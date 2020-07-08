@@ -65,12 +65,12 @@ export default {
   .title {
     font-size: $font-size-large;
     font-weight: $font-weight-medium;
-    color: $color-heading;
+    color: $color-white;
   }
 
   img {
-    height: 24px;
-    width: 24px;
+    height: 44px;
+    width: 44px;
     margin-right: $space-small;
   }
 
