@@ -30,7 +30,7 @@ export default {
 
 .date--separator::before,
 .date--separator::after {
-  background-color: lighten($color-border-dark, 5%);;
+  background-color: lighten($color-border-dark, 5%);
   content: '';
   height: 1px;
   position: absolute;
