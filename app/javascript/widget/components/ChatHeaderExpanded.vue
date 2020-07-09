@@ -4,7 +4,7 @@
     <span class="close close-button" @click="closeWindow"></span>
     <span class="header-elements">
         <h2 class="title" v-html="introHeading"></h2>
-        <span class="reply-eta">Usually replys within 1 hour</span>
+        <span class="reply-eta">Usually replies within 1 hour</span>
         <span class="social-links">
             <span class="email">
                 <a href="mailto:care@wevrlabs.net" target="_blank" rel="noopener noreferrer">
