@@ -2,7 +2,7 @@
   <header class="header-collapsed">
     <div class="header-branding">
       <img v-if="avatarUrl" :src="avatarUrl" alt="avatar" />
-       <span class="header-elements" v-html="introheaderElements">
+       <span class="header-elements">
         <h2 class="title" v-html="title"></h2>
         <span class="reply-eta">Usually replies within 1 hour</span>
         <span class="social-links">
@@ -96,16 +96,18 @@ export default {
   .reply-eta {
     color: $color-white;
     display: block;
-    opacity: .8!important;
+    opacity: .7!important;
     font-size: 11.6px!important;
     line-height: 16px;
     margin: 7px 2px 0;
   }
   .social-links {
     span {
-      background: #fff;
+      background: rgba(0, 0, 0, 0.25);
       display: inline-block;
       border-radius: 50%;
+      padding: 9px 5px;
+      margin: 10px 0 5px;
     }
   }
 
