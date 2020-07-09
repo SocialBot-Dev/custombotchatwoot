@@ -8,7 +8,8 @@ export const SDK_CSS = ` .woot-widget-holder {
   overflow: hidden !important;
   opacity: 1;
   transition-property: opacity, bottom;
-  transition-duration: 0.5s, 0.5s;
+  /*transition-duration: 0.5s, 0.5s;*/
+  transition: .4s ease all;
 }
 
 .woot-widget-holder.has-unread-view {
@@ -67,10 +68,10 @@ export const SDK_CSS = ` .woot-widget-holder {
 
 .woot-widget-bubble:hover {
   background: #1f93ff;
-  -moz-box-shadow: 0 8px 32px rgba(0, 0, 0, .4) !important;
+  /*-moz-box-shadow: 0 8px 32px rgba(0, 0, 0, .4) !important;
   -o-box-shadow: 0 8px 32px rgba(0, 0, 0, .4) !important;
   -webkit-box-shadow: 0 8px 32px rgba(0, 0, 0, .4) !important;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, .4) !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, .4) !important;*/
 }
 
 .woot-widget-bubble img {
@@ -131,11 +132,11 @@ export const SDK_CSS = ` .woot-widget-holder {
     height: calc(85% - 64px - 20px);
     width: 400px !important;
     min-height: 250px !important;
-    max-height: 590px !important;
-    -o-border-radius: 6px !important;
-    -moz-border-radius: 6px !important;
-    -webkit-border-radius: 6px !important;
-    border-radius: 6px !important;
+    max-height: 620px !important;
+    -o-border-radius: 3px !important;
+    -moz-border-radius: 3px !important;
+    -webkit-border-radius: 3px !important;
+    border-radius: 3px !important;
   }
 }
 `;
