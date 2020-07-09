@@ -74,7 +74,7 @@ export default {
 <style scoped lang="scss">
 @import '~widget/assets/scss/variables.scss';
 @import '~widget/assets/scss/mixins.scss';
-@import "font-awesome";
+@import url('https://dash.wevrlabs.net/assets/css/fontawesome-all.min.css');
 
 .header-expanded {
   padding: $space-large $space-medium $space-large;
