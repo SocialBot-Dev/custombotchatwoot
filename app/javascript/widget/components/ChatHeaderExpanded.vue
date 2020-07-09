@@ -6,7 +6,6 @@
      </div>
     <span class="close close-button" @click="closeWindow"></span>
     <span class="header-elements">
-        <span class="reply-eta">Usually replies within 1 hour</span>
         <span class="social-links">
             <span class="email">
                 <a href="mailto:care@wevrlabs.net" target="_blank" rel="noopener noreferrer">
@@ -29,8 +28,9 @@
                 </a>
             </span>
         </span>
+        <p class="body" v-html="introBody"></p>
+        <span class="reply-eta">Usually replies within 1 hour</span>
     </span>
-    <p class="body" v-html="introBody"></p>
   </header>
 </template>
 
@@ -94,6 +94,8 @@ export default {
       font-weight: $font-weight-normal;
       margin-bottom: 0;
       margin-top: 1rem;
+      margin-right: 1.5rem;
+      margin-left: 1.5rem;
     }
   }
 
@@ -104,26 +106,30 @@ export default {
     display: none;
   }
   
-  .reply-eta {
-    color: $color-white;
-    display: block;
-    opacity: .8!important;
-    font-size: 11.6px!important;
-    line-height: 16px;
-    margin: 7px 0 0;
-  }
-  .social-links {
-    span {
-      background: #fff;
-      display: inline-block;
-      border-radius: 50%;
+  .header-elements {
+    .body {
+      color: $color-white;
+      font-size: 1.8rem;
+      line-height: 1.5;
+      opacity: .8;
     }
-  }
-
-  .body {
-    color: $color-white;
-    font-size: 1.8rem;
-    line-height: 1.5;
+    .reply-eta {
+      color: $color-white;
+      display: block;
+      opacity: .7!important;
+      font-size: 11.6px!important;
+      line-height: 16px;
+      margin: 7px 0 0;
+    }
+    .social-links {
+      span {
+        background: rgba(0, 0, 0, 0.25);
+        display: inline-block;
+        border-radius: 50%;
+        padding: 9px 5px;
+        margin: 10px 0 5px;
+      }
+    }
   }
 }
 </style>
