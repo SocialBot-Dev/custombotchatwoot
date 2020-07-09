@@ -36,7 +36,6 @@ import ChatHeader from 'widget/components/ChatHeader.vue';
 import ConversationWrap from 'widget/components/ConversationWrap.vue';
 import AvailableAgents from 'widget/components/AvailableAgents.vue';
 import configMixin from '../mixins/configMixin';
-import { mapGetters } from 'vuex';
 
 export default {
   name: 'Home',
@@ -76,9 +75,6 @@ export default {
     },
   },
   computed: {
-    ...mapGetters({
-      widgetColor: 'appConfig/getWidgetColor',
-    }),
     isOpen() {
       return this.conversationAttributes.status === 'open';
     },
