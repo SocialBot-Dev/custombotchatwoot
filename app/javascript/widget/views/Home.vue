@@ -118,7 +118,7 @@ export default {
     flex-shrink: 0;
     border-radius: 0;
     background: white;
-    background-image: linear-gradient(125deg, rgba(0, 0, 0, 0.05) -10%, rgba(0, 0, 0, 0.55) 100%);
+    background-image: linear-gradient(125deg,rgba(255, 255, 255, 0.15) -10%,rgba(0,0,0,0.45)) !important;
     z-index: 99;
     @include shadow-large;
 
