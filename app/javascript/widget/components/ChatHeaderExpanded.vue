@@ -82,6 +82,7 @@ export default {
   .logo {
     width: 56px;
     height: 56px;
+    border-radius: 50%;
   }
 
   .close {
