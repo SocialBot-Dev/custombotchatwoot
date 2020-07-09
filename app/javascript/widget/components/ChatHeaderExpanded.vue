@@ -1,9 +1,11 @@
 <template>
   <header class="header-expanded">
-    <img v-if="avatarUrl" class="logo" :src="avatarUrl" />
+    <div class="title-logo">
+      <img v-if="avatarUrl" class="logo" :src="avatarUrl" />
+      <h2 class="title" v-html="introHeading"></h2>
+     </div>
     <span class="close close-button" @click="closeWindow"></span>
     <span class="header-elements">
-        <h2 class="title" v-html="introHeading"></h2>
         <span class="reply-eta">Usually replies within 1 hour</span>
         <span class="social-links">
             <span class="email">
@@ -78,11 +80,21 @@ export default {
   width: 100%;
   box-sizing: border-box;
   position: relative;
-
-  .logo {
-    width: 56px;
-    height: 56px;
-    border-radius: 50%;
+  
+  .title-logo {
+    display: flex;
+    .logo {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+    }
+    .title {
+      color: $color-white;
+      font-size: $font-size-mega;
+      font-weight: $font-weight-normal;
+      margin-bottom: 0;
+      margin-top: 1rem;
+    }
   }
 
   .close {
@@ -91,20 +103,14 @@ export default {
     top: $space-medium;
     display: none;
   }
-  .title {
-    color: $color-white;
-    font-size: $font-size-mega;
-    font-weight: $font-weight-normal;
-    margin-bottom: $space-slab;
-    margin-top: $space-medium;
-  }
+  
   .reply-eta {
     color: $color-white;
     display: block;
     opacity: .8!important;
     font-size: 11.6px!important;
     line-height: 16px;
-    margin: 7px 2px 0;
+    margin: 7px 0 0;
   }
   .social-links {
     span {
