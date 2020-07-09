@@ -75,6 +75,9 @@ export default {
     },
   },
   computed: {
+    ...mapGetters({
+      widgetColor: 'appConfig/getWidgetColor',
+    }),
     isOpen() {
       return this.conversationAttributes.status === 'open';
     },
