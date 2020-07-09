@@ -48,7 +48,6 @@ export default {
       type: String,
       default: '',
     },
-    
     introheaderElements: {
       type: String,
       default: '',
@@ -109,7 +108,6 @@ export default {
       type: String,
       default: '',
     },
-    
   },
   computed: {
     ...mapGetters({
