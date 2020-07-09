@@ -152,6 +152,21 @@ export default {
     font-weight: $font-weight-medium;
     color: $color-white;
   }
+  
+  .reply-eta {
+    display: block;
+    opacity: .8!important;
+    font-size: 11.6px!important;
+    line-height: 16px;
+    margin: 7px 2px 0;
+  }
+  .social-links {
+    span {
+      background: #fff;
+      display: inline-block;
+      border-radius: 50%;
+    }
+  }
 
   img {
     height: 44px;
