@@ -80,45 +80,47 @@ export default {
 
   .header-branding {
     display: flex;
-    align-items: center;
+    align-items: normal;
 
     img {
       border-radius: 50%;
     }
   }
-
-  .title {
-    font-size: $font-size-large;
-    font-weight: $font-weight-medium;
-    color: $color-white;
-  }
   
-  .reply-eta {
-    color: $color-white;
-    display: block;
-    opacity: .7!important;
-    font-size: 11.6px!important;
-    line-height: 16px;
-    margin: 7px 2px 0;
-  }
-  .social-links {
-    span {
-      background: rgba(0, 0, 0, 0.25);
-      display: inline-block;
-      border-radius: 50%;
-      padding: 9px 5px;
-      margin: 10px 0 5px;
+  .header-elements {
+    .title {
+      font-size: $font-size-large;
+      font-weight: $font-weight-medium;
+      color: $color-white;
+      margin-top: 3px;
     }
-  }
+    .reply-eta {
+      color: $color-white;
+      display: block;
+      opacity: .7!important;
+      font-size: 11.6px!important;
+      line-height: 16px;
+      margin: 7px 2px 0;
+    }
+    .social-links {
+      span {
+        background: rgba(0, 0, 0, 0.25);
+        display: inline-block;
+        border-radius: 50%;
+        padding: 9px 5px;
+        margin: 10px 0 5px;
+      }
+    }
+   }
 
   img {
-    height: 44px;
-    width: 44px;
-    margin-right: $space-small;
+    height: 55px;
+    width: 55px;
+    margin-right: $space-medium;
   }
 
   .close-button {
-    display: none;
+    /*display: none;*/
   }
 }
 </style>
