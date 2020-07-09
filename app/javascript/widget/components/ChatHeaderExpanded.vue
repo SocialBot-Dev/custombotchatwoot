@@ -99,6 +99,7 @@ export default {
     margin-top: $space-medium;
   }
   .reply-eta {
+    color: $color-white;
     display: block;
     opacity: .8!important;
     font-size: 11.6px!important;
