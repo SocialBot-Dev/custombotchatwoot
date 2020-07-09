@@ -91,7 +91,7 @@ export default {
     display: none;
   }
   .title {
-    color: $color-heading;
+    color: $color-white;
     font-size: $font-size-mega;
     font-weight: $font-weight-normal;
     margin-bottom: $space-slab;
@@ -113,7 +113,7 @@ export default {
   }
 
   .body {
-    color: $color-body;
+    color: $color-white;
     font-size: 1.8rem;
     line-height: 1.5;
   }
