@@ -103,7 +103,7 @@ export default {
     position: absolute;
     right: $space-medium;
     top: $space-medium;
-    display: none;
+    /*display: none;*/
   }
   
   .header-elements {
