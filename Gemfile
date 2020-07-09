@@ -7,6 +7,7 @@ gem 'rack-cors', require: 'rack/cors'
 gem 'rails'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', require: false
+gem 'font-awesome-sass'
 
 ##-- rails helper gems --##
 gem 'acts-as-taggable-on'
