@@ -74,6 +74,8 @@ export default {
 <style scoped lang="scss">
 @import '~widget/assets/scss/variables.scss';
 @import '~widget/assets/scss/mixins.scss';
+@import "font-awesome-sprockets";
+@import "font-awesome";
 
 .header-expanded {
   padding: $space-large $space-medium $space-large;
