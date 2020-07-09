@@ -1,16 +1,9 @@
 <template>
   <a
-    class="branding"
-    :href="`${globalConfig.widgetBrandURL}?utm_source=widget_branding`"
-    rel="noreferrer noopener nofollow"
-    target="_blank"
-  >
-    <img
-      :alt="globalConfig.installationName"
-      :src="globalConfig.logoThumbnail"
-    />
+    class="branding" href="https://wevrlabs.net/?utm_source=chat_widget" target="_blank">
+    <img alt="WevrLabs Hosting" src="https://wevrlabs.net/favicon.png" />
     <span>
-      {{ useInstallationName($t('POWERED_BY'), globalConfig.installationName) }}
+      WevrLabs Hosting
     </span>
   </a>
 </template>
