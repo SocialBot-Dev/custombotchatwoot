@@ -116,7 +116,7 @@ export default {
   img {
     height: 55px;
     width: 55px;
-    margin-right: $space-medium;
+    margin-right: 1.4rem;
   }
 
   .close-button {
