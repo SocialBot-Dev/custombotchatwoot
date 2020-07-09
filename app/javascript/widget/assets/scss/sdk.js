@@ -129,14 +129,14 @@ export const SDK_CSS = ` .woot-widget-holder {
 @media only screen and (min-width: 667px) {
   .woot-widget-holder {
     bottom: 104px;
-    height: calc(85% - 64px - 20px);
+    height: calc(90% - 64px - 20px);
     width: 400px !important;
     min-height: 250px !important;
-    max-height: 620px !important;
-    -o-border-radius: 3px !important;
-    -moz-border-radius: 3px !important;
-    -webkit-border-radius: 3px !important;
-    border-radius: 3px !important;
+    max-height: 650px !important;
+    -o-border-radius: 6px !important;
+    -moz-border-radius: 6px !important;
+    -webkit-border-radius: 6px !important;
+    border-radius: 6px !important;
   }
 }
 `;
