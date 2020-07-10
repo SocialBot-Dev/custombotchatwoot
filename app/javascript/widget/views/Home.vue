@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <div
-    class="header-wrap" style="background: #1aa022;">
+    class="header-wrap" :style="{ background: widgetColor }">
       <ChatHeaderExpanded
         v-if="isHeaderExpanded && !hideWelcomeHeader"
         :intro-heading="introHeading"
@@ -69,6 +69,10 @@ export default {
     unreadMessageCount: {
       type: Number,
       default: 0,
+    },
+    widgetColor: {
+      type: String,
+      default: '',
     },
   },
   computed: {
