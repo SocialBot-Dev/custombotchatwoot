@@ -138,7 +138,7 @@ export default {
         width: 14px;
         height: 15px;
         text-align: center;
-        transition: .3s ease all;
+        transition: .2s ease all;
           
          i:before {
             opacity: .8;
@@ -148,7 +148,7 @@ export default {
         }
         span a:hover {
             background: rgba(0, 0, 0, 0.5);
-            transition: .3s ease all;
+            transition: .2s ease all;
             transform: translateY(1.5px);
         }
         i.fab.fa-whatsapp:before {
