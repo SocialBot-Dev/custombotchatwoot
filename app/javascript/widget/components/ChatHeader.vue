@@ -123,13 +123,13 @@ export default {
           
          i:before {
             opacity: .8;
-            transition: .3s ease all;
+            transition: .2s ease all;
             color: #fff;
             font-size: 15px;
         }
         span a:hover {
             background: rgba(0, 0, 0, 0.5);
-            transition: .3s ease all;
+            transition: .2s ease all;
             transform: translateY(1.5px);
         }
         
