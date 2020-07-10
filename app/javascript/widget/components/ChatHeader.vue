@@ -114,15 +114,6 @@ export default {
       margin: 10px 0 0;
       display: block;
       
-      span a:hover i:before {
-          opacity: 1;
-          transition: .3s ease all;
-        }
-       span a:hover {
-          background: rgba(0, 0, 0, 0.5);
-          transition: .2s ease all;
-          transform: translateY(1.5px);
-        }
        span a {
           background: rgba(0, 0, 0, 0.25);
           display: inline-block;
@@ -132,6 +123,16 @@ export default {
           height: 15px;
           text-align: center;
           transition: .2s ease all;
+          
+          &:hover i:before {
+            opacity: 1;
+            transition: .3s ease all;
+          }
+          &:hover {
+            background: rgba(0, 0, 0, 0.5);
+            transition: .2s ease all;
+            transform: translateY(1.5px);
+          }
           
        i:before {
           opacity: .8;
