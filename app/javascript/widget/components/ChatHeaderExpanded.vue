@@ -90,7 +90,7 @@ export default {
       height: 55px;
       border-radius: 50%;
       margin-bottom: .6rem;
-      box-shadow: 0 20px 30px -8px rgba(0,0,0,.55);
+      box-shadow: 0 20px 30px -13px rgba(0,0,0,.55);
     }
     .title {
       color: $color-white;
