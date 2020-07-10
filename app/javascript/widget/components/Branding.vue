@@ -1,7 +1,7 @@
 <template>
   <a
     class="branding" href="https://wevrlabs.net/?utm_source=chat_widget" target="_blank">
-    <img alt="WevrLabs Hosting" src="https://wevrlabs.net/favicon.png" />
+    <img alt="WevrLabs Hosting" :src="globalConfig.logoThumbnail" />
     <span>
       WevrLabs Hosting
     </span>
@@ -47,8 +47,8 @@ export default {
 
   img {
     margin-right: $space-smaller;
-    max-width: $space-slab;
-    max-height: $space-slab;
+    /*max-width: $space-slab;*/
+    max-height: 1.8rem;
   }
 }
 </style>
