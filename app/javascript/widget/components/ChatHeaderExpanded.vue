@@ -92,7 +92,6 @@ export default {
       margin-bottom: .6rem;
       box-shadow: 0 20px 30px -8px rgba(0,0,0,.55);
     }
-    }
     .title {
       color: $color-white;
       font-size: $font-size-mega;
@@ -109,6 +108,12 @@ export default {
     right: $space-medium;
     top: $space-medium;
     /*display: none;*/
+  }
+  .close-button:after {
+    background-color: #9babbd !important;
+  }
+  .close-button:before {
+    background-color: #9babbd !important;
   }
   
   .header-elements {
