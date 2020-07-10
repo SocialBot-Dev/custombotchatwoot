@@ -82,13 +82,6 @@ export default {
   box-sizing: border-box;
   position: relative;
   
-  .close-button:after {
-    background-color: #9babbd !important;
-  }
-  .close-button:before {
-    background-color: #9babbd !important;
-  }
-  
   .title-logo {
     display: flex;
     
