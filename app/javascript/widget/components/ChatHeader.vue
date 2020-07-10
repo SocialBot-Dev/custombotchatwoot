@@ -159,5 +159,8 @@ export default {
   .close-button {
     /*display: none;*/
   }
+  .close-button:after, .close-button:before {
+    background-color: #9babbd !important;
+  }
 }
 </style>
