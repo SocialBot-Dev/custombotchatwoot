@@ -130,6 +130,7 @@ export default {
         span a:hover {
             background: rgba(0, 0, 0, 0.5);
             transition: .3s ease all;
+            transform: translateY(1.5px);
         }
         
         i.fab.fa-whatsapp:before {
