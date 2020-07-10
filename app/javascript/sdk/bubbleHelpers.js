@@ -2,7 +2,7 @@ import { addClass, toggleClass, wootOn } from './DOMHelpers';
 import { IFrameHelper } from './IFrameHelper';
 
 export const bubbleImg =
-  'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAUVBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////8IN+deAAAAGnRSTlMAAwgJEBk0TVheY2R5eo+ut8jb5OXs8fX2+cjRDTIAAADsSURBVHgBldZbkoMgFIThRgQv8SKKgGf/C51UnJqaRI30/9zfe+NQUQ3TvG7bOk9DVeCmshmj/CuOTYnrdBfkUOg0zlOtl9OWVuEk4+QyZ3DIevmSt/ioTvK1VH/s5bY3YdM9SBZ/mUUyWgx+U06ycgp7D8msxSvtc4HXL9BLdj2elSEfhBJAI0QNgJEBI1BEBsQClVBVGDgwYOLAhJkDM1YOrNg4sLFAsLJgZsHEgoEFFQt0JAFGFjQsKAMJ0LFAexKgZYFyJIDxJIBNJEDNAtSJBLCeBDCOBFAPzwFA94ED+zmhwDO9358r8ANtIsMXi7qVAwAAAABJRU5ErkJggg==';
+  'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAABi0lEQVRoge2YXWrCQBSFzy3FIK0uwbiHuo3StdiXPvTvRYpPWUvBdhO2qzArSLQIQjh9ESr2jsyk0ZnQ+R5vZuR8YXKIASKRSKsR1w2LxeIGwBjACMBF44l++ALwQTJL03RmWuQkkOf5lOTdn6O58zIYDO61C9YC2zv/2lgkR0hep2n6tj8/c/iNcYN56nCrDV0ErhoKUpeRNnQRuGwoSC1EpKfNzw9tIrnbOEeDJDabDZbLJdbrtdNeowDJKYCTNI6IIEkSJEmCsixRFIX1XvUIbe+8j7pEv99Ht9u1Xm96Brw2Tq+nHncVk4DXxul0OtZrTQK+G8d6rUuNBkkU8E0U8E0U8E0UOCGlNmyNgIh8avPWCFRVlWnztghMhsPhu3bh4D8yz6xEZF5VVWYKDxg+q5Dk8XLZIZavpKEeIbVxNEIVUBtHI1QBtXE0QhSYiIjxod0nlBZaAZgDyFzCG6EZ9QtxcBjCP/jOZU2rwwO/BB5953FmJ/yT7yy1aHV4ACD57DtDJBL5J3wDipq90XZr0vgAAAAASUVORK5CYII=';
 
 export const body = document.getElementsByTagName('body')[0];
 export const widgetHolder = document.createElement('div');
