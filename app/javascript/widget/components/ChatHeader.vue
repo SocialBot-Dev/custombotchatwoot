@@ -160,7 +160,7 @@ export default {
     height: 55px;
     width: 55px;
     margin-right: 1.4rem;
-    box-shadow: 0 20px 30px -8px rgba(0, 0, 0, 0.55);
+    box-shadow: 0 20px 30px -13px rgba(0, 0, 0, 0.55);
   }
 
   .close-button {
