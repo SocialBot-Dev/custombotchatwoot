@@ -9,7 +9,7 @@ export const SDK_CSS = ` .woot-widget-holder {
   opacity: 1;
   transition-property: opacity, bottom;
   /*transition-duration: 0.5s, 0.5s;*/
-  transition: .3s ease all;
+  transition: .4s ease all;
 }
 
 .woot-widget-holder.has-unread-view {
@@ -53,20 +53,20 @@ export const SDK_CSS = ` .woot-widget-holder {
 }
 
 .woot-widget-bubble.woot-elements--left {
-  left: 20px;
+  left: 30px;
 }
 
 .woot-widget-bubble.woot-elements--right {
-  right: 20px;
+  right: 30px;
 }
 
 @media only screen and (min-width: 667px) {
   .woot-widget-holder.woot-elements--left {
-    left: 20px;
+    left: 30px;
   }
 
   .woot-widget-holder.woot-elements--right {
-    right: 20px;
+    right: 30px;
   }
 }
 
