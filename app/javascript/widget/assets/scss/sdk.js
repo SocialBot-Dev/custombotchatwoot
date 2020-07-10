@@ -46,6 +46,11 @@ export const SDK_CSS = ` .woot-widget-holder {
   bottom: 20px;
   width: 64px !important;
   height: 64px !important;
+  transition: .3s ease all;
+  
+  &:active {
+    transform: scale(.9);
+  }
 }
 
 .woot-widget-bubble.woot-elements--left {
@@ -107,7 +112,7 @@ export const SDK_CSS = ` .woot-widget-holder {
   visibility: hidden !important;
   z-index: -1 !important;
   opacity: 0;
-  bottom: -20000px;
+  /*bottom: -20000px;*/
 }
 
 @media only screen and (max-width: 667px) {
