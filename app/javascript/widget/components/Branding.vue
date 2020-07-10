@@ -39,11 +39,13 @@ export default {
   text-decoration: none;
   padding: $space-normal 0 $space-slab;
   cursor: pointer;
+  transition: .3s ease all;
 
   &:hover {
     filter: grayscale(0);
     opacity: 1;
     color: $color-gray;
+    transition: .3s ease all;
   }
 
   img {
