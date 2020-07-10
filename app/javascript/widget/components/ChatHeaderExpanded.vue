@@ -148,6 +148,7 @@ export default {
           height: 15px;
           text-align: center;
           transition: .2s ease all;
+          margin-right: 5px;
           
           &:hover i:before {
             opacity: 1;
