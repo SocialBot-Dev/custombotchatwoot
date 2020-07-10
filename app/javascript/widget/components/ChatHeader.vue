@@ -111,6 +111,11 @@ export default {
               opacity: 1;
               transition: .3s ease all;
           }
+      span a:hover {
+            background: rgba(0, 0, 0, 0.5);
+            transition: .2s ease all;
+            transform: translateY(1.5px);
+        }
       span a {
             background: rgba(0,0,0,.25);
             display: inline-block;
@@ -126,11 +131,6 @@ export default {
             transition: .2s ease all;
             color: #fff;
             font-size: 15px;
-        }
-        span a:hover {
-            background: rgba(0, 0, 0, 0.5);
-            transition: .2s ease all;
-            transform: translateY(1.5px);
         }
         
         i.fab.fa-whatsapp:before {
