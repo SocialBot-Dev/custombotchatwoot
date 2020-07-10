@@ -77,7 +77,7 @@ export default {
 @import url('https://dash.wevrlabs.net/assets/css/fontawesome-all.min.css');
 
 .header-expanded {
-  padding: $space-large $space-medium $space-large;
+  padding: 2.1rem 2.4rem 2.4rem;
   width: 100%;
   box-sizing: border-box;
   position: relative;
@@ -85,9 +85,12 @@ export default {
   .title-logo {
     display: flex;
     .logo {
-      width: 56px;
-      height: 56px;
+      width: 55px;
+      height: 55px;
       border-radius: 50%;
+      margin-bottom: .6rem;
+      box-shadow: 0 20px 30px -8px rgba(0,0,0,.55);
+    }
     }
     .title {
       color: $color-white;
@@ -106,13 +109,20 @@ export default {
     top: $space-medium;
     /*display: none;*/
   }
+  .close-button:after, .close-button:before {
+    background-color: #9babbd !important;
+  }
   
   .header-elements {
+    margin: 0 2px;
+    display: block;
+    
     .body {
       color: $color-white;
       font-size: 1.8rem;
       line-height: 1.5;
       opacity: .8;
+      margin: 0 5px;
     }
     .reply-eta {
       color: $color-white;
@@ -120,10 +130,10 @@ export default {
       opacity: .7!important;
       font-size: 11.6px!important;
       line-height: 16px;
-      margin: 7px 0 0;
+      margin: 5px 5px 0;
     }
     .social-links {
-      margin: 10px 0 0;
+      margin: 7px 2px 5px;
       display: block;
       
       span a:hover i:before {
