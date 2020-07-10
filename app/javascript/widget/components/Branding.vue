@@ -1,9 +1,10 @@
 <template>
   <a
-    class="branding" href="https://wevrlabs.net/?utm_source=chat_widget" target="_blank">
-    <img alt="WevrLabs Hosting" :src="globalConfig.logoThumbnail" />
+    class="branding" href="https://dash.wevrlabs.net/knowledgebase.php?utm_source=chat_widget" target="_blank">
+    <!-- <img alt="WevrLabs Hosting" :src="globalConfig.logoThumbnail" /> -->
+    <i class="fa fa-book"></i>
     <span>
-      WevrLabs Hosting
+      Explore Help Articles
     </span>
   </a>
 </template>
@@ -49,6 +50,9 @@ export default {
     margin-right: $space-smaller;
     /*max-width: $space-slab;*/
     max-height: 1.8rem;
+  }
+  i.fas, i.fa {
+    margin: 0 4px;
   }
 }
 </style>
