@@ -65,6 +65,10 @@
   }
 }
 
+.menu .active>a, .menu .is-active>a {
+  background-color: $color-background-dark4;
+}
+
 .logout {
   bottom: $space-normal;
   left: $space-normal;
