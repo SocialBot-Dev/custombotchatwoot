@@ -15,7 +15,7 @@
     @include flex;
     @include flex-align($x: left, $y: middle);
     @include padding($space-one $space-normal);
-    @include background-white;
+    background: $color-background-dark1;
     @include margin(0);
     border-top-left-radius: $space-small;
     border-top-right-radius: $space-small;
@@ -82,14 +82,15 @@
       max-height: $space-mega * 2.4;
       min-height: 4rem;
       resize: none;
+      color: $color-light-gray;
     }
   }
 
   .reply-box__bottom {
-    @include background-light;
+    background: $color-background-dark2;
     @include flex;
     @include flex-align($x: justify, $y: middle);
-    @include border-light-top;
+    border-top: 1px solid $color-border-dark2;
     border-bottom-left-radius: $space-small;
     border-bottom-right-radius: $space-small;
 
@@ -109,7 +110,7 @@
         }
 
         &.is-private.is-active {
-          background: lighten($warning-color, 38%);
+          background: $color-background-dark1;
 
           a {
             border-bottom-color: darken($warning-color, 15%);
@@ -122,7 +123,7 @@
         border-bottom-left-radius: $space-small;
 
         &.is-active {
-          @include border-light-right;
+          border-right: 1px solid $color-border-dark2;
           border-left: 0;
 
           a {
@@ -132,9 +133,9 @@
       }
 
       .is-active {
-        @include background-white;
-        @include border-light-left;
-        @include border-light-right;
+        background: $color-background-dark1;
+        border-left: 1px solid $color-border-dark2;
+        border-right: 1px solid $color-border-dark2;
         margin-top: -1px;
       }
 
