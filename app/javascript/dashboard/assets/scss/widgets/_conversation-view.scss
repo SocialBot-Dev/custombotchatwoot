@@ -138,7 +138,7 @@
       @include padding($zero null $zero $space-normal);
       @include round-corner;
       @include margin($space-smaller $space-slab $zero $zero);
-      background-color: $$color-background-dark4;
+      background-color: $color-background-dark4;
       border: 1px solid $color-background-dark4;
       float: right;
       font-size: $font-size-mini;
