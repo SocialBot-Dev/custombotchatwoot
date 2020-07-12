@@ -59,6 +59,7 @@ export default {
   .conv-details--item__value {
     word-break: break-all;
     margin-top: $space-small;
+    color: $color-light-gray;
   }
 }
 </style>
