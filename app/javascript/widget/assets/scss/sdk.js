@@ -32,10 +32,10 @@ export const SDK_CSS = ` .woot-widget-holder {
 
 .woot-widget-bubble {
   z-index: 2147483000 !important;
-  -moz-box-shadow: 0 8px 24px rgba(0, 0, 0, .16) !important;
+  /* -moz-box-shadow: 0 8px 24px rgba(0, 0, 0, .16) !important;
   -o-box-shadow: 0 8px 24px rgba(0, 0, 0, .16) !important;
   -webkit-box-shadow: 0 8px 24px rgba(0, 0, 0, .16) !important;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, .16) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .16) !important; */
   -o-border-radius: 100px !important;
   -moz-border-radius: 100px !important;
   -webkit-border-radius: 100px !important;
