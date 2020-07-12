@@ -46,7 +46,7 @@ export const SDK_CSS = ` .woot-widget-holder {
   bottom: 20px;
   width: 64px !important;
   height: 64px !important;
-  transition: .3s ease all;
+  transition: .25s ease all;
 }
 .woot-widget-bubble:active {
   transform: scale(.9);
