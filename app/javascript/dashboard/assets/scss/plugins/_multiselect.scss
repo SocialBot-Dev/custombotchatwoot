@@ -64,7 +64,7 @@
 
   .multiselect__tag {
     $vertical-space: $space-smaller + $space-micro;
-    background: $color-background;
+    background: $color-background-dark1;
     color: $color-heading;
     margin-top: $space-smaller;
     padding: $vertical-space $space-medium $vertical-space $space-one;
@@ -79,7 +79,8 @@
     @include ghost-input;
     @include padding($zero);
     font-size: $font-size-small;
-
+    background: $color-background-dark1;
+    color: $color-dark-gray;
     margin-bottom: $zero;
   }
 
