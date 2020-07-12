@@ -138,12 +138,13 @@
       @include padding($zero null $zero $space-normal);
       @include round-corner;
       @include margin($space-smaller $space-slab $zero $zero);
-      background-color: $color-background-light;
-      border: 1px solid $color-border;
+      background-color: $$color-background-dark4;
+      border: 1px solid $color-background-dark4;
       float: right;
       font-size: $font-size-mini;
       height: $space-medium;
       width: auto;
+      color: $color-dark-gray;
     }
   }
 
@@ -160,9 +161,9 @@
 }
 
 .conversation-wrap {
-  @include background-gray;
+  background: $color-background-dark3;
   @include margin(0);
-  @include border-normal-left;
+  border-left: 1px solid $color-border-dark2;
 
   .current-chat {
     @include flex;
