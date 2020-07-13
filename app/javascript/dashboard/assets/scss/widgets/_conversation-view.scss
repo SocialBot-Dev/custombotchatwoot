@@ -1,9 +1,9 @@
 @mixin bubble-with-types {
   @include padding($space-small $space-normal);
   @include margin($zero);
-  background: $color-background-dark1;
+  background: #2f3235;
   border-radius: $space-one;
-  color: #ababab;
+  color: #e6e6e6;
   font-size: $font-size-small;
   font-weight: $font-weight-normal;
   position: relative;
@@ -261,7 +261,7 @@
       margin-right: auto;
 
       .time {
-        color: $color-white;
+        color: #e0e0e0;
       }
 
       .image .time {
