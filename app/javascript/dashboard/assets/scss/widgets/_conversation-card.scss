@@ -8,7 +8,12 @@
   border-top: 1px solid transparent;
   cursor: pointer;
   position: relative;
-
+  
+  .user-thumbnail-box .user-thumbnail #badge {
+    left: 25px !important;
+    top: 25px !important;
+  }
+  
   &.active {
     background: $color-background-dark4;
     border-bottom-color: $color-border-dark2;
