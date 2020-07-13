@@ -146,10 +146,16 @@ export default {
 
   .source-badge {
     bottom: -$space-micro;
-    height: $space-slab;
+    // height: $space-slab;
     position: absolute;
     right: $zero;
-    width: $space-slab;
+    // width: $space-slab;
+    
+    background: #e6e6e6;
+    border-radius: 50%;
+    padding: 2px;
+    width: 18px !important;
+    height: auto !important;
   }
 
   .user-online-status {
