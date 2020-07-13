@@ -229,6 +229,7 @@ export default {
     top: 38px !important;
     width: 28px !important;
     height: 28px !important;
+    background: $color-background-dark1;
   }
     
   .user-thumbnail-box {
