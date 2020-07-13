@@ -9,9 +9,11 @@
   cursor: pointer;
   position: relative;
   
-  .user-thumbnail-box .user-thumbnail #badge {
-    left: 25px !important;
-    top: 25px !important;
+  .user-thumbnail-box #badge {
+    left: 23px !important;
+    top: 26px !important;
+    width: 23px !important;
+    height: 23px !important;
   }
   
   &.active {
