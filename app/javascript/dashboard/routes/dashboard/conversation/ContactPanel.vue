@@ -226,6 +226,13 @@ export default {
 
   .user-thumbnail-box {
     // margin-right: $space-normal;
+    
+    img#badge {
+      left: 40px !important;
+      top: 38px !important;
+      width: 28px !important;
+      height: 28px !important;
+    }
   }
 }
 
