@@ -86,7 +86,7 @@
 
   .multiselect__single {
     @include padding($space-one);
-
+    background: $color-background-dark1;
     margin-bottom: 0;
   }
 }
