@@ -223,15 +223,16 @@ export default {
 .contact--profile {
   align-items: center;
   padding: $space-medium 0 $space-one;
-
+    
+  #badge {
+    left: 40px !important;
+    top: 38px !important;
+    width: 28px !important;
+    height: 28px !important;
+  }
+    
   .user-thumbnail-box {
     // margin-right: $space-normal;
-    #badge {
-      left: 40px !important;
-      top: 38px !important;
-      width: 28px !important;
-      height: 28px !important;
-    }
   }
 }
 
