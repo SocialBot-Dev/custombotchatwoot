@@ -49,18 +49,18 @@
     font-size: $font-size-small;
     margin-bottom: 0;
     text-transform: capitalize;
-    color: $color-woot;
+    color: $color-light-gray;
 
     .label {
       left: $space-micro;
-      max-width: $space-mega;
+      max-width: $space-larger;
       overflow: hidden;
       position: relative;
       text-overflow: ellipsis;
       top: $space-micro;
       white-space: nowrap;
       background: #2f3336;
-      color: #a7a7a7;
+      color: #c1c1c1;
     }
   }
 
@@ -129,10 +129,12 @@
 
     .conversation--message {
       font-weight: $font-weight-bold;
+      color: $color-light-gray;
     }
 
     .conversation--user {
       font-weight: $font-weight-bold;
+      color: $color-woot;
     }
   }
 
