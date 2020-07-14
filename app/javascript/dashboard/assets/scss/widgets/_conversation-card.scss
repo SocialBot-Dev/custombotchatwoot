@@ -107,17 +107,23 @@
       $unread-size: $space-normal;
       @include round-corner;
       @include light-shadow;
-      background: darken($success-color, 3%);
-      color: $color-white;
+      // background: darken($success-color, 3%);
+      background: #065d0a;
+      // color: $color-white;
+      color: #cecece;
       display: none;
-      font-size: $font-size-micro;
+      // font-size: $font-size-micro;
+      font-size: 1.4rem;
       font-weight: $font-weight-black;
-      height: $unread-size;
-      line-height: $unread-size;
+      // height: $unread-size;
+      height: 2.6rem;
+      // line-height: $unread-size;
+      line-height: 2.6rem;
       margin-left: auto;
       margin-top: $space-smaller;
       min-width: $unread-size;
-      padding: 0 $space-smaller;
+      // padding: 0 $space-smaller;
+      padding: 0 1rem;
       text-align: center;
     }
 
