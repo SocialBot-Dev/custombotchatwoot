@@ -106,7 +106,8 @@
     .unread {
       $unread-size: $space-normal;
       @include round-corner;
-      @include light-shadow;
+      // @include light-shadow;
+      box-shadow: 0 0.4rem 6px rgba(0, 0, 0, 1), 0 13px 31px rgba(0, 0, 0, 1);
       // background: darken($success-color, 3%);
       background: #065d0a;
       // color: $color-white;
