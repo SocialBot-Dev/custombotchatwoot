@@ -25,7 +25,7 @@
       <file-upload
         v-if="showFileUpload"
         :size="4096 * 4096"
-        accept="jpg,jpeg,png,mp3,ogg,amr,pdf,mp4,zip,tar,rar"
+        accept="jpg,jpeg,png,mp3,ogg,amr,pdf,mp4"
         @input-file="onFileUpload"
       >
         <i
@@ -141,7 +141,9 @@ export default {
     },
     showFileUpload() {
       this.channelType === 'Channel::WebWidget' ||	
-      this.channelType === 'Channel::TwilioSms'
+      this.channelType === 'Channel::TwilioSms' ||
+      this.channelType === 'Channel::FacebookPage' ||
+      this.channelType === 'Channel::TwitterProfile'
     },
     replyButtonLabel() {
       if (this.isPrivate) {
