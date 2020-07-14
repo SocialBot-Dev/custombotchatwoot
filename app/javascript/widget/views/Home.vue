@@ -116,7 +116,7 @@ export default {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  background: $color-background;
+  background: #f4f6fb; // $color-background;
 
   .header-wrap {
     flex-shrink: 0;
