@@ -141,9 +141,7 @@ export default {
     },
     showFileUpload() {
       this.channelType === 'Channel::WebWidget' ||	
-      this.channelType === 'Channel::TwilioSms' ||
-      this.channelType === 'Channel::FacebookPage' ||
-      this.channelType === 'Channel::TwitterProfile'
+      this.channelType === 'Channel::TwilioSms'
     },
     replyButtonLabel() {
       if (this.isPrivate) {
