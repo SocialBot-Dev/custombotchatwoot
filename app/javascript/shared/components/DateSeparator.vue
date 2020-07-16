@@ -30,12 +30,13 @@ export default {
 
 .date--separator::before,
 .date--separator::after {
-  background-color: $color-border;
+  background-color: lighten($color-border-dark, 5%);
   content: '';
   height: 1px;
   position: absolute;
   top: 24px;
-  width: calc((100% - 120px) / 2);
+  width: calc((100% - 160px)/2);
+  margin: 0 20px;
 }
 
 .date--separator::before {

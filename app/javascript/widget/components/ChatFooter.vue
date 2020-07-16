@@ -52,7 +52,7 @@ export default {
 .branding {
   align-items: center;
   color: $color-body;
-  display: flex;
+  display: none;
   font-size: $font-size-default;
   justify-content: center;
   padding: $space-one;

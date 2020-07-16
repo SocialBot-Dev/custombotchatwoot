@@ -1,10 +1,10 @@
 // Conversation header - Light BG
 .conv-header {
   @include padding($space-small $space-normal);
-  @include background-white;
+  background: $color-background-dark1;
   @include flex;
   @include flex-align($x: justify, $y: middle);
-  @include border-normal-bottom;
+  border-bottom: 1px solid $color-border-dark2;
 
   // Resolve Button
   .button {
@@ -16,7 +16,7 @@
     @include flex;
     @include flex-align($x: justify, $y: middle);
     @include margin(0 $space-small);
-    @include border-light;
+    border: 1px solid $color-border-dark2;
     border-radius: $space-smaller;
     margin-right: $space-normal;
 
@@ -33,6 +33,7 @@
 
       .multiselect__tags {
         border: 0;
+        background: $color-background-dark1;
       }
     }
   }

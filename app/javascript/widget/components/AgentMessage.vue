@@ -8,7 +8,7 @@
         <thumbnail
           v-if="message.showAvatar || hasRecordedResponse"
           :src="avatarUrl"
-          size="24px"
+          size="32px"
           :username="agentName"
         />
       </div>
@@ -183,8 +183,8 @@ export default {
     max-width: 88%;
 
     .avatar-wrap {
-      height: $space-medium;
-      width: $space-medium;
+      height: $space-large;
+      width: $space-large;
       flex-shrink: 0;
 
       .user-thumbnail-box {

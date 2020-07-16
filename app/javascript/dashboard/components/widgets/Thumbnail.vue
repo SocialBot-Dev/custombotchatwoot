@@ -150,6 +150,12 @@ export default {
     position: absolute;
     right: $zero;
     width: $space-slab;
+    
+    background: #e6e6e6;
+    border-radius: 50%;
+    padding: 2px;
+    // width: 18px !important;
+    // height: auto !important;
   }
 
   .user-online-status {
