@@ -4,7 +4,8 @@
       <img v-if="avatarUrl" :src="avatarUrl" alt="avatar" />
        <span class="header-elements">
         <h2 class="title" v-html="title"></h2>
-        <span class="reply-eta">We typically reply within 1 hour</span>
+        <span v-if="showAvailableAgents" class="reply-eta">Online (typically replies within 20min)</span>
+        <span v-else class="reply-eta">Currently Offline (We'll respond in a few hours)</span>
         <span class="social-links">
             <span class="email">
                 <a href="mailto:care@wevrlabs.net" target="_blank" rel="noopener noreferrer">
@@ -70,6 +71,7 @@ export default {
 @import '~widget/assets/scss/variables.scss';
 @import '~widget/assets/scss/mixins.scss';
 @import url('https://dash.wevrlabs.net/assets/css/fontawesome-all.min.css');
+@import AvailableAgents from 'widget/components/AvailableAgents.vue';
 
 .header-collapsed {
   display: flex;
