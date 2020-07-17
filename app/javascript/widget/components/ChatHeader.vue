@@ -54,6 +54,12 @@ export default {
   components: {
     AvailableAgents,
   },
+  props: {
+    availableAgents: {
+      type: Array,
+      default: () => [],
+    },
+  }
   computed: {
     ...mapGetters({
       widgetColor: 'appConfig/getWidgetColor',
