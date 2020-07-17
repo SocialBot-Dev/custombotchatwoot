@@ -28,7 +28,7 @@
                 </a>
             </span>
         </span>
-        <p class="body" v-html="introBody"></p>
+        <span class="reply-eta" v-html="introBody"></span>
         <span class="reply-eta">We typically reply within 1 hour during business hours</span>
     </span>
   </header>
