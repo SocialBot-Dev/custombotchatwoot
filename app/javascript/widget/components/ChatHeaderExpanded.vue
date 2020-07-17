@@ -29,7 +29,7 @@
             </span>
         </span>
         <span v-if="showAvailableAgents" class="reply-eta" v-html="introBody"></span>
-        <span v-else class="reply-eta">Currently Offline (We'll respond in a few hours)</span>
+        // <span v-else class="reply-eta">Currently Offline (We'll respond in a few hours)</span>
     </span>
   </header>
 </template>
@@ -145,7 +145,7 @@ export default {
       opacity: .7!important;
       font-size: 11.6px!important;
       line-height: 16px;
-      margin: 5px 5px 0;
+      margin: 10px 4px 0;
     }
     .social-links {
       margin: 7px 2px 5px;
