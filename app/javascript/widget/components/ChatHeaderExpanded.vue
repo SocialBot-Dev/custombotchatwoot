@@ -29,7 +29,6 @@
             </span>
         </span>
         <span v-if="showAvailableAgents" class="reply-eta" v-html="introBody"></span>
-        // <span v-else class="reply-eta">Currently Offline (We'll respond in a few hours)</span>
     </span>
   </header>
 </template>
