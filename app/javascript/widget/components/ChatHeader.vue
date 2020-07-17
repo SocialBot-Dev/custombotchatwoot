@@ -59,7 +59,7 @@ export default {
       type: Array,
       default: () => [],
     },
-  }
+  },
   computed: {
     ...mapGetters({
       widgetColor: 'appConfig/getWidgetColor',
