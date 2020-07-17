@@ -28,7 +28,7 @@
                 </a>
             </span>
         </span>
-        <span v-if="showAvailableAgents" class="reply-eta" v-html="introBody"></span>
+        <span v-if="showAvailableAgents" class="reply-eta" v-html="introBody" :agents="availableAgents"></span>
     </span>
   </header>
 </template>
@@ -67,9 +67,7 @@ export default {
       widgetColor: 'appConfig/getWidgetColor',
     }),
     showAvailableAgents() {
-      if (this.availableAgents(length > 0)) {
-        return;
-      },
+      return this.availableAgents.length > 0 && this.conversationSize < 1;
     },
   },
   methods: {
