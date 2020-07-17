@@ -7,6 +7,7 @@ class RemoveNameFromChannels < ActiveRecord::Migration[6.0]
 
     add_column :channel_web_widgets, :welcome_title, :string
     add_column :channel_web_widgets, :welcome_tagline, :string
+    add_column :channel_web_widgets, :welcome_statusmessageonline, :string
     add_column :channel_web_widgets, :agent_away_message, :string
     purge_orphan_facebook_pages
     remove_avatars_from_channel_to_inbox
