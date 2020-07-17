@@ -45,6 +45,9 @@ import AvailableAgents from 'widget/components/AvailableAgents.vue';
 
 export default {
   name: 'ChatHeader',
+  components: {
+    AvailableAgents,
+  },
   props: {
     avatarUrl: {
       type: String,
@@ -54,11 +57,6 @@ export default {
       type: String,
       default: '',
     },
-  },
-  components: {
-    AvailableAgents,
-  },
-  props: {
     availableAgents: {
       type: Array,
       default: () => [],
