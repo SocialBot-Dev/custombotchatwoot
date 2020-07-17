@@ -127,10 +127,10 @@ export default {
       opacity: .7!important;
       font-size: 11.6px!important;
       line-height: 16px;
-      margin: 7px 2px 0;
+      margin: 10px 3px 8px;
     }
     .social-links {
-      margin: 10px 0 0;
+      margin: 5px 0 0;
       display: block;
       
        span a {
