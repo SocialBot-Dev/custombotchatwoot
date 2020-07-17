@@ -13,6 +13,7 @@
         v-else
         :title="channelConfig.websiteName"
         :avatar-url="channelConfig.avatarUrl"
+        :intro-body="introBody"
         :intro-StatusMessageOnline ="channelConfig.StatusMessageOnline"
       />
     </div>
