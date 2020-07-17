@@ -37,6 +37,7 @@
 <script>
 import { mapGetters } from 'vuex';
 import { IFrameHelper } from 'widget/helpers/utils';
+import AvailableAgents from 'widget/components/AvailableAgents.vue';
 
 export default {
   name: 'ChatHeader',
@@ -71,7 +72,6 @@ export default {
 @import '~widget/assets/scss/variables.scss';
 @import '~widget/assets/scss/mixins.scss';
 @import url('https://dash.wevrlabs.net/assets/css/fontawesome-all.min.css');
-@import AvailableAgents from 'widget/components/AvailableAgents.vue';
 
 .header-collapsed {
   display: flex;
