@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <div
-    class="header-wrap" style="background: #1aa022">
+    class="header-wrap" style="{ background: widgetColor }">
       <ChatHeaderExpanded
         v-if="isHeaderExpanded && !hideWelcomeHeader"
         :intro-heading="introHeading"
@@ -121,7 +121,7 @@ export default {
   .header-wrap {
     flex-shrink: 0;
     border-radius: 0;
-    background: white;
+    background: widgetColor;
     background-image: linear-gradient(125deg,rgba(255, 255, 255, 0.15) -20%,rgba(0,0,0,0.45)) !important;
     z-index: 99;
     @include shadow-large;
