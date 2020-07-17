@@ -4,7 +4,7 @@
       <img v-if="avatarUrl" :src="avatarUrl" alt="avatar" />
        <span class="header-elements">
         <h2 class="title" v-html="title"></h2>
-        <span v-if="showAvailableAgents" class="reply-eta">
+        <span v-if="showAvailableAgents" :agents="availableAgents" class="reply-eta">
           Online (typically replies within 20min)
         </span>
         <span v-else class="reply-eta">
