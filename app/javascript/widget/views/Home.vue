@@ -28,6 +28,7 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
 import Branding from 'widget/components/Branding.vue';
 import ChatFooter from 'widget/components/ChatFooter.vue';
 import ChatHeaderExpanded from 'widget/components/ChatHeaderExpanded.vue';
@@ -78,6 +79,9 @@ export default {
     },
   },
   computed: {
+    ...mapGetters({
+      widgetColor: 'appConfig/getWidgetColor',
+    }),
     isOpen() {
       return this.conversationAttributes.status === 'open';
     },
@@ -126,7 +130,7 @@ export default {
   .header-wrap {
     flex-shrink: 0;
     border-radius: 0;
-    background: widgetColor;
+    // background: widgetColor;
     background-image: linear-gradient(125deg,rgba(255, 255, 255, 0.15) -20%,rgba(0,0,0,0.45)) !important;
     z-index: 99;
     @include shadow-large;
