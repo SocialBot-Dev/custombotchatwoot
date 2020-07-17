@@ -37,9 +37,14 @@
 <script>
 import { mapGetters } from 'vuex';
 import { IFrameHelper } from 'widget/helpers/utils';
+import AvailableAgents from 'widget/components/AvailableAgents.vue';
+import configMixin from '../mixins/configMixin';
 
 export default {
   name: 'ChatHeaderExpanded',
+  components: {
+    AvailableAgents,
+  },
   props: {
     avatarUrl: {
       type: String,
@@ -63,7 +68,7 @@ export default {
       widgetColor: 'appConfig/getWidgetColor',
     }),
     showAvailableAgents() {
-      return this.availableAgents.length > 0;
+      return this.availableAgents.length > 0 && this.conversationSize < 1;
     },
   },
   methods: {
