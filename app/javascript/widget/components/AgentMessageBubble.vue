@@ -125,6 +125,8 @@ export default {
     background: $color-white;
     border-bottom-left-radius: $space-smaller;
     color: #000;
+    text-align: start;
+    unicode-bidi: plaintext;
 
     .link {
       word-break: break-word;
