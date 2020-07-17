@@ -51,10 +51,16 @@ export default {
       default: '',
     },
   },
+  components: {
+    AvailableAgents,
+  },
   computed: {
     ...mapGetters({
       widgetColor: 'appConfig/getWidgetColor',
     }),
+  },
+  showAvailableAgents() {
+      return this.availableAgents.length > 0 && this.conversationSize < 1;
   },
   methods: {
     closeWindow() {
