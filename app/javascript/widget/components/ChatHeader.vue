@@ -4,11 +4,11 @@
       <img v-if="avatarUrl" :src="avatarUrl" alt="avatar" />
        <span class="header-elements">
         <h2 class="title" v-html="title"></h2>
-        <span v-if="showAvailableAgents" class="reply-eta">
-          <i>Online (typically replies within 20min)</i>
+        <span v-if="showStatusMessage" class="reply-eta">
+          Online (typically replies within 20min)
         </span>
         <span v-else class="reply-eta">
-          <i>Currently Offline (We'll respond in a few hours)</i>
+          Currently Offline (We'll respond in a few hours)
         </span>
         <span class="social-links">
             <span class="email">
@@ -66,7 +66,7 @@ export default {
     ...mapGetters({
       widgetColor: 'appConfig/getWidgetColor',
     }),
-    showAvailableAgents() {
+    showStatusMessage() {
       return this.availableAgents.length > 0;
     },
   },
