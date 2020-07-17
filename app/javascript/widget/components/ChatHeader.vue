@@ -4,8 +4,7 @@
       <img v-if="avatarUrl" :src="avatarUrl" alt="avatar" />
        <span class="header-elements">
         <h2 class="title" v-html="title"></h2>
-        <span v-if="showStatusMessage" class="reply-eta">Online (typically replies within 20min)</span>
-        <span v-else class="reply-eta">Currently Offline (We'll respond in a few hours)</span>
+        <span v-if="showStatusMessage" class="reply-eta" v-html="introStatusMessageOnline"></span>
         <span class="social-links">
             <span class="email">
                 <a href="mailto:care@wevrlabs.net" target="_blank" rel="noopener noreferrer">
@@ -57,13 +56,17 @@ export default {
       type: Array,
       default: () => [],
     },
+    introStatusMessageOnline: {
+      type: String,
+      default: '',
+    },
   },
   computed: {
     ...mapGetters({
       widgetColor: 'appConfig/getWidgetColor',
     }),
     showStatusMessage() {
-      return this.availableAgents.length > 0;
+      return this.availableAgents.length > 0 && this.conversationSize < 1;
     },
   },
   methods: {
