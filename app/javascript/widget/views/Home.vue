@@ -7,11 +7,13 @@
         :intro-heading="introHeading"
         :intro-body="introBody"
         :avatar-url="channelConfig.avatarUrl"
+        :intro-StatusMessageOnline ="channelConfig.StatusMessageOnline"
       />
       <ChatHeader
         v-else
         :title="channelConfig.websiteName"
         :avatar-url="channelConfig.avatarUrl"
+        :intro-StatusMessageOnline ="channelConfig.StatusMessageOnline"
       />
     </div>
     <AvailableAgents v-if="showAvailableAgents" :agents="availableAgents" />
