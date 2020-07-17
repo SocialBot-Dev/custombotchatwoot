@@ -58,9 +58,9 @@ export default {
     ...mapGetters({
       widgetColor: 'appConfig/getWidgetColor',
     }),
-  },
-  showAvailableAgents() {
+    showAvailableAgents() {
       return this.availableAgents.length > 0 && this.conversationSize < 1;
+    },
   },
   methods: {
     closeWindow() {
