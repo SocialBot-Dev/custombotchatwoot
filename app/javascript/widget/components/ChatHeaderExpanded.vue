@@ -28,7 +28,7 @@
                 </a>
             </span>
         </span>
-        <span v-if="showAvailableAgents" class="reply-eta" v-html="introBody" :agents="availableAgents"></span>
+        <span class="reply-eta" v-html="introBody"></span>
     </span>
   </header>
 </template>
