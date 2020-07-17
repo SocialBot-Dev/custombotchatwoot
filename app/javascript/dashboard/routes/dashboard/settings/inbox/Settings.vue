@@ -61,6 +61,20 @@
           "
         />
 
+        <woot-input
+          v-if="isAWidgetInbox"
+          v-model.trim="channelStatusMessageOnline"
+          class="medium-9 columns"
+          :label="
+            $t('INBOX_MGMT.ADD.WEBSITE_CHANNEL.CHANNEL_STATUS_MESSAGE_ONLINE.LABEL')
+          "
+          :placeholder="
+            $t(
+              'INBOX_MGMT.ADD.WEBSITE_CHANNEL.CHANNEL_STATUS_MESSAGE_ONLINE.PLACEHOLDER'
+            )
+          "
+        />
+
         <label v-if="isAWidgetInbox" class="medium-9 columns">
           {{ $t('INBOX_MGMT.ADD.WEBSITE_CHANNEL.WIDGET_COLOR.LABEL') }}
           <woot-color-picker v-model="inbox.widget_color" />
@@ -220,6 +234,7 @@ export default {
       channelWebsiteUrl: '',
       channelWelcomeTitle: '',
       channelWelcomeTagline: '',
+      channelStatusMessageOnline: '',
       autoAssignmentOptions: [
         {
           value: true,
@@ -283,6 +298,7 @@ export default {
         this.channelWebsiteUrl = this.inbox.website_url;
         this.channelWelcomeTitle = this.inbox.welcome_title;
         this.channelWelcomeTagline = this.inbox.welcome_tagline;
+        this.channelStatusMessageOnline = this.inbox.welcome_statusmessageonline;
       });
     },
     async fetchAttachedAgents() {
@@ -332,6 +348,7 @@ export default {
             website_url: this.channelWebsiteUrl,
             welcome_title: this.channelWelcomeTitle || '',
             welcome_tagline: this.channelWelcomeTagline || '',
+            welcome_statusmessageonline: this.channelStatusMessageOnline || '',
           },
         };
         if (this.avatarFile) {
