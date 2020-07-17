@@ -107,7 +107,7 @@ export default {
       return this.channelConfig.welcomeTagline;
     },
     introStatusMessageOnline() {
-      return this.channelConfig.StatusMessageOnline;
+      return this.channelConfig.welcomeStatusMessageOnline;
     },
     hideWelcomeHeader() {
       return !(this.introHeading || this.introBody);
