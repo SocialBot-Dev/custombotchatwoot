@@ -7,7 +7,7 @@
         :intro-heading="introHeading"
         :intro-body="introBody"
         :avatar-url="channelConfig.avatarUrl"
-        :intro-StatusMessageOnline ="channelConfig.StatusMessageOnline"
+        :intro-StatusMessageOnline ="introStatusMessageOnline"
       />
       <ChatHeader
         v-else
