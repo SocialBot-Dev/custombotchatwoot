@@ -63,6 +63,10 @@
           "LABEL": "Welcome Tagline",
           "PLACEHOLDER": "We make it simple to connect with us. Ask us anything, or share your feedback."
         },
+        "CHANNEL_STATUS_MESSAGE_ONLINE": {
+          "LABEL": "Online message",
+          "PLACEHOLDER": "Online (typically replies within 20 min)."
+        },
         "CHANNEL_GREETING_MESSAGE": {
           "LABEL": "Channel greeting message",
           "PLACEHOLDER": "Acme Inc typically replies in a few hours."
