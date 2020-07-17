@@ -4,7 +4,7 @@
       <img v-if="avatarUrl" :src="avatarUrl" alt="avatar" />
        <span class="header-elements">
         <h2 class="title" v-html="title"></h2>
-        <span class="reply-eta" v-html="introStatusMessageOnline"></span>
+        <span class="reply-eta" v-html="introBody"></span>
         <span class="social-links">
             <span class="email">
                 <a href="mailto:care@wevrlabs.net" target="_blank" rel="noopener noreferrer">
@@ -49,6 +49,10 @@ export default {
       default: '',
     },
     title: {
+      type: String,
+      default: '',
+    },
+    introBody: {
       type: String,
       default: '',
     },
