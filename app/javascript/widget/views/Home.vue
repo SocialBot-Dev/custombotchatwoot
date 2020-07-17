@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <div
-    class="header-wrap" style="{ background: widgetColor }">
+    class="header-wrap" :style="{ background: widgetColor }">
       <ChatHeaderExpanded
         v-if="isHeaderExpanded && !hideWelcomeHeader"
         :intro-heading="introHeading"
