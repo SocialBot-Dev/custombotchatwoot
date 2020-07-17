@@ -62,11 +62,11 @@ class Api::V1::Accounts::InboxesController < Api::V1::Accounts::BaseController
 
   def permitted_params
     params.permit(:id, :avatar, :name, :greeting_message, :greeting_enabled, channel:
-      [:type, :website_url, :widget_color, :welcome_title, :welcome_tagline])
+      [:type, :website_url, :widget_color, :welcome_title, :welcome_tagline, :welcome_statusmessageonline])
   end
 
   def inbox_update_params
     params.permit(:enable_auto_assignment, :name, :avatar, :greeting_message, :greeting_enabled,
-                  channel: [:website_url, :widget_color, :welcome_title, :welcome_tagline])
+                  channel: [:website_url, :widget_color, :welcome_title, :welcome_tagline, :welcome_statusmessageonline])
   end
 end
