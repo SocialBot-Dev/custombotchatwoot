@@ -63,7 +63,7 @@
 
         <woot-input
           v-if="isAWidgetInbox"
-          v-model.trim="channelStatusMessageOnline"
+          v-model.trim="channelWelcomeStatusMessageOnline"
           class="medium-9 columns"
           :label="
             $t('INBOX_MGMT.ADD.WEBSITE_CHANNEL.CHANNEL_STATUS_MESSAGE_ONLINE.LABEL')
@@ -234,7 +234,7 @@ export default {
       channelWebsiteUrl: '',
       channelWelcomeTitle: '',
       channelWelcomeTagline: '',
-      channelStatusMessageOnline: '',
+      channelWelcomeStatusMessageOnline: '',
       autoAssignmentOptions: [
         {
           value: true,
@@ -348,7 +348,7 @@ export default {
             website_url: this.channelWebsiteUrl,
             welcome_title: this.channelWelcomeTitle || '',
             welcome_tagline: this.channelWelcomeTagline || '',
-            welcome_statusmessageonline: this.channelStatusMessageOnline || '',
+            welcome_statusmessageonline: this.channelWelcomeStatusMessageOnline || '',
           },
         };
         if (this.avatarFile) {
