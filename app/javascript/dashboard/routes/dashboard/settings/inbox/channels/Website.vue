@@ -61,6 +61,20 @@
       </div>
       <div class="medium-12 columns">
         <label>
+          {{ $t('INBOX_MGMT.ADD.WEBSITE_CHANNEL.CHANNEL_STATUS_MESSAGE_ONLINE.LABEL') }}
+          <input
+            v-model.trim="channelStatusMessageOnline"
+            type="text"
+            :placeholder="
+              $t(
+                'INBOX_MGMT.ADD.WEBSITE_CHANNEL.CHANNEL_STATUS_MESSAGE_ONLINE.PLACEHOLDER'
+              )
+            "
+          />
+        </label>
+      </div>
+      <div class="medium-12 columns">
+        <label>
           {{
             $t('INBOX_MGMT.ADD.WEBSITE_CHANNEL.CHANNEL_WELCOME_TAGLINE.LABEL')
           }}
@@ -146,6 +160,7 @@ export default {
       channelWebsiteUrl: '',
       channelWidgetColor: '#009CE0',
       channelWelcomeTitle: '',
+      channelStatusMessageOnline: '',
       channelWelcomeTagline: '',
       greetingEnabled: false,
       greetingMessage: '',
@@ -169,6 +184,7 @@ export default {
             website_url: this.channelWebsiteUrl,
             widget_color: this.channelWidgetColor,
             welcome_title: this.channelWelcomeTitle,
+            welcome_statusmessageonline: this.channelStatusMessageOnline,
             welcome_tagline: this.channelWelcomeTagline,
           },
         }
