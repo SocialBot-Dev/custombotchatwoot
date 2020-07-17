@@ -29,7 +29,7 @@
             </span>
         </span>
         <span v-if="showAvailableAgents" class="reply-eta" v-html="introBody"></span>
-        <span v-else class="reply-eta">We typically reply within 1 hour during business hours</span>
+        <span v-else class="reply-eta">Currently Offline (We'll respond in a few hours)</span>
     </span>
   </header>
 </template>
@@ -48,6 +48,10 @@ export default {
     introHeading: {
       type: String,
       default: '',
+    },
+    availableAgents: {
+      type: Array,
+      default: () => [],
     },
     introBody: {
       type: String,
