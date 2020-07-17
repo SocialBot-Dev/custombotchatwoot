@@ -63,7 +63,7 @@
         <label>
           {{ $t('INBOX_MGMT.ADD.WEBSITE_CHANNEL.CHANNEL_STATUS_MESSAGE_ONLINE.LABEL') }}
           <input
-            v-model.trim="channelStatusMessageOnline"
+            v-model.trim="channelWelcomeStatusMessageOnline"
             type="text"
             :placeholder="
               $t(
@@ -160,7 +160,7 @@ export default {
       channelWebsiteUrl: '',
       channelWidgetColor: '#009CE0',
       channelWelcomeTitle: '',
-      channelStatusMessageOnline: '',
+      channelWelcomeStatusMessageOnline: '',
       channelWelcomeTagline: '',
       greetingEnabled: false,
       greetingMessage: '',
@@ -184,7 +184,7 @@ export default {
             website_url: this.channelWebsiteUrl,
             widget_color: this.channelWidgetColor,
             welcome_title: this.channelWelcomeTitle,
-            welcome_statusmessageonline: this.channelStatusMessageOnline,
+            welcome_statusmessageonline: this.channelWelcomeStatusMessageOnline,
             welcome_tagline: this.channelWelcomeTagline,
           },
         }
