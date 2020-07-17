@@ -67,7 +67,7 @@ export default {
       widgetColor: 'appConfig/getWidgetColor',
     }),
     showAvailableAgents() {
-      return this.availableAgents.length > 0 && this.conversationSize < 1;
+      return this.availableAgents.length == 1;
     },
   },
   methods: {
