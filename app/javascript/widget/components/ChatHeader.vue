@@ -67,7 +67,7 @@ export default {
       widgetColor: 'appConfig/getWidgetColor',
     }),
     showStatusMessage() {
-      if (availableAgents.length > 0) {
+      if (this.availableAgents.length > 0) {
         return;
       },
     },
