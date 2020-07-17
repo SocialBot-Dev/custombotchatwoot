@@ -100,6 +100,9 @@ export default {
     introBody() {
       return this.channelConfig.welcomeTagline;
     },
+    introStatusMessageOnline() {
+      return this.channelConfig.StatusMessageOnline;
+    },
     hideWelcomeHeader() {
       return !(this.introHeading || this.introBody);
     },
