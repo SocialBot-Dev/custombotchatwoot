@@ -7,6 +7,12 @@
     <span class="close close-button" @click="closeWindow"></span>
     <span class="header-elements">
         <span class="social-links">
+            <span class="text-link">
+                <a href="https://dash.wevrlabs.net/knowledgebase.php?utm_source=chat_widget" rel="noopener noreferrer">
+                  <i class="fa fa-book"></i>
+                  <span>Help Center</span>
+                </a>
+            </span>
             <span class="email">
                 <a href="mailto:care@wevrlabs.net" target="_blank" rel="noopener noreferrer">
                     <i class="fas fa-envelope"></i>
@@ -147,8 +153,24 @@ export default {
       margin: 10px 4px 0;
     }
     .social-links {
-      margin: 7px 2px 5px;
+      margin: 7px 0 5px;
       display: block;
+       
+       .text-link a {
+            width: auto !important;
+            height: 15px !important;
+            text-decoration: none;
+            line-height: 1.4 !important;
+            white-space: nowrap;
+            border-radius: 50px !important;
+            font-weight: 300 !important;
+            color: #eaeaea;
+            font-size: 12px;
+            
+            span {
+                margin: 0 1px 0 5px;
+            }
+        }
 
        span a {
           background: rgba(0, 0, 0, 0.25);
