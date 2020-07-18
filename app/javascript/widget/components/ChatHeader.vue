@@ -151,7 +151,7 @@ export default {
           &:hover {
             background: rgba(0, 0, 0, 0.5);
             transition: .2s ease all;
-            transform: translateY(1.5px);
+            transform: translateY(1px);
           }
           
        i:before {
