@@ -7,7 +7,7 @@
         <span class="reply-eta" v-html="introBody"></span>
         <span class="social-links">
             <span class="text-link">
-                <a href="https://dash.wevrlabs.net/knowledgebase.php?utm_source=chat_widget" rel="noopener noreferrer">
+                <a href="https://dash.wevrlabs.net/knowledgebase.php?utm_source=chat_widget" target="_blank" rel="noopener noreferrer">
                   <i class="fa fa-book"></i>
                   <span>Help Center</span>
                 </a>
@@ -139,20 +139,22 @@ export default {
       margin: 5px 0 0;
       display: block;
       
-       .text-link a {
-            width: auto !important;
-            height: 15px !important;
-            text-decoration: none;
-            line-height: 1.4 !important;
-            white-space: nowrap;
-            border-radius: 50px !important;
-            font-weight: 300 !important;
-            color: #eaeaea;
-            font-size: 12px;
-            
-            span {
-                margin: 0 1px 0 5px;
-            }
+       .text-link {
+          display: none;
+            a {
+              width: auto !important;
+              height: 15px !important;
+              text-decoration: none;
+              line-height: 1.4 !important;
+              white-space: nowrap;
+              border-radius: 50px !important;
+              font-weight: 300 !important;
+              color: #eaeaea;
+              font-size: 12px;
+                span {
+                    margin: 0 1px 0 5px;
+                }
+              }
         }
         
        span a {
