@@ -14,5 +14,7 @@
   value: 'https://wevrlabs.net/tos'
 - name: DISPLAY_MANIFEST
   value: true
-- name: FALLBACK_DOMAIN
-  value: wevrlabs.net
+- name: MAILER_INBOUND_EMAIL_DOMAIN
+  value: 
+- name: MAILER_SUPPORT_EMAIL
+  value:
