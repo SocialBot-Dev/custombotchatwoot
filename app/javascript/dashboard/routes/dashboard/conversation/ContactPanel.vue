@@ -202,9 +202,9 @@ export default {
 @import '~dashboard/assets/scss/mixins';
 
 .contact--panel {
-  @include border-normal-left;
+  border-left: 1px solid $color-border-dark2;
 
-  background: white;
+  background: $color-background-dark1;
   font-size: $font-size-small;
   overflow-y: auto;
   overflow: auto;
@@ -223,9 +223,17 @@ export default {
 .contact--profile {
   align-items: center;
   padding: $space-medium 0 $space-one;
-
+    
+  #badge {
+    left: 40px !important;
+    top: 38px !important;
+    width: 28px !important;
+    height: 28px !important;
+    background: $color-background-dark1;
+  }
+    
   .user-thumbnail-box {
-    margin-right: $space-normal;
+    // margin-right: $space-normal;
   }
 }
 
@@ -269,7 +277,7 @@ export default {
 }
 
 .conversation--details {
-  border-top: 1px solid $color-border-light;
+  border-top: 1px solid $color-border-dark2;
   padding: $space-large $space-normal;
 }
 
@@ -289,7 +297,7 @@ export default {
 }
 
 .contact-conversation--panel {
-  border-top: 1px solid $color-border-light;
+  border-top: 1px solid $color-border-dark2;
 }
 
 .contact--mute {

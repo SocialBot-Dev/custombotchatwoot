@@ -1,12 +1,15 @@
 @mixin bubble-with-types {
   @include padding($space-small $space-normal);
   @include margin($zero);
-  background: $color-woot;
+  background: #2f3235;
   border-radius: $space-one;
-  color: $color-white;
-  font-size: $font-size-small;
+  color: #d8d8d8;
+  font-size: $font-size-default;
   font-weight: $font-weight-normal;
   position: relative;
+  box-shadow: 0px 2px 3px 0 rgba(0, 0, 0, 0.07);
+  text-align: start;
+  unicode-bidi: plaintext;
 
   .icon {
     bottom: $space-smaller;
@@ -137,12 +140,13 @@
       @include padding($zero null $zero $space-normal);
       @include round-corner;
       @include margin($space-smaller $space-slab $zero $zero);
-      background-color: $color-background-light;
-      border: 1px solid $color-border;
+      background-color: $color-background-dark4;
+      border: 1px solid $color-background-dark4;
       float: right;
       font-size: $font-size-mini;
       height: $space-medium;
       width: auto;
+      color: $color-dark-gray;
     }
   }
 
@@ -159,9 +163,9 @@
 }
 
 .conversation-wrap {
-  @include background-gray;
+  background: $color-background-dark3;
   @include margin(0);
-  @include border-normal-left;
+  border-left: 1px solid $color-border-dark2;
 
   .current-chat {
     @include flex;
@@ -250,15 +254,17 @@
   &.left {
 
     .bubble {
-      @include border-normal;
-      background: $white;
+      // @include border-normal; // Removed for better looks
+      // background: $color-woot;
+      background: #3b4854;
       border-bottom-left-radius: $space-smaller;
       border-top-left-radius: $space-smaller;
-      color: $color-body;
+      // color: $color-border-light;
+      color: #ccc;
       margin-right: auto;
 
       .time {
-        color: $color-light-gray;
+        color: #7c8e96;
       }
 
       .image .time {
@@ -266,7 +272,8 @@
       }
 
       .link {
-        color: $color-primary-dark;
+        // color: $color-primary-dark;
+        color: #9fc0de;
       }
 
       .file {
@@ -308,9 +315,12 @@
       margin-left: auto;
 
       &.is-private {
-        background: lighten($warning-color, 32%);
-        border: 1px solid lighten($warning-color, 15%);
-        color: $color-heading;
+        // background: lighten($warning-color, 32%);
+        // border: 1px solid lighten($warning-color, 15%);
+        // color: $color-heading;
+        background: #7d672d;
+        border: 1px solid #927837;
+        color: #ffd975;
         padding-right: $space-large;
         position: relative;
 
@@ -323,7 +333,8 @@
         }
 
         .time {
-          color: $color-light-gray;
+          // color: $color-light-gray;
+          color: #ffd975;
         }
       }
     }
@@ -360,13 +371,15 @@
     @include margin($space-small auto);
     @include padding($space-small $space-normal);
     @include flex-align($x: center, $y: null);
-    background: lighten($warning-color, 32%);
-    border: 1px solid lighten($warning-color, 22%);
+    // background: lighten($warning-color, 32%);
+    // border: 1px solid lighten($warning-color, 22%);
+    background: $color-background-dark1;
+    border: 1px solid $color-border-dark2;
     border-radius: $space-smaller;
     font-size: $font-size-small;
 
     p {
-      color: $color-heading;
+      color: $color-light-gray;
       margin-bottom: $zero;
 
       .ion-person {
@@ -390,7 +403,8 @@
     }
 
     .time {
-      color: $medium-gray;
+      // color: $medium-gray;
+      color: $color-light-gray;
       font-size: $font-size-micro;
       margin-left: $space-slab;
     }

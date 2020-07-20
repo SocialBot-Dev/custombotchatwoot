@@ -44,6 +44,8 @@ export default {
   padding: $space-slab $space-normal $space-slab $space-normal;
   text-align: left;
   word-break: break-word;
+  text-align: start;
+  unicode-bidi: plaintext;
 
   > a {
     color: $color-primary;

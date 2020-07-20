@@ -1,16 +1,20 @@
 <template>
   <div class="home">
-    <div class="header-wrap">
+    <div
+    class="header-wrap" :style="{ background: widgetColor }">
       <ChatHeaderExpanded
         v-if="isHeaderExpanded && !hideWelcomeHeader"
         :intro-heading="introHeading"
         :intro-body="introBody"
         :avatar-url="channelConfig.avatarUrl"
+        :intro-StatusMessageOnline ="introStatusMessageOnline"
       />
       <ChatHeader
         v-else
         :title="channelConfig.websiteName"
         :avatar-url="channelConfig.avatarUrl"
+        :intro-body="introBody"
+        :intro-StatusMessageOnline ="channelConfig.StatusMessageOnline"
       />
     </div>
     <AvailableAgents v-if="showAvailableAgents" :agents="availableAgents" />
@@ -25,6 +29,7 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
 import Branding from 'widget/components/Branding.vue';
 import ChatFooter from 'widget/components/ChatFooter.vue';
 import ChatHeaderExpanded from 'widget/components/ChatHeaderExpanded.vue';
@@ -69,8 +74,15 @@ export default {
       type: Number,
       default: 0,
     },
+    widgetColor: {
+      type: String,
+      default: '',
+    },
   },
   computed: {
+    ...mapGetters({
+      widgetColor: 'appConfig/getWidgetColor',
+    }),
     isOpen() {
       return this.conversationAttributes.status === 'open';
     },
@@ -95,6 +107,9 @@ export default {
     introBody() {
       return this.channelConfig.welcomeTagline;
     },
+    introStatusMessageOnline() {
+      return this.channelConfig.welcomeStatusMessageOnline;
+    },
     hideWelcomeHeader() {
       return !(this.introHeading || this.introBody);
     },
@@ -111,12 +126,13 @@ export default {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  background: $color-background;
+  background: #f4f6fb; // $color-background;
 
   .header-wrap {
     flex-shrink: 0;
-    border-radius: $space-normal $space-normal $space-small $space-small;
+    border-radius: 0;
     background: white;
+    background-image: linear-gradient(125deg,rgba(255, 255, 255, 0.15) -20%,rgba(0,0,0,0.45)) !important;
     z-index: 99;
     @include shadow-large;
 
