@@ -19,4 +19,4 @@
 - name: MAILER_SUPPORT_EMAIL
   value:
 - name: CREATE_NEW_ACCOUNT_FROM_DASHBOARD
-  value: false
+  value: true
