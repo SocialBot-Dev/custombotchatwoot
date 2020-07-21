@@ -9,10 +9,12 @@
 // Conversation header - Light BG
 .settings-header {
   @include padding($space-small $space-normal);
-  @include background-white;
+  // @include background-white;
+  background: $color-background-dark1;
   @include flex;
   @include flex-align($x: justify, $y: middle);
-  @include border-normal-bottom;
+  // @include border-normal-bottom;
+  border-bottom: 1px solid $color-border-dark2;
   height: $header-height;
   min-height: $header-height;
 
