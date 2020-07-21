@@ -3,6 +3,7 @@
   select,
   .multiselect > .multiselect__tags {
     @include thin-border(darken(get-color(alert), 25%));
+    background: $color-background-dark1;
   }
 
   .message {
