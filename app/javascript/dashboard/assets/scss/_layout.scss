@@ -42,6 +42,7 @@ body {
 .content-box {
   overflow: auto;
   @include padding($space-normal);
+  background: $color-background-dark1;
 }
 
 .back-button {
