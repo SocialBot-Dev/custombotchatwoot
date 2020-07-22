@@ -1,5 +1,5 @@
 <% @messages.each do |message| %>
-  <p class="message-bubble" style="text-align: start; unicode-bidi: plaintext; padding: 10px 20px; margin: 5px 0 20px 0; background: #efefef; border-radius: 10px; display: inline-table;">
+  <p class="message-bubble" style="font-family: 'Helvetica Neue', Helvetica, Tahoma, Arial, sans-serif;  text-align: start; unicode-bidi: plaintext; padding: 10px 20px; margin: 5px 0 20px 0; background: #efefef; border-radius: 10px; display: inline-table;">
     <% if message.content %>
       <%= message.content.gsub("\n", "<br/>").html_safe %>
     <% end %>
@@ -10,3 +10,12 @@
     <% end %>
   </p>
 <% end %>
+
+<table width="100%" cellpadding="0" cellspacing="0" style="font-family: 'Helvetica Neue',Helvetica,Tahoma,Arial,sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;">
+      <tr style="font-family: 'Helvetica Neue',Helvetica,Tahoma,Arial,sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;">
+          <td class="content-block" style="font-family: 'Helvetica Neue',Helvetica,Tahoma,Arial,sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 0 0 20px;" valign="top">
+              &mdash; WevrLabs Communications Center <br/>
+              <a href="https://wevrlabs.net" style="font-family: 'Helvetica Neue',Helvetica,Tahoma,Arial,sans-serif; box-sizing: border-box; font-size: 12px; vertical-align: top; color: #999; text-align: center; margin: 0; padding: 0 0 20px;" align="center" valign="top"><%= global_config['BRAND_URL'] %></a>
+          </td>
+      </tr>
+</table>
