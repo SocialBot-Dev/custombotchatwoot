@@ -22,6 +22,7 @@ select {
   display: block;
   font-family: $base-font-family;
   font-size: $base-font-size;
+  background: $color-background-dark1;
 }
 
 input,
@@ -30,6 +31,7 @@ textarea {
   display: block;
   font-family: $base-font-family;
   font-size: 16px;
+  background: $color-background-dark1;
 }
 
 [type="color"],
@@ -48,7 +50,8 @@ textarea {
 input:not([type]),
 textarea {
   appearance: none;
-  background-color: $white;
+  // background-color: $white;
+  background-color: $color-background-dark1;
   border: $base-border;
   border-radius: $base-border-radius;
   padding: 0.5em;
