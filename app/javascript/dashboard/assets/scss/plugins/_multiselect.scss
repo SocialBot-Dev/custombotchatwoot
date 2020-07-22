@@ -46,9 +46,10 @@
 
 .multiselect>.multiselect__tags {
   @include margin(0);
-  border: 1px solid $color-border;
+  border: 1px solid $color-border-dark2;
   min-height: 44px;
   padding-top: $zero;
+  background: $color-background-dark1;
 
   .multiselect__tags-wrap {
     display: inline-block;
