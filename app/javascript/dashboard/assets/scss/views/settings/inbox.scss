@@ -1,5 +1,6 @@
 .settings {
   overflow: auto;
+  background: $color-background-dark1;
 
   .page-top-bar {
     @include padding($space-normal $space-two $zero);
