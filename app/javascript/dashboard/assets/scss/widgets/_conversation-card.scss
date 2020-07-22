@@ -145,7 +145,8 @@
 
     .conversation--message {
       font-weight: $font-weight-bold;
-      color: $color-light-gray;
+      // color: $color-light-gray;
+      color: #dadada;
     }
 
     .conversation--user {
