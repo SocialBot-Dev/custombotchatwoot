@@ -53,6 +53,7 @@ textarea {
   // background-color: $white;
   background-color: $color-background-dark1 !important;
   border: $base-border;
+  border-color: #b7b7b7;
   border-radius: $base-border-radius;
   padding: 0.5em;
   transition: border-color $base-duration $base-timing;
@@ -73,6 +74,7 @@ textarea {
 
     &:hover {
       border: $base-border;
+      border-color: #b7b7b7;
     }
   }
 }
