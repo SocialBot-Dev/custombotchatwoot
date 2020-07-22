@@ -35,7 +35,8 @@
 .wizard-box {
   .item {
     @include padding($space-normal $space-normal $space-normal $space-medium);
-    @include background-light;
+    // @include background-light;
+    background: $color-background-dark2;
 
     cursor: pointer;
     position: relative;
@@ -135,7 +136,8 @@
 }
 
 .wizard-body {
-  @include background-white;
+  // @include background-white;
+  background: $color-background-dark2;
   @include padding($space-medium);
   @include border-light;
   @include full-height();
@@ -150,7 +152,8 @@
     @include padding($space-normal $space-normal);
     @include border-light-bottom();
 
-    background: $color-white;
+    // background: $color-white;
+    background: $color-background-dark2;
     cursor: pointer;
     flex-direction: column;
     float: left;
