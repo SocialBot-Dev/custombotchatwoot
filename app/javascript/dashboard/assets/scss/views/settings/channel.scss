@@ -9,11 +9,13 @@
     @include flex;
     @include padding($space-normal $zero);
     @include margin($zero);
-    @include background-white;
+    // @include background-white;
+    app/javascript/dashboard/assets/scss/views/settings/channel.scss
     @include border-light;
+    
     flex-direction: column;
     cursor: pointer;
-    border-right-color: $color-white;
+    border-color: $color-border-dark2;
     transition: all 0.200s ease-in;
 
     &:last-child {
