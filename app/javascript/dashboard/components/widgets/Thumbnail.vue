@@ -161,6 +161,9 @@ export default {
   .user-online-status {
     border-radius: 50%;
     bottom: $space-micro;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .2);
+    border: .15rem solid #fff;
+    transform: scale(1.5);
 
     &:after {
       content: ' ';
@@ -169,6 +172,7 @@ export default {
 
   .user-online-status--online {
     background: $success-color;
+    background-image: linear-gradient(-180deg, #8FE8FE 0%, #00B7FF 100%);
   }
 
   .user-online-status--busy {
