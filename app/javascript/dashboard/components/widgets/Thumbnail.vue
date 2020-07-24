@@ -153,7 +153,7 @@ export default {
     
     background: #e6e6e6;
     border-radius: 50%;
-    padding: 2px;
+    padding: 3px;
     // width: 18px !important;
     // height: auto !important;
   }
