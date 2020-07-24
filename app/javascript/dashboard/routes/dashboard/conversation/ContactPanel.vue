@@ -258,6 +258,7 @@ export default {
 
   font-weight: $font-weight-bold;
   font-size: $font-size-default;
+  color: $color-light-gray;
 }
 
 .contact--email {
