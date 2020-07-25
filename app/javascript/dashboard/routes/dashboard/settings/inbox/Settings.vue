@@ -364,7 +364,7 @@ export default {
 @import '~dashboard/assets/scss/mixins';
 
 .settings {
-  background: $color-white;
+  background: $color-background-dark1;
 
   .settings--content {
     &:last-child {
