@@ -89,6 +89,11 @@
     @include padding($space-one);
     background: $color-background-dark1;
     margin-bottom: 0;
+    overflow: hidden;
+    position: relative;
+    text-overflow: ellipsis;
+    max-width: 10rem;
+    white-space: nowrap;
   }
 }
 
