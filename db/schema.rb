@@ -177,6 +177,7 @@ ActiveRecord::Schema.define(version: 2020_07_19_171437) do
     t.string "website_token"
     t.string "widget_color", default: "#1f93ff"
     t.string "welcome_title"
+    t.string "welcome_statusmessageonline"
     t.string "welcome_tagline"
     t.index ["website_token"], name: "index_channel_web_widgets_on_website_token", unique: true
   end

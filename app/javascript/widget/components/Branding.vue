@@ -1,16 +1,10 @@
 <template>
   <a
-    class="branding"
-    :href="`${globalConfig.widgetBrandURL}?utm_source=widget_branding`"
-    rel="noreferrer noopener nofollow"
-    target="_blank"
-  >
-    <img
-      :alt="globalConfig.installationName"
-      :src="globalConfig.logoThumbnail"
-    />
+    class="branding" href="https://dash.wevrlabs.net/knowledgebase.php?utm_source=chat_widget" target="_blank">
+    <!-- <img alt="WevrLabs Hosting" :src="globalConfig.logoThumbnail" /> -->
+    <i class="fa fa-book"></i>
     <span>
-      {{ useInstallationName($t('POWERED_BY'), globalConfig.installationName) }}
+      Explore Help Articles
     </span>
   </a>
 </template>
@@ -45,17 +39,22 @@ export default {
   text-decoration: none;
   padding: $space-normal 0 $space-slab;
   cursor: pointer;
+  transition: .3s ease all;
 
   &:hover {
     filter: grayscale(0);
     opacity: 1;
     color: $color-gray;
+    transition: .3s ease all;
   }
 
   img {
     margin-right: $space-smaller;
-    max-width: $space-slab;
-    max-height: $space-slab;
+    /*max-width: $space-slab;*/
+    max-height: 1.8rem;
+  }
+  i.fas, i.fa {
+    margin: 0 4px;
   }
 }
 </style>

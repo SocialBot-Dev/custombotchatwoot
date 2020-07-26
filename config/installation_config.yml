@@ -3,20 +3,20 @@
 - name: LOGO
   value: '/brand-assets/logo.svg'
 - name: INSTALLATION_NAME
-  value: 'Chatwoot'
+  value: 'WevrLabs Hosting'
 - name: BRAND_URL
-  value: 'https://www.chatwoot.com'
+  value: 'https://wevrlabs.net'
 - name: WIDGET_BRAND_URL
-  value: 'https://www.chatwoot.com'
+  value: 'https://wevrlabs.net'
 - name: TERMS_URL
-  value: 'https://www.chatwoot.com/terms-of-service'
+  value: 'https://wevrlabs.net/tos'
 - name: PRIVACY_URL
-  value: 'https://www.chatwoot.com/privacy-policy'
+  value: 'https://wevrlabs.net/tos'
 - name: DISPLAY_MANIFEST
   value: true
 - name: MAILER_INBOUND_EMAIL_DOMAIN
-  value:
+  value: 'sandboxa54b342eefc74ea497ae292bdb78ca21.mailgun.org'
 - name: MAILER_SUPPORT_EMAIL
-  value:
+  value: 'care@wevrlabs.net'
 - name: CREATE_NEW_ACCOUNT_FROM_DASHBOARD
-  value: false
+  value: true

@@ -46,9 +46,10 @@
 
 .multiselect>.multiselect__tags {
   @include margin(0);
-  border: 1px solid $color-border;
+  border: 1px solid $color-border-dark2;
   min-height: 44px;
   padding-top: $zero;
+  background: $color-background-dark1;
 
   .multiselect__tags-wrap {
     display: inline-block;
@@ -64,7 +65,7 @@
 
   .multiselect__tag {
     $vertical-space: $space-smaller + $space-micro;
-    background: $color-background;
+    background: $color-background-dark1;
     color: $color-heading;
     margin-top: $space-smaller;
     padding: $vertical-space $space-medium $vertical-space $space-one;
@@ -79,14 +80,20 @@
     @include ghost-input;
     @include padding($zero);
     font-size: $font-size-small;
-
+    background: $color-background-dark1;
+    color: $color-dark-gray;
     margin-bottom: $zero;
   }
 
   .multiselect__single {
     @include padding($space-one);
-
+    background: $color-background-dark1;
     margin-bottom: 0;
+    overflow: hidden;
+    position: relative;
+    text-overflow: ellipsis;
+    max-width: 10rem;
+    white-space: nowrap;
   }
 }
 

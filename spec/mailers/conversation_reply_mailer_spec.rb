@@ -20,7 +20,7 @@ RSpec.describe ConversationReplyMailer, type: :mailer do
       let(:mail) { described_class.reply_with_summary(message.conversation, Time.zone.now).deliver_now }
 
       it 'renders the subject' do
-        expect(mail.subject).to eq("[##{message.conversation.display_id}] New messages on this conversation")
+        expect(mail.subject).to eq("New messages on conversation [##{message.conversation.display_id}] ")
       end
 
       it 'not have private notes' do
@@ -51,7 +51,7 @@ RSpec.describe ConversationReplyMailer, type: :mailer do
       end
 
       it 'renders the subject' do
-        expect(mail.subject).to eq("[##{message_2.conversation.display_id}] New messages on this conversation")
+        expect(mail.subject).to eq("New messages on conversation [##{message_2.conversation.display_id}]")
       end
 
       it 'not have private notes' do
@@ -108,13 +108,13 @@ RSpec.describe ConversationReplyMailer, type: :mailer do
 
       it 'sets reply to email to be based on the domain' do
         reply_to_email = "reply+#{message.conversation.uuid}@#{conversation.account.domain}"
-        reply_to = "#{agent.name} <#{reply_to_email}>"
+        reply_to = "#{agent.name} #{inbox.name} <#{reply_to_email}>"
         expect(mail['REPLY-TO'].value).to eq(reply_to)
         expect(mail.reply_to).to eq([reply_to_email])
       end
 
       it 'sets the from email to be the support email' do
-        expect(mail['FROM'].value).to eq("#{agent.name} <#{conversation.account.support_email}>")
+        expect(mail['FROM'].value).to eq("#{agent.name} #{inbox.name} <#{conversation.account.support_email}>")
         expect(mail.from).to eq([conversation.account.support_email])
       end
 

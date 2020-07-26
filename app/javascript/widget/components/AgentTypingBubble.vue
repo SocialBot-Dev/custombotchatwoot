@@ -5,7 +5,7 @@
       <div class="message-wrap">
         <div class="typing-bubble chat-bubble agent">
           <img
-            src="~widget/assets/images/typing.gif"
+            src="~widget/assets/images/loading.svg"
             alt="Agent is typing a message"
           />
         </div>

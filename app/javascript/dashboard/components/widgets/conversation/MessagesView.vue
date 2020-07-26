@@ -45,7 +45,7 @@
           {{ typingUserNames }}
           <img
             class="gif"
-            src="~dashboard/assets/images/typing.gif"
+            src="~dashboard/assets/images/loading.svg"
             alt="Someone is typing"
           />
         </div>

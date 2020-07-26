@@ -150,11 +150,20 @@ export default {
     position: absolute;
     right: $zero;
     width: $space-slab;
+    
+    background: #e6e6e6;
+    border-radius: 50%;
+    padding: 3px;
+    // width: 18px !important;
+    // height: auto !important;
   }
 
   .user-online-status {
     border-radius: 50%;
     bottom: $space-micro;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .2);
+    border: .15rem solid #fff;
+    transform: scale(1.5);
 
     &:after {
       content: ' ';
@@ -163,6 +172,7 @@ export default {
 
   .user-online-status--online {
     background: $success-color;
+    background-image: linear-gradient(-180deg,#31ef25,#0e9005);
   }
 
   .user-online-status--busy {
