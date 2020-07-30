@@ -8,16 +8,16 @@
     <span class="header-elements">
         <span class="social-links">
             <span class="text-link">
-                <a href="https://dash.wevrlabs.net/knowledgebase.php?utm_source=chat_widget" target="_blank" rel="noopener noreferrer">
+                <a href="https://dash.wevrlabs.net/knowledgebase.php?utm_source=chat_widget" target="_blank">
                   <i class="fa fa-book"></i>
                   <span>Help Center</span>
                 </a>
             </span>
-            <span class="email">
+            /* <span class="email">
                 <a href="mailto:care@wevrlabs.net" target="_blank" rel="noopener noreferrer">
                     <i class="fas fa-envelope"></i>
                 </a>
-            </span>
+            </span> */
             <span class="whatsapp">
                 <a href="https://wa.me/19712514959" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-whatsapp"></i>
