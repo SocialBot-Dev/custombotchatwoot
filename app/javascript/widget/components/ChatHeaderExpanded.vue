@@ -13,11 +13,11 @@
                   <span>Help Center</span>
                 </a>
             </span>
-            /* <span class="email">
+            <!-- <span class="email">
                 <a href="mailto:care@wevrlabs.net" target="_blank" rel="noopener noreferrer">
                     <i class="fas fa-envelope"></i>
                 </a>
-            </span> */
+            </span> -->
             <span class="whatsapp">
                 <a href="https://wa.me/19712514959" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-whatsapp"></i>
