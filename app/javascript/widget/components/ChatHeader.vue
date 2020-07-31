@@ -140,7 +140,6 @@ export default {
       display: block;
       
        .text-link {
-          display: none;
             a {
               width: auto !important;
               height: 15px !important;
