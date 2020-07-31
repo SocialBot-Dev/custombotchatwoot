@@ -100,7 +100,6 @@ export default {
   position: relative;
   
   .title-logo {
-    display: flex;
     
     .logo {
       width: 55px;
