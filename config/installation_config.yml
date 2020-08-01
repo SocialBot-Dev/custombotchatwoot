@@ -20,3 +20,5 @@
   value: 'care@wevrlabs.net'
 - name: CREATE_NEW_ACCOUNT_FROM_DASHBOARD
   value: true
+- name: BRAND_NAME
+  value: 'WevrLabs'
