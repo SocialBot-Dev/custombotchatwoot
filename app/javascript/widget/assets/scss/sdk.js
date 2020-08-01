@@ -81,7 +81,7 @@ export const SDK_CSS = ` .woot-widget-holder {
 .woot-widget-bubble img {
   width: 34px;
   height: 34px;
-  margin: 16px 16px;
+  margin: 17px 15px;
 }
 
 .woot--close:hover {
