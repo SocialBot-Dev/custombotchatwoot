@@ -59,7 +59,7 @@ class Notification < ApplicationRecord
   # TODO: move to a data presenter
   def push_message_title
     if notification_type == 'conversation_creation'
-      return "#{primary_actor.contact.name} [#{primary_actor.inbox.name}-#{primary_actor.display_id}]"
+      return "#{primary_actor.contact.name} [#{primary_actor.inbox.name}]"
     end
 
     return "Conversation #{primary_actor.display_id} has been assigned to you." if notification_type == 'conversation_assignment'
