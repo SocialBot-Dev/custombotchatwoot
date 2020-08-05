@@ -179,6 +179,7 @@ ActiveRecord::Schema.define(version: 2020_08_02_170002) do
     t.string "welcome_title"
     t.string "welcome_statusmessageonline"
     t.string "welcome_tagline"
+    t.integer "feature_flags", default: 3, null: false
     t.index ["website_token"], name: "index_channel_web_widgets_on_website_token", unique: true
   end
 
