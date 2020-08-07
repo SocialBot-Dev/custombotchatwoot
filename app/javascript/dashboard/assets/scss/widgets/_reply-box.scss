@@ -28,10 +28,10 @@
       border-top: $space-small solid $color-white;
       left: 0;
 
-      max-height: 14rem;
+      max-height: 15rem;
       overflow: auto;
       position: absolute;
-      width: 24rem;
+      width: 100%;
       z-index: 100;
 
       .active a {
