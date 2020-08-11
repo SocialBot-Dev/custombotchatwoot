@@ -3,7 +3,7 @@
 - name: LOGO
   value: '/brand-assets/logo.svg'
 - name: INSTALLATION_NAME
-  value: 'WevrLabs Hosting'
+  value: 'WevrLabs Communication Center'
 - name: BRAND_URL
   value: 'https://wevrlabs.net'
 - name: WIDGET_BRAND_URL
@@ -21,4 +21,4 @@
 - name: CREATE_NEW_ACCOUNT_FROM_DASHBOARD
   value: true
 - name: BRAND_NAME
-  value: 'WevrLabs'
+  value: 'WevrLabs Communication Center'
