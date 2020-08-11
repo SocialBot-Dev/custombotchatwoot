@@ -1,6 +1,7 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: ENV.fetch('MAILER_SENDER_EMAIL', 'noreply@wevrlabs.net')
   include ActionView::Helpers::SanitizeHelper
+
+  default from: ENV.fetch('MAILER_SENDER_EMAIL', 'noreply@wevrlabs.net')
   before_action { ensure_current_account(params.try(:[], :account)) }
   layout 'mailer/base'
   # Fetch template from Database if available
