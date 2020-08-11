@@ -11,7 +11,6 @@ export const SDK_CSS = ` .woot-widget-holder {
   /*transition-duration: 0.5s, 0.5s;*/
   transition: .4s ease all;
 }
-
 .woot-widget-holder.has-unread-view {
   box-shadow: none !important;
   -moz-box-shadow: none !important;
@@ -23,13 +22,11 @@ export const SDK_CSS = ` .woot-widget-holder {
   border-radius: 0 !important;
   bottom: 94px;
 }
-
 .woot-widget-holder iframe {
   width: 100% !important;
   height: 100% !important;
   border: 0;
 }
-
 .woot-widget-bubble {
   z-index: 2147483000 !important;
   /* -moz-box-shadow: 0 8px 24px rgba(0, 0, 0, .16) !important;
@@ -51,25 +48,20 @@ export const SDK_CSS = ` .woot-widget-holder {
 .woot-widget-bubble:active {
   transform: scale(.9);
 }
-
 .woot-widget-bubble.woot-elements--left {
   left: 30px;
 }
-
 .woot-widget-bubble.woot-elements--right {
   right: 30px;
 }
-
 @media only screen and (min-width: 667px) {
   .woot-widget-holder.woot-elements--left {
     left: 30px;
   }
-
   .woot-widget-holder.woot-elements--right {
     right: 30px;
   }
 }
-
 .woot-widget-bubble:hover {
   background: #1f93ff;
   /*-moz-box-shadow: 0 8px 32px rgba(0, 0, 0, .4) !important;
@@ -77,17 +69,14 @@ export const SDK_CSS = ` .woot-widget-holder {
   -webkit-box-shadow: 0 8px 32px rgba(0, 0, 0, .4) !important;
   box-shadow: 0 8px 32px rgba(0, 0, 0, .4) !important;*/
 }
-
 .woot-widget-bubble img {
   width: 34px;
   height: 34px;
   margin: 17px 15px;
 }
-
 .woot--close:hover {
   opacity: 1;
 }
-
 .woot--close:before, .woot--close:after {
   position: absolute;
   left: 32px;
@@ -97,23 +86,18 @@ export const SDK_CSS = ` .woot-widget-holder {
   width: 2px;
   background-color: white;
 }
-
 .woot--close:before {
   transform: rotate(45deg);
 }
-
 .woot--close:after {
   transform: rotate(-45deg);
 }
-
-
 .woot--hide {
   visibility: hidden !important;
   z-index: -1 !important;
   opacity: 0;
   /*bottom: -20000px;*/
 }
-
 @media only screen and (max-width: 667px) {
   .woot-widget-holder {
     top: 0;
@@ -121,7 +105,6 @@ export const SDK_CSS = ` .woot-widget-holder {
     height: 100%;
     width: 100%;
   }
-
   .woot-widget-bubble.woot--close {
     visibility: hidden !important;
     z-index: -1 !important;
@@ -129,7 +112,6 @@ export const SDK_CSS = ` .woot-widget-holder {
     bottom: 60px;
   }
 }
-
 @media only screen and (min-width: 667px) {
   .woot-widget-holder {
     bottom: 104px;
