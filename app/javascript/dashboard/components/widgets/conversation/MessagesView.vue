@@ -298,7 +298,7 @@ export default {
   }
 
   &.messenger-policy--banner {
-    background: var(--r-400);
+    background: #581d1c;
   }
 
   .banner-close-button {
