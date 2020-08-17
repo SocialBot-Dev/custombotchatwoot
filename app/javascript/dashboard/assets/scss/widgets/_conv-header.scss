@@ -18,7 +18,7 @@
     @include margin(0 $space-small);
     border: 1px solid $color-border-dark2;
     border-radius: $space-smaller;
-    margin-right: $space-normal;
+    margin-right: var(--space-small);
 
     &::before {
       color: $medium-gray;

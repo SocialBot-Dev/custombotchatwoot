@@ -56,3 +56,4 @@ en:
       email_input_box_message_body: "Enter your email"
     reply:
       email_subject: "New messages on conversation"
+      transcript_subject: "Conversation Transcript"
