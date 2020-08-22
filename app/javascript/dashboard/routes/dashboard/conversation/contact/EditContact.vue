@@ -36,7 +36,7 @@
             {{ $t('EDIT_CONTACT.FORM.BIO.LABEL') }}
             <textarea
               v-model.trim="description"
-              type="text"
+              type="textarea"
               :placeholder="$t('EDIT_CONTACT.FORM.BIO.PLACEHOLDER')"
               @input="$v.description.$touch"
             />
