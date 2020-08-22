@@ -1,63 +1,9 @@
 <template>
   <div class="medium-3 bg-white contact--panel">
-    <div class="contact--profile">
-      <span class="close-button" @click="onPanelToggle">
-        <i class="ion-chevron-right" />
-      </span>
-      <div class="contact--info">
-        <thumbnail
-          :src="contact.thumbnail"
-          size="64px"
-          :badge="channelType"
-          :username="contact.name"
-          :status="contact.availability_status"
-        />
-        <div class="contact--details">
-          <div class="contact--name">
-            {{ contact.name }}
-          </div>
-          <a
-            v-if="contact.email"
-            :href="`mailto:${contact.email}`"
-            class="contact--email"
-          >
-            {{ contact.email }}
-          </a>
-          <a
-            v-if="contact.phone_number"
-            :href="`tel:${contact.phone_number}`"
-            class="contact--email"
-          >
-            {{ contact.phone_number }}
-          </a>
-
-          <div
-            v-if="
-              contact.additional_attributes &&
-                contact.additional_attributes.screen_name
-            "
-            class="contact--location"
-          >
-            {{ `@${contact.additional_attributes.screen_name}` }}
-          </div>
-          <div class="contact--location">
-            {{ contact.location }}
-          </div>
-        </div>
-      </div>
-      <div v-if="contact.bio" class="contact--bio">
-        {{ contact.bio }}
-      </div>
-      <div
-        v-if="
-          contact.additional_attributes &&
-            contact.additional_attributes.description
-        "
-        class="contact--bio"
-      >
-        {{ contact.additional_attributes.description }}
-      </div>
-    </div>
+    <span class="close-button" @click="onPanelToggle">
+      <i class="ion-chevron-right" />
+    </span>
+    <contact-info :contact="contact" :channel-type="channelType" />
     <div v-if="browser.browser_name" class="conversation--details">
       <contact-details-item
         v-if="browser.browser_name"
@@ -99,9 +45,9 @@
 
 <script>
 import { mapGetters } from 'vuex';
-import Thumbnail from 'dashboard/components/widgets/Thumbnail.vue';
 import ContactConversations from './ContactConversations.vue';
 import ContactDetailsItem from './ContactDetailsItem.vue';
+import ContactInfo from './contact/ContactInfo';
 import ConversationLabels from './labels/LabelBox.vue';
 import ContactCustomAttributes from './ContactCustomAttributes';
 
@@ -110,8 +56,8 @@ export default {
     ContactCustomAttributes,
     ContactConversations,
     ContactDetailsItem,
+    ContactInfo,
     ConversationLabels,
-    Thumbnail,
   },
   props: {
     conversationId: {
@@ -210,7 +156,11 @@ export default {
   overflow-y: auto;
   overflow: auto;
   position: relative;
-  padding: $space-normal;
+  padding: $space-one;
+
+  i {
+    margin-right: $space-smaller;
+  }
 }
 
 .close-button {
