@@ -1,5 +1,5 @@
 <template>
-  <div class="user-thumbnail-box" style="height: 78px; width: 78px;">
+  <div class="user-thumbnail-box" :style="{ height: size, width: size }">
     <img
       v-if="!imgError && Boolean(src)"
       id="image"
@@ -156,7 +156,7 @@ export default {
     height: $space-slab;
     position: absolute;
     right: $zero;
-    width: 26px;
+    width: $space-slab;
     
     background: #e6e6e6;
     border-radius: 50%;

@@ -201,6 +201,16 @@ export default {
   display: flex;
   flex-direction: column;
   text-align: center;
+
+    .user-thumbnail-box {
+      height: 78px !important;
+      width: 78px !important;
+
+        .badge {
+          width: 26px !important;
+          height: 26px !important;
+        }
+    }
 }
 
 .contact--name {
