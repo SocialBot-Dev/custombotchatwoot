@@ -51,9 +51,18 @@ export default {
 
 .custom-attribute--row {
   margin-bottom: var(--space-small);
+  
+   div {
+    border: 1px solid #333;
+    padding: 5px 15px;
+    display: inline-flex;
+  }
 }
 
 .custom-attribute--row__attribute {
   font-weight: 500;
+  margin: 0 0 8px 0px;
+  background: #31302a;
+  color: #8e8e8e;
 }
 </style>
