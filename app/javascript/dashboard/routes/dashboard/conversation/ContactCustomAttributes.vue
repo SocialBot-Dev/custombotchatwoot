@@ -45,7 +45,7 @@ export default {
 
 <style scoped>
 .custom-attributes--panel {
-  border-top: 1px solid var(--b-100);
+  border-top: $color-border-dark2;
   padding: var(--space-normal);
 }
 
