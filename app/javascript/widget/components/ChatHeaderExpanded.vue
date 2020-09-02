@@ -111,8 +111,8 @@ export default {
     }
     .title {
       color: $color-white;
-      font-size: $font-size-mega;
-      font-weight: $font-weight-normal;
+      font-size: 2.7rem;
+      font-weight: 500;
       margin-bottom: 0;
       margin-top: 1rem;
       margin-right: 1.5rem;

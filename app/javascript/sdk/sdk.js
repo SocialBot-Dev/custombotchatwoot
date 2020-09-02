@@ -54,6 +54,42 @@ export const SDK_CSS = ` .woot-widget-holder {
 .woot-widget-bubble.woot-elements--right {
   right: 30px;
 }
+
+.woot-widget-bubble .bubble-tooltip .tooltip-text {
+    display: inline-flex;
+    position: relative;
+    padding: 10px 10px 10px 0;
+    font-size: 1.5rem;
+}
+.woot-widget-bubble .bubble-tooltip img {
+    display: inline-flex;
+    width: 12%;
+    height: auto;
+    margin: 10px 15px;
+}
+.woot-widget-bubble .bubble-tooltip {
+    display: flex;
+    position: relative;
+    background: #fff;
+    width: 300% !important;
+    vertical-align: middle;
+    align-content: center;
+    align-items: center;
+    right: 205px;
+    top: -58px;
+    border-radius: 3px;
+    box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.15);
+}
+.woot-elements--right.woot-widget-bubble.woot--close .bubble-tooltip {
+    top: 9px !important;
+    width: 230% !important;
+    right: 160px;
+}
+.woot-elements--right.woot-widget-bubble.woot--close .bubble-tooltip img {
+    margin: 10px;
+    width: 15%;
+}
+
 @media only screen and (min-width: 667px) {
   .woot-widget-holder.woot-elements--left {
     left: 30px;
