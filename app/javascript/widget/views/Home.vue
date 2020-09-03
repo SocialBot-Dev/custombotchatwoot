@@ -7,14 +7,14 @@
         :intro-heading="introHeading"
         :intro-body="introBody"
         :avatar-url="channelConfig.avatarUrl"
-        :intro-StatusMessageOnline ="introStatusMessageOnline"
+        :show-popout-button="showPopoutButton"
       />
       <ChatHeader
         v-else
         :title="channelConfig.websiteName"
         :avatar-url="channelConfig.avatarUrl"
         :intro-body="introBody"
-        :intro-StatusMessageOnline ="channelConfig.StatusMessageOnline"
+        :show-popout-button="showPopoutButton"
       />
     </div>
     <AvailableAgents v-if="showAvailableAgents" :agents="availableAgents" />
@@ -77,6 +77,9 @@ export default {
     widgetColor: {
       type: String,
       default: '',
+    showPopoutButton: {
+      type: Boolean,
+      default: false,
     },
   },
   computed: {
@@ -106,9 +109,6 @@ export default {
     },
     introBody() {
       return this.channelConfig.welcomeTagline;
-    },
-    introStatusMessageOnline() {
-      return this.channelConfig.welcomeStatusMessageOnline;
     },
     hideWelcomeHeader() {
       return !(this.introHeading || this.introBody);

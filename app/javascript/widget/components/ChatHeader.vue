@@ -35,19 +35,17 @@
         </span>
     </span>
     </div>
-    <span class="close-button" @click="closeWindow"></span>
+    <header-actions :show-popout-button="showPopoutButton" />
   </header>
 </template>
 
 <script>
 import { mapGetters } from 'vuex';
-import { IFrameHelper } from 'widget/helpers/utils';
-import AvailableAgents from 'widget/components/AvailableAgents.vue';
-
+import HeaderActions from './HeaderActions';
 export default {
   name: 'ChatHeader',
   components: {
-    AvailableAgents,
+    HeaderActions,
   },
   props: {
     avatarUrl: {
@@ -69,6 +67,9 @@ export default {
     introStatusMessageOnline: {
       type: String,
       default: '',
+    showPopoutButton: {
+      type: Boolean,
+      default: false,
     },
   },
   computed: {
@@ -77,15 +78,6 @@ export default {
     }),
     showStatusMessage() {
       return this.availableAgents.length == 0;
-    },
-  },
-  methods: {
-    closeWindow() {
-      if (IFrameHelper.isIFrame()) {
-        IFrameHelper.sendMessage({
-          event: 'toggleBubble',
-        });
-      }
     },
   },
 };

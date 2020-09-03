@@ -2,6 +2,7 @@
   <header class="header-expanded">
     <div class="title-logo">
       <img v-if="avatarUrl" class="logo" :src="avatarUrl" />
+      <header-actions :show-popout-button="showPopoutButton" />
       <h2 class="title" v-html="introHeading"></h2>
      </div>
     <span class="close close-button" @click="closeWindow"></span>
@@ -41,14 +42,11 @@
 
 <script>
 import { mapGetters } from 'vuex';
-import { IFrameHelper } from 'widget/helpers/utils';
-import AvailableAgents from 'widget/components/AvailableAgents.vue';
-import configMixin from '../mixins/configMixin';
-
+import HeaderActions from './HeaderActions';
 export default {
   name: 'ChatHeaderExpanded',
   components: {
-    AvailableAgents,
+    HeaderActions,
   },
   props: {
     avatarUrl: {
@@ -67,6 +65,10 @@ export default {
       type: String,
       default: '',
     },
+    showPopoutButton: {
+      type: Boolean,
+      default: false,
+    },
   },
   computed: {
     ...mapGetters({
@@ -74,15 +76,6 @@ export default {
     }),
     showAvailableAgents() {
       return this.availableAgents.length > 0 && this.conversationSize < 1;
-    },
-  },
-  methods: {
-    closeWindow() {
-      if (IFrameHelper.isIFrame()) {
-        IFrameHelper.sendMessage({
-          event: 'toggleBubble',
-        });
-      }
     },
   },
 };
@@ -216,5 +209,11 @@ export default {
       }
     }
   }
+}
+
+.header--row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
 }
 </style>

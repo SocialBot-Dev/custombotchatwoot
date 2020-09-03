@@ -22,3 +22,5 @@
   value: true
 - name: BRAND_NAME
   value: 'WevrLabs Communication Center'
+- name: 'INSTALLATION_EVENTS_WEBHOOK_URL'
+  value: 
