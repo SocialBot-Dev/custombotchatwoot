@@ -67,6 +67,7 @@ export default {
     introStatusMessageOnline: {
       type: String,
       default: '',
+    },
     showPopoutButton: {
       type: Boolean,
       default: false,
