@@ -77,6 +77,7 @@ export default {
     widgetColor: {
       type: String,
       default: '',
+    },
     showPopoutButton: {
       type: Boolean,
       default: false,
@@ -114,6 +115,7 @@ export default {
       return !(this.introHeading || this.introBody);
     },
   },
+};
 </script>
 
 <style scoped lang="scss">
