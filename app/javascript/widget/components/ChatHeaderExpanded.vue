@@ -6,6 +6,10 @@
       <span class="header-elements">
         <h2 class="title" v-html="introHeading"></h2>
         <span class="reply-eta" v-html="introBody"></span>
+      </span>
+     </div>
+    <span class="close close-button" @click="closeWindow"></span>
+    <span class="header-elements">
         <span class="social-links">
             <span class="text-link">
                 <a href="https://dash.wevrlabs.net/knowledgebase.php?utm_source=chat_widget" target="_blank">
@@ -33,11 +37,18 @@
                     <i class="fab fa-twitter"></i>
                 </a>
             </span>
+            <span class="linkedin">
+                <a href="https://www.linkedin.com/company/wevrlabs" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </span>
+            <span class="instagram">
+                <a href="https://instagram.com/WevrLabs" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </span>
         </span>
-        <span class="reply-eta" v-html="introBody"></span>
-      </span>
-     </div>
-    <span class="close close-button" @click="closeWindow"></span>
+        <span class="reply-eta">Welcome to our communication channel for sales questions and billing related inquiries! For technical issues, it is better to open a support ticket from your account.</span>
   </header>
 </template>
 
