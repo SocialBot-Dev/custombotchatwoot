@@ -114,7 +114,6 @@ export default {
       return !(this.introHeading || this.introBody);
     },
   },
-};
 </script>
 
 <style scoped lang="scss">
