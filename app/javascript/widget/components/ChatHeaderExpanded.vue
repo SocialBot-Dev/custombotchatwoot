@@ -3,10 +3,9 @@
     <div class="title-logo">
       <img v-if="avatarUrl" class="logo" :src="avatarUrl" />
       <header-actions :show-popout-button="showPopoutButton" />
-      <h2 class="title" v-html="introHeading"></h2>
-     </div>
-    <span class="close close-button" @click="closeWindow"></span>
-    <span class="header-elements">
+      <span class="header-elements">
+        <h2 class="title" v-html="introHeading"></h2>
+        <span class="reply-eta" v-html="introBody"></span>
         <span class="social-links">
             <span class="text-link">
                 <a href="https://dash.wevrlabs.net/knowledgebase.php?utm_source=chat_widget" target="_blank">
@@ -36,7 +35,9 @@
             </span>
         </span>
         <span class="reply-eta" v-html="introBody"></span>
-    </span>
+      </span>
+     </div>
+    <span class="close close-button" @click="closeWindow"></span>
   </header>
 </template>
 
@@ -106,10 +107,10 @@ export default {
       color: $color-white;
       font-size: 2.7rem;
       font-weight: 500;
-      margin-bottom: 0;
+      /* margin-bottom: 0;
       margin-top: 1rem;
       margin-right: 1.5rem;
-      margin-left: 1.5rem;
+      margin-left: 1.5rem; */
     }
   }
 
@@ -127,9 +128,18 @@ export default {
   }
   
   .header-elements {
-    margin: 0 2px;
+    margin: 5px 10px 0;
     display: block;
     
+    .title {
+      color: $color-white;
+      font-size: 2.7rem;
+      font-weight: 500;
+      /* margin-bottom: 0;
+      margin-top: 1rem;
+      margin-right: 1.5rem;
+      margin-left: 1.5rem; */
+    }
     .body {
       color: $color-white;
       font-size: 1.8rem;
