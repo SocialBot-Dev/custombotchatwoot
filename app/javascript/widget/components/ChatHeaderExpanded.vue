@@ -9,7 +9,7 @@
       <header-actions :show-popout-button="showPopoutButton" />
      </div>
     <span class="close close-button" @click="closeWindow"></span>
-    <span class="header-elements">
+    <span class="header-elements header-elements-2">
         <span class="social-links">
             <span class="text-link">
                 <a href="#" target="_blank">
