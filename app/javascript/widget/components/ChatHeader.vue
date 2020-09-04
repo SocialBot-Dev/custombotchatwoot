@@ -6,7 +6,7 @@
         <h2 class="title" v-html="title"></h2>
         <span class="reply-eta" v-html="introBody"></span>
         <span class="social-links">
-            <span v-if="isIframe" class="text-link">
+            <span class="text-link">
                 <a href="#" target="_blank">
                   <i class="fa fa-comment-lines"></i>
                   <span>Expand Chat</span>
@@ -79,9 +79,6 @@ export default {
     }),
     showStatusMessage() {
       return this.availableAgents.length == 0;
-    },
-    isIframe() {
-      return IFrameHelper.isIFrame();
     },
   },
 };

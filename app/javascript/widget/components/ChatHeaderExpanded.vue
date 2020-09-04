@@ -11,7 +11,7 @@
     <span class="close close-button" @click="closeWindow"></span>
     <span class="header-elements header-elements-2">
         <span class="social-links">
-            <span v-if="isIframe" class="text-link">
+            <span class="text-link">
                 <a href="#" target="_blank">
                   <i class="fa fa-comment-lines"></i>
                   <span>Expand Chat</span>
@@ -88,9 +88,6 @@ export default {
     }),
     showAvailableAgents() {
       return this.availableAgents.length > 0 && this.conversationSize < 1;
-    },
-    isIframe() {
-      return IFrameHelper.isIFrame();
     },
   },
 };
