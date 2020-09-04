@@ -92,7 +92,7 @@ export default {
 .header-collapsed {
   display: flex;
   justify-content: space-between;
-  padding: $space-two $space-medium;
+  padding: $space-two;
   width: 100%;
   box-sizing: border-box;
   color: $color-white;
