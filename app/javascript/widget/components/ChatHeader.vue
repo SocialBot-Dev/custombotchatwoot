@@ -9,7 +9,7 @@
             <span class="text-link">
                 <a href="#" target="_blank">
                   <span>Follow Us</span>
-                  <i class="fa fa-caret-right"></i>
+                  <i class="fa fa-hand-point-right"></i>
                 </a>
             </span>
             <!-- <span class="email">
