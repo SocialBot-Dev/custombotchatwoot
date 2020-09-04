@@ -12,9 +12,9 @@
     <span class="header-elements">
         <span class="social-links">
             <span class="text-link">
-                <a href="https://dash.wevrlabs.net/knowledgebase.php?utm_source=chat_widget" target="_blank">
-                  <i class="fa fa-book"></i>
-                  <span>Help Center</span>
+                <a href="#" target="_blank">
+                  <span>Follow Us</span>
+                  <i class="fa fa-caret-right"></i>
                 </a>
             </span>
             <!-- <span class="email">
@@ -138,6 +138,9 @@ export default {
     background-color: #9babbd !important;
   }
   
+  header-elements.header-elements-2 {
+    margin: 0 !important;
+  }
   .header-elements {
     margin: 5px 10px 0;
     display: block;
@@ -182,7 +185,9 @@ export default {
               color: #eaeaea;
               font-size: 12px;
                 span {
-                    margin: 0 1px 0 5px;
+                    margin: 0 7px 0 2px;
+                    top: -1px;
+                    position: relative;
                 }
               }
         }

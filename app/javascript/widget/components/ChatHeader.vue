@@ -1,5 +1,5 @@
 <template>
-  <header class="header-collapsed" @click="closeWindow">
+  <header class="header-collapsed"">
     <div class="header-branding">
       <img v-if="avatarUrl" :src="avatarUrl" alt="avatar" />
        <span class="header-elements">
@@ -7,9 +7,9 @@
         <span class="reply-eta" v-html="introBody"></span>
         <span class="social-links">
             <span class="text-link">
-                <a href="https://dash.wevrlabs.net/knowledgebase.php?utm_source=chat_widget" target="_blank">
-                  <i class="fa fa-book"></i>
-                  <span>Help Center</span>
+                <a href="#" target="_blank">
+                  <span>Follow Us</span>
+                  <i class="fa fa-caret-right"></i>
                 </a>
             </span>
             <!-- <span class="email">
@@ -113,6 +113,9 @@ export default {
     }
   }
   
+  header-elements.header-elements-2 {
+    margin: 0 !important;
+  }
   .header-elements {
     .title {
       font-size: $font-size-large;
@@ -144,7 +147,9 @@ export default {
               color: #eaeaea;
               font-size: 12px;
                 span {
-                    margin: 0 1px 0 5px;
+                    margin: 0 7px 0 2px;
+                    top: -1px;
+                    position: relative;
                 }
               }
         }
