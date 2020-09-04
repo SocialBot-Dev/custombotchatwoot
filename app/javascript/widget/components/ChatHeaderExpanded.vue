@@ -2,11 +2,11 @@
   <header class="header-expanded">
     <div class="title-logo">
       <img v-if="avatarUrl" class="logo" :src="avatarUrl" />
-      <header-actions :show-popout-button="showPopoutButton" />
       <span class="header-elements">
         <h2 class="title" v-html="introHeading"></h2>
         <span class="reply-eta" v-html="introBody"></span>
       </span>
+      <header-actions :show-popout-button="showPopoutButton" />
      </div>
     <span class="close close-button" @click="closeWindow"></span>
     <span class="header-elements">

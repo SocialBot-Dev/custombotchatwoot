@@ -70,7 +70,8 @@ export default {
   align-items: center;
 
   button {
-    margin-left: $space-normal;
+    margin-left: 3.6rem;
+    margin-top: -30px;
   }
 
   span {
@@ -83,7 +84,7 @@ export default {
   }
 
   .close-button {
-    display: none;
+    /* display: none;*/
   }
 }
 </style>
