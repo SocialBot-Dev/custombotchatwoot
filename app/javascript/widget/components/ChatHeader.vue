@@ -9,7 +9,7 @@
             <span class="text-link">
                 <a>
                 	<span>Follow Us</span>
-                  	<i class="fa fa-comment-lines"></i>
+                  	<i class="fa fa-caret-right"></i>
                 </a>
             </span>
             <!-- <span class="email">
