@@ -8,8 +8,8 @@
         <span class="social-links">
             <span class="text-link">
                 <a href="#" target="_blank">
-                  <span>Follow Us</span>
-                  <i class="fa fa-hand-point-right"></i>
+                  <i class="fa fa-comment-lines"></i>
+                  <span>Expand Chat</span>
                 </a>
             </span>
             <!-- <span class="email">
@@ -147,7 +147,7 @@ export default {
               color: #eaeaea;
               font-size: 12px;
                 span {
-                    margin: 0 7px 0 2px;
+                    margin: 0 0 0 5px;
                     top: -1px;
                     position: relative;
                 }
@@ -201,7 +201,7 @@ export default {
   img {
     height: 55px;
     width: 55px;
-    margin-right: 1.4rem;
+    margin-right: 1rem;
     box-shadow: 0 20px 30px -13px rgba(0, 0, 0, 0.55);
   }
 
