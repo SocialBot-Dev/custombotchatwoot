@@ -12,9 +12,9 @@
     <span class="header-elements header-elements-2">
         <span class="social-links">
             <span class="text-link">
-                <a href="#" target="_blank">
-                  <i class="fa fa-comment-lines"></i>
-                  <span>Expand Chat</span>
+                <a>
+                  <span>Follow Us</span>
+                    <i class="fa fa-comment-lines"></i>
                 </a>
             </span>
             <!-- <span class="email">
@@ -185,7 +185,7 @@ export default {
               color: #eaeaea;
               font-size: 12px;
                 span {
-                    margin: 0 0 0 5px;
+                    margin: 0 7px 0 5px;
                     top: -1px;
                     position: relative;
                 }
