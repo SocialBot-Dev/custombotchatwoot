@@ -180,6 +180,7 @@ export default {
   .user-online-status--online {
     background: $success-color;
     background-image: linear-gradient(-180deg,#31ef25,#0e9005);
+    top: 0;
   }
 
   .user-online-status--busy {
