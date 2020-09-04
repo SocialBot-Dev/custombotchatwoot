@@ -113,7 +113,7 @@ export default {
     }
   }
   
-  header-elements.header-elements-2 {
+  .header-elements.header-elements-2 {
     margin: 0 !important;
   }
   .header-elements {
