@@ -113,9 +113,9 @@ export const IFrameHelper = {
       dispatchWindowEvent(EVENT_NAME);
     },
 
-    // setBubbleLabel(message) {
-    //   setBubbleText(window.$chatwoot.launcherTitle || message.label);
-    // },
+    setBubbleLabel(message) {
+      setBubbleText(window.$chatwoot.launcherTitle || message.label);
+    },
 
     toggleBubble: () => {
       onBubbleClick();

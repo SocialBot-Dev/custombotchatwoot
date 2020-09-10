@@ -65,7 +65,8 @@ class Notification < ApplicationRecord
 
     return "Conversation #{primary_actor.display_id} has been assigned to you." if notification_type == 'conversation_assignment'
 
-    return "New message in your assigned conversation [ID -#{primary_actor.display_id}]." if notification_type == 'assigned_conversation_new_message'
+    # return "New message in your assigned conversation [ID -#{primary_actor.display_id}]." if notification_type == 'assigned_conversation_new_message'
+    return "#{primary_actor.contact.name} [#{primary_actor.inbox.name}]" if notification_type == 'assigned_conversation_new_message'
 
     ''
   end

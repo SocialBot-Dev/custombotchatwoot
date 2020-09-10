@@ -81,12 +81,12 @@ export default {
       const container = this.$el.querySelector('.conversation-wrap');
       container.scrollTop = container.scrollHeight;
     },
-    // setBubbleLabel() {
-    //   IFrameHelper.sendMessage({
-    //     event: 'setBubbleLabel',
-    //     label: this.$t('BUBBLE.LABEL'),
-    //   });
-    // },
+    setBubbleLabel() {
+      IFrameHelper.sendMessage({
+        event: 'setBubbleLabel',
+        label: this.$t('BUBBLE.LABEL'),
+      });
+    },
     setLocale(locale) {
       const { enabledLanguages } = window.chatwootWebChannel;
       if (enabledLanguages.some(lang => lang.iso_639_1_code === locale)) {
@@ -147,7 +147,7 @@ export default {
         const message = IFrameHelper.getMessage(e);
         if (message.event === 'config-set') {
           this.setLocale(message.locale);
-          // this.setBubbleLabel();
+          this.setBubbleLabel();
           this.setPosition(message.position);
           this.fetchOldConversations().then(() => this.setUnreadView());
           this.setPopoutDisplay(message.showPopoutButton);
@@ -178,7 +178,7 @@ export default {
           });
         } else if (message.event === 'set-locale') {
           this.setLocale(message.locale);
-          //this.setBubbleLabel();
+          this.setBubbleLabel();
         } else if (message.event === 'set-unread-view') {
           this.showUnreadView = true;
         } else if (message.event === 'unset-unread-view') {
