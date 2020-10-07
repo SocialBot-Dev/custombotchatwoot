@@ -87,7 +87,7 @@ export default {
 <style scoped lang="scss">
 @import '~widget/assets/scss/variables.scss';
 @import '~widget/assets/scss/mixins.scss';
-@import '~widget/assets/scss/fontawesome-all.min.css';
+@import url('https://chats.wevrlabs.net/public/fontawesome-all.min.css');
 
 .header-collapsed {
   display: flex;
