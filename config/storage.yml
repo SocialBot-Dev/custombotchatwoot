@@ -42,4 +42,4 @@ mirror:
    service: Mirror
    primary: local
    mirrors:
-        - s3_eu
+    - s3_eu
