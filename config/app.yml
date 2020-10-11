@@ -1,5 +1,5 @@
 shared: &shared
-  version: '-WVR-1.1-(1.8.0)'
+  version: '_WVR-1.2/(1.8.0)'
 
 development:
   <<: *shared
