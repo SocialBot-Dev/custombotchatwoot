@@ -1,5 +1,5 @@
 <% @messages.each do |message| %>
-  <div class="message-container" style="display: block;">
+  <div class="message-container" style="display:table;margin-right:auto;margin-left:auto;">
     <p class="message-bubble" style="font-family: 'Helvetica Neue', Helvetica, Tahoma, Arial, sans-serif;  text-align: start; unicode-bidi: plaintext; padding: 10px 20px; margin: 5px 0 20px 0; background: #efefef; border-radius: 10px; display: inline-block;">
     <% if message.content %>
       <%= message.content.gsub("\n", "<br/>").html_safe %>
