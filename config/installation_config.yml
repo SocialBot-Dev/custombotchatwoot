@@ -19,7 +19,7 @@
 - name: MAILER_SUPPORT_EMAIL
   value: 'care@wevrlabs.net'
 - name: CREATE_NEW_ACCOUNT_FROM_DASHBOARD
-  value: true
+  value: false
 - name: BRAND_NAME
   value: 'WevrLabs Communication Center'
 - name: 'INSTALLATION_EVENTS_WEBHOOK_URL'
