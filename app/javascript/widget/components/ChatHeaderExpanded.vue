@@ -1,6 +1,6 @@
 <template>
-  <header class="header-expanded">
-    <div class="title-logo">
+  <header class="header-expanded py-8 px-6 bg-white relative box-border w-full">
+    <div class="flex justify-between items-start">
       <img v-if="avatarUrl" class="logo" :src="avatarUrl" />
       <span class="header-elements">
         <h2 class="title" v-html="introHeading"></h2>
@@ -49,6 +49,12 @@
             </span>
         </span>
         <span class="reply-eta">Welcome to our communication channel for sales questions and billing related inquiries! For technical issues, it is better to open a support ticket from your account.</span>
+    </div>
+    <h2
+      class="text-slate-900 mt-6 text-4xl mb-3 font-normal"
+      v-html="introHeading"
+    />
+    <p class="text-lg text-black-700 leading-normal" v-html="introBody" />
   </header>
 </template>
 
@@ -94,7 +100,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import '~widget/assets/scss/variables.scss';
 @import '~widget/assets/scss/mixins.scss';
 @import url('https://chats.wevrlabs.net/fontawesome-all.min.css');
 
@@ -241,5 +246,11 @@ export default {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  @include shadow-large;
+
+  .logo {
+    width: 56px;
+    height: 56px;
+  }
 }
 </style>

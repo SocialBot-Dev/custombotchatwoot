@@ -12,13 +12,31 @@
 <script>
 import { mapGetters } from 'vuex';
 import globalConfigMixin from 'shared/mixins/globalConfigMixin';
+import { BUS_EVENTS } from 'shared/constants/busEvents';
 
 export default {
   mixins: [globalConfigMixin],
+  data() {
+    return {
+      referrerHost: '',
+    };
+  },
   computed: {
     ...mapGetters({
       globalConfig: 'globalConfig/get',
     }),
+    brandRedirectURL() {
+      const baseURL = `${this.globalConfig.widgetBrandURL}?utm_source=widget_branding`;
+      if (this.referrerHost) {
+        return `${baseURL}&utm_referrer=${this.referrerHost}`;
+      }
+      return baseURL;
+    },
+  },
+  mounted() {
+    bus.$on(BUS_EVENTS.SET_REFERRER_HOST, referrerHost => {
+      this.referrerHost = referrerHost;
+    });
   },
 };
 </script>
@@ -29,13 +47,25 @@ export default {
 
 .branding {
   align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: $space-normal 0 $space-slab;
+  text-align: center;
+
+  img {
+    margin-right: $space-smaller;
+    max-width: $space-slab;
+    max-height: $space-slab;
+  }
+}
+
+.branding--link {
   color: $color-light-gray;
-  opacity: 0.9;
+  cursor: pointer;
   display: flex;
   filter: grayscale(1);
   font-size: $font-size-small;
-  justify-content: center;
-  text-align: center;
+  opacity: 0.9;
   text-decoration: none;
   padding: $space-normal 0 $space-slab;
   cursor: pointer;
@@ -56,5 +86,9 @@ export default {
   i.fas, i.fa {
     margin: 0 4px;
   }
+}
+
+.brand--alternative {
+  padding: $space-slab;
 }
 </style>

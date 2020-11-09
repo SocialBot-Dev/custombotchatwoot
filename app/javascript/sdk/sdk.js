@@ -44,6 +44,27 @@ export const SDK_CSS = ` .woot-widget-holder {
   width: 64px !important;
   height: 64px !important;
   transition: .25s ease all;
+  z-index: 2147483000 !important;
+  user-select: none;
+}
+
+.woot-widget-bubble.woot-widget--expanded {
+  bottom: 24px;
+  display: flex;
+  height: 48px !important;
+  width: auto !important;
+}
+
+.woot-widget-bubble.woot-widget--expanded div {
+  align-items: center;
+  color: #fff;
+  display: flex;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  justify-content: center;
+  padding-right: 20px;
+  width: auto !important;
 }
 .woot-widget-bubble:active {
   transform: scale(.9);
