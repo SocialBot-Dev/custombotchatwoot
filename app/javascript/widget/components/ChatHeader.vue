@@ -5,19 +5,19 @@
        <span class="header-elements">
          <div style="display: inline-flex;">
           <h2 class="title" v-html="title"></h2>
-            <div
-              :class="
-                `status-view--badge rounded-full leading-4 ${
-                  availableAgents.length ? 'bg-green-500' : 'bg-orange-500'
-                }`
-              "
-              :title="
-                `${
-                  availableAgents.length ? 'Online' : 'Currenlty Away'
-                }`
-              "
-            />
-          </div>
+          <div
+            :class="
+              `status-view--badge rounded-full leading-4 ${
+                availableAgents.length ? 'bg-green-500' : 'bg-orange-500'
+              }`
+            "
+            :title="
+              `${
+                availableAgents.length ? 'Online' : 'Currenlty Away'
+              }`
+            "
+          />
+        </div>
         <span class="reply-eta">Availability from 9am to 9pm (GMT +2)</span>
         <span class="social-links">
             <span class="text-link">
