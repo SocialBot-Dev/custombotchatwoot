@@ -135,10 +135,13 @@ export default {
       margin: 5px 0 0;
       display: block;
       
+        .whatsapp {
+            display: none;
+        }
        .text-link {
             a {
               width: auto !important;
-              height: 15px !important;
+              height: 30px !important;
               text-decoration: none;
               line-height: 1.4 !important;
               white-space: nowrap;
