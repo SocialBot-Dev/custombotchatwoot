@@ -1,6 +1,6 @@
 <template>
-  <header class="header-expanded py-8 px-6 bg-white relative box-border w-full">
-    <div class="flex justify-between items-start">
+  <header class="header-expanded">
+    <div class="title-logo">
       <img v-if="avatarUrl" class="logo" :src="avatarUrl" />
       <span class="header-elements">
         <h2 class="title" v-html="introHeading"></h2>
@@ -49,12 +49,6 @@
             </span>
         </span>
         <span class="reply-eta">Welcome to our communication channel for sales questions and billing related inquiries! For technical issues, it is better to open a support ticket from your account.</span>
-    </div>
-    <h2
-      class="text-slate-900 mt-6 text-4xl mb-3 font-normal"
-      v-html="introHeading"
-    />
-    <p class="text-lg text-black-700 leading-normal" v-html="introBody" />
   </header>
 </template>
 
@@ -121,7 +115,7 @@ export default {
       box-shadow: 0 20px 30px -13px rgba(0,0,0,.55);
     }
     .title {
-      color: #fff;
+      color: $color-white;
       font-size: 2.7rem;
       font-weight: 500;
       /* margin-bottom: 0;
@@ -152,7 +146,7 @@ export default {
     display: block;
     
     .title {
-      color: #fff;
+      color: $color-white;
       font-size: 2.7rem;
       font-weight: 500;
       /* margin-bottom: 0;
@@ -161,14 +155,14 @@ export default {
       margin-left: 1.5rem; */
     }
     .body {
-      color: #fff;
+      color: $color-white;
       font-size: 1.8rem;
       line-height: 1.5;
       opacity: .8;
       margin: 0 5px;
     }
     .reply-eta {
-      color: #fff;
+      color: $color-white;
       display: block;
       opacity: .7!important;
       font-size: 11.6px!important;
@@ -247,11 +241,5 @@ export default {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  @include shadow-large;
-
-  .logo {
-    width: 56px;
-    height: 56px;
-  }
 }
 </style>
