@@ -3,14 +3,21 @@
     <div class="header-branding">
       <img v-if="avatarUrl" :src="avatarUrl" alt="avatar" />
        <span class="header-elements">
-        <h2 class="title" v-html="title"></h2>
-          <div
-            :class="
-              `status-view--badge rounded-full leading-4 ${
-                availableAgents.length ? 'bg-green-500' : 'hidden'
-              }`
-            "
-          />
+         <div style="display: inline-flex;">
+          <h2 class="title" v-html="title"></h2>
+            <div
+              :class="
+                `status-view--badge rounded-full leading-4 ${
+                  availableAgents.length ? 'bg-green-500' : 'bg-orange-500'
+                }`
+              "
+              :title="
+                `status-view--badge rounded-full leading-4 ${
+                  availableAgents.length ? 'Online' : 'Currenlty Away'
+                }`
+              "
+            />
+          <div>
         <span class="reply-eta">Availability: 9AM - 5PM (GMT +2)</span>
         <span class="social-links">
             <span class="text-link">
@@ -232,7 +239,9 @@ export default {
   }
 }
 .status-view--badge {
-  height: $space-small;
-  width: $space-small;
+    height: 0.8rem;
+    width: 0.8rem;
+    margin-top: 8px;
+    margin-left: 10px;
 }
 </style>
