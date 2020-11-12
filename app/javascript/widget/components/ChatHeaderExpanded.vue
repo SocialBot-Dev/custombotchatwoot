@@ -104,9 +104,6 @@ export default {
     ...mapGetters({
       widgetColor: 'appConfig/getWidgetColor',
     }),
-    showAvailableAgents() {
-      return this.availableAgents.length == 0;
-    },
   },
 };
 </script>
