@@ -3,7 +3,21 @@
     <div class="title-logo">
       <img v-if="avatarUrl" class="logo" :src="avatarUrl" />
       <span class="header-elements">
-        <h2 class="title" v-html="introHeading"></h2>
+        <div style="display: inline-flex;">
+          <h2 class="title" v-html="introHeading"></h2>
+            <div
+              :class="
+                `status-view--badge rounded-full leading-4 ${
+                  availableAgents.length ? 'bg-green-500' : 'bg-orange-500'
+                }`
+              "
+              :title="
+                `${
+                  availableAgents.length ? 'Online' : 'Currenlty Away'
+                }`
+              "
+            />
+          </div>
         <span class="reply-eta" v-html="introBody"></span>
       </span>
       <header-actions :show-popout-button="showPopoutButton" />
@@ -241,5 +255,14 @@ export default {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+}
+.status-view--badge {
+    height: 0.8rem;
+    width: 0.8rem;
+    margin-top: 8px;
+    margin-left: 10px;
+}
+.status-view--badge.bg-orange-500 {
+  background-color: #ffbc00;
 }
 </style>
