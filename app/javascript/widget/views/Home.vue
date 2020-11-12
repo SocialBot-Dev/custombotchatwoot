@@ -65,7 +65,6 @@ import ConversationWrap from 'widget/components/ConversationWrap.vue';
 import configMixin from '../mixins/configMixin';
 import TeamAvailability from 'widget/components/TeamAvailability';
 import Spinner from 'shared/components/Spinner.vue';
-import { mapGetters } from 'vuex';
 
 export default {
   name: 'Home',
