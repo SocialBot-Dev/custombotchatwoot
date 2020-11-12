@@ -4,7 +4,7 @@
       <img v-if="avatarUrl" class="logo" :src="avatarUrl" />
       <span class="header-elements">
         <h2 class="title" v-html="introHeading"></h2>
-        <span class="reply-eta" v-html="introBody"></span>
+        <!-- <span class="reply-eta" v-html="introBody"></span> -->
       </span>
       <header-actions :show-popout-button="showPopoutButton" />
      </div>
@@ -116,7 +116,7 @@ export default {
     }
     .title {
       color: $color-white;
-      font-size: 2.7rem;
+      font-size: 1.5rem;
       font-weight: 500;
       /* margin-bottom: 0;
       margin-top: 1rem;
