@@ -70,12 +70,14 @@
 import { mapGetters } from 'vuex';
 import HeaderActions from './HeaderActions';
 import teamAvailabilityMixin from 'widget/mixins/teamAvailabilityMixin';
+import configMixin from 'widget/mixins/configMixin';
 
 export default {
   name: 'ChatHeaderExpanded',
   components: {
     HeaderActions,
   },
+  mixins: [configMixin, teamAvailabilityMixin],
   props: {
     avatarUrl: {
       type: String,
