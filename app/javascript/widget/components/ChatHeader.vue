@@ -83,10 +83,6 @@ export default {
       type: String,
       default: '',
     },
-    availableAgents: {
-      type: Array,
-      default: () => [],
-    },
     introStatusMessageOnline: {
       type: String,
       default: '',
