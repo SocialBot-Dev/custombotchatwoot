@@ -18,7 +18,7 @@
               "
             />
           </div>
-        <span class="reply-eta">Availability from 9am to 5pm (GMT +2)</span>
+        <span class="reply-eta">Availability from 9am to 9pm (GMT +2)</span>
         <span class="social-links">
             <span class="text-link">
                 <a>
