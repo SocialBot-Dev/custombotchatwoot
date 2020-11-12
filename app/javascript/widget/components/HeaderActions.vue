@@ -67,7 +67,7 @@ export default {
 
 .actions {
   button {
-    margin-left: 3.6rem;
+    margin-left: 1.6rem;
     margin-top: -30px;
   }
 

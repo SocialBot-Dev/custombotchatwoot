@@ -16,12 +16,12 @@
                 <a href="mailto:care@wevrlabs.net" target="_blank" rel="noopener noreferrer">
                     <i class="fas fa-envelope"></i>
                 </a>
-            </span> -->
+            </span>
             <span class="whatsapp">
                 <a href="https://wa.me/19712514959" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-whatsapp"></i>
                 </a>
-            </span>
+            </span> -->
             <span class="facebook">
                 <a href="https://fb.me/WevrLabs" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-facebook-f"></i>
@@ -30,6 +30,11 @@
             <span class="twitter">
                 <a href="https://twitter.com/WevrLabs" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-twitter"></i>
+                </a>
+            </span>
+            <span class="linkedin">
+                <a href="https://www.linkedin.com/company/wevrlabs" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-linkedin"></i>
                 </a>
             </span>
         </span>
@@ -136,7 +141,6 @@ export default {
       display: block;
       
         .whatsapp {
-            display: none;
         }
        .text-link {
             a {
