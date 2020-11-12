@@ -129,7 +129,7 @@ export default {
 
 .contacts-table-wrap {
   @include scroll-on-hover;
-  background: var(--color-background-light);
+  // background: var(--color-background-light);
   flex: 1 1;
   height: 100%;
 }
@@ -138,8 +138,8 @@ export default {
   margin-top: -1px;
 
   > thead {
-    border-bottom: 1px solid var(--color-border);
-    background: white;
+    border-bottom: 1px solid var(--color-border-dark2);
+    // background: white;
 
     > th:first-child {
       padding-left: var(--space-medium);
@@ -152,11 +152,11 @@ export default {
       cursor: pointer;
 
       &:hover {
-        background: var(--b-50);
+        background: #000;
       }
 
       &.is-active {
-        background: var(--b-100);
+        background: #000;
       }
 
       > td {
