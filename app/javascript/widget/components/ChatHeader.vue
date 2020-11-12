@@ -12,7 +12,7 @@
                 }`
               "
               :title="
-                `status-view--badge rounded-full leading-4 ${
+                `${
                   availableAgents.length ? 'Online' : 'Currenlty Away'
                 }`
               "
@@ -243,5 +243,8 @@ export default {
     width: 0.8rem;
     margin-top: 8px;
     margin-left: 10px;
+}
+.status-view--badge.bg-orange-500 {
+  background-color: #ffbc00;
 }
 </style>
