@@ -120,7 +120,7 @@ export default {
       box-shadow: 0 20px 30px -13px rgba(0,0,0,.55);
     }
     .title {
-      color: $color-white;
+      color: #fff;
       font-size: 2.7rem;
       font-weight: 500;
       /* margin-bottom: 0;
@@ -151,7 +151,7 @@ export default {
     display: block;
     
     .title {
-      color: $color-white;
+      color: #fff;
       font-size: 2.7rem;
       font-weight: 500;
       /* margin-bottom: 0;
@@ -160,14 +160,14 @@ export default {
       margin-left: 1.5rem; */
     }
     .body {
-      color: $color-white;
+      color: #fff;
       font-size: 1.8rem;
       line-height: 1.5;
       opacity: .8;
       margin: 0 5px;
     }
     .reply-eta {
-      color: $color-white;
+      color: #fff;
       display: block;
       opacity: .7!important;
       font-size: 11.6px!important;
