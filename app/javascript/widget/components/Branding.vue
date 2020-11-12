@@ -1,6 +1,6 @@
 <template>
   <a
-    class="branding" href="https://dash.wevrlabs.net/knowledgebase.php?utm_source=chat_widget" target="_blank">
+    class="branding branding--link" href="https://dash.wevrlabs.net/knowledgebase.php?utm_source=chat_widget" target="_blank">
     <!-- <img alt="WevrLabs Hosting" :src="globalConfig.logoThumbnail" /> -->
     <i class="fa fa-book"></i>
     <span>
