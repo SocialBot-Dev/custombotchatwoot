@@ -254,4 +254,6 @@ export default {
   height: $space-small;
   width: $space-small;
 }
+}
+}
 </style>
