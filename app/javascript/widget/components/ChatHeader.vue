@@ -162,8 +162,8 @@ export default {
           display: inline-block;
           border-radius: 50%;
           padding: 8px 9px;
-          width: 14px;
-          height: 15px;
+          width: 35px;
+          height: 32px;
           text-align: center;
           transition: .2s ease all;
           margin-right: 5px;
