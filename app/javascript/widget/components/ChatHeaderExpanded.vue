@@ -22,27 +22,27 @@
                     <i class="fas fa-envelope"></i>
                 </a>
             </span> -->
-            <span class="whatsapp">
+            <span class="whatsapp" title="send us on WhatsApp">
                 <a href="https://wa.me/19712514959" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-whatsapp"></i>
                 </a>
             </span>
-            <span class="facebook">
+            <span class="facebook" title="like our page on Facebook">
                 <a href="https://fb.me/WevrLabs" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-facebook-f"></i>
                 </a>
             </span>
-            <span class="twitter">
+            <span class="twitter" title="follow us on Twitter">
                 <a href="https://twitter.com/WevrLabs" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-twitter"></i>
                 </a>
             </span>
-            <span class="linkedin">
+            <span class="linkedin" title="follow us on LinkedIn">
                 <a href="https://www.linkedin.com/company/wevrlabs" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-linkedin"></i>
                 </a>
             </span>
-            <span class="instagram">
+            <span class="instagram" title="follow us on Instagram">
                 <a href="https://instagram.com/WevrLabs" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-instagram"></i>
                 </a>

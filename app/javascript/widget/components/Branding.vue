@@ -60,7 +60,7 @@ export default {
 }
 
 .branding--link {
-  color: $color-light-gray;
+  color: #6f6f6f;
   cursor: pointer;
   display: flex;
   filter: grayscale(1);
@@ -74,7 +74,7 @@ export default {
   &:hover {
     filter: grayscale(0);
     opacity: 1;
-    color: $color-gray;
+    color: #232323;
     transition: .3s ease all;
   }
 
