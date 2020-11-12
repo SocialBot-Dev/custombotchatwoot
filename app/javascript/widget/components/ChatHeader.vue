@@ -3,15 +3,16 @@
     <div class="header-branding">
       <img v-if="avatarUrl" :src="avatarUrl" alt="avatar" />
        <span class="header-elements">
-        <h2 class="title" v-html="title"></h2>
-        <div
+        <h2 class="title" v-html="title">
+          <div
             :class="
               `status-view--badge rounded-full leading-4 ${
                 availableAgents.length ? 'bg-green-500' : 'hidden'
               }`
             "
           />
-        <span class="reply-eta" v-html="introBody"></span>
+        </h2>
+        <span class="reply-eta">Availability: 9AM - 5PM (GMT +2)</span>
         <span class="social-links">
             <span class="text-link">
                 <a>
