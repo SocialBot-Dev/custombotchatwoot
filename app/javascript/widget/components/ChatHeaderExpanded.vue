@@ -99,7 +99,7 @@ export default {
 @import url('https://chats.wevrlabs.net/fontawesome-all.min.css');
 
 .header-expanded {
-  padding: 2.1rem 2.4rem 2.4rem;
+  padding: 2.1rem 1.4rem 1.4rem;
   width: 100%;
   box-sizing: border-box;
   position: relative;
@@ -176,7 +176,7 @@ export default {
        .text-link {         
             a {
               width: auto !important;
-              height: 15px !important;
+              height: 30px !important;
               text-decoration: none;
               line-height: 1.4 !important;
               white-space: nowrap;
@@ -197,8 +197,8 @@ export default {
           display: inline-block;
           border-radius: 50%;
           padding: 8px 9px;
-          width: 14px;
-          height: 15px;
+          width: 35px;
+          height: 35px;
           text-align: center;
           transition: .2s ease all;
           margin-right: 5px;
