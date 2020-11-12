@@ -4,6 +4,13 @@
       <img v-if="avatarUrl" :src="avatarUrl" alt="avatar" />
        <span class="header-elements">
         <h2 class="title" v-html="title"></h2>
+        <div
+            :class="
+              `status-view--badge rounded-full leading-4 ${
+                availableAgents.length ? 'bg-green-500' : 'hidden'
+              }`
+            "
+          />
         <span class="reply-eta" v-html="introBody"></span>
         <span class="social-links">
             <span class="text-link">
@@ -47,11 +54,15 @@
 <script>
 import { mapGetters } from 'vuex';
 import HeaderActions from './HeaderActions';
+import configMixin from 'widget/mixins/configMixin';
+import teamAvailabilityMixin from 'widget/mixins/teamAvailabilityMixin';
+
 export default {
   name: 'ChatHeader',
   components: {
     HeaderActions,
   },
+  mixins: [configMixin, teamAvailabilityMixin],
   props: {
     avatarUrl: {
       type: String,
@@ -76,6 +87,10 @@ export default {
     showPopoutButton: {
       type: Boolean,
       default: false,
+    },
+    availableAgents: {
+      type: Array,
+      default: () => {},
     },
   },
   computed: {
@@ -215,5 +230,9 @@ export default {
   .close-button {
     /*display: none;*/
   }
+}
+.status-view--badge {
+  height: $space-small;
+  width: $space-small;
 }
 </style>
