@@ -62,7 +62,7 @@
                 </a>
             </span>
         </span>
-        <span class="reply-eta">Welcome to our communication channel for sales questions and billing related inquiries! For technical issues, it is better to open a support ticket from your account.</span>
+        <span class="reply-eta">Welcome to our communication channel for all sales inquiries and billing related matters. For technical support, kindly open a ticket from your account.</span>
   </header>
 </template>
 
