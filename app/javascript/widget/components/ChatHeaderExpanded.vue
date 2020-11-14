@@ -87,10 +87,6 @@ export default {
       type: String,
       default: '',
     },
-    availableAgents: {
-      type: Array,
-      default: () => [],
-    },
     introBody: {
       type: String,
       default: '',
@@ -99,11 +95,18 @@ export default {
       type: Boolean,
       default: false,
     },
+    availableAgents: {
+      type: Array,
+      default: () => [],
+    },
   },
   computed: {
     ...mapGetters({
       widgetColor: 'appConfig/getWidgetColor',
     }),
+    showStatusMessage() {
+      return this.availableAgents.length == 0;
+    },
   },
 };
 </script>
