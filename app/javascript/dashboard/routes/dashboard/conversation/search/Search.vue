@@ -155,7 +155,7 @@ export default {
   width: 100%;
 
   &:hover {
-    background: var(--w-50);
+    background: #000;
   }
 }
 
