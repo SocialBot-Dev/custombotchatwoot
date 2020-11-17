@@ -53,7 +53,7 @@ export default {
 .contact--panel {
   @include border-normal-left;
 
-  background: white;
+  background: $color-background-dark1;
   font-size: var(--font-size-small);
   overflow-y: auto;
   overflow: auto;
@@ -74,12 +74,12 @@ export default {
 }
 
 .conversation--details {
-  border-top: 1px solid $color-border-light;
+  border-top: 1px solid $color-border-dark2;
   padding: var(--space-normal);
 }
 
 .contact-conversation--panel {
-  border-top: 1px solid $color-border-light;
+  border-top: 1px solid $color-border-dark2;
   height: 100%;
 }
 
