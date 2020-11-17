@@ -63,6 +63,9 @@ select {
     border-bottom-left-radius: var(--space-smaller);
     border-top-left-radius: var(--space-smaller);
   }
+  .input-group-label:first-child {
+    background: #161819 !important;
+  }
 
   .input-group-field {
     border-bottom-left-radius: 0 !important;
