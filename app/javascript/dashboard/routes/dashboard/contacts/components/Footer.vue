@@ -152,7 +152,7 @@ export default {
 <style lang="scss" scoped>
 .footer {
   height: 60px;
-  border-top: 1px solid var(--color-border);
+  border-top: 1px solid var(--color-border-dark2);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -166,8 +166,8 @@ export default {
 
   .button {
     background: transparent;
-    border-color: var(--color-border);
-    color: var(--color-body);
+    border-color: var(--color-border-dark2);
+    color: var(--color-light-gray);
     margin-bottom: 0;
     margin-left: -2px;
     font-size: var(--font-size-small);
