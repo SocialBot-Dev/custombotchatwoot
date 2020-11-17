@@ -145,7 +145,7 @@ export default {
 }
 
 .search--messages {
-  border-bottom: 1px solid $color-border-dark2;
+  border-bottom: 1px solid #3a3a3a;
   color: $color-light-gray;
   cursor: pointer;
   font-size: var(--font-size-small);
