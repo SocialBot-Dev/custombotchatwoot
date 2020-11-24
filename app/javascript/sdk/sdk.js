@@ -155,6 +155,11 @@ export const SDK_CSS = ` .woot-widget-holder {
   opacity: 0;
   /*bottom: -20000px;*/
 }
+
+.woot-widget--without-bubble {
+  bottom: 20px !important;
+}
+
 @media only screen and (max-width: 667px) {
   .woot-widget-holder {
     top: 0;
