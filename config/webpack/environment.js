@@ -21,6 +21,4 @@ environment.config.set('output.filename', chunkData => {
     : 'js/[name]-[hash].js';
 });
 
-environment.loaders.get('file').use.find(item => item.loader === 'file-loader').options.esModule = false
-
 module.exports = environment;
