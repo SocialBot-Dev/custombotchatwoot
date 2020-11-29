@@ -6,7 +6,7 @@
         <div style="display: inline-flex;">
           <h2 class="title" v-html="introHeading"></h2>
             
-        <span class="reply-eta" v-html="introBody"></span>
+          <span class="reply-eta" v-html="introBody"></span>
 
         </div>
 
