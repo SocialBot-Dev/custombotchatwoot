@@ -17,10 +17,10 @@
                 availableAgents.length ? 'Online' : 'Currenlty Away'
               }`
             "
-                <span v-if="availableAgents.length">Online</span>
-                <span v-else>Away</span>
-            />
-
+          />
+            <span v-if="availableAgents.length">Online</span>
+            <span v-else>Away</span>
+          </div>
         </div>
         <span class="reply-eta" v-html="introBody"></span>
       </span>
