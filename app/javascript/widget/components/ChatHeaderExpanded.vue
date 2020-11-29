@@ -8,8 +8,6 @@
             
           <span class="reply-eta" v-html="introBody"></span>
 
-        </div>
-
       </span>
       <header-actions :show-popout-button="showPopoutButton" />
      </div>
