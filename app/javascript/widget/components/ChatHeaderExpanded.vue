@@ -256,7 +256,7 @@ export default {
 }
 @keyframes pulse {
   0% {
-    transform: scale(0.95);
+    transform: scale(0.85);
     box-shadow: 0 0 0 0 rgb(8 187 19 / 70%);
   }
 

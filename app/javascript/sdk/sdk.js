@@ -71,9 +71,27 @@ export const SDK_CSS = ` .woot-widget-holder {
 }
 .woot-widget-bubble.woot-elements--left {
   left: 30px;
+  animation: pulse 2s infinite;
 }
 .woot-widget-bubble.woot-elements--right {
   right: 30px;
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgb(67 56 99);
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+  }
+
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
 }
 
 .woot-widget-bubble .bubble-tooltip .tooltip-text {
