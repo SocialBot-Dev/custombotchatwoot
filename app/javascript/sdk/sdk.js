@@ -70,11 +70,11 @@ export const SDK_CSS = ` .woot-widget-holder {
   transform: scale(.9);
 }
 .woot-widget-bubble.woot-elements--left {
-  left: 30px;
+  left: 31px;
   animation: pulse 2s infinite;
 }
 .woot-widget-bubble.woot-elements--right {
-  right: 30px;
+  right: 31px;
   animation: pulse 2s infinite;
 }
 @keyframes pulse {
