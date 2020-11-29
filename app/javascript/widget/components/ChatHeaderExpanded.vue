@@ -18,7 +18,7 @@
               }`
             "
           />
-            <span>
+            :<span>
               `${
                 availableAgents.length ? 'Away' : 'Online<'
               }`
