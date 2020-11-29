@@ -20,7 +20,7 @@
           />
             :<span>
               `${
-                availableAgents.length ? 'Away' : 'Online<'
+                availableAgents.length ? 'Away' : 'Online'
               }`
             </span>
           </div>
