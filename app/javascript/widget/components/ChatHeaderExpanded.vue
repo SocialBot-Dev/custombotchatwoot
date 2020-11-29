@@ -18,7 +18,8 @@
               }`
             "
           />
-            <span v-if="availableAgents.length ? 'Away' : 'Online'">
+            <span v-if="availableAgents.length > 1"></span>
+            <span v-else>Online</span>
           </div>
 
         </div>
