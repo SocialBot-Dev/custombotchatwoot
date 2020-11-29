@@ -268,7 +268,7 @@ export default {
 span.availability-status {
     display: inline-block;
     margin-left: 7px;
-    bottom: -6px!important;
+    bottom: -7px!important;
     position: relative;
     color: #fff;
     font-size: 12px;
