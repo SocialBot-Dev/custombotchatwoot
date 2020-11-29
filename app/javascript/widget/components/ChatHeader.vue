@@ -20,7 +20,6 @@
             <span class="availability-status" v-if="availableAgents.length">Online</span>
             <span class="availability-status" v-else>Away</span>
          </div>
-        </div>
         <span class="reply-eta">Availability from 9am to 9pm (GMT +2)</span>
         <span class="social-links">
             <span class="text-link">
