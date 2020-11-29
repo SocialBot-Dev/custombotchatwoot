@@ -5,22 +5,6 @@
       <span class="header-elements">
         <div style="display: inline-flex;">
           <h2 class="title" v-html="introHeading"></h2>
-          
-          <div
-            :class="
-              `status-view--badge rounded-full leading-4 ${
-                availableAgents.length ? 'bg-green-500' : 'bg-orange-500'
-              }`
-            "
-            :title="
-              `${
-                availableAgents.length ? 'Online' : 'Currenlty Away'
-              }`
-            "
-          />
-            <span class="availability-status" v-if="availableAgents.length">Online</span>
-            <span class="availability-status" v-else>Away</span>
-         </div>
             
         <span class="reply-eta" v-html="introBody"></span>
 
