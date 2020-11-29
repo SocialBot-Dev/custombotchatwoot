@@ -17,6 +17,9 @@
               }`
             "
           />
+            <span class="availability-status" v-if="availableAgents.length">Online</span>
+            <span class="availability-status" v-else>Away</span>
+         </div>
         </div>
         <span class="reply-eta">Availability from 9am to 9pm (GMT +2)</span>
         <span class="social-links">
@@ -242,8 +245,8 @@ export default {
 }
 span.availability-status {
     display: inline-block;
-    margin-left: 15px;
-    bottom: 4px !important;
+    margin-left: 5px;
+    bottom: -8px!important;
     position: relative;
     color: #fff;
     font-size: 12px;
