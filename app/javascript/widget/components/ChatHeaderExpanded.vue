@@ -18,8 +18,8 @@
               }`
             "
           />
-            <span v-if="availableAgents.length"></span>
-            <span v-else>Online</span>
+            <span v-if="availableAgents.length">Online</span>
+            <span v-else>Away</span>
 
         </div>
         <span class="reply-eta" v-html="introBody"></span>
