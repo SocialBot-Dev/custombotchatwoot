@@ -86,8 +86,8 @@ export default {
 }
 
 .header-expanded button.button.transparent.compact.close-button {
-    margin-left: 310px !important;
-    margin-top: -150px !important;
+    margin-left: 6px!important;
+    margin-top: -50px!important;
 }
 .header-collapsed button.button.transparent.compact.close-button {
     margin-left: -0.4rem !important;

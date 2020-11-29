@@ -240,15 +240,34 @@ export default {
   }
 
 }
+
 .status-view--badge {
     height: 0.55rem;
     width: 0.55rem;
     margin-top: 8px;
     margin-left: 10px;
+    animation: pulse 2s infinite;
 }
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgb(8 187 19 / 70%);
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+  }
+
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
+
 span.availability-status {
     display: inline-block;
-    margin-left: 5px;
+    margin-left: 7px;
     bottom: -6px!important;
     position: relative;
     color: #fff;
