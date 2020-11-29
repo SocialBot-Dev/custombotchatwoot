@@ -257,11 +257,6 @@ export default {
       }
     }
   }
-
-  button.button.transparent.compact.close-button {
-    margin-left: 310px !important;
-    margin-top: -150px !important;
-  }
 }
 
 .header--row {
