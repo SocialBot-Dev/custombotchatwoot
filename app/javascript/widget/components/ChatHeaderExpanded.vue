@@ -284,7 +284,7 @@ span.availability-status {
 .status-view--badge.bg-orange-500 {
   background-color: #ffbc00;
 }
-.actions button {
+.header-collapsed .actions button {
     margin-left: 21.3rem !important;
     margin-top: -95px !important;
 }
