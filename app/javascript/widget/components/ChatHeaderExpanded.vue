@@ -25,7 +25,7 @@
         <span class="reply-eta" v-html="introBody"></span>
 
         </div>
-        
+
       </span>
       <header-actions :show-popout-button="showPopoutButton" />
      </div>
@@ -283,5 +283,9 @@ span.availability-status {
 }
 .status-view--badge.bg-orange-500 {
   background-color: #ffbc00;
+}
+.actions button {
+    margin-left: 21.3rem !important;
+    margin-top: -95px !important;
 }
 </style>
