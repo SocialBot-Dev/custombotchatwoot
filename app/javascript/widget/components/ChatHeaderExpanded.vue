@@ -223,7 +223,7 @@ export default {
           height: 35px;
           text-align: center;
           transition: .2s ease all;
-          margin-right: 5px;
+          margin-right: 4px;
           
           &:hover i:before {
             opacity: 1;
