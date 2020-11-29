@@ -256,12 +256,12 @@ export default {
 
   70% {
     transform: scale(1);
-    box-shadow: 0 0 0 10px #000;
+    box-shadow: 0 0 0 10px transparent;
   }
 
   100% {
     transform: scale(0.95);
-    box-shadow: 0 0 0 0 #000;
+    box-shadow: 0 0 0 0 transparent;
   }
 }
 
