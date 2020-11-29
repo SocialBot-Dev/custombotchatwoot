@@ -18,9 +18,8 @@
               }`
             "
           />
-            <span v-if="availableAgents.length">Online</span>
-            <span v-else>Away</span>
-          </div>
+            <span class="availability-status" v-if="availableAgents.length">Online</span>
+            <span class="availability-status" v-else>Away</span>
         </div>
         <span class="reply-eta" v-html="introBody"></span>
       </span>
@@ -269,15 +268,14 @@ export default {
     width: 0.7rem;
     margin-top: 8px;
     margin-left: 7px;
-
-      span {
-          display: inline-block;
-          margin-left: 15px;
-          bottom: 4px !important;
-          position: relative;
-          color: #fff;
-          font-size: 12px;
-      }
+}
+span.availability-status {
+    display: inline-block;
+    margin-left: 15px;
+    bottom: 4px !important;
+    position: relative;
+    color: #fff;
+    font-size: 12px;
 }
 .status-view--badge.bg-orange-500 {
   background-color: #ffbc00;
