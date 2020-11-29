@@ -18,11 +18,7 @@
               }`
             "
           />
-            :<span>
-              `${
-                availableAgents.length ? 'Away' : 'Online'
-              }`
-            </span>
+            <span v-if="availableAgents.length ? 'Away' : 'Online'">
           </div>
 
         </div>
