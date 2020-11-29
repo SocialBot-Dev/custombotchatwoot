@@ -132,11 +132,9 @@ export const SDK_CSS = ` .woot-widget-holder {
 @media only screen and (min-width: 667px) {
   .woot-widget-holder.woot-elements--left {
     left: 30px;
-    animation: pulse-2 2s infinite;
   }
   .woot-widget-holder.woot-elements--right {
     right: 30px;
-    animation: pulse-2 2s infinite;
   }
 }
 .woot-widget-bubble:hover {
