@@ -22,8 +22,10 @@
             <span class="availability-status" v-else>Away</span>
          </div>
             
-        </div>
         <span class="reply-eta" v-html="introBody"></span>
+
+        </div>
+        
       </span>
       <header-actions :show-popout-button="showPopoutButton" />
      </div>
@@ -273,8 +275,8 @@ export default {
 }
 span.availability-status {
     display: inline-block;
-    margin-left: 15px;
-    bottom: 4px !important;
+    margin-left: 5px;
+    bottom: -8px!important;
     position: relative;
     color: #fff;
     font-size: 12px;
