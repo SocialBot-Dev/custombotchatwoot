@@ -126,7 +126,7 @@ export default {
   box-sizing: border-box;
   position: relative;
 
-  .actions button {
+  .button {
     margin-left: 310px !important;
     margin-top: -150px !important;
   }
@@ -278,7 +278,7 @@ export default {
 span.availability-status {
     display: inline-block;
     margin-left: 5px;
-    bottom: -6px!important;
+    bottom: -7px!important;
     position: relative;
     color: #fff;
     font-size: 12px;

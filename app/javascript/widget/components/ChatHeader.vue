@@ -123,7 +123,7 @@ export default {
   color: $color-white;
   
 
-  .actions button {
+  .button {
     margin-top: -70px !important;
   }
   .close-button:after {
