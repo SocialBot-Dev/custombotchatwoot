@@ -124,6 +124,7 @@ export default {
   
 
   .button {
+    margin-left: -0.4rem !important;
     margin-top: -70px !important;
   }
   .close-button:after {
