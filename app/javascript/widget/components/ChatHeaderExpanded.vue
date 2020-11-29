@@ -125,6 +125,11 @@ export default {
   width: 100%;
   box-sizing: border-box;
   position: relative;
+
+  .actions button {
+    margin-left: 310px !important;
+    margin-top: -150px !important;
+  }
   
   .title-logo {
     display: flex;   
@@ -280,9 +285,5 @@ span.availability-status {
 }
 .status-view--badge.bg-orange-500 {
   background-color: #ffbc00;
-}
-.header-expanded .actions button {
-    margin-left: 21.3rem !important;
-    margin-top: -95px !important;
 }
 </style>

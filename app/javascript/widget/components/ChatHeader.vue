@@ -122,6 +122,10 @@ export default {
   box-sizing: border-box;
   color: $color-white;
   
+
+  .actions button {
+    margin-top: -70px !important;
+  }
   .close-button:after {
     background-color: #9babbd !important;
   }
