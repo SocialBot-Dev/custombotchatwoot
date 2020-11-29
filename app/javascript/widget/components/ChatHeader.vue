@@ -102,9 +102,7 @@ export default {
     ...mapGetters({
       widgetColor: 'appConfig/getWidgetColor',
     }),
-    showStatusMessage() {
-      return this.availableAgents.length == 0;
-    },
+
   },
 };
 </script>
