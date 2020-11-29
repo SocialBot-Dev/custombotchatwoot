@@ -80,7 +80,7 @@ export const SDK_CSS = ` .woot-widget-holder {
 @keyframes pulse-2 {
   0% {
     transform: scale(0.95);
-    box-shadow: 0 0 0 0 #08bb13;
+    box-shadow: 0 0 0 0 #433863;
   }
 
   70% {
