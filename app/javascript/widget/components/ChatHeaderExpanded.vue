@@ -18,9 +18,8 @@
               }`
             "
           />
-            <span v-if="availableAgents.length > 1"></span>
+            <span v-if="availableAgents.length"></span>
             <span v-else>Online</span>
-          </div>
 
         </div>
         <span class="reply-eta" v-html="introBody"></span>
