@@ -5,10 +5,12 @@
   margin: $space-normal;
   margin-top: 0;
   max-height: $space-mega * 3;
-  transition: box-shadow .35s $ease-in-out-cubic, height 2s $ease-in-out-cubic;
+  transition: box-shadow .35s $swift-ease-out-function,
+    height 2s $swift-ease-out-function;
+
 
   &.is-focused {
-    @include normal-shadow;
+    @include shadow;
   }
 
   .reply-box__top {
@@ -63,7 +65,7 @@
       }
     }
 
-    .file-uploads > label {
+    .file-uploads>label {
       cursor: pointer;
     }
 
@@ -73,7 +75,7 @@
       padding: 0 $space-small;
     }
 
-    > textarea {
+    >textarea {
       @include ghost-input();
       @include margin(0);
       background: transparent;
@@ -103,7 +105,7 @@
 
       .tabs-title {
         margin: 0;
-        transition: all .2s $ease-in-out-cubic;
+        transition: all .2s $swift-ease-out-function;
         transition-property: color, background;
 
         a {
@@ -127,10 +129,10 @@
         &.is-active {
           border-right: 1px solid $color-border-dark2;
           border-left: 0;
+        }
 
-          a {
-            border-bottom-left-radius: $space-small;
-          }
+        a {
+          border-bottom-left-radius: $space-small;
         }
       }
 
