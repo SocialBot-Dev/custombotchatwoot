@@ -67,7 +67,7 @@ export default {
 
 .actions {
   button {
-    margin-left: 1.6rem;
+    margin-left: -0.4rem;
     margin-top: -30px;
   }
 
@@ -84,4 +84,14 @@ export default {
     /* display: none;*/
   }
 }
+
+.header-expanded button.button.transparent.compact.close-button {
+    margin-left: 310px !important;
+    margin-top: -150px !important;
+}
+.header-collapsed button.button.transparent.compact.close-button {
+    margin-left: -0.4rem !important;
+    margin-top: -30px !important;
+}
+
 </style>
