@@ -89,7 +89,7 @@ export const SDK_CSS = ` .woot-widget-holder {
   }
 
   100% {
-    transform: scale(0.95);
+    transform: scale(1);
     box-shadow: 0 0 0 0 transparent;
   }
 }
