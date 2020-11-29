@@ -5,6 +5,7 @@
       <span class="header-elements">
         <div style="display: inline-flex;">
           <h2 class="title" v-html="introHeading"></h2>
+          
           <div
             :class="
               `status-view--badge rounded-full leading-4 ${
@@ -17,6 +18,13 @@
               }`
             "
           />
+            <span>
+              `${
+                availableAgents.length ? 'Away' : 'Online<'
+              }`
+            </span>
+          </div>
+
         </div>
         <span class="reply-eta" v-html="introBody"></span>
       </span>
@@ -261,10 +269,19 @@ export default {
   justify-content: space-between;
 }
 .status-view--badge {
-    height: 0.8rem;
-    width: 0.8rem;
+    height: 0.7rem;
+    width: 0.7rem;
     margin-top: 8px;
-    margin-left: 10px;
+    margin-left: 7px;
+
+      span {
+          display: inline-block;
+          margin-left: 15px;
+          bottom: 4px !important;
+          position: relative;
+          color: #fff;
+          font-size: 12px;
+      }
 }
 .status-view--badge.bg-orange-500 {
   background-color: #ffbc00;

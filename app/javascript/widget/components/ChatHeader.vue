@@ -235,10 +235,19 @@ export default {
   }
 }
 .status-view--badge {
-    height: 0.8rem;
-    width: 0.8rem;
+    height: 0.7rem;
+    width: 0.7rem;
     margin-top: 8px;
     margin-left: 10px;
+
+      span {
+          display: inline-block;
+          margin-left: 15px;
+          bottom: 4px !important;
+          position: relative;
+          color: #fff;
+          font-size: 7px;
+      }
 }
 .status-view--badge.bg-orange-500 {
   background-color: #ffbc00;
