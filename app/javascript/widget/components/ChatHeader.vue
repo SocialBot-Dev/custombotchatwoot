@@ -122,11 +122,6 @@ export default {
   box-sizing: border-box;
   color: $color-white;
   
-
-  .button {
-    margin-left: -0.4rem !important;
-    margin-top: -70px !important;
-  }
   .close-button:after {
     background-color: #9babbd !important;
   }
@@ -240,6 +235,12 @@ export default {
   .close-button {
     /*display: none;*/
   }
+
+  button.button.transparent.compact.close-button {
+    margin-left: -0.4rem !important;
+    margin-top: -70px !important;
+  }
+
 }
 .status-view--badge {
     height: 0.55rem;

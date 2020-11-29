@@ -125,11 +125,6 @@ export default {
   width: 100%;
   box-sizing: border-box;
   position: relative;
-
-  .button {
-    margin-left: 310px !important;
-    margin-top: -150px !important;
-  }
   
   .title-logo {
     display: flex;   
@@ -261,6 +256,11 @@ export default {
         }
       }
     }
+  }
+
+  button.button.transparent.compact.close-button {
+    margin-left: 310px !important;
+    margin-top: -150px !important;
   }
 }
 
