@@ -246,12 +246,36 @@ export default {
     width: 0.55rem;
     margin-top: 8px;
     margin-left: 10px;
-    animation: pulse 2s infinite;
 }
-@keyframes pulse {
+.status-view--badge.bg-green-500 {
+    animation: pulse-g 2s infinite;
+}
+@keyframes pulse-g {
   0% {
     transform: scale(0.85);
     box-shadow: 0 0 0 0 #08bb13;
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px transparent;
+  }
+
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 transparent;
+  }
+}
+
+
+.status-view--badge.bg-orange-500 {
+  background-color: #ffbc00;
+  animation: pulse-o 2s infinite;
+}
+@keyframes pulse-o {
+  0% {
+    transform: scale(0.85);
+    box-shadow: 0 0 0 0 #ffbc00;
   }
 
   70% {
@@ -272,8 +296,5 @@ span.availability-status {
     position: relative;
     color: #fff;
     font-size: 12px;
-}
-.status-view--badge.bg-orange-500 {
-  background-color: #ffbc00;
 }
 </style>
