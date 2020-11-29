@@ -237,8 +237,8 @@ export default {
   }
 }
 .status-view--badge {
-    height: 0.7rem;
-    width: 0.7rem;
+    height: 0.55rem;
+    width: 0.55rem;
     margin-top: 8px;
     margin-left: 10px;
 }

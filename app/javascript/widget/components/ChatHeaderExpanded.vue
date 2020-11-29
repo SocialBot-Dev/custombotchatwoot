@@ -269,14 +269,14 @@ export default {
 }
 .status-view--badge {
     height: 0.7rem;
-    width: 0.7rem;
+    width: 0.65rem;
     margin-top: 8px;
     margin-left: 7px;
 }
 span.availability-status {
     display: inline-block;
     margin-left: 5px;
-    bottom: -8px!important;
+    bottom: -6px!important;
     position: relative;
     color: #fff;
     font-size: 12px;
@@ -284,7 +284,7 @@ span.availability-status {
 .status-view--badge.bg-orange-500 {
   background-color: #ffbc00;
 }
-.header-collapsed .actions button {
+.header-expanded .actions button {
     margin-left: 21.3rem !important;
     margin-top: -95px !important;
 }
