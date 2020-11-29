@@ -274,8 +274,8 @@ export default {
 }
 @keyframes pulse-o {
   0% {
-    transform: scale(0.85);
-    box-shadow: 0 0 0 0 #ffbc00;
+    transform: scale(0.9);
+    box-shadow: 0 0 0 0 #a0894f;
   }
 
   70% {
