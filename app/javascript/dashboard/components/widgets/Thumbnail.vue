@@ -169,7 +169,7 @@ export default {
     border-radius: 50%;
     bottom: $space-micro;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .2);
-    border: .15rem solid #fff;
+    //border: .15rem solid #fff;
     transform: scale(1.5);
 
     &:after {
@@ -181,7 +181,7 @@ export default {
     background: $success-color;
     background-image: linear-gradient(-180deg,#31ef25,#0e9005);
     top: 0;
-    animation: pulse-badge-g 2s infinite;
+    animation: pulse-badge-g 1s infinite;
   }
 
   .user-online-status--busy {
