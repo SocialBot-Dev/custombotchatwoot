@@ -169,7 +169,7 @@ export default {
     border-radius: 50%;
     bottom: $space-micro;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .2);
-    //border: .15rem solid #fff;
+    border: .15rem solid #fff;
     transform: scale(1.5);
 
     &:after {
@@ -191,7 +191,7 @@ export default {
 
 @keyframes pulse-badge-g {
   0% {
-    transform: scale(1);
+    transform: scale(0.95);
     box-shadow: 0 0 0 0 #08bb13;
   }
 
@@ -201,7 +201,7 @@ export default {
   }
 
   100% {
-    transform: scale(1);
+    transform: scale(0.95);
     box-shadow: 0 0 0 0 transparent;
   }
 }
