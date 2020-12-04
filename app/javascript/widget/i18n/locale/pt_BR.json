@@ -9,15 +9,15 @@
     }
   },
   "TEAM_AVAILABILITY": {
-    "ONLINE": "Estamos conectados",
-    "OFFLINE": "Não estamos conectados"
+    "ONLINE": "We are online",
+    "OFFLINE": "We are offline"
   },
   "REPLY_TIME": {
-    "IN_A_FEW_MINUTES": "Responde normalmente em alguns minutos",
-    "IN_A_FEW_HOURS": "Responde normalmente em algumas horas",
-    "IN_A_DAY": "Responde normalmente em um dia"
+    "IN_A_FEW_MINUTES": "Typically replies in a few minutes",
+    "IN_A_FEW_HOURS": "Typically replies in a few hours",
+    "IN_A_DAY": "Typically replies in a day"
   },
-  "START_CONVERSATION": "Iniciar Conversa",
+  "START_CONVERSATION": "Start Conversation",
   "UNREAD_VIEW": {
     "VIEW_MESSAGES_BUTTON": "Ver novas mensagens",
     "CLOSE_MESSAGES_BUTTON": "Fechar"

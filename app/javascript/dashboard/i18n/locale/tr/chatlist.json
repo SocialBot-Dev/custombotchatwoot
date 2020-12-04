@@ -1,49 +1,49 @@
 {
   "CHAT_LIST": {
-    "LOADING": "Görüşmeler getiriliyor",
-    "LOAD_MORE_CONVERSATIONS": "Daha fazla konuşma yükleyin",
-    "EOF": "Tüm görüşmeler yüklendi 🎉",
+    "LOADING": "Fetching conversations",
+    "LOAD_MORE_CONVERSATIONS": "Load more conversations",
+    "EOF": "All conversations loaded 🎉",
     "LIST": {
-      "404": "Bu grupta aktif görüşme yok."
+      "404": "There are no active conversations in this group."
     },
-    "TAB_HEADING": "Konuşmalar",
+    "TAB_HEADING": "Conversations",
     "SEARCH": {
-      "INPUT": "Kişileri, Sohbetleri, Kaydedilen Yanıtları Ara .."
+      "INPUT": "Search for People, Chats, Saved Replies .."
     },
     "STATUS_TABS": [
       {
-        "NAME": "Açık",
+        "NAME": "Open",
         "KEY": "openCount"
       },
       {
-        "NAME": "Çözüldü",
+        "NAME": "Resolved",
         "KEY": "allConvCount"
       }
     ],
     "ASSIGNEE_TYPE_TABS": [
       {
-        "NAME": "Benim",
+        "NAME": "Mine",
         "KEY": "me",
         "COUNT_KEY": "mineCount"
       },
       {
-        "NAME": "Atanmamış",
+        "NAME": "Unassigned",
         "KEY": "unassigned",
         "COUNT_KEY": "unAssignedCount"
       },
       {
-        "NAME": "Hepsi",
+        "NAME": "All",
         "KEY": "all",
         "COUNT_KEY": "allCount"
       }
     ],
     "CHAT_STATUS_ITEMS": [
       {
-        "TEXT": "Açık",
+        "TEXT": "Open",
         "VALUE": "open"
       },
       {
-        "TEXT": "Çözüldü",
+        "TEXT": "Resolved",
         "VALUE": "resolved"
       },
       {
@@ -54,31 +54,31 @@
     "ATTACHMENTS": {
       "image": {
         "ICON": "ion-image",
-        "CONTENT": "Görsel mesaj"
+        "CONTENT": "Picture message"
       },
       "audio": {
         "ICON": "ion-volume-high",
-        "CONTENT": "Sesli mesaj"
+        "CONTENT": "Audio message"
       },
       "video": {
         "ICON": "ion-ios-videocam",
-        "CONTENT": "Video mesajı"
+        "CONTENT": "Video message"
       },
       "file": {
         "ICON": "ion-document",
-        "CONTENT": "Dosya eklentisi"
+        "CONTENT": "File Attachment"
       },
       "location": {
         "ICON": "ion-ios-location",
-        "CONTENT": "Yer"
+        "CONTENT": "Location"
       },
       "fallback": {
         "ICON": "ion-link",
-        "CONTENT": "bir url paylaştı"
+        "CONTENT": "has shared a url"
       }
     },
-    "RECEIVED_VIA_EMAIL": "E-posta ile alındı",
-    "VIEW_TWEET_IN_TWITTER": "Twitter'da tweet'i görüntüleyin",
-    "REPLY_TO_TWEET": "Bu tweet'i yanıtla"
+    "RECEIVED_VIA_EMAIL": "Received via email",
+    "VIEW_TWEET_IN_TWITTER": "View tweet in Twitter",
+    "REPLY_TO_TWEET": "Reply to this tweet"
   }
 }
