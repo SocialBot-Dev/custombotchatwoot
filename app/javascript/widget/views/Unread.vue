@@ -103,6 +103,7 @@ export default {
   flex-wrap: nowrap;
   justify-content: flex-end;
   overflow: hidden;
+  padding: 10px 15px 0;
 
   .unread-messages {
     padding-bottom: $space-small;
@@ -161,6 +162,7 @@ export default {
   flex-direction: column;
   flex-wrap: nowrap;
   overflow: visible;
+  padding: 10px 15px 0;
 
   .chat-bubble-wrap {
     margin-bottom: 0.55rem;
