@@ -103,7 +103,7 @@ export default {
   flex-wrap: nowrap;
   justify-content: flex-end;
   overflow: hidden;
-  padding: 10px 15px 0;
+  padding: 10px 15px 0px;
 
   .unread-messages {
     padding-bottom: $space-small;
