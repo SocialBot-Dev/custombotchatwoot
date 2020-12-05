@@ -136,7 +136,7 @@ export default {
     border: 0;
     font-weight: $font-weight-bold;
     font-size: $font-size-small;
-    transition: all 0.3s $ease-in-cubic;
+    transition: all .2s cubic-bezier(0.42, 0, 0.29, 0.83);
     margin-bottom: $space-slab;
     border-radius: $space-normal;
 
