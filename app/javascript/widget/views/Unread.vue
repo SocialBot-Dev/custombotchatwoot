@@ -116,7 +116,7 @@ export default {
     border: 0;
     font-weight: $font-weight-bold;
     font-size: $font-size-medium;
-    transition: all 0.3s $ease-in-cubic;
+    transition: all .2s cubic-bezier(0.42, 0, 0.29, 0.83);
     margin-left: $space-smaller;
     padding: 7px 14px 7px 10px;
     box-shadow: -10px -7px 20px 0px rgba(0, 0, 0, 0.15);
@@ -179,7 +179,7 @@ export default {
       left: 10px;
       overflow: visible;
       border-radius: 4px !important;
-      transition: all .3s cubic-bezier(.17,.67,.83,.67);
+      transition: all .2s cubic-bezier(0.42, 0, 0.29, 0.83);
 
       &:hover {
           transform: translateX(.25rem);
@@ -202,7 +202,7 @@ export default {
       right: 10px;
       overflow: visible;
       border-radius: 4px !important;
-      transition: all .3s cubic-bezier(.17,.67,.83,.67);
+      transition: all .2s cubic-bezier(0.42, 0, 0.29, 0.83);
 
       &:hover {
           transform: translateX(.25rem);
