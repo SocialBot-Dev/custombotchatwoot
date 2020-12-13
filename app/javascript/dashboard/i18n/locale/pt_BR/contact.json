@@ -70,44 +70,44 @@
         "LABEL": "Localização"
       },
       "COMPANY_NAME": {
-        "PLACEHOLDER": "Digite o nome da empresa",
-        "LABEL": "Nome da empresa"
+        "PLACEHOLDER": "Enter the company name",
+        "LABEL": "Company Name"
       },
       "SOCIAL_PROFILES": {
         "FACEBOOK": {
-          "PLACEHOLDER": "Digite o nome de usuário do Facebook",
+          "PLACEHOLDER": "Enter the Facebook username",
           "LABEL": "Facebook"
         },
         "TWITTER": {
-          "PLACEHOLDER": "Digite o nome de usuário Twitter",
+          "PLACEHOLDER": "Enter the Twitter username",
           "LABEL": "Twitter"
         },
         "LINKEDIN": {
-          "PLACEHOLDER": "Digite o nome de usuário do LinkedIn",
+          "PLACEHOLDER": "Enter the LinkedIn username",
           "LABEL": "LinkedIn"
         },
         "GITHUB": {
-          "PLACEHOLDER": "Digite o nome de usuário do Github",
+          "PLACEHOLDER": "Enter the Github username",
           "LABEL": "Github"
         }
       }
     },
-    "SUCCESS_MESSAGE": "Contato atualizado com sucesso",
-    "CONTACT_ALREADY_EXIST": "Esse endereço de e-mail já está sendo usado para outro contato.",
-    "ERROR_MESSAGE": "Ocorreu um erro ao atualizar o contato, por favor, tente novamente"
+    "SUCCESS_MESSAGE": "Updated contact successfully",
+    "CONTACT_ALREADY_EXIST": "This email address is in use for another contact.",
+    "ERROR_MESSAGE": "There was an error updating the contact, please try again"
   },
   "CONTACTS_PAGE": {
-    "HEADER": "Contato",
-    "SEARCH_BUTTON": "Pesquisar",
-    "SEARCH_INPUT_PLACEHOLDER": "Procurar contatos",
+    "HEADER": "Contacts",
+    "SEARCH_BUTTON": "Search",
+    "SEARCH_INPUT_PLACEHOLDER": "Search for contacts",
     "LIST": {
-      "LOADING_MESSAGE": "Carregando contatos...",
-      "404": "Nenhum contato corresponde à sua pesquisa 🔍",
+      "LOADING_MESSAGE": "Loading contacts...",
+      "404": "No contacts matches your search 🔍",
       "TABLE_HEADER": [
         "Nome",
         "Phone Number",
         "Conversas",
-        "Último contato"
+        "Last Contacted"
       ]
     }
   }

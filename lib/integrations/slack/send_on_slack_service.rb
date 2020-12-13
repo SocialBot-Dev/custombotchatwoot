@@ -24,11 +24,7 @@ class Integrations::Slack::SendOnSlackService < Base::SendOnChannelService
 
   def perform_reply
     send_message
-
-    return unless @slack_message
-
     update_reference_id
-    update_external_source_id_slack
   end
 
   def message_content
@@ -70,12 +66,6 @@ class Integrations::Slack::SendOnSlackService < Base::SendOnChannelService
     return if conversation.identifier
 
     conversation.update!(identifier: @slack_message['ts'])
-  end
-
-  def update_external_source_id_slack
-    return unless @slack_message['message']
-
-    message.update!(external_source_id_slack: "cw-origin-#{@slack_message['message']['ts']}")
   end
 
   def slack_client

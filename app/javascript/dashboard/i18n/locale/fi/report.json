@@ -1,42 +1,42 @@
 {
   "REPORT": {
-    "HEADER": "Raportit",
-    "LOADING_CHART": "Ladataan kaaviotietoja...",
-    "NO_ENOUGH_DATA": "Emme ole saaneet tarpeeksi dataa raportin luomiseen, yritä myöhemmin uudelleen.",
+    "HEADER": "Reports",
+    "LOADING_CHART": "Loading chart data...",
+    "NO_ENOUGH_DATA": "We've not received enough data points to generate report, Please try again later.",
     "METRICS": {
       "CONVERSATIONS": {
-        "NAME": "Keskustelut",
-        "DESC": "(yhteensä)"
+        "NAME": "Conversations",
+        "DESC": "( Total )"
       },
       "INCOMING_MESSAGES": {
-        "NAME": "Saapuvat viestit",
-        "DESC": "(yhteensä)"
+        "NAME": "Incoming Messages",
+        "DESC": "( Total )"
       },
       "OUTGOING_MESSAGES": {
-        "NAME": "Lähtevät viestit",
-        "DESC": "(yhteensä)"
+        "NAME": "Outgoing Messages",
+        "DESC": "( Total )"
       },
       "FIRST_RESPONSE_TIME": {
-        "NAME": "Ensimmäinen vasteaika",
-        "DESC": "(keskiarvo)"
+        "NAME": "First response time",
+        "DESC": "( Avg )"
       },
       "RESOLUTION_TIME": {
-        "NAME": "Selviytymisen kesto",
-        "DESC": "(keskiarvo)"
+        "NAME": "Resolution Time",
+        "DESC": "( Avg )"
       },
       "RESOLUTION_COUNT": {
-        "NAME": "Selvitysmäärä",
-        "DESC": "(yhteensä)"
+        "NAME": "Resolution Count",
+        "DESC": "( Total )"
       }
     },
     "DATE_RANGE": [
       {
         "id": 0,
-        "name": "Viimeiset 7 päivää"
+        "name": "Last 7 days"
       },
       {
         "id": 1,
-        "name": "Viimeiset 30 päivää"
+        "name": "Last 30 days"
       }
     ]
   }

@@ -1,253 +1,251 @@
 {
   "INBOX_MGMT": {
-    "HEADER": "Gelen kutuları",
-    "SIDEBAR_TXT": "<p><b>Gelen Kutusu</b> </p> <p> Chatwoot'a bir web sitesi veya Facebook Sayfası bağladığınızda, buna <b> Gelen Kutusu </b> denir. Chatwoot hesabınızda sınırsız gelen kutunuz olabilir. </p> <p> Bir web sitesine veya Facebook Sayfasına bağlanmak için <b> Gelen Kutusu Ekle </b> 'yi tıklayın. </p> <p> Gösterge Panosunda, tüm gelen kutularınızdaki tüm konuşmaları tek bir yerde görebilir ve bunlara 'Görüşmeler' sekmesi altında yanıt verebilirsiniz. </p> <p> Ayrıca, kontrol panelinin sol bölmesindeki gelen kutusu adını tıklayarak bir gelen kutusuna özel görüşmeleri de görebilirsiniz. </p>",
+    "HEADER": "Inboxes",
+    "SIDEBAR_TXT": "<p><b>Inbox</b></p> <p> When you connect a website or a facebook Page to Chatwoot, it is called an <b>Inbox</b>. You can have unlimited inboxes in your Chatwoot account. </p><p> Click on <b>Add Inbox</b> to connect a website or a Facebook Page. </p><p> In the Dashboard, you can see all the conversations from all your inboxes in a single place and respond to them under the `Conversations` tab. </p><p> You can also see conversations specific to an inbox by clicking on the inbox name on the left pane of the dashboard. </p>",
     "LIST": {
-      "404": "Bu hesaba bağlı gelen kutusu yok."
+      "404": "There are no inboxes attached to this account."
     },
     "CREATE_FLOW": [
       {
-        "title": "Kanal Seçin",
+        "title": "Choose Channel",
         "route": "settings_inbox_new",
-        "body": "Chatwoot ile entegre etmek istediğiniz sağlayıcıyı seçin."
+        "body": "Choose the provider you want to integrate with Chatwoot."
       },
       {
-        "title": "Gelen Kutusu Oluştur",
+        "title": "Create Inbox",
         "route": "settings_inboxes_page_channel",
-        "body": "Hesabınızın kimliğini doğrulayın ve bir gelen kutusu oluşturun."
+        "body": "Authenticate your account and create an inbox."
       },
       {
-        "title": "Kullanıcı Ekle",
+        "title": "Add Agents",
         "route": "settings_inboxes_add_agents",
-        "body": "Temsilcileri oluşturulan gelen kutusuna ekleyin."
+        "body": "Add agents to the created inbox."
       },
       {
-        "title": "Burada!",
+        "title": "Voila!",
         "route": "settings_inbox_finish",
-        "body": "Hepiniz gitmeye hazırsınız!"
+        "body": "You are all set to go!"
       }
     ],
     "ADD": {
       "FB": {
-        "HELP": "Not: Oturum açarak, yalnızca Sayfanızın mesajlarına erişebiliriz. Özel mesajlarınıza Chatwoot ile asla erişilemez.",
-        "CHOOSE_PAGE": "Sayfa Seçin",
-        "CHOOSE_PLACEHOLDER": "Listeden bir sayfa seçin",
-        "INBOX_NAME": "Gelen Kutusu Adı",
-        "ADD_NAME": "Gelen kutunuz için bir isim ekleyin",
-        "PICK_NAME": "Gelen Kutunuza Bir İsim Seçin",
-        "PICK_A_VALUE": "Bir değer seçin"
+        "HELP": "PS: By signing in, we only get access to your Page's messages. Your private messages can never be accessed by Chatwoot.",
+        "CHOOSE_PAGE": "Choose Page",
+        "CHOOSE_PLACEHOLDER": "Select a page from the list",
+        "INBOX_NAME": "Inbox Name",
+        "ADD_NAME": "Add a name for your inbox",
+        "PICK_NAME": "Pick A Name Your Inbox",
+        "PICK_A_VALUE": "Pick a value"
       },
       "TWITTER": {
-        "HELP": "Twitter profilinizi bir kanal olarak eklemek için, 'Twitter ile Giriş Yap'ı tıklayarak Twitter Profilinizi doğrulamanız gerekir."
+        "HELP": "To add your Twitter profile as a channel, you need to authenticate your Twitter Profile by clicking on 'Sign in with Twitter' "
       },
       "WEBSITE_CHANNEL": {
         "TITLE": "Website channel",
-        "DESC": "Web siteniz için bir kanal oluşturun ve müşterilerinizi web sitesi widget'ımız aracılığıyla desteklemeye başlayın.",
-        "LOADING_MESSAGE": "Web Sitesi Destek Kanalı Oluşturma",
+        "DESC": "Create a channel for your website and start supporting your customers via our website widget.",
+        "LOADING_MESSAGE": "Creating Website Support Channel",
         "CHANNEL_AVATAR": {
-          "LABEL": "Kanal Avatarı"
+          "LABEL": "Channel Avatar"
         },
         "CHANNEL_NAME": {
-          "LABEL": "Web Sitesi Adı",
-          "PLACEHOLDER": "Web sitenizin adını girin"
+          "LABEL": "Website Name",
+          "PLACEHOLDER": "Enter your website name (eg: Acme Inc)"
         },
         "CHANNEL_DOMAIN": {
-          "LABEL": "Web Sitesi Alan Adı",
-          "PLACEHOLDER": "Web sitenizin adresini girin"
+          "LABEL": "Website Domain",
+          "PLACEHOLDER": "Enter your website domain (eg: acme.com)"
         },
         "CHANNEL_WELCOME_TITLE": {
-          "LABEL": "Hoş Geldiniz Başlığı",
-          "PLACEHOLDER": "Merhaba !"
+          "LABEL": "Welcome Heading",
+          "PLACEHOLDER": "Hi there !"
         },
         "CHANNEL_WELCOME_TAGLINE": {
-          "LABEL": "Hoş Geldiniz Etiketi",
-          "PLACEHOLDER": "Bizimle bağlantı kurmayı kolaylaştırıyoruz. Bize bir şey sorun veya görüşlerinizi paylaşın."
+          "LABEL": "Welcome Tagline",
+          "PLACEHOLDER": "We make it simple to connect with us. Ask us anything, or share your feedback."
         },
         "CHANNEL_GREETING_MESSAGE": {
-          "LABEL": "Kanal karşılama mesajı",
-          "PLACEHOLDER": "Acme Inc genellikle birkaç saat içinde yanıt verir."
+          "LABEL": "Channel greeting message",
+          "PLACEHOLDER": "Acme Inc typically replies in a few hours."
         },
         "CHANNEL_GREETING_TOGGLE": {
-          "LABEL": "Kanal karşılamasını etkinleştir",
-          "HELP_TEXT": "Kullanıcı konuşmayı başlattığında ona bir karşılama mesajı gönderin.",
-          "ENABLED": "Etkin",
-          "DISABLED": "Devre dışı"
+          "LABEL": "Enable channel greeting",
+          "HELP_TEXT": "Send a greeting message to the user when he starts the conversation.",
+          "ENABLED": "Enabled",
+          "DISABLED": "Disabled"
         },
         "REPLY_TIME": {
-          "TITLE": "Yanıtlama zamanını ayarlayın",
-          "IN_A_FEW_MINUTES": "Birkaç dakika içinde",
-          "IN_A_FEW_HOURS": "Bir kaç saat içinde",
-          "IN_A_DAY": "Bir gün içinde",
-          "HELP_TEXT": "Bu yanıt süresi, canlı sohbet widget'ında görüntülenecek"
+          "TITLE": "Set Reply time",
+          "IN_A_FEW_MINUTES": "In a few minutes",
+          "IN_A_FEW_HOURS": "In a few hours",
+          "IN_A_DAY": "In a day",
+          "HELP_TEXT": "This reply time will be displayed on the live chat widget"
         },
         "WIDGET_COLOR": {
-          "LABEL": "Widget Rengi",
-          "PLACEHOLDER": "Widget'ta kullanılan widget rengini güncelleyin"
+          "LABEL": "Widget Color",
+          "PLACEHOLDER": "Update the widget color used in widget"
         },
-        "SUBMIT_BUTTON": "Gelen Kutusu Oluştur"
+        "SUBMIT_BUTTON": "Create inbox"
       },
       "TWILIO": {
-        "TITLE": "Twilio SMS / Whatsapp Kanalı",
-        "DESC": "Twilio'yu entegre edin ve müşterilerinizi SMS veya Whatsapp ile desteklemeye başlayın.",
+        "TITLE": "Twilio SMS/Whatsapp Channel",
+        "DESC": "Integrate Twilio and start supporting your customers via SMS or Whatsapp.",
         "ACCOUNT_SID": {
-          "LABEL": "Hesap SID'si",
-          "PLACEHOLDER": "Lütfen Twilio Hesabı SID'nizi girin",
-          "ERROR": "Bu alan gereklidir"
+          "LABEL": "Account SID",
+          "PLACEHOLDER": "Please enter your Twilio Account SID",
+          "ERROR": "This field is required"
         },
         "CHANNEL_TYPE": {
-          "LABEL": "Kanal Tipi",
-          "ERROR": "Lütfen Kanal Türünüzü seçin"
+          "LABEL": "Channel Type",
+          "ERROR": "Please select your Channel Type"
         },
         "AUTH_TOKEN": {
-          "LABEL": "Yetkilendirme Jetonu",
-          "PLACEHOLDER": "Lütfen Twilio Yetkilendirme Jetonunuzu girin",
-          "ERROR": "Bu alan gereklidir"
+          "LABEL": "Auth Token",
+          "PLACEHOLDER": "Please enter your Twilio Auth Token",
+          "ERROR": "This field is required"
         },
         "CHANNEL_NAME": {
-          "LABEL": "Kanal ismi",
-          "PLACEHOLDER": "Lütfen bir kanal adı girin",
-          "ERROR": "Bu alan gereklidir"
+          "LABEL": "Channel Name",
+          "PLACEHOLDER": "Please enter a channel name",
+          "ERROR": "This field is required"
         },
         "PHONE_NUMBER": {
-          "LABEL": "Telefon numarası",
-          "PLACEHOLDER": "Lütfen mesajın gönderileceği telefon numarasını giriniz.",
-          "ERROR": "Lütfen geçerli bir değer girin. Telefon numarası '+' işaretiyle başlamalıdır."
+          "LABEL": "Phone number",
+          "PLACEHOLDER": "Please enter the phone number from which message will be sent.",
+          "ERROR": "Please enter a valid value. Phone number should start with `+` sign."
         },
         "API_CALLBACK": {
-          "TITLE": "Geri arama URL'si",
-          "SUBTITLE": "Twilio'daki mesaj geri arama URL'sini burada belirtilen URL ile yapılandırmanız gerekir."
+          "TITLE": "Callback URL",
+          "SUBTITLE": "You have to configure the message callback URL in Twilio with the URL mentioned here."
         },
-        "SUBMIT_BUTTON": "Twilio Kanalı Oluşturun",
+        "SUBMIT_BUTTON": "Create Twilio Channel",
         "API": {
-          "ERROR_MESSAGE": "Twilio kimlik bilgilerini doğrulayamadık, lütfen tekrar deneyin"
+          "ERROR_MESSAGE": "We were not able to authenticate Twilio credentials, please try again"
         }
       },
       "API_CHANNEL": {
-        "TITLE": "API Kanalı",
-        "DESC": "API kanalı ile entegre edin ve müşterilerinizi desteklemeye başlayın.",
+        "TITLE": "API Channel",
+        "DESC": "Integrate with API channel and start supporting your customers.",
         "CHANNEL_NAME": {
-          "LABEL": "Kanal ismi",
-          "PLACEHOLDER": "Lütfen bir kanal adı girin",
-          "ERROR": "Bu alan gereklidir"
+          "LABEL": "Channel Name",
+          "PLACEHOLDER": "Please enter a channel name",
+          "ERROR": "This field is required"
         },
         "WEBHOOK_URL": {
-          "LABEL": "Web kancası URL'si",
-          "SUBTITLE": "Etkinliklerle ilgili geri aramaları almak istediğiniz URL'yi yapılandırın.",
-          "PLACEHOLDER": "Web kancası URL'si"
+          "LABEL": "Webhook URL",
+          "SUBTITLE": "Configure the URL where you want to recieve callbacks on events.",
+          "PLACEHOLDER": "Webhook URL"
         },
-        "SUBMIT_BUTTON": "API Kanalı Oluşturun",
+        "SUBMIT_BUTTON": "Create API Channel",
         "API": {
-          "ERROR_MESSAGE": "API kanalını kaydedemedik"
+          "ERROR_MESSAGE": "We were not able to save the api channel"
         }
       },
       "EMAIL_CHANNEL": {
-        "TITLE": "E-posta Kanalı",
-        "DESC": "E-posta gelen kutunuzu entegre edin.",
+        "TITLE": "Email Channel",
+        "DESC": "Integrate you email inbox.",
         "CHANNEL_NAME": {
-          "LABEL": "Kanal ismi",
-          "PLACEHOLDER": "Lütfen bir kanal adı girin",
-          "ERROR": "Bu alan gereklidir"
+          "LABEL": "Channel Name",
+          "PLACEHOLDER": "Please enter a channel name",
+          "ERROR": "This field is required"
         },
         "EMAIL": {
-          "LABEL": "E-Posta",
-          "SUBTITLE": "Müşterilerinizin size destek gönderdiği e-posta",
-          "PLACEHOLDER": "E-Posta"
+          "LABEL": "Email",
+          "SUBTITLE": "Email where your customers sends you support tickets",
+          "PLACEHOLDER": "Email"
         },
-        "SUBMIT_BUTTON": "E-posta Kanalı Oluşturun",
+        "SUBMIT_BUTTON": "Create Email Channel",
         "API": {
-          "ERROR_MESSAGE": "E-posta kanalını kaydedemedik"
+          "ERROR_MESSAGE": "We were not able to save the email channel"
         },
-        "FINISH_MESSAGE": "E-postalarınızı aşağıdaki e-posta adresine iletmeye başlayın."
+        "FINISH_MESSAGE": "Start forwarding your emails to the following email address."
       },
       "AUTH": {
-        "TITLE": "Kanallar",
+        "TITLE": "Channels",
         "DESC": "Currently we support Website live chat widgets, Facebook Pages and Twitter profiles as platforms. We have more platforms like Whatsapp, Email, Telegram and Line in the works, which will be out soon."
       },
       "AGENTS": {
-        "TITLE": "Kullanıcılar",
-        "DESC": "Burada yeni oluşturulan gelen kutunuzu yönetmek için aracılar ekleyebilirsiniz. Yalnızca bu seçilen temsilciler gelen kutunuza erişebilir. Bu gelen kutusunun parçası olmayan temsilciler, oturum açtıklarında bu gelen kutusundaki mesajları göremeyecek veya yanıtlayamayacak. <br> <b> Not: </b> Bir yönetici olarak, tüm gelen kutularına erişmeniz gerekiyorsa, kendinizi oluşturduğunuz tüm gelen kutularına aracı olarak eklemelisiniz.",
-        "VALIDATION_ERROR": "Add atleast one agent to your new Inbox",
-        "PICK_AGENTS": "Pick agents for the inbox"
+        "TITLE": "Agents",
+        "DESC": "Here you can add agents to manage your newly created inbox. Only these selected agents will have access to your inbox. Agents which are not part of this inbox will not be able to see or respond to messages in this inbox when they login. <br> <b>PS:</b> As an administrator, if you need access to all inboxes, you should add yourself as agent to all inboxes that you create."
       },
       "DETAILS": {
-        "TITLE": "Gelen Kutusu Ayrıntıları",
-        "DESC": "Aşağıdaki açılır menüden, Chatwoot'a bağlanmak istediğiniz Facebook Sayfasını seçin. Daha iyi tanımlama için gelen kutunuza özel bir ad da verebilirsiniz."
+        "TITLE": "Inbox Details",
+        "DESC": "From the dropdown below, select the Facebook Page you want to connect to Chatwoot. You can also give a custom name to your inbox for better identification."
       },
       "FINISH": {
-        "TITLE": "Başardın!",
-        "DESC": "Facebook Sayfanızı Chatwoot ile entegre etmeyi başarıyla tamamladınız. Bir müşteri Sayfanıza bir dahaki sefere mesaj gönderdiğinde, konuşma otomatik olarak gelen kutunuzda görünecektir. <br> Ayrıca, web sitenize kolayca ekleyebileceğiniz bir pencere öğesi komut dosyası da sağlıyoruz. Bu web sitenizde yayınlandıktan sonra, müşteriler herhangi bir harici aracın yardımı olmadan doğrudan web sitenizden size mesaj gönderebilir ve sohbet burada, Chatwoot'ta görünecektir. <br> Harika, ha? Peki, emin olmaya çalışıyoruz :)"
+        "TITLE": "Nailed It!",
+        "DESC": "You have successfully finished integrating your Facebook Page with Chatwoot. Next time a customer messages your Page, the conversation will automatically appear on your inbox.<br>We are also providing you with a widget script that you can easily add to your website. Once this is live on your website, customers can message you right from your website without the help of any external tool and the conversation will appear right here, on Chatwoot.<br>Cool, huh? Well, we sure try to be :)"
       }
     },
     "DETAILS": {
-      "LOADING_FB": "Facebook ile kimliğinizi doğruluyoruz ...",
-      "ERROR_FB_AUTH": "Bir şeyler ters gitti, lütfen sayfayı yenileyin ...",
-      "CREATING_CHANNEL": "Gelen Kutunuz oluşturuluyor ...",
-      "TITLE": "Gelen Kutusu Ayrıntılarını Yapılandırın",
+      "LOADING_FB": "Authenticating you with Facebook...",
+      "ERROR_FB_AUTH": "Something went wrong, Please refresh page...",
+      "CREATING_CHANNEL": "Creating your Inbox...",
+      "TITLE": "Configure Inbox Details",
       "DESC": ""
     },
     "AGENTS": {
-      "BUTTON_TEXT": "Kullanıcı Ekle",
-      "ADD_AGENTS": "Gelen Kutunuza Aracılar Ekleniyor ..."
+      "BUTTON_TEXT": "Add agents",
+      "ADD_AGENTS": "Adding Agents to your Inbox..."
     },
     "FINISH": {
-      "TITLE": "Gelen Kutunuz hazır!",
-      "MESSAGE": "Artık yeni Kanalınız üzerinden müşterilerinizle etkileşim kurabilirsiniz. Mutlu destek",
-      "BUTTON_TEXT": "Beni oraya götür",
-      "WEBSITE_SUCCESS": "Bir web sitesi kanalı oluşturmayı başarıyla tamamladınız. Aşağıda gösterilen kodu kopyalayın ve web sitenize yapıştırın. Bir müşteri canlı sohbeti bir dahaki sefere kullandığında, konuşma otomatik olarak gelen kutunuzda görünecektir."
+      "TITLE": "Your Inbox is ready!",
+      "MESSAGE": "You can now engage with your customers through your new Channel. Happy supporting ",
+      "BUTTON_TEXT": "Take me there",
+      "WEBSITE_SUCCESS": "You have successfully finished creating a website channel. Copy the code shown below and paste it on your website. Next time a customer use the live chat, the conversation will automatically appear on your inbox."
     },
-    "REAUTH": "Yeniden yetkilendir",
-    "VIEW": "Görünüm",
+    "REAUTH": "Reauthorize",
+    "VIEW": "View",
     "EDIT": {
       "API": {
-        "SUCCESS_MESSAGE": "Gelen kutusu ayarları başarıyla güncellendi",
-        "AUTO_ASSIGNMENT_SUCCESS_MESSAGE": "Otomatik atama başarıyla güncellendi",
-        "ERROR_MESSAGE": "Widget rengi güncellenemedi. Lütfen daha sonra tekrar deneyiniz."
+        "SUCCESS_MESSAGE": "Inbox settings updated successfully",
+        "AUTO_ASSIGNMENT_SUCCESS_MESSAGE": "Auto assignment updated successfully",
+        "ERROR_MESSAGE": "Could not update widget color. Please try again later."
       },
       "AUTO_ASSIGNMENT": {
-        "ENABLED": "Etkin",
-        "DISABLED": "Devre dışı"
+        "ENABLED": "Enabled",
+        "DISABLED": "Disabled"
       }
     },
     "DELETE": {
-      "BUTTON_TEXT": "Sil",
+      "BUTTON_TEXT": "Delete",
       "CONFIRM": {
-        "TITLE": "Silmeyi onayla",
-        "MESSAGE": "Silmek istediğinize emin misiniz ?",
-        "YES": "Evet, Sil ",
-        "NO": "Hayır, Tut"
+        "TITLE": "Confirm Deletion",
+        "MESSAGE": "Are you sure to delete ",
+        "YES": "Yes, Delete ",
+        "NO": "No, Keep "
       },
       "API": {
-        "SUCCESS_MESSAGE": "Gelen kutusu başarıyla silindi",
-        "ERROR_MESSAGE": "Gelen kutusu silinemedi. Lütfen daha sonra tekrar deneyiniz."
+        "SUCCESS_MESSAGE": "Inbox deleted successfully",
+        "ERROR_MESSAGE": "Could not delete inbox. Please try again later."
       }
     },
     "TABS": {
-      "SETTINGS": "Ayarlar",
-      "COLLABORATORS": "Ortak çalışanlar",
-      "CONFIGURATION": "Yapılandırma"
+      "SETTINGS": "Settings",
+      "COLLABORATORS": "Collaborators",
+      "CONFIGURATION": "Configuration"
     },
-    "SETTINGS": "Ayarlar",
+    "SETTINGS": "Settings",
     "FEATURES": {
-      "LABEL": "Özellikleri",
-      "DISPLAY_FILE_PICKER": "Widget'ta dosya seçiciyi görüntüle",
-      "DISPLAY_EMOJI_PICKER": "Widget'ta emoji seçiciyi görüntüleyin"
+      "LABEL": "Features",
+      "DISPLAY_FILE_PICKER": "Display file picker on the widget",
+      "DISPLAY_EMOJI_PICKER": "Display emoji picker on the widget"
     },
     "SETTINGS_POPUP": {
-      "MESSENGER_HEADING": "Messenger Komut Dosyası",
-      "MESSENGER_SUB_HEAD": "Bu düğmeyi gövde etiketinizin içine yerleştirin",
-      "INBOX_AGENTS": "Kullanıcılar",
-      "INBOX_AGENTS_SUB_TEXT": "Bu gelen kutusuna aracı ekleyin veya aracıları kaldırın",
-      "UPDATE": "Güncelleme",
-      "AUTO_ASSIGNMENT": "Otomatik atamayı etkinleştir",
-      "INBOX_UPDATE_TITLE": "Gelen Kutusu Ayarları",
-      "INBOX_UPDATE_SUB_TEXT": "Gelen kutusu ayarlarınızı güncelleyin",
-      "AUTO_ASSIGNMENT_SUB_TEXT": "Bu gelen kutusuna eklenen aracılara yeni görüşmelerin otomatik olarak atanmasını etkinleştirin veya devre dışı bırakın."
+      "MESSENGER_HEADING": "Messenger Script",
+      "MESSENGER_SUB_HEAD": "Place this button inside your body tag",
+      "INBOX_AGENTS": "Agents",
+      "INBOX_AGENTS_SUB_TEXT": "Add or remove agents from this inbox",
+      "UPDATE": "Update",
+      "AUTO_ASSIGNMENT": "Enable auto assignment",
+      "INBOX_UPDATE_TITLE": "Inbox Settings",
+      "INBOX_UPDATE_SUB_TEXT": "Update your inbox settings",
+      "AUTO_ASSIGNMENT_SUB_TEXT": "Enable or disable the automatic assignment of new conversations to the agents added to this inbox."
     },
     "FACEBOOK_REAUTHORIZE": {
-      "TITLE": "Yeniden yetkilendir",
-      "SUBTITLE": "Facebook bağlantınızın süresi doldu, hizmetlere devam etmek için lütfen Facebook sayfanızı yeniden bağlayın",
-      "MESSAGE_SUCCESS": "Yeniden bağlantı başarılı",
-      "MESSAGE_ERROR": "Bir hata oluştu, lütfen tekrar deneyin"
+      "TITLE": "Reauthorize",
+      "SUBTITLE": "Your Facebook connection has expired, please reconnect your Facebook page to continue services",
+      "MESSAGE_SUCCESS": "Reconnection successful",
+      "MESSAGE_ERROR": "There was an error, please try again"
     }
   }
 }

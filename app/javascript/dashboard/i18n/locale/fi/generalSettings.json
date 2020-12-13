@@ -1,54 +1,47 @@
 {
   "GENERAL_SETTINGS": {
-    "TITLE": "Tilin asetukset",
-    "SUBMIT": "Päivitä asetukset",
-    "BACK": "Takaisin",
+    "TITLE": "Account settings",
+    "SUBMIT": "Update settings",
+    "BACK": "Back",
     "UPDATE": {
-      "ERROR": "Asetuksia ei voitu päivittää, yritä uudelleen",
-      "SUCCESS": "Tilin asetukset päivitetty onnistuneesti"
+      "ERROR": "Could not update settings, try again!",
+      "SUCCESS": "Successfully updated account settings"
     },
     "FORM": {
-      "ERROR": "Korjaa lomakkeen virheet",
+      "ERROR": "Please fix form errors",
       "GENERAL_SECTION": {
-        "TITLE": "Yleiset asetukset",
+        "TITLE": "General settings",
         "NOTE": ""
       },
       "NAME": {
-        "LABEL": "Tilin nimi",
-        "PLACEHOLDER": "Tilisi nimi",
-        "ERROR": "Anna kelvollinen tilin nimi"
+        "LABEL": "Account name",
+        "PLACEHOLDER": "Your account name",
+        "ERROR": "Please enter a valid account name"
       },
       "LANGUAGE": {
-        "LABEL": "Sivuston kieli (Beta)",
-        "PLACEHOLDER": "Tilisi nimi",
+        "LABEL": "Site language (Beta)",
+        "PLACEHOLDER": "Your account name",
         "ERROR": ""
       },
       "DOMAIN": {
-        "LABEL": "Saapuvan sähköpostin verkkotunnus",
-        "PLACEHOLDER": "Verkkotunnus, jonne saat sähköpostit",
+        "LABEL": "Incoming Email Domain",
+        "PLACEHOLDER": "The domain where you will receive the emails",
         "ERROR": ""
       },
       "SUPPORT_EMAIL": {
-        "LABEL": "Tukisähköposti",
-        "PLACEHOLDER": "Yrityksesi tukisähköposti",
+        "LABEL": "Support Email",
+        "PLACEHOLDER": "Your company's support email",
         "ERROR": ""
       },
       "AUTO_RESOLVE_DURATION": {
-        "LABEL": "Kuinka monen päivän jälkeen tukipyyntö suljetaan automaattisesti, mikäli sillä ei ole toimintaa",
+        "LABEL": "Number of days after a ticket should auto resolve if there is no activity",
         "PLACEHOLDER": "30",
-        "ERROR": "Syötä kelvollinen automaattisen ratkaisun kesto (vähintään 1 päivä)"
+        "ERROR": "Please enter a valid auto resolve duration (minimum 1 day)"
       },
       "FEATURES": {
-        "INBOUND_EMAIL_ENABLED": "Keskustelun jatkuvuus sähköpostin kautta on käytössä tililläsi.",
-        "CUSTOM_EMAIL_DOMAIN_ENABLED": "Voit nyt vastaanottaa sähköposteja mukautetulla verkkotunnuksellasi."
+        "INBOUND_EMAIL_ENABLED": "Conversation continuity with emails is enabled for your account.",
+        "CUSTOM_EMAIL_DOMAIN_ENABLED": "You can receive emails in your custom domain now."
       }
-    }
-  },
-  "FORMS": {
-    "MULTISELECT": {
-      "ENTER_TO_SELECT": "Paina enter valitaksesi",
-      "ENTER_TO_REMOVE": "Paina enter poistaaksesi",
-      "SELECT_ONE": "Valitse yksi"
     }
   }
 }

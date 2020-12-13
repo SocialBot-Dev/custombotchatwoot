@@ -48,11 +48,11 @@ Vue.component('multiselect', Multiselect);
 Vue.component('woot-switch', WootSwitch);
 Vue.component('woot-wizard', WootWizard);
 
-const i18nConfig = new VueI18n({
-  locale: 'en',
-  messages: i18n,
+Object.keys(i18n).forEach(lang => {
+  Vue.locale(lang, i18n[lang]);
 });
 
+Vue.config.lang = 'en';
 sync(store, router);
 // load common helpers into js
 commonHelpers();
@@ -64,7 +64,6 @@ window.onload = () => {
   window.WOOT = new Vue({
     router,
     store,
-    i18n: i18nConfig,
     components: { App },
     template: '<App/>',
   }).$mount('#app');

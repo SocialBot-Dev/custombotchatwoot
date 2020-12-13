@@ -5,10 +5,7 @@
         v-model="currentDateRangeSelection"
         track-by="name"
         label="name"
-        :placeholder="$t('FORMS.MULTISELECT.SELECT_ONE')"
-        selected-label
-        :select-label="$t('FORMS.MULTISELECT.ENTER_TO_SELECT')"
-        :deselect-label="$t('FORMS.MULTISELECT.ENTER_TO_REMOVE')"
+        placeholder="Select one"
         :options="dateRange"
         :searchable="false"
         :allow-empty="true"

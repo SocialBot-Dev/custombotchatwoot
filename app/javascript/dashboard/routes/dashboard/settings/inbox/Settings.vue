@@ -211,9 +211,6 @@
           :clear-on-select="false"
           :hide-selected="true"
           placeholder="Pick some"
-          selected-label
-          :select-label="$t('FORMS.MULTISELECT.ENTER_TO_SELECT')"
-          :deselect-label="$t('FORMS.MULTISELECT.ENTER_TO_REMOVE')"
           @select="$v.selectedAgents.$touch"
         />
 

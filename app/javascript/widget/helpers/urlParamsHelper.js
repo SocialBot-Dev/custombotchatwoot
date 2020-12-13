@@ -1,5 +1,7 @@
+import Vue from 'vue';
+
 export const buildSearchParamsWithLocale = search => {
-  const locale = window.WOOT_WIDGET.$root.$i18n.locale;
+  const locale = Vue.config.lang;
   if (search) {
     search = `${search}&locale=${locale}`;
   } else {

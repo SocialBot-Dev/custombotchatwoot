@@ -8,11 +8,7 @@ import i18n from 'dashboard/i18n';
 const localVue = createLocalVue();
 localVue.use(Vuex);
 localVue.use(VueI18n);
-
-const i18nConfig = new VueI18n({
-  locale: 'en',
-  messages: i18n,
-});
+localVue.locale('en', i18n.en);
 
 describe('AvailabilityStatus', () => {
   const currentUser = { availability_status: 'online' };
@@ -44,7 +40,6 @@ describe('AvailabilityStatus', () => {
     availabilityStatus = mount(AvailabilityStatus, {
       store,
       localVue,
-      i18n: i18nConfig,
     });
   });
 
