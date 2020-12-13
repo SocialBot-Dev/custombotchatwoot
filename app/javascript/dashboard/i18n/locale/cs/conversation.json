@@ -42,7 +42,13 @@
     },
     "VISIBLE_TO_AGENTS": "Soukromá poznámka: Viditelné pouze pro vás a váš tým",
     "CHANGE_STATUS": "Stav konverzace byl změněn",
-    "CHANGE_AGENT": "Konverzace pověřená osoba změněna"
+    "CHANGE_AGENT": "Konverzace pověřená osoba změněna",
+    "SENT_BY": "Sent by:",
+    "ASSIGNMENT": {
+      "SELECT_AGENT": "Select Agent",
+      "REMOVE": "Odebrat",
+      "ASSIGN": "Assign"
+    }
   },
   "EMAIL_TRANSCRIPT": {
     "TITLE": "Send conversation transcript",
@@ -52,9 +58,9 @@
     "SEND_EMAIL_SUCCESS": "The chat transcript was sent successfully",
     "SEND_EMAIL_ERROR": "There was an error, please try again",
     "FORM": {
-      "SEND_TO_CONTACT": "Send the transcript to the customer",
-      "SEND_TO_AGENT": "Send the transcript of the assigned agent",
-      "SEND_TO_OTHER_EMAIL_ADDRESS": "Send the transcript to another email address",
+      "SEND_TO_CONTACT": "Poslat přepis zákazníkovi",
+      "SEND_TO_AGENT": "Zašlete přepis přidělenému agentovi",
+      "SEND_TO_OTHER_EMAIL_ADDRESS": "Poslat přepis na jinou e-mailovou adresu",
       "EMAIL": {
         "PLACEHOLDER": "Enter an email address",
         "ERROR": "Zadejte prosím platnou e-mailovou adresu"
