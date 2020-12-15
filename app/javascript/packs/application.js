@@ -14,7 +14,7 @@ import WootWizard from 'components/ui/Wizard';
 import { sync } from 'vuex-router-sync';
 import Vuelidate from 'vuelidate';
 import VTooltip from 'v-tooltip';
-import VueHighlightJS from 'vue-highlight.js';
+//import VueHighlightJS from 'vue-highlight.js';
 import javascript from 'highlight.js/lib/languages/javascript';
 
 import WootUiKit from '../dashboard/components';
@@ -38,11 +38,11 @@ Vue.use(VueI18n);
 Vue.use(WootUiKit);
 Vue.use(Vuelidate);
 Vue.use(VTooltip);
-Vue.use(VueHighlightJS, {
-  languages: {
-    javascript,
-  },
-});
+//Vue.use(VueHighlightJS, {
+//  languages: {
+//    javascript,
+//  },
+//});
 
 Vue.component('multiselect', Multiselect);
 Vue.component('woot-switch', WootSwitch);
