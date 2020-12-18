@@ -49,6 +49,9 @@ export default {
     font-weight: $font-weight-medium;
     justify-content: space-between;
     margin-bottom: $space-micro;
+    background: #343940;
+    padding: 6px 15px;
+    border-radius: 5px;
 
     button {
       cursor: pointer;
