@@ -1,16 +1,17 @@
 {
   "CONTACT_PANEL": {
-    "NOT_AVAILABLE": "Not Available",
-    "EMAIL_ADDRESS": "Email Address",
-    "PHONE_NUMBER": "Phone number",
-    "COPY_SUCCESSFUL": "Copied to clipboard successfully",
-    "COMPANY": "Company",
-    "LOCATION": "Location",
-    "CONVERSATION_TITLE": "Conversation Details",
-    "BROWSER": "Browser",
-    "OS": "Operating System",
-    "INITIATED_FROM": "Initiated from",
-    "INITIATED_AT": "Initiated at",
+    "NOT_AVAILABLE": "Müsait değil",
+    "EMAIL_ADDRESS": "E-posta adresi",
+    "PHONE_NUMBER": "Telefon numarası",
+    "COPY_SUCCESSFUL": "Panoya başarıyla kopyalandı",
+    "COMPANY": "Şirket",
+    "LOCATION": "Yer",
+    "CONVERSATION_TITLE": "Sohbet Ayrıntıları",
+    "BROWSER": "Tarayıcı",
+    "OS": "İşletim sistemi",
+    "INITIATED_FROM": "Başlatıldı",
+    "INITIATED_AT": "Başlatıldı",
+    "IP_ADDRESS": "IP Address",
     "CONVERSATIONS": {
       "NO_RECORDS_FOUND": "There are no previous conversations associated to this contact.",
       "TITLE": "Previous Conversations"
