@@ -111,17 +111,17 @@
     }
   },
   "SIDEBAR": {
-    "CONVERSATIONS": "Conversations",
-    "REPORTS": "Reports",
-    "CONTACTS": "Contacts (Beta)",
-    "SETTINGS": "Settings",
-    "HOME": "Home",
-    "AGENTS": "Agents",
-    "INBOXES": "Inboxes",
-    "CANNED_RESPONSES": "Canned Responses",
-    "INTEGRATIONS": "Integrations",
-    "ACCOUNT_SETTINGS": "Account Settings",
-    "LABELS": "Labels"
+    "CONVERSATIONS": "Konuşmalar",
+    "REPORTS": "Raporlar",
+    "CONTACTS": "Kişiler",
+    "SETTINGS": "Ayarlar",
+    "HOME": "Anasayfa",
+    "AGENTS": "Kullanıcılar",
+    "INBOXES": "Gelen kutuları",
+    "CANNED_RESPONSES": "Hazır Yanıtlar",
+    "INTEGRATIONS": "Entegrasyonlar",
+    "ACCOUNT_SETTINGS": "Hesap ayarları",
+    "LABELS": "Etiketler"
   },
   "CREATE_ACCOUNT": {
     "NEW_ACCOUNT": "New Account",
