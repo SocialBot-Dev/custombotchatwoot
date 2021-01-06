@@ -21,13 +21,6 @@
     }
   }
 
-  .message-text {
-    &::after {
-      content: ' \00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0';
-      display: inline;
-    }
-  }
-
   .image {
     cursor: pointer;
     position: relative;
@@ -215,6 +208,9 @@
       // .image .time {
       //   color: $color-white;
       // }
+      &.is-image {
+        border-radius: var(--border-radius-large);
+      }
 
       .link {
         // color: $color-primary-dark;
@@ -282,6 +278,10 @@
         //   color: #ffd975;
         // }
       }
+
+      &.is-image {
+        border-radius: var(--border-radius-large);
+      }
     }
 
     +.left {
@@ -337,6 +337,7 @@
 
       .message-text__wrap {
         position: relative;
+        display: inline-block;
       }
 
       .message-text {
