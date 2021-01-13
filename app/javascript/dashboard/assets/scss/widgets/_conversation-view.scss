@@ -102,6 +102,7 @@
 }
 
 .conversation-wrap {
+
   background: $color-background-dark3;
   @include margin(0);
   border-left: 1px solid $color-border-dark2;
@@ -146,8 +147,8 @@
   flex-direction: column;
   // Firefox flexbox fix
   height: 100%;
-  margin-bottom: $space-small;
   overflow-y: auto;
+  padding-bottom: var(--space-normal);
   position: relative;
 }
 
