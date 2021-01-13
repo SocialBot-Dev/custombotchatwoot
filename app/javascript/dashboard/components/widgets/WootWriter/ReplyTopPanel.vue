@@ -91,7 +91,7 @@ export default {
   display: flex;
   justify-content: space-between;
 
-  background: var(--b-100);
+  background: $color-background-dark1;
 }
 
 .button-group {

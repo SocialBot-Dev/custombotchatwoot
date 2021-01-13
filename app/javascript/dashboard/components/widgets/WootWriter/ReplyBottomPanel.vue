@@ -103,7 +103,7 @@ export default {
   padding: var(--space-slab) var(--space-normal);
 
   &.is-note-mode {
-    background: var(--y-50);
+    background: $color-background-dark1;
   }
 }
 
@@ -116,49 +116,49 @@ export default {
   justify-content: space-between;
 
   &:hover {
-    background: var(--w-300);
+    background: $color-background-dark4;
   }
 
   &.is-active {
-    background: white;
+    background: $color-background-dark1;
   }
 
   &.button--emoji {
     font-size: var(--font-size-small);
     padding: var(--space-small);
     border-radius: 9px;
-    background: var(--b-50);
-    border: 1px solid var(--color-border-light);
+    background: $color-background-dark1;
+    border: 1px solid $color-background-dark1;
     margin-right: var(--space-small);
 
     &:hover {
-      background: var(--b-200);
+      background: $color-background-dark4;
     }
   }
 
   &.button--note {
     background: var(--y-800);
-    color: white;
+    color: $color-background-dark1;
 
     &:hover {
-      background: var(--y-700);
+      background: $color-background-dark4;
     }
   }
 
   &.button--disabled {
-    background: var(--b-100);
+    background: $color-background-dark1;
     color: var(--b-400);
     cursor: default;
 
     &:hover {
-      background: var(--b-100);
+      background: $color-background-dark4;
     }
   }
 }
 
 .bottom-box.is-note-mode {
   .button--emoji {
-    background: white;
+    background: $color-background-dark1;
   }
 }
 
