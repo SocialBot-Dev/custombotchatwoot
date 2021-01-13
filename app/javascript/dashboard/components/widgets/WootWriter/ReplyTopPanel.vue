@@ -91,7 +91,7 @@ export default {
   display: flex;
   justify-content: space-between;
 
-  background: $color-background-dark1;
+  background: #1f2123;
 }
 
 .button-group {
@@ -108,22 +108,22 @@ export default {
     z-index: 1;
 
     &.is-active {
-      background: white;
+      background: #1f2123;
     }
   }
 
   .button--reply {
-    border-right: 1px solid var(--color-border);
+    border-right: 1px solid #3a3a3a;
 
     &:hover {
-      border-right: 1px solid var(--color-border);
+      border-right: 1px solid #3a3a3a;
     }
   }
 
   .button--note {
     &.is-active {
-      border-right: 1px solid var(--color-border);
-      background: var(--y-50);
+      border-right: 1px solid #3a3a3a;
+      background: #1f2123;
     }
   }
 }

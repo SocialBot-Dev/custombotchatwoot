@@ -352,11 +352,11 @@ export default {
 }
 
 .reply-box {
-  border-top: 1px solid $color-border-dark2;
-  background: $color-background-dark1;
+  border-top: 1px solid #3a3a3a;
+  background: #1f2123;
 
   &.is-private {
-    background: $color-background-dark1;
+    background: #1f2123;
   }
 }
 .send-button {
@@ -365,7 +365,7 @@ export default {
 
 .reply-box__top {
   padding: 0 var(--space-normal);
-  border-top: 1px solid $color-border-dark2;
+  border-top: 1px solid #3a3a3a;
   margin-top: -1px;
 }
 
