@@ -55,6 +55,9 @@ export default {
     display: flex;
     justify-content: space-between;
     margin-bottom: var(--space-smaller);
+    background: #36393d;
+    padding: 6px 20px;
+    border-radius: 6px;
 
     .edit-button {
       padding: 0;
