@@ -193,6 +193,8 @@ export default {
     justify-content: flex-start;
     margin: 0 0 $space-micro $space-small;
     max-width: 88%;
+    text-align: start !important;
+    unicode-bidi: plaintext;
 
     .avatar-wrap {
       height: $space-large;
@@ -209,6 +211,8 @@ export default {
       flex-shrink: 0;
       margin-left: $space-small;
       max-width: 90%;
+      text-align: start !important;
+      unicode-bidi: plaintext;
     }
   }
 
@@ -232,25 +236,35 @@ export default {
   .agent-message-wrap {
     + .agent-message-wrap {
       margin-top: $space-micro;
+      text-align: start !important;
+      unicode-bidi: plaintext;
 
       .agent-message .chat-bubble {
         border-top-left-radius: $space-smaller;
+        text-align: start !important;
+        unicode-bidi: plaintext;
       }
     }
 
     + .user-message-wrap {
       margin-top: $space-normal;
+      text-align: start !important;
+      unicode-bidi: plaintext;
     }
 
     &.has-response + .user-message-wrap {
       margin-top: $space-micro;
       .chat-bubble {
         border-top-right-radius: $space-smaller;
+        text-align: start !important;
+        unicode-bidi: plaintext;
       }
     }
 
     &.has-response + .agent-message-wrap {
       margin-top: $space-normal;
+      text-align: start !important;
+      unicode-bidi: plaintext;
     }
   }
 }
