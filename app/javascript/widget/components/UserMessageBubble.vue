@@ -46,10 +46,15 @@ export default {
   word-break: break-word;
   text-align: start;
   unicode-bidi: plaintext;
+  max-width: 100%;
 
   > a {
     color: $color-primary;
     word-break: break-all;
+  }
+
+  .link {
+    text-decoration: underline;
   }
 
   &.user {
@@ -59,5 +64,15 @@ export default {
       color: $color-white;
     }
   }
+}
+</style>
+<style lang="scss" scoped>
+@import '~widget/assets/scss/variables.scss';
+
+.chat-bubble.user::v-deep pre {
+  background: $color-primary-light;
+  color: $color-body;
+  overflow: scroll;
+  padding: $space-smaller;
 }
 </style>
