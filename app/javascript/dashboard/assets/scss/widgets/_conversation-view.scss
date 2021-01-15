@@ -237,6 +237,8 @@
 
       .bubble {
         border-top-right-radius: $space-one;
+        text-align: start !important;
+  		unicode-bidi: plaintext;
       }
     }
 
@@ -254,6 +256,8 @@
       border-bottom-right-radius: $space-smaller;
       border-top-right-radius: $space-smaller;
       margin-left: auto;
+      text-align: start !important;
+  	  unicode-bidi: plaintext;
 
       &.is-private {
         // background: lighten($warning-color, 32%);
@@ -405,23 +409,33 @@
   h5,
   h6 {
     color: var(--color-body);
+    text-align: start !important;
+  	unicode-bidi: plaintext;
   }
 
   a {
     color: var(--color-woot);
     text-decoration: underline;
+    text-align: start !important;
+  	unicode-bidi: plaintext;
   }
 
   blockquote {
     border-left-color: var(--s-300);
+    text-align: start !important;
+  	unicode-bidi: plaintext;
 
     p {
       color: var(--s-300);
+      text-align: start !important;
+  	unicode-bidi: plaintext;
     }
   }
 
   p:last-child {
     margin-bottom: 0;
+    text-align: start !important;
+  	unicode-bidi: plaintext;
   }
 }
 
@@ -434,26 +448,38 @@
   h5,
   h6 {
     color: var(--white);
+    text-align: start !important;
+  	unicode-bidi: plaintext;
   }
 
   a {
     color: var(--white);
     text-decoration: underline;
+    text-align: start !important;
+  	unicode-bidi: plaintext;
   }
 
   blockquote {
     border-left-color: var(--w-100);
+    text-align: start !important;
+  	unicode-bidi: plaintext;
 
     p {
       color: var(--w-100);
+      text-align: start !important;
+  	unicode-bidi: plaintext;
     }
   }
 
   pre code {
     background: var(--color-background);
+    text-align: start !important;
+  	unicode-bidi: plaintext;
   }
 
   p:last-child {
     margin-bottom: 0;
+    text-align: start !important;
+  	unicode-bidi: plaintext;
   }
 }

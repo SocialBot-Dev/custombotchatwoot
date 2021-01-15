@@ -213,6 +213,8 @@ export default {
       overflow: visible;
       border-radius: 4px !important;
       transition: all .2s cubic-bezier(0.42, 0, 0.29, 0.83);
+      text-align: start !important;
+      unicode-bidi: plaintext;
 
       &:hover {
           transform: translateX(.25rem);

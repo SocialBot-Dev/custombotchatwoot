@@ -74,5 +74,54 @@ export default {
   color: $color-body;
   overflow: scroll;
   padding: $space-smaller;
+
+  blockquote {
+    text-align: start !important;
+    unicode-bidi: plaintext;
+  }
+  dd {
+    text-align: start !important;
+    unicode-bidi: plaintext;
+  }
+  dl {
+    text-align: start !important;
+    unicode-bidi: plaintext;
+  }
+  figure {
+    text-align: start !important;
+    unicode-bidi: plaintext;
+  }
+  h1 {
+    text-align: start !important;
+    unicode-bidi: plaintext;
+  }
+  h2 {
+    text-align: start !important;
+    unicode-bidi: plaintext;
+  }
+  h3 {
+    text-align: start !important;
+    unicode-bidi: plaintext;
+  }
+  h4 {
+    text-align: start !important;
+    unicode-bidi: plaintext;
+  }
+  h5 {
+    text-align: start !important;
+    unicode-bidi: plaintext;
+  }
+  h6 {
+    text-align: start !important;
+    unicode-bidi: plaintext;
+  }
+  p {
+    text-align: start !important;
+    unicode-bidi: plaintext;
+  }
+  pre {
+    text-align: start !important;
+    unicode-bidi: plaintext;
+  }
 }
 </style>
