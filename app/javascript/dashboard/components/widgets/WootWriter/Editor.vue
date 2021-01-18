@@ -107,6 +107,11 @@ export default {
 
   > .ProseMirror {
     padding: 0;
+
+      p {
+        text-align: start !important;
+        unicode-bidi: plaintext;
+      }
   }
 }
 
