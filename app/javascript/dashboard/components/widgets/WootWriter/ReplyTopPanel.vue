@@ -114,7 +114,7 @@ export default {
 
   .button--reply {
     border-radius: 0;
-    border-right: 1px solid var(--color-border);
+    border-right: 1px solid #3a3a3a;
 
     &:hover {
       border-right: 1px solid #3a3a3a;

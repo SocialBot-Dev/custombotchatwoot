@@ -101,6 +101,10 @@ export default {
   display: flex;
   flex-direction: column;
 
+  .ProseMirror-menubar {
+    color: #b1b1b1 !important;
+  }
+
   > .ProseMirror {
     padding: 0;
   }
