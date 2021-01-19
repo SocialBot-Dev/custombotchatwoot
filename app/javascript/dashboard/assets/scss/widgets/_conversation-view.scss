@@ -16,6 +16,11 @@
     text-align: start !important;
     unicode-bidi: plaintext;
 
+    p {
+    	text-align: start !important;
+    	unicode-bidi: plaintext;
+    }
+
     .link {
       color: var(--white);
       text-decoration: underline;
