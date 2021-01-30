@@ -9,8 +9,8 @@
     }
   },
   "TEAM_AVAILABILITY": {
-    "ONLINE": "We are online",
-    "OFFLINE": "Currently away"
+    "ONLINE": "We Are Online",
+    "OFFLINE": "Currently Away"
   },
   "REPLY_TIME": {
     "IN_A_FEW_MINUTES": "Typically replies in a few minutes",
