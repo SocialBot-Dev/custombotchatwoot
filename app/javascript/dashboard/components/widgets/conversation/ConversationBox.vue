@@ -73,12 +73,12 @@ export default {
   display: flex;
   flex-direction: column;
   width: 100%;
-  border-left: 1px solid #3a3a3a;
+  border-left: 1px solid var(--color-border-dark2);
 }
 
 .messages-and-sidebar {
   display: flex;
-  background: #000;
+  background: var(--color-background-dark);
   margin: 0;
   height: auto;
   flex: 1 1;
