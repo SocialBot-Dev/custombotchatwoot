@@ -174,6 +174,7 @@ export default {
       line-height: 16px;
       margin: 10px 4px 0;
     }
+
     .social-links {
       margin: 7px 0 5px;
       display: block;
@@ -239,10 +240,13 @@ export default {
         }
       }
     }
-  .logo {
-    width: 56px;
-    height: 56px;
+
+    .logo {
+      width: 56px;
+      height: 56px;
+    }
   }
+}
 }
 
 .header--row {
