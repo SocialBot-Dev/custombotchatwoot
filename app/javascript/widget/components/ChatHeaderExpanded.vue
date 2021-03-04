@@ -1,6 +1,6 @@
 <template>
   <header class="header-expanded bg-white py-8 px-6 relative box-border w-full" :style="{ background: widgetColor }">
-    <div class="flex justify-between items-start">
+    <div class="">
       <div class="title-logo">
       <img v-if="avatarUrl" class="logo" :src="avatarUrl" />
       <span class="header-elements">
