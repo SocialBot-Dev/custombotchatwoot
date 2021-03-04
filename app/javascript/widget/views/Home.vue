@@ -9,6 +9,7 @@
     <div
       class="header-wrap bg-white"
       :class="{ expanded: !isHeaderCollapsed, collapsed: isHeaderCollapsed }"
+      :style="{ background: widgetColor }"
     >
       <transition
         enter-active-class="transition-all delay-200 duration-300 ease"
