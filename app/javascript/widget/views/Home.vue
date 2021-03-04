@@ -9,7 +9,7 @@
     <div
       class="header-wrap bg-white"
       :class="{ expanded: !isHeaderCollapsed, collapsed: isHeaderCollapsed }"
-      :style="{ background: widgetColor }"
+      :style="{ background: widgetColor }
     >
       <transition
         enter-active-class="transition-all delay-200 duration-300 ease"
@@ -72,7 +72,6 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
 import Branding from 'widget/components/Branding.vue';
 import ChatFooter from 'widget/components/ChatFooter.vue';
 import ChatHeaderExpanded from 'widget/components/ChatHeaderExpanded.vue';
