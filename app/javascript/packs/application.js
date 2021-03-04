@@ -22,6 +22,7 @@ import App from '../dashboard/App';
 import i18n from '../dashboard/i18n';
 import createAxios from '../dashboard/helper/APIHelper';
 import commonHelpers from '../dashboard/helper/commons';
+import { getAlertAudio } from '../shared/helpers/AudioNotificationHelper';
 import router from '../dashboard/routes';
 import store from '../dashboard/store';
 import vueActionCable from '../dashboard/helper/actionCable';
@@ -31,6 +32,7 @@ import {
   registerSubscription,
 } from '../dashboard/helper/pushHelper';
 import * as Sentry from '@sentry/vue';
+import 'vue-easytable/libs/theme-default/index.css';
 
 Vue.config.env = process.env;
 
@@ -75,7 +77,6 @@ window.onload = () => {
   }).$mount('#app');
   vueActionCable.init();
 };
-
 window.addEventListener('load', () => {
   verifyServiceWorkerExistence(registration =>
     registration.pushManager.getSubscription().then(subscription => {
@@ -84,4 +85,5 @@ window.addEventListener('load', () => {
       }
     })
   );
+  getAlertAudio();
 });

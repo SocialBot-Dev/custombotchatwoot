@@ -128,6 +128,7 @@ export default {
     background-color: #9babbd !important;
   }
   
+
   .header-branding {
     display: flex;
     align-items: normal;

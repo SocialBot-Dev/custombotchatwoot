@@ -1,6 +1,7 @@
 <template>
-  <header class="header-expanded">
-    <div class="title-logo">
+  <header class="header-expanded bg-white py-8 px-6 relative box-border w-full">
+  <div class="title-logo">
+    <div class="flex justify-between items-start">
       <img v-if="avatarUrl" class="logo" :src="avatarUrl" />
       <span class="header-elements">
         <div style="display: inline-flex;">
@@ -238,6 +239,9 @@ export default {
         }
       }
     }
+  .logo {
+    width: 56px;
+    height: 56px;
   }
 }
 
