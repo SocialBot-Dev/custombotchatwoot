@@ -1,5 +1,5 @@
 <template>
-  <header class="header-expanded bg-white py-8 px-6 relative box-border w-full" :style="{ background: widgetColor }">
+  <header class="header-expanded py-8 px-6 relative box-border w-full">
     <div class="">
       <div class="title-logo">
       <img v-if="avatarUrl" class="logo" :src="avatarUrl" />
