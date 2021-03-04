@@ -104,6 +104,10 @@ export default {
       type: Boolean,
       default: false,
     },
+    widgetColor: {  
+      type: String, 
+      default: '',  
+    },
   },
   data() {
     return { isOnCollapsedView: false };
@@ -115,6 +119,7 @@ export default {
       conversationSize: 'conversation/getConversationSize',
       groupedMessages: 'conversation/getGroupedConversation',
       isFetchingList: 'conversation/getIsFetchingList',
+      widgetColor: 'appConfig/getWidgetColor',
     }),
     currentView() {
       if (this.isHeaderCollapsed) {
@@ -177,6 +182,11 @@ export default {
     transition: max-height 300ms;
     z-index: 99;
     @include shadow-large;
+    border-radius: 0; 
+    background: #f4f6fb;  
+    background-image: linear-gradient(125deg,rgba(255, 255, 255, 0.25) -20%,rgba(0,0,0,0.45)) !important; 
+    overflow: hidden;
+
     &.expanded {
       max-height: 100%;
     }
