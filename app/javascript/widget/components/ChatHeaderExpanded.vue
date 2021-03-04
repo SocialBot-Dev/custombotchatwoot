@@ -1,7 +1,7 @@
 <template>
   <header class="header-expanded bg-white py-8 px-6 relative box-border w-full">
-  <div class="title-logo">
     <div class="flex justify-between items-start">
+      <div class="title-logo">
       <img v-if="avatarUrl" class="logo" :src="avatarUrl" />
       <span class="header-elements">
         <div style="display: inline-flex;">
@@ -11,7 +11,7 @@
 
       </span>
       <header-actions :show-popout-button="showPopoutButton" />
-     </div>
+    </div>
     <span class="close close-button" @click="closeWindow"></span>
     <span class="header-elements header-elements-2">
         <span class="social-links">
@@ -247,7 +247,7 @@ export default {
     }
   }
 }
-}
+
 
 .header--row {
   display: flex;
