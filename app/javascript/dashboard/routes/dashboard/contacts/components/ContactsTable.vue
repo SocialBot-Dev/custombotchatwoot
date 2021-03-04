@@ -221,7 +221,7 @@ export default {
 
   > thead {
     border-bottom: 1px solid var(--color-border-dark2);
-    // background: white;
+    background: var(--color-border-dark1);
 
     > th:first-child {
       padding-left: var(--space-medium);

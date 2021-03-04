@@ -103,7 +103,7 @@ export default {
   }
 
   @include breakpoint(xxlarge up) {
-    flex-basis: 36rem;
+    flex-basis: 32rem;
   }
 
   &::v-deep .contact--panel {
