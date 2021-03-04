@@ -200,11 +200,11 @@ export default {
     @include shadow-large;
 
     &.expanded {
-      max-height: 16rem;
+      max-height: 100%;
     }
 
     &.collapsed {
-      max-height: 4.5rem;
+      max-height: 100%;
     }
 
     @media only screen and (min-device-width: 320px) and (max-device-width: 667px) {
