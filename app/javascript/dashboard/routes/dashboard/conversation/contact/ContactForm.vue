@@ -224,5 +224,6 @@ export default {
 
 .input-group-label {
   font-size: var(--font-size-small);
+  background: #000;
 }
 </style>

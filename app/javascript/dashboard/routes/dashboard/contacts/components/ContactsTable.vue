@@ -282,6 +282,9 @@ export default {
 
   .ve-table-header-th {
     padding: var(--space-small) var(--space-two) !important;
+    background-color: #1f2124;
+    color: rgb(110 111 115);
+    border-color: #3a3a3a;
   }
 
   .ve-table-body-td {
