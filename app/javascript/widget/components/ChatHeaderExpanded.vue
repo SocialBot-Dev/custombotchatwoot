@@ -290,4 +290,5 @@ span.availability-status {
 .status-view--badge.bg-orange-500 {
   background-color: #ffbc00;
 }
+
 </style>
