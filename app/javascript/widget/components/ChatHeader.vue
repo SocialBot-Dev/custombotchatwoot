@@ -1,5 +1,5 @@
 <template>
-  <header class="header-collapsed"">
+  <header class="header-collapsed">
     <div class="header-branding">
       <img v-if="avatarUrl" :src="avatarUrl" alt="avatar" />
        <span class="header-elements">
