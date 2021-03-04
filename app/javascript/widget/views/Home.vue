@@ -9,7 +9,6 @@
     <div
       class="header-wrap bg-white"
       :class="{ expanded: !isHeaderCollapsed, collapsed: isHeaderCollapsed }"
-      :style="{ background: widgetColor }"
     >
       <transition
         enter-active-class="transition-all delay-200 duration-300 ease"
@@ -80,7 +79,6 @@ import ConversationWrap from 'widget/components/ConversationWrap.vue';
 import configMixin from '../mixins/configMixin';
 import TeamAvailability from 'widget/components/TeamAvailability';
 import Spinner from 'shared/components/Spinner.vue';
-
 import { mapGetters } from 'vuex';
 import PreChatForm from '../components/PreChat/Form';
 export default {
@@ -101,18 +99,6 @@ export default {
       type: Boolean,
       default: false,
     },
-    conversationAttributes: {
-      type: Object,
-      default: () => {},
-    },
-    unreadMessageCount: {
-      type: Number,
-      default: 0,
-    },
-    widgetColor: {
-      type: String,
-      default: '',
-    },
     showPopoutButton: {
       type: Boolean,
       default: false,
@@ -123,7 +109,6 @@ export default {
   },
   computed: {
     ...mapGetters({
-      widgetColor: 'appConfig/getWidgetColor',
       availableAgents: 'agent/availableAgents',
       conversationAttributes: 'conversationAttributes/getConversationParams',
       conversationSize: 'conversation/getConversationSize',
@@ -158,7 +143,6 @@ export default {
       if (!this.hasIntroText || this.conversationSize) {
         return true;
       }
-
       return this.isOnCollapsedView;
     },
     hasIntroText() {
@@ -178,47 +162,36 @@ export default {
 <style scoped lang="scss">
 @import '~widget/assets/scss/variables';
 @import '~widget/assets/scss/mixins';
-
 .home {
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  background: #f4f6fb; // $color-background;
-
+  overflow: hidden;
+  background: $color-background;
   .header-wrap {
     border-radius: $space-normal $space-normal 0 0;
     flex-shrink: 0;
-    border-radius: 0;
-    background: white;
-    background-image: linear-gradient(125deg,rgba(255, 255, 255, 0.25) -20%,rgba(0,0,0,0.45)) !important;
-  overflow: hidden;
-  background: $color-background;
     transition: max-height 300ms;
     z-index: 99;
     @include shadow-large;
-
     &.expanded {
       max-height: 100%;
     }
-
     &.collapsed {
       max-height: 100%;
     }
-
     @media only screen and (min-device-width: 320px) and (max-device-width: 667px) {
       border-radius: 0;
     }
   }
-
   .footer-wrap {
     flex-shrink: 0;
     width: 100%;
     display: flex;
     flex-direction: column;
     position: relative;
-
     &:before {
       content: '';
       position: absolute;
@@ -234,7 +207,6 @@ export default {
       );
     }
   }
-
   .input-wrap {
     padding: 0 $space-normal;
   }
