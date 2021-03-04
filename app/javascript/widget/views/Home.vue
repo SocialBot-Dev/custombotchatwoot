@@ -175,7 +175,7 @@ export default {
   flex-direction: column;
   flex-wrap: nowrap;
   overflow: hidden;
-  background: $color-background;
+  background: #f4f6fb;
   .header-wrap {
     border-radius: $space-normal $space-normal 0 0;
     flex-shrink: 0;
@@ -183,7 +183,6 @@ export default {
     z-index: 99;
     @include shadow-large;
     border-radius: 0; 
-    background: #f4f6fb;  
     background-image: linear-gradient(125deg,rgba(255, 255, 255, 0.25) -20%,rgba(0,0,0,0.45)) !important; 
     overflow: hidden;
 
