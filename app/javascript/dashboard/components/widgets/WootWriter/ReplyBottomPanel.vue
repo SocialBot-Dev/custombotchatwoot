@@ -160,9 +160,9 @@ export default {
 }
 
 .button {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  &.button--emoji {
+    margin-right: var(--space-small);
+  }
 
   &:hover {
     background: $color-background-dark4;
@@ -238,6 +238,7 @@ export default {
 
     label {
       color: var(--s-500);
+      font-size: var(--font-size-mini);
     }
   }
 }
