@@ -4,7 +4,7 @@
       <div class="text-black-700">
         <div class="text-base leading-5 font-medium mb-1">
           {{ isOnline }}
-          <span class="availability-status" v-if="isOnline">We are Online</span>
+          <span class="availability-status" v-if="isOnline">We Are Online</span>
           <span class="availability-status" v-else>Currently Away</span>
           <div
             :class="
