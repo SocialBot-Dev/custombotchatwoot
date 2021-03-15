@@ -334,7 +334,7 @@ export default {
 }
 
 .contact--name {
-  @include text-ellipsis;
+  //@include text-ellipsis;
   text-transform: capitalize;
 
   font-weight: $font-weight-bold;
@@ -343,7 +343,7 @@ export default {
 }
 
 .contact--email {
-  @include text-ellipsis;
+  //@include text-ellipsis;
 
   color: $color-gray;
   display: block;
