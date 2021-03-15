@@ -3,7 +3,7 @@
     <div class="flex items-center justify-between mb-4">
       <div class="text-black-700">
         <div class="text-base leading-5 font-medium mb-1">
-          {{ teamAvailabilityStatus }}
+          {{ isOnline }}
           <div
             :class="
               `status-view--badge rounded-full leading-4 ${
@@ -13,11 +13,11 @@
           />
         </div>
         <div class="text-xs leading-4 mt-1">
-          <span class="reply-eta" v-if="availableAgents.length">Average response time is 30 minutes</span>
+          <span class="reply-eta" v-if="isOnline">Average response time is 30 minutes</span>
           <span class="reply-eta" v-else>We'll get back to you in a few hours</span>
         </div>
       </div>
-      <available-agents :agents="availableAgents" />
+      <available-agents v-if="isOnline" :agents="availableAgents" />
     </div>
     <woot-button
       class="font-medium"
@@ -37,7 +37,7 @@ import AvailableAgents from 'widget/components/AvailableAgents.vue';
 import { getContrastingTextColor } from 'shared/helpers/ColorHelper';
 import WootButton from 'shared/components/Button';
 import configMixin from 'widget/mixins/configMixin';
-import teamAvailabilityMixin from 'widget/mixins/teamAvailabilityMixin';
+import availabilityMixin from 'widget/mixins/availability';
 
 export default {
   name: 'TeamAvailability',
@@ -45,7 +45,7 @@ export default {
     AvailableAgents,
     WootButton,
   },
-  mixins: [configMixin, teamAvailabilityMixin],
+  mixins: [configMixin, availabilityMixin],
   props: {
     availableAgents: {
       type: Array,
@@ -56,6 +56,26 @@ export default {
     ...mapGetters({ widgetColor: 'appConfig/getWidgetColor' }),
     textColor() {
       return getContrastingTextColor(this.widgetColor);
+    },
+    isOnline() {
+      const { workingHoursEnabled } = this.channelConfig;
+      const anyAgentOnline = this.availableAgents.length > 0;
+
+      if (workingHoursEnabled) {
+        return this.isInBetweenTheWorkingHours;
+      }
+      return anyAgentOnline;
+    },
+    replyWaitMeessage() {
+      const { workingHoursEnabled } = this.channelConfig;
+
+      if (this.isOnline) {
+        return this.replyTimeStatus;
+      }
+      if (workingHoursEnabled) {
+        return this.outOfOfficeMessage;
+      }
+      return this.$t('TEAM_AVAILABILITY.OFFLINE');
     },
   },
   methods: {

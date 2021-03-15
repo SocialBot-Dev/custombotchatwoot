@@ -8,12 +8,12 @@
           <div
             :class="
               `status-view--badge rounded-full leading-4 ${
-                availableAgents.length ? 'bg-green-500' : 'bg-orange-500'
+                isOnline ? 'bg-green-500' : 'bg-orange-500'
               }`
             "
             :title="
               `${
-                availableAgents.length ? 'Online' : 'Currenlty Away'
+                isOnline ? 'Online' : 'Currenlty Away'
               }`
             "
           />
@@ -64,14 +64,14 @@
 <script>
 import { mapGetters } from 'vuex';
 import HeaderActions from './HeaderActions';
-import configMixin from 'widget/mixins/configMixin';
+import availabilityMixin from 'widget/mixins/availability';
 
 export default {
   name: 'ChatHeader',
   components: {
     HeaderActions,
   },
-  mixins: [configMixin],
+  mixins: [availabilityMixin],
   props: {
     avatarUrl: {
       type: String,
@@ -102,7 +102,20 @@ export default {
     ...mapGetters({
       widgetColor: 'appConfig/getWidgetColor',
     }),
+    isOnline() {
+      const { workingHoursEnabled } = this.channelConfig;
+      const anyAgentOnline = this.availableAgents.length > 0;
 
+      if (workingHoursEnabled) {
+        return this.isInBetweenTheWorkingHours;
+      }
+      return anyAgentOnline;
+    },
+    replyWaitMeessage() {
+      return this.isOnline
+        ? this.replyTimeStatus
+        : this.$t('TEAM_AVAILABILITY.OFFLINE');
+    },
   },
 };
 </script>
