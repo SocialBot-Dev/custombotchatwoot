@@ -4,10 +4,43 @@
       <i class="ion-chevron-right" />
     </span>
     <contact-info :contact="contact" :channel-type="channelType" />
-    <contact-custom-attributes
-      v-if="hasContactAttributes"
-      :custom-attributes="contact.custom_attributes"
-    />
+    <div class="conversation--actions">
+      <h4 class="sub-block-title">
+        {{ $t('CONVERSATION_SIDEBAR.DETAILS_TITLE') }}
+      </h4>
+      <div class="multiselect-wrap--small">
+        <label class="multiselect__label">
+          {{ $t('CONVERSATION_SIDEBAR.ASSIGNEE_LABEL') }}
+        </label>
+        <multiselect
+          v-model="assignedAgent"
+          :options="agentsList"
+          label="name"
+          track-by="id"
+          deselect-label=""
+          select-label=""
+          selected-label=""
+          :placeholder="$t('CONVERSATION_SIDEBAR.SELECT.PLACEHOLDER')"
+          :allow-empty="true"
+        />
+      </div>
+      <div class="multiselect-wrap--small">
+        <label class="multiselect__label">
+          {{ $t('CONVERSATION_SIDEBAR.TEAM_LABEL') }}
+        </label>
+        <multiselect
+          v-model="assignedTeam"
+          :options="teamsList"
+          label="name"
+          track-by="id"
+          deselect-label=""
+          select-label=""
+          selected-label=""
+          :placeholder="$t('CONVERSATION_SIDEBAR.SELECT.PLACEHOLDER')"
+          :allow-empty="true"
+        />
+      </div>
+    </div>
     <div v-if="browser.browser_name" class="conversation--details">
       <contact-details-item
         v-if="location"
@@ -67,6 +100,7 @@
 
 <script>
 import { mapGetters } from 'vuex';
+import alertMixin from 'shared/mixins/alertMixin';
 
 import ContactConversations from './ContactConversations.vue';
 import ContactDetailsItem from './ContactDetailsItem.vue';
@@ -83,6 +117,7 @@ export default {
     ContactInfo,
     ConversationLabels,
   },
+  mixins: [alertMixin],
   props: {
     conversationId: {
       type: [Number, String],
@@ -96,6 +131,8 @@ export default {
   computed: {
     ...mapGetters({
       currentChat: 'getSelectedChat',
+      agents: 'agents/getVerifiedAgents',
+      teams: 'teams/getTeams',
     }),
     currentConversationMetaData() {
       return this.$store.getters[
@@ -159,6 +196,46 @@ export default {
     contact() {
       return this.$store.getters['contacts/getContact'](this.contactId);
     },
+    agentsList() {
+      return [{ id: 0, name: 'None' }, ...this.agents];
+    },
+    teamsList() {
+      return [{ id: 0, name: 'None' }, ...this.teams];
+    },
+    assignedAgent: {
+      get() {
+        return this.currentChat.meta.assignee;
+      },
+      set(agent) {
+        const agentId = agent ? agent.id : 0;
+        this.$store.dispatch('setCurrentChatAssignee', agent);
+        this.$store
+          .dispatch('assignAgent', {
+            conversationId: this.currentChat.id,
+            agentId,
+          })
+          .then(() => {
+            this.showAlert(this.$t('CONVERSATION.CHANGE_AGENT'));
+          });
+      },
+    },
+    assignedTeam: {
+      get() {
+        return this.currentChat.meta.team;
+      },
+      set(team) {
+        const teamId = team ? team.id : 0;
+        this.$store.dispatch('setCurrentChatTeam', team);
+        this.$store
+          .dispatch('assignTeam', {
+            conversationId: this.currentChat.id,
+            teamId,
+          })
+          .then(() => {
+            this.showAlert(this.$t('CONVERSATION.CHANGE_TEAM'));
+          });
+      },
+    },
   },
   watch: {
     conversationId(newConversationId, prevConversationId) {
@@ -191,11 +268,9 @@ export default {
 
 <style lang="scss" scoped>
 @import '~dashboard/assets/scss/variables';
-@import '~dashboard/assets/scss/mixins';
 
 .contact--panel {
   border-left: 1px solid $color-border-dark2;
-
   background: $color-background-dark1;
   font-size: $font-size-small;
   overflow-y: auto;
@@ -312,5 +387,17 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.sub-block-title {
+  margin-bottom: var(--space-small);
+}
+
+.conversation--actions {
+  padding: 0 var(--space-normal) var(--space-small);
+}
+
+.multiselect__label {
+  margin-bottom: var(--space-smaller);
 }
 </style>

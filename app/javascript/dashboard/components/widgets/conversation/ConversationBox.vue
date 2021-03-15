@@ -74,6 +74,7 @@ export default {
   flex-direction: column;
   width: 100%;
   border-left: 1px solid var(--color-border-dark2);
+  background: var(--color-background-dark);
 }
 
 .messages-and-sidebar {
