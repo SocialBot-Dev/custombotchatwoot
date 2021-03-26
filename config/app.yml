@@ -1,6 +1,5 @@
 shared: &shared
-
-  version: '-1.7.0/(1.14.1)'
+  version: '1.14.2'
 
 development:
   <<: *shared
