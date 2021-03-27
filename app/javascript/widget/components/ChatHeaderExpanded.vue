@@ -278,11 +278,11 @@ $logo-size: 56px;
   100% {
     transform: scale(0.95);
     box-shadow: 0 0 0 0 transparent;
-  // .logo {
-  //   width: $logo-size;
-  //   height: $logo-size;
-  //   border-radius: $logo-size;
-  // }
+//   .logo {
+//     width: $logo-size;
+//     height: $logo-size;
+//     border-radius: $logo-size;
+  }
 }
 
 span.availability-status {
