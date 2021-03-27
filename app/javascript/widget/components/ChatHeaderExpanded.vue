@@ -103,6 +103,8 @@ export default {
 @import '~widget/assets/scss/mixins.scss';
 @import url('https://chats.wevrlabs.net/fontawesome-all.min.css');
 
+$logo-size: 56px;
+
 .header-expanded {
   padding: 2.1rem 1.4rem 1.4rem;
   width: 100%;
@@ -276,7 +278,11 @@ export default {
   100% {
     transform: scale(0.95);
     box-shadow: 0 0 0 0 transparent;
-  }
+  // .logo {
+  //   width: $logo-size;
+  //   height: $logo-size;
+  //   border-radius: $logo-size;
+  // }
 }
 
 span.availability-status {
