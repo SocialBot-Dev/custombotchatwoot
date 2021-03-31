@@ -288,7 +288,7 @@ export default {
   right: $space-normal;
   top: $space-slab;
   font-size: $font-size-default;
-  color: $color-heading;
+  color: #5e656d;
 }
 
 .contact--profile {
