@@ -23,21 +23,21 @@ RSpec.describe Notification do
     it 'returns appropriate title suited for the notification type conversation_creation' do
       notification = create(:notification, notification_type: 'conversation_creation')
 
-      expect(notification.push_message_title).to eq "#{notification.primary_actor.inbox.name} - ##{notification.primary_actor.display_id} has\
+      expect(notification.push_message_title).to eq "[New conversation] - ##{notification.primary_actor.display_id} has\
  been created in #{notification.primary_actor.inbox.name}"
     end
 
     it 'returns appropriate title suited for the notification type conversation_assignment' do
       notification = create(:notification, notification_type: 'conversation_assignment')
 
-      expect(notification.push_message_title).to eq "#{notification.primary_actor.inbox.name} - ##{notification.primary_actor.display_id} has been assigned to you"
+      expect(notification.push_message_title).to eq "[Assigned to you] - ##{notification.primary_actor.display_id} has been assigned to you"
     end
 
     it 'returns appropriate title suited for the notification type assigned_conversation_new_message' do
       message = create(:message, sender: create(:user), content: Faker::Lorem.paragraphs(number: 2))
       notification = create(:notification, notification_type: 'assigned_conversation_new_message', primary_actor: message)
 
-      expect(notification.push_message_title).to eq "#{notification.primary_actor.inbox.name} - ##{notification.conversation.display_id} \
+      expect(notification.push_message_title).to eq "[New message] - ##{notification.conversation.display_id} \
 #{message.content.truncate_words(10)}"
     end
 
@@ -46,7 +46,7 @@ RSpec.describe Notification do
       message = create(:message, sender: create(:user), content: nil)
       notification = create(:notification, notification_type: 'assigned_conversation_new_message', primary_actor: message)
 
-      expect(notification.push_message_title).to eq "#{notification.primary_actor.inbox.name} - ##{notification.conversation.display_id} "
+      expect(notification.push_message_title).to eq "[New message] - ##{notification.conversation.display_id} "
     end
 
     it 'returns appropriate title suited for the notification type conversation_mention' do
