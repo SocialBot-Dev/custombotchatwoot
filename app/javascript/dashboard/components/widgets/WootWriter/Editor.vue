@@ -197,6 +197,7 @@ export default {
         text-align: start !important;
         unicode-bidi: plaintext;
       }
+    word-break: break-word;
   }
 }
 
