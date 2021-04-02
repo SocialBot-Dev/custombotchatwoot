@@ -41,6 +41,10 @@
         />
       </div>
     </div>
+    <contact-custom-attributes
+      v-if="hasContactAttributes"
+      :custom-attributes="contact.custom_attributes"
+    />
     <div v-if="browser.browser_name" class="conversation--details">
       <contact-details-item
         v-if="location"
@@ -89,10 +93,6 @@
         emoji="🕰"
       />
     </div>
-    <contact-custom-attributes
-      v-if="hasContactAttributes"
-      :custom-attributes="contact.custom_attributes"
-    />
     <conversation-labels :conversation-id="conversationId" />
     <contact-conversations
       v-if="contact.id"
