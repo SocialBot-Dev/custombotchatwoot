@@ -321,7 +321,7 @@ export default {
 .current-user--options {
   font-size: $font-size-big;
   margin-bottom: auto;
-  margin-left: auto;
+  margin-left: 15px;
   margin-top: auto;
 }
 

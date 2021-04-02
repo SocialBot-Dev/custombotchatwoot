@@ -54,7 +54,7 @@ export default {
     align-items: center;
     display: flex;
     justify-content: space-between;
-    margin-bottom: var(--space-smaller);
+    margin-bottom: var(--space-normal);
     background: #36393d;
     padding: 6px 20px;
     border-radius: 6px;

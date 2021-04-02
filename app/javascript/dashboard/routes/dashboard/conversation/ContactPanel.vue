@@ -393,6 +393,9 @@ export default {
 
 .sub-block-title {
   margin-bottom: var(--space-small);
+  background: #36393d;
+  padding: 6px 20px;
+  border-radius: 6px;
 }
 
 .conversation--actions {
