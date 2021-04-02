@@ -89,6 +89,10 @@
         emoji="🕰"
       />
     </div>
+    <contact-custom-attributes
+      v-if="hasContactAttributes"
+      :custom-attributes="contact.custom_attributes"
+    />
     <conversation-labels :conversation-id="conversationId" />
     <contact-conversations
       v-if="contact.id"
@@ -101,14 +105,12 @@
 <script>
 import { mapGetters } from 'vuex';
 import alertMixin from 'shared/mixins/alertMixin';
-
 import ContactConversations from './ContactConversations.vue';
 import ContactDetailsItem from './ContactDetailsItem.vue';
 import ContactInfo from './contact/ContactInfo';
 import ConversationLabels from './labels/LabelBox.vue';
 import ContactCustomAttributes from './ContactCustomAttributes';
 import flag from 'country-code-emoji';
-
 export default {
   components: {
     ContactCustomAttributes,
