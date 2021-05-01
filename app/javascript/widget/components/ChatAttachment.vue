@@ -1,10 +1,10 @@
 <template>
   <file-upload
     :size="4096 * 2048"
-    accept="image/*, application/pdf, audio/mpeg, video/mp4, audio/ogg, text/csv, application/zip, application/x-zip, application/x-zip-compressed"
+    accept="image/*, application/pdf, audio/mpeg, video/mp4, audio/ogg, text/csv"
     @input-file="onFileUpload"
   >
-    <span class="attachment-button ">
+    <span class="attachment-button">
       <i v-if="!isUploading.image" class="ion-android-attach" />
       <spinner v-if="isUploading" size="small" />
     </span>
@@ -14,6 +14,10 @@
 <script>
 import FileUpload from 'vue-upload-component';
 import Spinner from 'shared/components/Spinner.vue';
+import { checkFileSizeLimit } from 'shared/helpers/FileHelper';
+import { MAXIMUM_FILE_UPLOAD_SIZE } from 'shared/constants/messages';
+import { BUS_EVENTS } from 'shared/constants/busEvents';
+
 export default {
   components: { FileUpload, Spinner },
   props: {
@@ -30,14 +34,21 @@ export default {
       return fileType.includes('image') ? 'image' : 'file';
     },
     async onFileUpload(file) {
+      if (!file) {
+        return;
+      }
       this.isUploading = true;
       try {
-        const thumbUrl = window.URL.createObjectURL(file.file);
-        await this.onAttach({
-          fileType: this.getFileType(file.type),
-          file: file.file,
-          thumbUrl,
-        });
+        if (checkFileSizeLimit(file, MAXIMUM_FILE_UPLOAD_SIZE)) {
+          const thumbUrl = window.URL.createObjectURL(file.file);
+          await this.onAttach({
+            fileType: this.getFileType(file.type),
+            file: file.file,
+            thumbUrl,
+          });
+        } else {
+          window.bus.$emit(BUS_EVENTS.ATTACHMENT_SIZE_CHECK_ERROR);
+        }
       } catch (error) {
         // Error
       }
@@ -48,12 +59,14 @@ export default {
 </script>
 <style scoped lang="scss">
 @import '~widget/assets/scss/variables.scss';
+
 .attachment-button {
   background: transparent;
   border: 0;
   cursor: pointer;
   position: relative;
   width: 20px;
+
   i {
     font-size: $font-size-large;
     color: $color-gray;

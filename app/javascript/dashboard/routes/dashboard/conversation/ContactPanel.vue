@@ -22,7 +22,17 @@
           selected-label=""
           :placeholder="$t('CONVERSATION_SIDEBAR.SELECT.PLACEHOLDER')"
           :allow-empty="true"
-        />
+        >
+          <template slot="option" slot-scope="props">
+            <div class="option__desc">
+              <availability-status-badge
+                :status="props.option.availability_status"
+              />
+              <span class="option__title">{{ props.option.name }}</span>
+            </div>
+          </template>
+          <span slot="noResult">{{ $t('AGENT_MGMT.SEARCH.NO_RESULTS') }}</span>
+        </multiselect>
       </div>
       <div class="multiselect-wrap--small">
         <label class="multiselect__label">
@@ -38,7 +48,9 @@
           selected-label=""
           :placeholder="$t('CONVERSATION_SIDEBAR.SELECT.PLACEHOLDER')"
           :allow-empty="true"
-        />
+        >
+          <span slot="noResult">{{ $t('AGENT_MGMT.SEARCH.NO_RESULTS') }}</span>
+        </multiselect>
       </div>
     </div>
     <contact-custom-attributes
@@ -110,6 +122,8 @@ import ContactDetailsItem from './ContactDetailsItem.vue';
 import ContactInfo from './contact/ContactInfo';
 import ConversationLabels from './labels/LabelBox.vue';
 import ContactCustomAttributes from './ContactCustomAttributes';
+import AvailabilityStatusBadge from 'dashboard/components/widgets/conversation/AvailabilityStatusBadge.vue';
+
 import flag from 'country-code-emoji';
 export default {
   components: {
@@ -118,12 +132,17 @@ export default {
     ContactDetailsItem,
     ContactInfo,
     ConversationLabels,
+    AvailabilityStatusBadge,
   },
   mixins: [alertMixin],
   props: {
     conversationId: {
       type: [Number, String],
       required: true,
+    },
+    inboxId: {
+      type: Number,
+      default: undefined,
     },
     onToggle: {
       type: Function,
@@ -133,8 +152,9 @@ export default {
   computed: {
     ...mapGetters({
       currentChat: 'getSelectedChat',
-      agents: 'agents/getVerifiedAgents',
       teams: 'teams/getTeams',
+      getAgents: 'inboxAssignableAgents/getAssignableAgents',
+      uiFlags: 'inboxAssignableAgents/getUIFlags',
     }),
     currentConversationMetaData() {
       return this.$store.getters[
@@ -180,7 +200,7 @@ export default {
         return '';
       }
       const countryFlag = countryCode ? flag(countryCode) : '🌎';
-      return `${countryFlag} ${cityAndCountry}`;
+      return `${cityAndCountry} ${countryFlag}`;
     },
     platformName() {
       const {
@@ -199,7 +219,7 @@ export default {
       return this.$store.getters['contacts/getContact'](this.contactId);
     },
     agentsList() {
-      return [{ id: 0, name: 'None' }, ...this.agents];
+      return [{ id: 0, name: 'None' }, ...this.getAgents(this.inboxId)];
     },
     teamsList() {
       return [{ id: 0, name: 'None' }, ...this.teams];
@@ -282,6 +302,14 @@ export default {
 
   i {
     margin-right: $space-smaller;
+  }
+}
+
+.multiselect-wrap--small {
+  &::v-deep .multiselect__element {
+    span {
+      width: 100%;
+    }
   }
 }
 
@@ -404,5 +432,15 @@ export default {
 
 .multiselect__label {
   margin-bottom: var(--space-smaller);
+}
+.option__desc {
+  display: flex;
+  align-items: center;
+
+  &::v-deep .status-badge {
+    margin-right: var(--space-small);
+    min-width: 0;
+    flex-shrink: 0;
+  }
 }
 </style>
