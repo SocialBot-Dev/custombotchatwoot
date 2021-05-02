@@ -1,9 +1,9 @@
 @mixin bubble-with-types {
   @include padding($space-small $space-normal);
   @include margin($zero);
-  background: #2f3235;
+  background: $color-woot;
   border-radius: $space-one;
-  color: #d8d8d8;
+  color: $color-white;
   font-size: $font-size-small;
   font-weight: $font-weight-normal;
   position: relative;
@@ -156,10 +156,10 @@
 
     .bubble {
       @include border-normal;
-      background: $color-woot;
+      background: #2f3235;
       border-bottom-left-radius: $space-smaller;
       border-top-left-radius: $space-smaller;
-      color: $color-body;
+      color: #d8d8d8;
       margin-right: auto;
       word-break: break-word;
       text-align: start !important;
