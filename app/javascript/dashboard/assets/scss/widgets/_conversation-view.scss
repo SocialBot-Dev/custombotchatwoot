@@ -1,15 +1,23 @@
 @mixin bubble-with-types {
   @include padding($space-small $space-normal);
   @include margin($zero);
-  background: $color-woot;
+  background: #2f3235;
   border-radius: $space-one;
-  color: var(--white);
+  color: #d8d8d8;
   font-size: $font-size-small;
   font-weight: $font-weight-normal;
   position: relative;
+  text-align: start !important;
+  unicode-bidi: plaintext;
 
   .message-text__wrap {
     position: relative;
+    text-align: start !important;
+    unicode-bidi: plaintext;
+    p {
+      text-align: start !important;
+      unicode-bidi: plaintext;
+    }
 
     .link {
       color: var(--white);
@@ -146,7 +154,7 @@
 
     .bubble {
       @include border-normal;
-      background: $white;
+      background: $color-woot;
       border-bottom-left-radius: $space-smaller;
       border-top-left-radius: $space-smaller;
       color: $color-body;
