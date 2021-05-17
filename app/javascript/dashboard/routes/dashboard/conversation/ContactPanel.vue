@@ -54,6 +54,10 @@
       </div>
     </div>
     <conversation-labels :conversation-id="conversationId" />
+    <contact-custom-attributes
+      v-if="hasContactAttributes"
+      :custom-attributes="contact.custom_attributes"
+    />
     <div v-if="browser.browser_name" class="conversation--details">
       <contact-details-item
         v-if="location"
@@ -102,10 +106,6 @@
         emoji="🕰"
       />
     </div>
-    <contact-custom-attributes
-      v-if="hasContactAttributes"
-      :custom-attributes="contact.custom_attributes"
-    />
     <contact-conversations
       v-if="contact.id"
       :contact-id="contact.id"
@@ -294,7 +294,7 @@ export default {
 @import '~dashboard/assets/scss/variables';
 
 .contact--panel {
-  background: white;
+  /*background: white;*/
   border-left: 1px solid var(--color-border);
   font-size: $font-size-small;
   overflow-y: auto;
