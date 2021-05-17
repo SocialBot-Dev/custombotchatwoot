@@ -53,10 +53,7 @@
         </multiselect>
       </div>
     </div>
-    <contact-custom-attributes
-      v-if="hasContactAttributes"
-      :custom-attributes="contact.custom_attributes"
-    />
+    <conversation-labels :conversation-id="conversationId" />
     <div v-if="browser.browser_name" class="conversation--details">
       <contact-details-item
         v-if="location"
@@ -105,7 +102,10 @@
         emoji="🕰"
       />
     </div>
-    <conversation-labels :conversation-id="conversationId" />
+    <contact-custom-attributes
+      v-if="hasContactAttributes"
+      :custom-attributes="contact.custom_attributes"
+    />
     <contact-conversations
       v-if="contact.id"
       :contact-id="contact.id"
@@ -117,6 +117,7 @@
 <script>
 import { mapGetters } from 'vuex';
 import alertMixin from 'shared/mixins/alertMixin';
+
 import ContactConversations from './ContactConversations.vue';
 import ContactDetailsItem from './ContactDetailsItem.vue';
 import ContactInfo from './contact/ContactInfo';
@@ -125,6 +126,7 @@ import ContactCustomAttributes from './ContactCustomAttributes';
 import AvailabilityStatusBadge from 'dashboard/components/widgets/conversation/AvailabilityStatusBadge.vue';
 
 import flag from 'country-code-emoji';
+
 export default {
   components: {
     ContactCustomAttributes,
@@ -292,8 +294,8 @@ export default {
 @import '~dashboard/assets/scss/variables';
 
 .contact--panel {
-  border-left: 1px solid $color-border-dark2;
-  background: $color-background-dark1;
+  background: white;
+  border-left: 1px solid var(--color-border);
   font-size: $font-size-small;
   overflow-y: auto;
   overflow: auto;
@@ -318,74 +320,7 @@ export default {
   right: $space-normal;
   top: $space-slab;
   font-size: $font-size-default;
-  color: #5e656d;
-}
-
-.contact--profile {
-  align-items: center;
-  padding: $space-medium 0 $space-one;
-    
-  #badge {
-    left: 40px !important;
-    top: 38px !important;
-    width: 28px !important;
-    height: 28px !important;
-    background: $color-background-dark1;
-  }
-    
-  .user-thumbnail-box {
-    // margin-right: $space-normal;
-  }
-}
-
-.contact--details {
-  margin-top: $space-small;
-
-  p {
-    margin-bottom: 0;
-  }
-}
-
-.contact--info {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-
-    .user-thumbnail-box {
-      height: 78px !important;
-      width: 78px !important;
-
-        .badge {
-          width: 26px !important;
-          height: 26px !important;
-        }
-    }
-}
-
-.contact--name {
-  //@include text-ellipsis;
-  text-transform: capitalize;
-
-  font-weight: $font-weight-bold;
-  font-size: $font-size-default;
-  color: $color-light-gray;
-}
-
-.contact--email {
-  //@include text-ellipsis;
-
-  color: $color-gray;
-  display: block;
-  line-height: $space-medium;
-
-  &:hover {
-    color: $color-woot;
-  }
-}
-
-.contact--bio {
-  margin-top: $space-normal;
+  color: $color-heading;
 }
 
 .conversation--details {
@@ -421,13 +356,10 @@ export default {
 
 .sub-block-title {
   margin-bottom: var(--space-small);
-  background: #36393d;
-  padding: 6px 20px;
-  border-radius: 6px;
 }
 
 .conversation--actions {
-  padding: 0 var(--space-normal) var(--space-small);
+  padding: 0 var(--space-normal) var(--space-smaller);
 }
 
 .multiselect__label {
