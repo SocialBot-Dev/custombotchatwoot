@@ -336,10 +336,10 @@ export default {
         return [
           ...visibleToAllChannelTabs,
           {
-		    key: 'campaign',
-		    name: this.$t('INBOX_MGMT.TABS.CAMPAIGN'),
-		  },
-		  { 
+            key: 'campaign',
+            name: this.$t('INBOX_MGMT.TABS.CAMPAIGN'),
+          },
+          {
             key: 'preChatForm',
             name: this.$t('INBOX_MGMT.TABS.PRE_CHAT_FORM'),
           },
@@ -401,7 +401,7 @@ export default {
     },
     toggleInput(selected, current) {
       if (selected.includes(current)) {
-        const newSelectedFlags = selected.filter((flag) => flag !== current);
+        const newSelectedFlags = selected.filter(flag => flag !== current);
         return newSelectedFlags;
       }
       return [...selected, current];
@@ -442,7 +442,7 @@ export default {
       }
     },
     async updateAgents() {
-      const agentList = this.selectedAgents.map((el) => el.id);
+      const agentList = this.selectedAgents.map(el => el.id);
       this.isAgentListUpdating = true;
       try {
         await this.$store.dispatch('inboxMembers/create', {
@@ -501,7 +501,7 @@ export default {
 @import '~dashboard/assets/scss/mixins';
 
 .settings {
-  background: $color-background-dark1;
+  background: $color-white;
 
   .settings--content {
     div:last-child {
