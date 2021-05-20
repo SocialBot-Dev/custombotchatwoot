@@ -14,6 +14,8 @@
       >
         <woot-button
           size="small"
+          variant="clear"
+          color-scheme="secondary"
           class-names="goto-first"
           :is-disabled="hasFirstPage"
           @click="onFirstPage"
@@ -23,16 +25,25 @@
         </woot-button>
         <woot-button
           size="small"
+          variant="clear"
+          color-scheme="secondary"
           :is-disabled="hasPrevPage"
           @click="onPrevPage"
         >
           <i class="ion-chevron-left" />
         </woot-button>
-        <woot-button @click.prevent>
+        <woot-button
+          size="small"
+          variant="clear"
+          color-scheme="secondary"
+          @click.prevent
+        >
           {{ currentPage }}
         </woot-button>
         <woot-button
           size="small"
+          variant="clear"
+          color-scheme="secondary"
           :is-disabled="hasNextPage"
           @click="onNextPage"
         >
@@ -40,6 +51,8 @@
         </woot-button>
         <woot-button
           size="small"
+          variant="clear"
+          color-scheme="secondary"
           class-names="goto-last"
           :is-disabled="hasLastPage"
           @click="onLastPage"
@@ -187,12 +200,10 @@ export default {
       color: var(--b-900);
     }
 
-    &.goto-first,
-    &.goto-last {
-      i:last-child {
-        margin-left: var(--space-minus-smaller);
-      }
-    }
+.goto-first,
+.goto-last {
+  i:last-child {
+    margin-left: var(--space-minus-smaller);
   }
 }
 </style>
