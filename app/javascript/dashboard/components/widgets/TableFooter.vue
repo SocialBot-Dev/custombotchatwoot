@@ -200,11 +200,12 @@ export default {
       color: var(--b-900);
     }
 
-.goto-first,
-.goto-last {
-  i:last-child {
-    margin-left: var(--space-minus-smaller);
+    .goto-first,
+    .goto-last {
+      i:last-child {
+        margin-left: var(--space-minus-smaller);
+      }
+    }
   }
-}
 }
 </style>
