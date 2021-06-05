@@ -63,10 +63,7 @@
         leave-class="opacity-100 transform translate-y-0"
         leave-to-class="opacity-0 transform "
       >
-        <div
-          v-if="showInputTextArea && currentView === 'messageView'"
-          class="input-wrap"
-        >
+        <div v-if="currentView === 'messageView'" class="input-wrap">
           <chat-footer />
         </div>
         <team-availability
@@ -151,15 +148,6 @@ export default {
     },
     fileUploadSizeLimit() {
       return MAXIMUM_FILE_UPLOAD_SIZE;
-    },
-    showInputTextArea() {
-      if (this.hideInputForBotConversations) {
-        if (this.isOpen) {
-          return true;
-        }
-        return false;
-      }
-      return true;
     },
     isHeaderCollapsed() {
       if (!this.hasIntroText || this.conversationSize) {
