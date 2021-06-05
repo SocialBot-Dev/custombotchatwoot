@@ -206,4 +206,5 @@ export default {
     margin-left: var(--space-minus-smaller);
   }
 }
+}
 </style>
