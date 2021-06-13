@@ -54,7 +54,7 @@ export default {
   }
 }
 .contact--panel {
-  background: $color-background-dark1;
+  background: #1f2123;
   font-size: var(--font-size-small);
   overflow-y: auto;
   overflow: auto;
