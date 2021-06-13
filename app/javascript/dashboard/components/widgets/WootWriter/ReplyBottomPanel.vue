@@ -159,7 +159,7 @@ export default {
   padding: var(--space-slab) var(--space-normal);
 
   &.is-note-mode {
-    background: $color-background-dark1;
+    background: #1f2123;
   }
 }
 
@@ -169,49 +169,49 @@ export default {
   }
 
   &:hover {
-    background: $color-background-dark4;
+    background: rgba(235,245,255,.13);
   }
 
   &.is-active {
-    background: $color-background-dark1;
+    background: #1f2123;
   }
 
   &.button--emoji {
     font-size: var(--font-size-small);
     padding: var(--space-small);
     border-radius: 9px;
-    background: $color-background-dark1;
-    border: 1px solid $color-background-dark1;
+    background: #1f2123;
+    border: 1px solid #1f2123;
     margin-right: var(--space-small);
 
     &:hover {
-      background: $color-background-dark4;
+      background: rgba(235,245,255,.13);
     }
   }
 
   &.button--note {
     background: var(--y-800);
-    color: $color-background-dark1;
+    color: #1f2123;
 
     &:hover {
-      background: $color-background-dark4;
+      background: rgba(235,245,255,.13);
     }
   }
 
   &.button--disabled {
-    background: $color-background-dark1;
+    background: #1f2123;
     color: var(--b-400);
     cursor: default;
 
     &:hover {
-      background: $color-background-dark4;
+      background: rgba(235,245,255,.13);
     }
   }
 }
 
 .bottom-box.is-note-mode {
   .button--emoji {
-    background: $color-background-dark1;
+    background: #1f2123;
   }
 .left-wrap .button {
   margin-right: var(--space-small);
