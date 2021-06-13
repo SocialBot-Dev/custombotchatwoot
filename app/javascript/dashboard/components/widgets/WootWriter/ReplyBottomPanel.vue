@@ -248,4 +248,5 @@ export default {
     background: var(--s-100);
   }
 }
+}
 </style>
