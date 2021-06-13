@@ -50,8 +50,8 @@ export default {
 
   .conv-details--item__value {
     word-break: break-all;
-    margin-top: $space-small;
-    color: $color-light-gray;
+    margin-top: 10px;
+    color: #ced2d9;
     //text-align: center;
     margin-left: var(--space-medium);
     margin-bottom: var(--space-normal);
