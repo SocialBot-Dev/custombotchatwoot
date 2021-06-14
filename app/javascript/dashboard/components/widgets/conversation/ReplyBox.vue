@@ -442,6 +442,9 @@ export default {
     background: #1f2123;
   }
 }
+.left-wrap {
+    display: flex;
+}
 .send-button {
   margin-bottom: 0;
 }
