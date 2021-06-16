@@ -51,7 +51,6 @@
         :remove-attachment="removeAttachment"
       />
     </div>
-
     <reply-bottom-panel
       :mode="replyType"
       :send-button-text="replyButtonLabel"
@@ -68,7 +67,6 @@
       :enter-to-send-enabled="enterToSendEnabled"
       @toggleEnterToSend="toggleEnterToSend"
     />
-
   </div>
 </template>
 
@@ -441,9 +439,6 @@ export default {
   &.is-private {
     background: #1f2123;
   }
-}
-.left-wrap {
-    display: flex;
 }
 .send-button {
   margin-bottom: 0;

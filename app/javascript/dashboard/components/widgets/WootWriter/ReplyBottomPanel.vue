@@ -163,56 +163,6 @@ export default {
   }
 }
 
-.button {
-  &.button--emoji {
-    margin-right: var(--space-small);
-  }
-
-  &:hover {
-    background: rgba(235,245,255,.13);
-  }
-
-  &.is-active {
-    background: #1f2123;
-  }
-
-  &.button--emoji {
-    font-size: var(--font-size-small);
-    padding: var(--space-small);
-    border-radius: 9px;
-    background: #1f2123;
-    border: 1px solid #1f2123;
-    margin-right: var(--space-small);
-
-    &:hover {
-      background: rgba(235,245,255,.13);
-    }
-  }
-
-  &.button--note {
-    background: var(--y-800);
-    color: #1f2123;
-
-    &:hover {
-      background: rgba(235,245,255,.13);
-    }
-  }
-
-  &.button--disabled {
-    background: #1f2123;
-    color: var(--b-400);
-    cursor: default;
-
-    &:hover {
-      background: rgba(235,245,255,.13);
-    }
-  }
-}
-
-.bottom-box.is-note-mode {
-  .button--emoji {
-    background: #1f2123;
-  }
 .left-wrap .button {
   margin-right: var(--space-small);
 }
@@ -247,6 +197,5 @@ export default {
   &:hover .button {
     background: var(--s-100);
   }
-}
 }
 </style>
