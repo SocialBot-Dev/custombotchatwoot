@@ -147,6 +147,7 @@
 }
 
 .sidebar-labels-wrap {
+
   &.has-edited,
   &:hover {
     .multiselect {
@@ -173,6 +174,12 @@
   $multiselect-height: 3.8rem;
 
   .multiselect__tags,
+  .multiselect__input {
+    align-items: center;
+    display: flex;
+  }
+
+  .multiselect__tags,
   .multiselect__input,
   .multiselect {
     background: #000;
@@ -187,15 +194,24 @@
   }
 
   .multiselect__single {
+    align-items: center;
+    display: flex;
     font-size: var(--font-size-small);
-    padding: var(--space-small) 0;
+    margin: 0;
+    padding: var(--space-smaller) var(--space-micro);
   }
 
   .multiselect__placeholder {
-    padding: var(--space-small) 0;
+    margin: 0;
+    padding: var(--space-smaller) var(--space-micro);
   }
 
   .multiselect__select {
     min-height: $multiselect-height;
+  }
+
+  .multiselect--disabled .multiselect__current,
+  .multiselect--disabled .multiselect__select {
+    background: transparent;
   }
 }
