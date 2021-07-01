@@ -118,7 +118,11 @@ export default {
     },
   },
   data() {
-    return { isOnCollapsedView: false, showAttachmentError: false };
+    return {
+      isOnCollapsedView: false,
+      showAttachmentError: false,
+      isOnNewConversation: false,
+    };
   },
   computed: {
     ...mapGetters({
@@ -136,7 +140,10 @@ export default {
         if (this.conversationSize) {
           return 'messageView';
         }
-        if (this.preChatFormEnabled && !currentUserEmail) {
+        if (
+          this.isOnNewConversation ||
+          (this.preChatFormEnabled && !currentUserEmail)
+        ) {
           return 'preChatFormView';
         }
         return 'messageView';
@@ -167,6 +174,10 @@ export default {
       setTimeout(() => {
         this.showAttachmentError = false;
       }, 3000);
+    });
+    bus.$on(BUS_EVENTS.START_NEW_CONVERSATION, () => {
+      this.isOnCollapsedView = true;
+      this.isOnNewConversation = true;
     });
   },
   methods: {
