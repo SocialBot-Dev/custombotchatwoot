@@ -367,7 +367,7 @@ li.right {
 }
 
 .has-context-menu {
-  background: var(--color-background);
+  background: transparent;
   .button--delete-message {
     visibility: visible;
   }
