@@ -133,14 +133,14 @@
   }
 
   .multiselect__single {
-    background: #000;
+    background: #1f2123;
     @include text-ellipsis;
     display: inline-block;
     margin-bottom: 0;
     overflow: hidden;
     position: relative;
     text-overflow: ellipsis;
-    max-width: 10rem;
+    max-width: 20rem;
     white-space: nowrap;
     padding: var(--space-slab) var(--space-one);
   }
