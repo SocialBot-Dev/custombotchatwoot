@@ -49,12 +49,12 @@
       }
 
       &.multiselect__option--highlight {
-        background: var(--white);
+        background: #1f2123;
         color: var(--color-body);
       }
 
       &.multiselect__option--highlight:hover {
-        background: var(--w-50);
+        background: #1f2123;
         color: var(--color-body);
 
         &::after {
@@ -68,11 +68,11 @@
       }
 
       &.multiselect__option--selected {
-        background: var(--w-400);
+        background: #1f2123;
         color: var(--white);
 
         &.multiselect__option--highlight:hover {
-          background: var(--w-600);
+          background: #1f2123;
           color: var(--white);
 
           &::after {
