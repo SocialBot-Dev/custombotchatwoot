@@ -3,8 +3,7 @@
   @include margin($zero);
   // @include background-light;
   background: $color-background-dark2;
-  
-  cursor: pointer;
+    cursor: pointer;
   @include custom-border-top(3px, transparent);
 
   &.active {
