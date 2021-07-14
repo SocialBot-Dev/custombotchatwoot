@@ -34,7 +34,7 @@ export default {
     var(--space-two);
 
   .heading {
-    color: var(--color-heading);
+    color: var(--b-400);
     font-size: var(--font-size-small);
     font-weight: var(--font-weight-bold);
     margin: 0;

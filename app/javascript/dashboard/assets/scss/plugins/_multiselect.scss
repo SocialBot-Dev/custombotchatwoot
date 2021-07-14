@@ -49,12 +49,12 @@
       }
 
       &.multiselect__option--highlight {
-        background: #1f2123;
+        background: var(--color-background-dark2);
         color: var(--color-body);
       }
 
       &.multiselect__option--highlight:hover {
-        background: #1f2123;
+        background: var(--color-background-dark2);
         color: var(--color-body);
 
         &::after {
@@ -68,11 +68,11 @@
       }
 
       &.multiselect__option--selected {
-        background: #1f2123;
+        background: var(--color-background-dark2);
         color: var(--white);
 
         &.multiselect__option--highlight:hover {
-          background: #1f2123;
+          background: var(--color-background-dark2);
           color: var(--white);
 
           &::after {
@@ -133,7 +133,7 @@
   }
 
   .multiselect__single {
-    background: #1f2123;
+    background: var(--color-background-dark2);
     @include text-ellipsis;
     display: inline-block;
     margin-bottom: 0;

@@ -434,10 +434,10 @@ export default {
 
 .reply-box {
   border-top: 1px solid #3a3a3a;
-  background: #1f2123;
+  background: var(--color-background-dark2);
 
   &.is-private {
-    background: #1f2123;
+    background: var(--color-background-dark2);
   }
 }
 .send-button {

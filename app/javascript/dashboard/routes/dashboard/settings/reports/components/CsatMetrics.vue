@@ -82,7 +82,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .csat--metrics-container {
-  background: var(--white);
+  background: var(--color-background-dark2);
   margin-bottom: var(--space-two);
   border-radius: var(--border-radius-normal);
   border: 1px solid var(--color-border);
