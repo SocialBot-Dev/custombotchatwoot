@@ -63,7 +63,7 @@
     </div>
     <div class="context-menu-wrap">
       <context-menu
-        v-if="isBubble && !isMessageDeleted"
+        v-if="isBubble"
         :is-open="showContextMenu"
         :show-copy="hasText"
         :menu-position="contextMenuPosition"
@@ -91,7 +91,6 @@ import contentTypeMixin from 'shared/mixins/contentTypeMixin';
 import BubbleActions from './bubble/Actions';
 import { MESSAGE_TYPE, MESSAGE_STATUS } from 'shared/constants/messages';
 import { generateBotMessageContent } from './helpers/botMessageContentHelper';
-import { stripStyleCharacters } from './helpers/EmailContentParser';
 
 export default {
   components: {
@@ -140,7 +139,7 @@ export default {
 
       if ((replyHTMLContent || fullHTMLContent) && this.isIncoming) {
         let contentToBeParsed = replyHTMLContent || fullHTMLContent || '';
-        const parsedContent = stripStyleCharacters(contentToBeParsed);
+        const parsedContent = this.stripStyleCharacters(contentToBeParsed);
         if (parsedContent) {
           return parsedContent;
         }
@@ -207,9 +206,6 @@ export default {
     },
     hasText() {
       return !!this.data.content;
-    },
-    isMessageDeleted() {
-      return this.contentAttributes.deleted;
     },
     sentByMessage() {
       const { sender } = this;
