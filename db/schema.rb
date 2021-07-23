@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_14_110714) do
+ActiveRecord::Schema.define(version: 2021_07_22_095814) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_stat_statements"
@@ -268,6 +268,7 @@ ActiveRecord::Schema.define(version: 2021_07_14_110714) do
     t.datetime "last_activity_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
     t.bigint "team_id"
     t.bigint "campaign_id"
+    t.datetime "snoozed_until"
     t.index ["account_id", "display_id"], name: "index_conversations_on_account_id_and_display_id", unique: true
     t.index ["account_id"], name: "index_conversations_on_account_id"
     t.index ["campaign_id"], name: "index_conversations_on_campaign_id"
@@ -290,6 +291,19 @@ ActiveRecord::Schema.define(version: 2021_07_14_110714) do
     t.index ["contact_id"], name: "index_csat_survey_responses_on_contact_id"
     t.index ["conversation_id"], name: "index_csat_survey_responses_on_conversation_id"
     t.index ["message_id"], name: "index_csat_survey_responses_on_message_id", unique: true
+  end
+
+  create_table "custom_attribute_definitions", force: :cascade do |t|
+    t.string "attribute_display_name"
+    t.string "attribute_key"
+    t.integer "attribute_display_type", default: 0
+    t.integer "default_value"
+    t.integer "attribute_model", default: 0
+    t.bigint "account_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["account_id"], name: "index_custom_attribute_definitions_on_account_id"
+    t.index ["attribute_key", "attribute_model"], name: "attribute_key_model_index", unique: true
   end
 
   create_table "custom_filters", force: :cascade do |t|
