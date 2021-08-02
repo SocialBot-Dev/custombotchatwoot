@@ -35,7 +35,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-$tailwind-black-700: #3c4858;
+$tailwind-black-700: #657b95;
 .conversation--container {
   width: 100%;
   padding: var(--space-two);

@@ -315,7 +315,7 @@ export default {
         color: var(--w-400);
       }
       .text-block-title {
-        color: #3c4858;
+        color: #657b95;
       }
       .download.button {
         color: var(--w-400);

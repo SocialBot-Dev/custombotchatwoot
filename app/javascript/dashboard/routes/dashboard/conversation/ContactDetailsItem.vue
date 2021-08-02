@@ -39,7 +39,7 @@ export default {
     display: flex;
     justify-content: space-between;
     margin-bottom: var(--space-normal);
-    background: #36393d;
+    background: #1b1b1b;
     padding: 6px 20px;
     border-radius: 6px;
 
