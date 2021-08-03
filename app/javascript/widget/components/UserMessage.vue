@@ -136,5 +136,9 @@ export default {
       unicode-bidi: plaintext;
     }
   }
+
+  p:not(:last-child) {
+    margin-bottom: $space-normal;
+  }
 }
 </style>
