@@ -104,7 +104,9 @@ export default {
 .contact-fields {
   margin-top: var(--space-medium);
 }
-
+.custom-attribute--row a {
+    word-break: break-all;
+}
 .title {
   margin-bottom: var(--space-normal);
 }
