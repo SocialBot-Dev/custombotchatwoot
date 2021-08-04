@@ -70,7 +70,7 @@ export default {
     padding: 5px 15px;
     display: inline-flex;
 }
-.custom-attribute--row a {
+.custom-attribute--row span {
     word-break: break-all;
 }
 .custom-attribute--row__attribute {
