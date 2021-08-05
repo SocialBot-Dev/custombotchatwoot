@@ -257,8 +257,17 @@ export default {
   display: flex;
   flex-direction: column;
 
+  .ProseMirror-menubar {
+    color: #b1b1b1 !important;
+  }
+
   > .ProseMirror {
     padding: 0;
+
+      p {
+        text-align: start !important;
+        unicode-bidi: plaintext;
+      }
     word-break: break-word;
   }
 }

@@ -262,6 +262,46 @@ export default {
   overflow: hidden;
 }
 
+.contacts-table {
+  margin-top: -1px;
+
+  > thead {
+    border-bottom: 1px solid var(--color-border-dark2);
+    background: var(--color-border-dark1);
+
+    > th:first-child {
+      padding-left: var(--space-medium);
+      width: 30%;
+    }
+  }
+
+  > tbody {
+    > tr {
+      cursor: pointer;
+
+      &:hover {
+        background: #000;
+      }
+
+      &.is-active {
+        background: #000;
+      }
+
+      > td {
+        padding: var(--space-slab);
+
+        &:first-child {
+          padding-left: var(--space-medium);
+        }
+
+        &.conversation-count-item {
+          padding-left: var(--space-medium);
+        }
+      }
+    }
+  }
+  .row-main-info {
+    display: flex;
 .contacts-table-wrap::v-deep {
   .ve-table {
     padding-bottom: var(--space-large);
@@ -292,6 +332,9 @@ export default {
 
   .ve-table-header-th {
     padding: var(--space-small) var(--space-two) !important;
+    background-color: #1f2124;
+    color: #6e6f73;
+    border-color: #3a3a3a;
   }
 
   .ve-table-body-td {
@@ -322,5 +365,7 @@ export default {
     min-width: var(--space-large);
     text-align: center;
   }
+}
+}
 }
 </style>

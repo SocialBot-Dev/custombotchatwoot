@@ -129,21 +129,26 @@ export default {
   flex-wrap: nowrap;
   justify-content: flex-end;
   overflow: hidden;
+  padding: 10px 15px 0px;
 
   .unread-messages {
     padding-bottom: $space-small;
   }
 
   .clear-button {
-    background: transparent;
+    background: #fff;
     color: $color-woot;
     padding: 0;
     border: 0;
     font-weight: $font-weight-bold;
     font-size: $font-size-medium;
-    transition: all 0.3s $ease-in-cubic;
+    transition: all .2s cubic-bezier(0.42, 0, 0.29, 0.83);
     margin-left: $space-smaller;
-    padding-right: $space-one;
+    padding: 7px 14px 7px 10px;
+    box-shadow: -10px -7px 20px 0px rgba(0, 0, 0, 0.15);
+    overflow: visible;
+    margin-bottom: 10px;
+    border-radius: 5px;
 
     &:hover {
       transform: translateX($space-smaller);
@@ -157,7 +162,7 @@ export default {
     border: 0;
     font-weight: $font-weight-bold;
     font-size: $font-size-small;
-    transition: all 0.3s $ease-in-cubic;
+    transition: all .2s cubic-bezier(0.42, 0, 0.29, 0.83);
     margin-bottom: $space-slab;
     border-radius: $space-normal;
 
@@ -182,25 +187,29 @@ export default {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  overflow-y: auto;
+  overflow: visible;
+  padding: 10px 15px 0;
 
   .chat-bubble-wrap {
-    margin-bottom: $space-smaller;
+    margin-bottom: 0.55rem;
 
     &:first-child {
       margin-top: auto;
     }
     .chat-bubble {
-      border: 1px solid $color-border-dark;
-    }
+      background: #fff;
+      box-shadow: -4px 5px 20px 0px rgba(0, 0, 0, 0.15);
+      z-index: 999999 !important;
+      border: none !important;
+      position: relative;
+      left: 10px;
+      overflow: visible;
+      border-radius: 4px !important;
+      transition: all .2s cubic-bezier(0.42, 0, 0.29, 0.83);
 
-    + .chat-bubble-wrap {
-      .chat-bubble {
-        border-top-left-radius: $space-smaller;
+      &:hover {
+          transform: translateX(.25rem);
       }
-    }
-    &:last-child .chat-bubble {
-      border-bottom-left-radius: $space-two;
     }
   }
 }
@@ -211,17 +220,21 @@ export default {
 
   .chat-bubble-wrap {
     .chat-bubble {
-      border-radius: $space-two;
-      border-bottom-right-radius: $space-smaller;
-    }
+      background: #fff;
+      box-shadow: -4px 5px 20px 0px rgba(0, 0, 0, 0.15);
+      z-index: 99999 !important;
+      border: none !important;
+      position: relative;
+      right: 10px;
+      overflow: visible;
+      border-radius: 4px !important;
+      transition: all .2s cubic-bezier(0.42, 0, 0.29, 0.83);
+      text-align: start !important;
+      unicode-bidi: plaintext;
 
-    + .chat-bubble-wrap {
-      .chat-bubble {
-        border-top-right-radius: $space-smaller;
+      &:hover {
+          transform: translateX(.25rem);
       }
-    }
-    &:last-child .chat-bubble {
-      border-bottom-right-radius: $space-two;
     }
   }
 

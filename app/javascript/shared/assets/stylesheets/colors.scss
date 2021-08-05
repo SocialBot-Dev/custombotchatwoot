@@ -42,9 +42,9 @@
   --s-400: #7489A4;
   --s-500: #5D7592;
   --s-600: #506781;
-  --s-700: #40546B;
+  --s-700: #55677c;
   --s-800: #314155;
-  --s-900: #1F2D3D;
+  --s-900: #657b95;
 
   --b-50: #F8F9FE;
   --b-100: #F2F3F7;
@@ -80,17 +80,22 @@
   --v-900: #2B0052;
 
   // Common color aliases
-  --color-woot: var(--w-500);
+  --color-woot: #34628e;
 
-  --color-heading: #1f2d3d;
-  --color-body: #3c4858;
+  --color-heading: #657b95;
+  --color-body: #657b95;
 
-  --color-border: #e0e6ed;
-  --color-border-light: #f0f4f5;
+  --color-border: rgba(235, 245, 255, 0.13);
+  --color-border-light: #3a3a3a;
   --color-border-dark: #cad0d4;
+  --color-border-dark2: #3a3a3a;
 
   --color-background: #f4f6fb;
-  --color-background-light: #f9fafc;
+  --color-background-light: #26282b;
+  --color-background-dark: #000;
+  --color-background-dark1: #1f2123;
+  --color-background-dark2: #26282b;
+  --color-background-dark4: rgba(235, 245, 255, 0.13);
 
   // Social and inboxes brand colors
   --color-facebook-brand: #3b5998;

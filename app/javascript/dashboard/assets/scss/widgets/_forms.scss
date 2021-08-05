@@ -4,6 +4,7 @@
   select,
   .multiselect>.multiselect__tags {
     @include thin-border(var(--r-400));
+    background: $color-background-dark1;
   }
 
   .message {

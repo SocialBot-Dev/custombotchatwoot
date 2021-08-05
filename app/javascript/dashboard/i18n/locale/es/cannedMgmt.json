@@ -17,7 +17,7 @@
     },
     "ADD": {
       "TITLE": "Añadir respuesta predefinida",
-      "DESC": "Las respuestas predefinidas son plantillas de respuesta guardadas que se pueden utilizar para enviar rápidamente la respuesta a la conversación .",
+      "DESC": "Las respuestas predefinidas son plantillas de respuesta guardadas que se pueden utilizar para enviar rápidamente la respuesta a la conversación.",
       "CANCEL_BUTTON_TEXT": "Cancelar",
       "FORM": {
         "SHORT_CODE": {
@@ -34,7 +34,7 @@
       },
       "API": {
         "SUCCESS_MESSAGE": "Respuesta predefinida añadida correctamente",
-        "ERROR_MESSAGE": "No se pudo conectar al servidor Woot, por favor inténtalo de nuevo más tarde"
+        "ERROR_MESSAGE": "No se pudo conectar al servidor Woot, por favor inténtelo de nuevo más tarde"
       }
     },
     "EDIT": {
@@ -56,14 +56,14 @@
       "BUTTON_TEXT": "Editar",
       "API": {
         "SUCCESS_MESSAGE": "Respuesta predefinida actualizada correctamente",
-        "ERROR_MESSAGE": "No se pudo conectar al servidor Woot, por favor inténtalo de nuevo más tarde"
+        "ERROR_MESSAGE": "No se pudo conectar al servidor Woot, por favor inténtelo de nuevo más tarde"
       }
     },
     "DELETE": {
       "BUTTON_TEXT": "Eliminar",
       "API": {
         "SUCCESS_MESSAGE": "Respuesta predefinida eliminada correctamente",
-        "ERROR_MESSAGE": "No se pudo conectar al servidor Woot, por favor inténtalo de nuevo más tarde"
+        "ERROR_MESSAGE": "No se pudo conectar al servidor Woot, por favor inténtelo de nuevo más tarde"
       },
       "CONFIRM": {
         "TITLE": "Confirmar eliminación",

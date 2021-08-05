@@ -79,7 +79,8 @@ export default {
 
 .actions {
   button {
-    margin-left: $space-normal;
+    margin-left: -0.4rem;
+    margin-top: -30px;
   }
 
   span {
@@ -92,10 +93,20 @@ export default {
   }
 
   .close-button {
-    display: none;
+    /* display: none;*/
   }
   .rn-close-button {
     display: block !important;
   }
 }
+
+.header-expanded button.button.transparent.compact.close-button {
+    margin-left: 6px!important;
+    margin-top: -50px!important;
+}
+.header-collapsed button.button.transparent.compact.close-button {
+    margin-left: -0.4rem !important;
+    margin-top: -30px !important;
+}
+
 </style>

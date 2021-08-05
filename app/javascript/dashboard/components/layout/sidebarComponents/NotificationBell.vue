@@ -38,7 +38,7 @@ export default {
   position: relative;
 
   .unread-badge {
-    background: var(--r-300);
+    background: #920606;
     border-radius: var(--space-small);
     color: var(--white);
     font-size: var(--font-size-micro);

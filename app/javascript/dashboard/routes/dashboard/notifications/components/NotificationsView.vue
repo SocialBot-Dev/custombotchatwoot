@@ -69,7 +69,7 @@ export default {
 
 <style lang="scss" scoped>
 .notification--page {
-  background: var(--white);
+  background: #1f2124;
   overflow-y: auto;
   width: 100%;
 }

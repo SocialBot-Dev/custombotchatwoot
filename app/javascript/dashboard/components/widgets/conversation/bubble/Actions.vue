@@ -181,6 +181,9 @@ export default {
       position: absolute;
       right: var(--space-small);
       white-space: nowrap;
+      background: #000;
+      margin: 0;
+      padding: 2px 8px;
     }
   }
 }

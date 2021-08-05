@@ -159,5 +159,7 @@ export default {
   max-height: 2.4 * $space-mega;
   resize: none;
   padding-top: $space-small;
+  text-align: start;
+  unicode-bidi: plaintext;
 }
 </style>

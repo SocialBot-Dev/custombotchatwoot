@@ -136,7 +136,9 @@ export default {
   &.agent {
     background: $color-white;
     border-bottom-left-radius: $space-smaller;
-    color: $color-body;
+    color: #000;
+    text-align: start;
+    unicode-bidi: plaintext;
 
     .link {
       word-break: break-word;

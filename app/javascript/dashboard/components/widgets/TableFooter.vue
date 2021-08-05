@@ -151,7 +151,7 @@ export default {
 <style lang="scss" scoped>
 .footer {
   height: 60px;
-  border-top: 1px solid var(--color-border);
+  border-top: 1px solid var(--color-border-dark2);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -160,11 +160,52 @@ export default {
 .page-meta {
   font-size: var(--font-size-mini);
 }
+.pagination-button-group {
+  margin: 0;
 
-.goto-first,
-.goto-last {
-  i:last-child {
-    margin-left: var(--space-minus-smaller);
+  .button {
+    background: transparent;
+    border-color: var(--color-border-dark2);
+    color: var(--color-light-gray);
+    margin-bottom: 0;
+    margin-left: -2px;
+    font-size: var(--font-size-small);
+    padding: var(--space-small) var(--space-normal);
+    border-radius: 0;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background: var(--s-200);
+      color: white;
+    }
+
+    &:first-child {
+      border-top-left-radius: var(--space-smaller);
+      border-bottom-left-radius: var(--space-smaller);
+    }
+
+    &:last-child {
+      border-top-right-radius: var(--space-smaller);
+      border-bottom-right-radius: var(--space-smaller);
+    }
+
+    &.small {
+      font-size: var(--font-size-micro);
+    }
+
+    &.disabled {
+      background: var(--s-200);
+      border-color: var(--s-200);
+      color: var(--b-900);
+    }
+
+    .goto-first,
+    .goto-last {
+      i:last-child {
+        margin-left: var(--space-minus-smaller);
+      }
+    }
   }
 }
 </style>

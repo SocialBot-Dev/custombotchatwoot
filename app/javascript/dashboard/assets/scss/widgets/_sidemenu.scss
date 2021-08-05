@@ -6,8 +6,8 @@
 }
 
 .sidebar {
-  @include border-normal-right;
-  @include background-white;
+  border-right: 1px solid $color-border-dark2;
+  background: $color-background-dark1;
   @include full-height;
   @include margin(0);
   @include space-between-column;
@@ -63,7 +63,7 @@
   @include flex;
   @include space-between-column;
   @include padding($space-one $space-normal $space-one $space-one);
-  @include border-normal-top;
+  border-top: 1px solid $color-border-dark2;
   flex-direction: column;
   position: relative;
 

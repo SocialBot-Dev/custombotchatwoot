@@ -8,11 +8,13 @@
   .channel {
     @include flex;
     @include padding($space-normal $zero);
-    @include background-white;
+    // @include background-white;
+    background: $color-background-dark2;
     @include border-light;
-
-    cursor: pointer;
+    
     flex-direction: column;
+    cursor: pointer;
+    border-color: $color-border-dark2;
     margin: -1px;
     transition: all 0.200s ease-in;
 

@@ -144,11 +144,11 @@ export default {
       cursor: pointer;
 
       &:hover {
-        background: var(--b-50);
+        background: var(--color-background-dark);
       }
 
       &.is-active {
-        background: var(--b-100);
+        background: var(--color-background-dark);
       }
 
       > td {

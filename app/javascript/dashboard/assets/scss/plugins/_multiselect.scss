@@ -38,6 +38,7 @@
     .multiselect__option {
       font-size: $font-size-small;
       font-weight: $font-weight-normal;
+      background: #000;
 
       span {
         display: inline-block;
@@ -48,12 +49,12 @@
       }
 
       &.multiselect__option--highlight {
-        background: var(--white);
+        background: var(--color-background-dark2);
         color: var(--color-body);
       }
 
       &.multiselect__option--highlight:hover {
-        background: var(--w-50);
+        background: var(--color-background-dark2);
         color: var(--color-body);
 
         &::after {
@@ -67,11 +68,11 @@
       }
 
       &.multiselect__option--selected {
-        background: var(--w-400);
+        background: var(--color-background-dark2);
         color: var(--white);
 
         &.multiselect__option--highlight:hover {
-          background: var(--w-600);
+          background: var(--color-background-dark2);
           color: var(--white);
 
           &::after {
@@ -89,10 +90,11 @@
 
   .multiselect__tags {
     @include margin(0);
-    border: 1px solid $color-border;
-    border-color: $color-border;
+    border: 1px solid $color-border-dark2;
+    border-color: $color-border-dark2;
     min-height: 4.4rem;
     padding-top: $zero;
+    background: $color-background-dark1;
   }
 
   .multiselect__tags-wrap {
@@ -109,7 +111,7 @@
 
   .multiselect__tag {
     $vertical-space: $space-smaller + $space-micro;
-    background: $color-background;
+    background: $color-background-dark1;
     color: $color-heading;
     margin-top: $space-smaller;
     padding: $vertical-space $space-medium $vertical-space $space-one;
@@ -124,14 +126,22 @@
     @include ghost-input;
     @include padding($zero);
     font-size: $font-size-small;
+    background: $color-background-dark1;
+    color: $color-dark-gray;
     height: 4.4rem;
     margin-bottom: $zero;
   }
 
   .multiselect__single {
+    background: var(--color-background-dark2);
     @include text-ellipsis;
     display: inline-block;
     margin-bottom: 0;
+    overflow: hidden;
+    position: relative;
+    text-overflow: ellipsis;
+    max-width: 20rem;
+    white-space: nowrap;
     padding: var(--space-slab) var(--space-one);
   }
 }
@@ -172,7 +182,7 @@
   .multiselect__tags,
   .multiselect__input,
   .multiselect {
-    background: var(--white);
+    background: #000;
     font-size: var(--font-size-small);
     height: $multiselect-height;
     min-height: $multiselect-height;

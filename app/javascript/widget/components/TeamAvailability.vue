@@ -3,14 +3,19 @@
     <div class="flex items-center justify-between mb-4">
       <div class="text-black-700">
         <div class="text-base leading-5 font-medium mb-1">
-          {{
-            isOnline
-              ? $t('TEAM_AVAILABILITY.ONLINE')
-              : $t('TEAM_AVAILABILITY.OFFLINE')
-          }}
+          <span class="availability-status" v-if="isOnline">We Are Online</span>
+          <span class="availability-status" v-else>Currently Away</span>
+          <div
+            :class="
+              `status-view--badge rounded-full leading-4 ${
+                isOnline ? 'bg-green-500' : 'bg-orange-500'
+              }`
+            "
+          />
         </div>
         <div class="text-xs leading-4 mt-1">
-          {{ replyWaitMeessage }}
+          <span class="reply-eta" v-if="isOnline">Average response time is 30 minutes</span>
+          <span class="reply-eta" v-else>We'll get back to you in a few hours</span>
         </div>
       </div>
       <available-agents v-if="isOnline" :agents="availableAgents" />
@@ -81,3 +86,57 @@ export default {
   },
 };
 </script>
+
+<style scoped lang="scss">
+
+.text-base {
+  display: inline-flex;
+}
+.status-view--badge {
+    height: .75rem;
+    width: .75rem;
+    margin-top: 5px;
+    margin-left: 8px;
+}
+.status-view--badge.bg-green-500 {
+    animation: pulse-g 2s infinite;
+}
+@keyframes pulse-g {
+  0% {
+    transform: scale(0.85);
+    box-shadow: 0 0 0 0 #08bb13;
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px transparent;
+  }
+
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 transparent;
+  }
+}
+
+
+.status-view--badge.bg-orange-500 {
+  background-color: #ffbc00;
+  animation: pulse-o 2s infinite;
+}
+@keyframes pulse-o {
+  0% {
+    transform: scale(0.9);
+    box-shadow: 0 0 0 0 #efb921;
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px transparent;
+  }
+
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 transparent;
+  }
+}
+</style>

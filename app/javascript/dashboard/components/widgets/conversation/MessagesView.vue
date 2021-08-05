@@ -84,7 +84,7 @@
           {{ typingUserNames }}
           <img
             class="gif"
-            src="~dashboard/assets/images/typing.gif"
+            src="~dashboard/assets/images/loading.svg"
             alt="Someone is typing"
           />
         </div>
@@ -342,7 +342,7 @@ export default {
   }
 
   &.messenger-policy--banner {
-    background: var(--r-400);
+    background: #581d1c;
   }
 
   .banner-close-button {

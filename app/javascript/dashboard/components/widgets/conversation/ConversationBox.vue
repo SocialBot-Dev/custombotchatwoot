@@ -80,13 +80,13 @@ export default {
   flex-direction: column;
   min-width: 0;
   width: 100%;
-  border-left: 1px solid var(--color-border);
-  background: var(--color-background-light);
+  border-left: 1px solid var(--color-border-dark2);
+  background: var(--color-background-dark);
 }
 
 .messages-and-sidebar {
   display: flex;
-  background: var(--color-background-light);
+  background: var(--color-background-dark);
   margin: 0;
   height: calc(100vh - var(--space-jumbo));
 }
@@ -96,7 +96,7 @@ export default {
   flex: 0 0;
   overflow: hidden;
   overflow: auto;
-  background: white;
+  /*background: white;*/
   flex-basis: 28rem;
 
   @include breakpoint(large up) {
@@ -108,7 +108,7 @@ export default {
   }
 
   @include breakpoint(xxlarge up) {
-    flex-basis: 33rem;
+    flex-basis: 32rem;
   }
 
   @include breakpoint(xxxlarge up) {

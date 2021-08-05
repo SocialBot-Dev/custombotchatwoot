@@ -3,13 +3,21 @@
   @include margin($zero);
   background: $color-woot;
   border-radius: $space-one;
-  color: var(--white);
+  color: $color-white;
   font-size: $font-size-small;
   font-weight: $font-weight-normal;
   position: relative;
+  text-align: start !important;
+  unicode-bidi: plaintext;
 
   .message-text__wrap {
     position: relative;
+    text-align: start !important;
+    unicode-bidi: plaintext;
+    p {
+      text-align: start !important;
+      unicode-bidi: plaintext;
+    }
 
     .link {
       color: var(--white);
@@ -133,6 +141,8 @@
     @include bubble-with-types;
     text-align: left;
     word-wrap: break-word;
+    text-align: start !important;
+    word-wrap: break-word;
 
     .aplayer {
       box-shadow: none;
@@ -144,19 +154,22 @@
 
     .bubble {
       @include border-normal;
-      background: $white;
+      background: #2f3235;
       border-bottom-left-radius: $space-smaller;
       border-top-left-radius: $space-smaller;
-      color: $color-body;
+      color: #d8d8d8;
       margin-right: auto;
       word-break: break-word;
+      text-align: start !important;
+      word-wrap: break-word;
 
       &.is-image {
         border-radius: var(--border-radius-large);
       }
 
       .link {
-        color: $color-primary-dark;
+        color: #75a1e3;
+        text-decoration: none;
       }
 
       .file {
@@ -200,9 +213,9 @@
       word-break: break-word;
 
       &.is-private {
-        background: lighten($warning-color, 32%);
-        border: 1px solid lighten($warning-color, 15%);
-        color: $color-heading;
+        background: #463f2e;
+        border: 1px solid #63532e;
+        color: #b3a06f;
         position: relative;
 
         &::before {
@@ -253,8 +266,8 @@
   }
 
   .activity-wrap {
-    background: var(--s-50);
-    border: 1px solid var(--s-100);
+    background: #000;
+    border: 1px solid $color-border-dark2;
     border-radius: var(--border-radius-medium);
     display: flex;
     font-size: var(--font-size-small);
@@ -319,23 +332,33 @@
   h5,
   h6 {
     color: var(--color-body);
+    text-align: start !important;
+    unicode-bidi: plaintext;
   }
 
   a {
     color: var(--color-woot);
     text-decoration: underline;
+    text-align: start !important;
+    unicode-bidi: plaintext;
   }
 
   blockquote {
     border-left-color: var(--s-300);
+    text-align: start !important;
+    unicode-bidi: plaintext;
 
     p {
       color: var(--s-300);
+      text-align: start !important;
+      unicode-bidi: plaintext;
     }
   }
 
   p:last-child {
     margin-bottom: 0;
+    text-align: start !important;
+    unicode-bidi: plaintext;
   }
 }
 
@@ -348,6 +371,8 @@
   h5,
   h6 {
     color: var(--white);
+    text-align: start !important;
+    unicode-bidi: plaintext;
   }
 
   a {
@@ -357,9 +382,13 @@
 
   blockquote {
     border-left-color: var(--w-100);
+    text-align: start !important;
+    unicode-bidi: plaintext;
 
     p {
       color: var(--w-100);
+      text-align: start !important;
+      unicode-bidi: plaintext;
     }
   }
 
@@ -369,5 +398,7 @@
 
   p:last-child {
     margin-bottom: 0;
+    text-align: start !important;
+    unicode-bidi: plaintext;
   }
 }

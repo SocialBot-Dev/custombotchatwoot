@@ -207,6 +207,7 @@ ActiveRecord::Schema.define(version: 2021_07_23_095657) do
     t.string "website_token"
     t.string "widget_color", default: "#1f93ff"
     t.string "welcome_title"
+    t.string "welcome_statusmessageonline"
     t.string "welcome_tagline"
     t.integer "feature_flags", default: 3, null: false
     t.integer "reply_time", default: 0

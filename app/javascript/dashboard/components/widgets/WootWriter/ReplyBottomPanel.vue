@@ -173,7 +173,7 @@ export default {
   padding: var(--space-slab) var(--space-normal);
 
   &.is-note-mode {
-    background: var(--y-50);
+    background: var(--color-background-dark2);
   }
 }
 
@@ -212,6 +212,7 @@ export default {
     background: var(--s-100);
   }
 }
+</style>
 
 .modal-mask {
   color: var(--s-600);

@@ -1,18 +1,12 @@
 <template>
-  <div v-if="globalConfig.brandName" class="branding">
-    <a
-      :href="brandRedirectURL"
-      rel="noreferrer noopener nofollow"
-      target="_blank"
-      class="branding--link w-full justify-center"
-    >
-      <img :alt="globalConfig.brandName" :src="globalConfig.logoThumbnail" />
-      <span>
-        {{ useInstallationName($t('POWERED_BY'), globalConfig.brandName) }}
-      </span>
-    </a>
-  </div>
-  <div v-else class="brand--alternative" />
+  <a
+    class="branding branding--link" href="https://dash.wevrlabs.net/knowledgebase.php?utm_source=chat_widget" target="_blank">
+    <!-- <img alt="WevrLabs Hosting" :src="globalConfig.logoThumbnail" /> -->
+    <i class="fa fa-book"></i>
+    <span>
+      Explore Help Articles
+    </span>
+  </a>
 </template>
 
 <script>
@@ -72,18 +66,31 @@ export default {
 }
 
 .branding--link {
-  color: $color-light-gray;
+  color: #6f6f6f;
   cursor: pointer;
   display: flex;
   filter: grayscale(1);
   font-size: $font-size-small;
   opacity: 0.9;
   text-decoration: none;
+  padding: $space-normal 0 $space-slab;
+  cursor: pointer;
+  transition: .3s ease all;
 
   &:hover {
     filter: grayscale(0);
     opacity: 1;
-    color: $color-gray;
+    color: #232323;
+    transition: .3s ease all;
+  }
+
+  img {
+    margin-right: $space-smaller;
+    /*max-width: $space-slab;*/
+    max-height: 1.8rem;
+  }
+  i.fas, i.fa {
+    margin: 0 4px;
   }
 }
 

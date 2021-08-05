@@ -9,6 +9,7 @@
     <div
       class="header-wrap bg-white"
       :class="{ expanded: !isHeaderCollapsed, collapsed: isHeaderCollapsed }"
+      :style="{ background: widgetColor }"
     >
       <transition
         enter-active-class="transition-all delay-200 duration-300 ease"
@@ -105,6 +106,10 @@ export default {
       type: Boolean,
       default: false,
     },
+    widgetColor: {  
+      type: String, 
+      default: '',  
+    },
   },
   data() {
     return {
@@ -119,6 +124,7 @@ export default {
       conversationSize: 'conversation/getConversationSize',
       groupedMessages: 'conversation/getGroupedConversation',
       isFetchingList: 'conversation/getIsFetchingList',
+      widgetColor: 'appConfig/getWidgetColor',
       currentUser: 'contacts/getCurrentUser',
     }),
     currentView() {
@@ -147,7 +153,6 @@ export default {
       if (!this.hasIntroText || this.conversationSize) {
         return true;
       }
-
       return this.isOnCollapsedView;
     },
     hasIntroText() {
@@ -173,7 +178,6 @@ export default {
 <style scoped lang="scss">
 @import '~widget/assets/scss/variables';
 @import '~widget/assets/scss/mixins';
-
 .home {
   width: 100%;
   height: 100%;
@@ -181,35 +185,33 @@ export default {
   flex-direction: column;
   flex-wrap: nowrap;
   overflow: hidden;
-  background: $color-background;
-
+  background: #f4f6fb;
   .header-wrap {
     border-radius: $space-normal $space-normal 0 0;
     flex-shrink: 0;
     transition: max-height 300ms;
     z-index: 99;
     @include shadow-large;
+    border-radius: 0; 
+    background-image: linear-gradient(125deg,rgba(255, 255, 255, 0.25) -20%,rgba(0,0,0,0.45)) !important; 
+    overflow: hidden;
 
     &.expanded {
-      max-height: 16rem;
+      max-height: 100%;
     }
-
     &.collapsed {
-      max-height: 4.5rem;
+      max-height: 100%;
     }
-
     @media only screen and (min-device-width: 320px) and (max-device-width: 667px) {
       border-radius: 0;
     }
   }
-
   .footer-wrap {
     flex-shrink: 0;
     width: 100%;
     display: flex;
     flex-direction: column;
     position: relative;
-
     &:before {
       content: '';
       position: absolute;
@@ -225,7 +227,6 @@ export default {
       );
     }
   }
-
   .input-wrap {
     padding: 0 $space-normal;
   }

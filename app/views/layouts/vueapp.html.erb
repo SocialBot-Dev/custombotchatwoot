@@ -51,6 +51,26 @@
     <%= javascript_pack_tag 'application' %>
     <%= stylesheet_pack_tag 'application' %>
   </head>
+  <style type="text/css">
+    .modal-container textarea, .modal-container [type=text], .modal-container [type=url], .search-wrap .contact-search, .edit-contact--form span.input-group-label, .settings--section [type=color], .settings--section [type=date], .settings--section [type=datetime-local], .settings--section [type=datetime], .settings--section [type=email], .settings--section [type=month], .settings--section [type=number], .settings--section [type=password], .settings--section [type=search], .settings--section [type=tel], .settings--section [type=text], .settings--section [type=time], .settings--section [type=url], .settings--section [type=week], .settings--section textarea, select, .wizard-body [type=color], .wizard-body [type=date], .wizard-body [type=datetime-local], .wizard-body [type=datetime], .wizard-body [type=email], .wizard-body [type=month], .wizard-body [type=number], .wizard-body [type=password], .wizard-body [type=search], .wizard-body [type=tel], .wizard-body [type=text], .wizard-body [type=time], .wizard-body [type=url], .wizard-body [type=week], .wizard-body textarea  {
+        background: transparent !important;
+      }
+      .ve-table table.ve-table-content tbody.ve-table-body tr.ve-table-body-tr td.ve-table-body-td, .ve-table table.ve-table-content tbody.ve-table-body tr.ve-table-body-tr td.ve-table-expand-td, .ve-table table.ve-table-content tbody.ve-table-body tr.ve-table-expand-tr td.ve-table-body-td, .ve-table table.ve-table-content tbody.ve-table-body tr.ve-table-expand-tr td.ve-table-expand-td {
+          background-color: #1f2124 !important;
+          color: #d2d2d2 !important;
+          height: inherit;
+      }
+      .ve-table .ve-table-container .ve-table-content.ve-table-border-x td, .ve-table .ve-table-container .ve-table-content.ve-table-border-x th {
+          border-bottom: 1px solid #3a3a3a !important;
+      }
+      .ve-table table.ve-table-content thead.ve-table-header tr.ve-table-header-tr th.ve-table-header-th {
+          background-color: #000000 !important;
+          color: #9a9b9b !important;
+      }
+      .ve-table .ve-table-container .ve-table-content.ve-table-border-x tr.ve-table-footer-tr:first-child>td, .ve-table .ve-table-container .ve-table-content.ve-table-border-x tr:first-child>th {
+          border-top: 1px solid #3a3a3a;
+      }
+  </style>
   <body>
     <div id="app"></div>
     <noscript id="noscript">This app works best with JavaScript enabled.</noscript>

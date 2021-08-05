@@ -38,6 +38,10 @@ export default {
     align-items: center;
     display: flex;
     justify-content: space-between;
+    margin-bottom: var(--space-normal);
+    background: #1b1b1b;
+    padding: 6px 20px;
+    border-radius: 6px;
 
     .edit-button {
       padding: 0;
@@ -46,6 +50,9 @@ export default {
 
   .conv-details--item__value {
     word-break: break-all;
+    margin-top: 10px;
+    color: #ced2d9;
+    //text-align: center;
     margin-left: var(--space-medium);
     margin-bottom: var(--space-normal);
   }

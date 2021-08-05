@@ -8,6 +8,7 @@
 </template>
 
 <script>
+/* global bus */
 import 'highlight.js/styles/default.css';
 import copy from 'copy-text-to-clipboard';
 
