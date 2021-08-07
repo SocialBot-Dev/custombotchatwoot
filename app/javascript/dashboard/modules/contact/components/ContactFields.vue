@@ -107,10 +107,8 @@ export default {
 .custom-attribute--row span {
     word-break: break-all;
 }
-.custom-attribute--row {
-  p {
-    margin-bottom: 0;
-  }
+.custom-attribute--row div span p {
+    margin-bottom: 0 !important;
 }
 .title {
   margin-bottom: var(--space-normal);
