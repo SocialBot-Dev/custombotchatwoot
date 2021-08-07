@@ -69,6 +69,7 @@ export default {
     border: 1px solid #333;
     padding: 5px 15px;
     display: inline-flex;
+    border-radius: 3px;
 }
 .custom-attribute--row span {
     word-break: break-all;
