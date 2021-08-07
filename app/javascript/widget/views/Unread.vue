@@ -122,7 +122,7 @@ export default {
 
 .unread-wrap {
   width: 100%;
-  height: auto;
+  height: 100%;
   max-height: 100vh;
   background: transparent;
   display: flex;
@@ -158,8 +158,8 @@ export default {
   }
 
   .close-unread-button {
-    background: $color-background;
-    color: $color-light-gray;
+    background: rgb(245 212 214);
+    color: #000000;
     border: 0;
     transition: all .2s cubic-bezier(0.42, 0, 0.29, 0.83);
     font-weight: $font-weight-medium;
@@ -212,6 +212,12 @@ export default {
       &:hover {
           transform: translateX(.25rem);
       }
+      .message-content {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
     }
   }
 }
@@ -236,6 +242,12 @@ export default {
 
       &:hover {
           transform: translateX(.25rem);
+      }
+      .message-content {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
       }
     }
   }
