@@ -73,7 +73,7 @@ export default {
 .custom-attribute--row span {
     word-break: break-all;
 }
-.custom-attribute--row span p {
+.custom-attribute--row div span p {
     margin-bottom: 0;
 }
 .custom-attribute--row__attribute {
