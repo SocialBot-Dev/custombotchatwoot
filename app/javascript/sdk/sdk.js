@@ -135,6 +135,11 @@ export const SDK_CSS = ` .woot-widget-holder {
 .woot-elements--right.woot-widget-bubble.woot--close .bubble-tooltip img {
     margin: 10px;
     width: 15%;
+.woot-widget-bubble img {
+  all: revert;
+  height: 34px;
+  width: 34px;
+  margin: 17px 15px;
 }
 
 @media only screen and (min-width: 667px) {
@@ -151,11 +156,6 @@ export const SDK_CSS = ` .woot-widget-holder {
   -o-box-shadow: 0 8px 32px rgba(0, 0, 0, .4) !important;
   -webkit-box-shadow: 0 8px 32px rgba(0, 0, 0, .4) !important;
   box-shadow: 0 8px 32px rgba(0, 0, 0, .4) !important;*/
-}
-.woot-widget-bubble img {
-  width: 34px;
-  height: 34px;
-  margin: 17px 15px;
 }
 .woot--close:hover {
   opacity: 1;
