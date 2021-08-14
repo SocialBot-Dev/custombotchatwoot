@@ -132,6 +132,7 @@ export const SDK_CSS = `.woot-widget-holder {
 .woot-elements--right.woot-widget-bubble.woot--close .bubble-tooltip img {
     margin: 10px;
     width: 15%;
+}
 .woot-widget-bubble img {
   all: revert;
   height: 34px;
