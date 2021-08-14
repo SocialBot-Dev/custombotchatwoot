@@ -1,15 +1,12 @@
-export const SDK_CSS = ` .woot-widget-holder {
-  z-index: 2147483000 !important;
-  position: fixed !important;
-  -moz-box-shadow: 0 12px 20px 0 rgba(0,0,0,.15) !important;
-  -o-box-shadow: 0 12px 20px 0 rgba(0,0,0,.15) !important;
-  -webkit-box-shadow: 0 12px 20px 0 rgba(0,0,0,.15) !important;
+export const SDK_CSS = `.woot-widget-holder {
   box-shadow: 0 12px 20px 0 rgba(0,0,0,.15) !important;
-  overflow: hidden !important;
   opacity: 1;
-  transition-property: opacity, bottom;
-  /*transition-duration: 0.5s, 0.5s;*/
-  transition: .4s ease all;
+  will-change: transform, opacity;
+  transform: translateY(0);
+  overflow: hidden !important;
+  position: fixed !important;
+  transition: opacity 0.2s linear, transform 0.25s linear;
+  z-index: 2147483000 !important;
 }
 
 .woot-widget-holder iframe {
@@ -176,7 +173,8 @@ export const SDK_CSS = ` .woot-widget-holder {
   transform: rotate(-45deg);
 }
 .woot--hide {
-  bottom: -20000px !important;
+  bottom: -100vh;
+  transform: translateY(40px);
   top: unset !important;
   opacity: 0;
   visibility: hidden !important;
