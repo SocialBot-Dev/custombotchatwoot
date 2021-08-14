@@ -5,7 +5,7 @@ export const SDK_CSS = `.woot-widget-holder {
   transform: translateY(0);
   overflow: hidden !important;
   position: fixed !important;
-  transition: opacity 0.2s linear, transform 0.25s linear;
+  transition: opacity 0.5s linear, transform 0.5s linear;
   z-index: 2147483000 !important;
 }
 
@@ -48,7 +48,7 @@ export const SDK_CSS = `.woot-widget-holder {
   bottom: 20px;
   width: 64px !important;
   height: 64px !important;
-  transition: .25s ease all;
+  transition: .5s ease all;
   z-index: 2147483000 !important;
   user-select: none;
 }
