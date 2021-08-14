@@ -5,6 +5,7 @@
         !isCards && !isOptions && !isForm && !isArticle && !isCards && !isCSAT
       "
       class="chat-bubble agent"
+      :style="{ background: widgetColor }"
     >
       <div class="message-content" v-html="formatMessage(message, false)"></div>
       <email-input
@@ -80,6 +81,10 @@ export default {
     messageContentAttributes: {
       type: Object,
       default: () => {},
+    },
+    widgetColor: {
+      type: String,
+      default: '',
     },
   },
   computed: {
