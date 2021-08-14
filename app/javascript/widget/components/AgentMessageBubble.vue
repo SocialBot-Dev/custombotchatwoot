@@ -74,6 +74,7 @@ export default {
   },
   mixins: [messageFormatterMixin],
   props: {
+    widgetColor: { type: String, default: null },
     message: { type: String, default: null },
     contentType: { type: String, default: null },
     messageType: { type: Number, default: null },
@@ -82,7 +83,6 @@ export default {
       type: Object,
       default: () => {},
     },
-    widgetColor: { type: String, default: null },
   },
   computed: {
     isTemplate() {
