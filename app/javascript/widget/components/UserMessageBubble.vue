@@ -20,6 +20,10 @@ export default {
       type: String,
       default: '',
     },
+    widgetColor: {
+      type: String,
+      default: '',
+    },
   },
 };
 </script>
