@@ -136,9 +136,7 @@ export default {
 
 .chat-bubble {
   &.agent {
-    background: $color-white;
     border-bottom-left-radius: $space-smaller;
-    color: #000;
     text-align: start;
     unicode-bidi: plaintext;
 
