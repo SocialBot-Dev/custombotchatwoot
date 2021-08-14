@@ -20,10 +20,6 @@ export default {
       type: String,
       default: '',
     },
-    widgetColor: {
-      type: String,
-      default: '',
-    },
   },
 };
 </script>
@@ -58,6 +54,8 @@ export default {
 
   &.user {
     border-bottom-right-radius: $space-smaller;
+    background: #fff;
+    color: #000;
 
     > a {
       color: $color-white;

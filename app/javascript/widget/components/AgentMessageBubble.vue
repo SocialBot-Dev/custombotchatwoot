@@ -82,10 +82,7 @@ export default {
       type: Object,
       default: () => {},
     },
-    widgetColor: {
-      type: String,
-      default: '',
-    },
+    widgetColor: { type: String, default: null },
   },
   computed: {
     isTemplate() {
