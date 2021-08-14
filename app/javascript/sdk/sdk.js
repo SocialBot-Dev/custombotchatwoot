@@ -5,7 +5,7 @@ export const SDK_CSS = `.woot-widget-holder {
   transform: translateY(0);
   overflow: hidden !important;
   position: fixed !important;
-  transition: opacity 0.5s linear, transform 0.5s linear;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
   z-index: 2147483000 !important;
 }
 
