@@ -200,6 +200,7 @@ export default {
     }
     .chat-bubble {
       background: #fff;
+      color: #000;
       box-shadow: -4px 5px 20px 0px rgba(0, 0, 0, 0.15);
       z-index: 999999 !important;
       border: none !important;
