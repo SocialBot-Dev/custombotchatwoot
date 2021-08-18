@@ -219,6 +219,9 @@ export default {
         -webkit-box-orient: vertical;
         overflow: hidden;
       }
+      .link {
+        color: #000 !important;
+      }
     }
   }
 }
