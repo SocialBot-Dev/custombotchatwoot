@@ -29,10 +29,10 @@
             <audio v-else-if="attachment.file_type === 'audio'" controls>
               <source :src="attachment.data_url" />
             </audio>
-            <vidoe v-else-if="attachment.file_type === 'vidoe'" controls>
+            <video v-else-if="attachment.file_type === 'video'" controls>
               <source :src="attachment.data_url" />
               Your browser does not support the video tag
-            </vidoe>
+            </video>
             <bubble-file
               v-else
               :url="attachment.data_url"
