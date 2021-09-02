@@ -43,9 +43,11 @@ export const SDK_CSS = `.woot-widget-holder {
   -webkit-border-radius: 100px !important;
   border-radius: 100px !important;
   background: #1f93ff;
+  border-width: 0px;
+  bottom: 20px;
+  padding: 0px;
   position: fixed;
   cursor: pointer;
-  bottom: 20px;
   width: 64px !important;
   height: 64px !important;
   transition: .5s ease all;
@@ -58,6 +60,7 @@ export const SDK_CSS = `.woot-widget-holder {
   display: flex;
   height: 48px !important;
   width: auto !important;
+  align-items: center;
 }
 
 .woot-widget-bubble.woot-widget--expanded div {
