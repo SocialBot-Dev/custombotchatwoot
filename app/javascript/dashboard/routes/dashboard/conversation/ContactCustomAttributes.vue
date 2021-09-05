@@ -1,6 +1,7 @@
 <template>
   <div class="custom-attributes--panel">
     <contact-details-item
+      v-if="showTitle"
       :title="$t('CUSTOM_ATTRIBUTES.TITLE')"
       icon="ion-code"
       emoji="📕"
@@ -30,6 +31,10 @@ export default {
   },
 
   props: {
+    showTitle: {
+      type: Boolean,
+      default: true,
+    },
     customAttributes: {
       type: Object,
       default: () => ({}),
@@ -51,13 +56,13 @@ export default {
     },
     parseAttributeToString(attribute) {
       switch (typeof attribute) {
-         case 'string':
-           return attribute;
-         case 'object':
-           return JSON.stringify(attribute);
-         default:
-           return `${attribute}`;
-       }
+        case 'string':
+          return attribute;
+        case 'object':
+          return JSON.stringify(attribute);
+        default:
+          return `${attribute}`;
+      }
     },
   },
 };
@@ -88,6 +93,7 @@ export default {
 .custom-attribute--row div span p {
     margin-bottom: 0 !important;
 }
+
 .custom-attribute--row__attribute {
   font-weight: 500;
   margin: 0 0 8px 0px;
