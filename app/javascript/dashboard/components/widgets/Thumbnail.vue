@@ -110,7 +110,7 @@ export default {
     },
     badgeStyle() {
       const badgeSize = `${this.avatarSize / 3}px`;
-      return { width: 17.3333px, height: 17.3333px, padding: 0, bottom: -5px }; //{ width: badgeSize, height: badgeSize };
+      return { width: "17.3333px", height: "17.3333px", padding: "0", bottom: "-5px" }; //{ width: badgeSize, height: badgeSize };
     },
     statusStyle() {
       const statusSize = `${this.avatarSize / 4}px`;
