@@ -28,12 +28,10 @@
 <script>
 import { mixin as clickaway } from 'vue-clickaway';
 import { VeTable } from 'vue-easytable';
-
 import Spinner from 'shared/components/Spinner.vue';
 import Thumbnail from 'dashboard/components/widgets/Thumbnail.vue';
 import EmptyState from 'dashboard/components/widgets/EmptyState.vue';
 import timeMixin from 'dashboard/mixins/time';
-
 export default {
   components: {
     EmptyState,
@@ -194,11 +192,8 @@ export default {
           align: 'left',
           renderBodyCell: ({ row }) => {
             const { profiles } = row;
-
             const items = Object.keys(profiles);
-
             if (!items.length) return '---';
-
             return (
               <div class="cell--social-profiles">
                 {items.map(
@@ -255,53 +250,11 @@ export default {
 
 <style lang="scss" scoped>
 @import '~dashboard/assets/scss/mixins';
-
 .contacts-table-wrap {
   flex: 1 1;
   height: 100%;
   overflow: hidden;
 }
-
-.contacts-table {
-  margin-top: -1px;
-
-  > thead {
-    border-bottom: 1px solid var(--color-border-dark2);
-    background: var(--color-border-dark1);
-
-    > th:first-child {
-      padding-left: var(--space-medium);
-      width: 30%;
-    }
-  }
-
-  > tbody {
-    > tr {
-      cursor: pointer;
-
-      &:hover {
-        background: #000;
-      }
-
-      &.is-active {
-        background: #000;
-      }
-
-      > td {
-        padding: var(--space-slab);
-
-        &:first-child {
-          padding-left: var(--space-medium);
-        }
-
-        &.conversation-count-item {
-          padding-left: var(--space-medium);
-        }
-      }
-    }
-  }
-  .row-main-info {
-    display: flex;
 .contacts-table-wrap::v-deep {
   .ve-table {
     padding-bottom: var(--space-large);
@@ -310,37 +263,30 @@ export default {
     align-items: center;
     display: flex;
     text-align: left;
-
     .user-block {
       min-width: 0;
     }
-
     .user-thumbnail-box {
       margin-right: var(--space-small);
     }
-
     .user-name {
       font-size: var(--font-size-small);
       margin: 0;
       text-transform: capitalize;
     }
-
     .user-email {
       margin: 0;
     }
   }
-
   .ve-table-header-th {
     padding: var(--space-small) var(--space-two) !important;
     background-color: #1f2124;
     color: #6e6f73;
     border-color: #3a3a3a;
   }
-
   .ve-table-body-td {
     padding: var(--space-small) var(--space-two) !important;
   }
-
   .ve-table-header-th {
     font-size: var(--font-size-mini) !important;
   }
@@ -348,7 +294,6 @@ export default {
     top: -4px;
   }
 }
-
 .contacts--loader {
   align-items: center;
   display: flex;
@@ -356,7 +301,6 @@ export default {
   justify-content: center;
   padding: var(--space-big);
 }
-
 .cell--social-profiles {
   a {
     color: var(--s-300);
@@ -365,7 +309,5 @@ export default {
     min-width: var(--space-large);
     text-align: center;
   }
-}
-}
 }
 </style>
