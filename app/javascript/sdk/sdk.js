@@ -5,7 +5,7 @@ export const SDK_CSS = `.woot-widget-holder {
   transform: translateY(0);
   overflow: hidden !important;
   position: fixed !important;
-  transition: opacity 0.3s ease-in-out, transform 0.5s cubic-bezier(0.1, 0.51, 1, 1);
+  transition: opacity 0.3s ease-in-out;
   z-index: 2147483000 !important;
 }
 
@@ -50,9 +50,10 @@ export const SDK_CSS = `.woot-widget-holder {
   cursor: pointer;
   width: 64px !important;
   height: 64px !important;
-  transition: .5s ease all;
+  transition: opacity 0.3s ease-in-out;
   z-index: 2147483000 !important;
   user-select: none;
+  will-change: transform, opacity
 }
 
 .woot-widget-bubble.woot-widget--expanded {
