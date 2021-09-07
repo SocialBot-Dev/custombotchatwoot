@@ -21,14 +21,9 @@
                     <i class="fa fa-caret-right"></i>
                 </a>
             </span>
-            <!-- <span class="email">
+            <span class="email">
                 <a href="mailto:care@wevrlabs.net" target="_blank" rel="noopener noreferrer">
                     <i class="fas fa-envelope"></i>
-                </a>
-            </span> -->
-            <span class="whatsapp" title="send us on WhatsApp">
-                <a href="https://wa.me/19712514959" target="_blank" rel="noopener noreferrer">
-                    <i class="fab fa-whatsapp"></i>
                 </a>
             </span>
             <span class="facebook" title="like our page on Facebook">
