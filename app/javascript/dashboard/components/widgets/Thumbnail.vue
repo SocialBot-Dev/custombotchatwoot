@@ -49,6 +49,13 @@
       :style="badgeStyle"
       src="~dashboard/assets/images/channels/wevrlabs.png"
     />
+    <img
+      v-if="badge === 'Channel::Telegram'"
+      id="badge"
+      class="source-badge"
+      :style="badgeStyle"
+      src="~dashboard/assets/images/channels/telegram.png"
+    />
     <div
       v-if="showStatusIndicator"
       :class="`source-badge user-online-status user-online-status--${status}`"
