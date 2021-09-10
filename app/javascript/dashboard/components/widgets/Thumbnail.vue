@@ -50,6 +50,13 @@
       src="~dashboard/assets/images/channels/wevrlabs.png"
     />
     <img
+      v-if="badge === 'Channel::Line'"
+      id="badge"
+      class="source-badge"
+      :style="badgeStyle"
+      src="~dashboard/assets/images/channels/line.png"
+    />
+    <img
       v-if="badge === 'Channel::Telegram'"
       id="badge"
       class="source-badge"
