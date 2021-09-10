@@ -29,7 +29,7 @@
             <audio v-else-if="attachment.file_type === 'audio'" controls>
               <source :src="attachment.data_url" />
             </audio>
-            <video v-else-if="attachment.file_type === 'video'" controls>
+            <video v-else-if="attachment.file_type === 'video'" controls style="max-width: 100%">
               <source :src="attachment.data_url" />
               Your browser does not support the video tag
             </video>
