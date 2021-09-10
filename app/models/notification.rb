@@ -76,15 +76,16 @@ class Notification < ApplicationRecord
     when 'conversation_creation'
       I18n.t('notifications.notification_title.conversation_creation', display_id: primary_actor.display_id, inbox_name: primary_actor.inbox.name)
     when 'conversation_assignment'
-      I18n.t('notifications.notification_title.conversation_assignment', display_id: primary_actor.display_id)
+      I18n.t('notifications.notification_title.conversation_assignment', display_id: primary_actor.display_id, inbox_name: primary_actor.inbox.name)
     when 'assigned_conversation_new_message'
       I18n.t(
         'notifications.notification_title.assigned_conversation_new_message',
         display_id: conversation.display_id,
-        content: primary_actor.content&.truncate_words(10)
+        content: primary_actor.content&.truncate_words(10),
+        inbox_name: primary_actor.inbox.name
       )
     when 'conversation_mention'
-      "[##{conversation.display_id}] #{transform_user_mention_content primary_actor.content}"
+      "[##{primary_actor.inbox.name}] #{transform_user_mention_content primary_actor.content}"
     else
       ''
     end
