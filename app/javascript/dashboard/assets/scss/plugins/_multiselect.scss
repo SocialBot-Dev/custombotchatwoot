@@ -94,7 +94,7 @@
     border-color: $color-border-dark2;
     min-height: 4.4rem;
     padding-top: $zero;
-    background: $color-background-dark1;
+    background: var(--color-background-dark1)
   }
 
   .multiselect__tags-wrap {
@@ -111,7 +111,7 @@
 
   .multiselect__tag {
     $vertical-space: $space-smaller + $space-micro;
-    background: $color-background-dark1;
+    background: var(--color-background-dark1)
     color: $color-heading;
     margin-top: $space-smaller;
     padding: $vertical-space $space-medium $vertical-space $space-one;
@@ -126,7 +126,7 @@
     @include ghost-input;
     @include padding($zero);
     font-size: $font-size-small;
-    background: $color-background-dark1;
+    background: var(--color-background-dark1)
     color: $color-dark-gray;
     height: 4.4rem;
     margin-bottom: $zero;

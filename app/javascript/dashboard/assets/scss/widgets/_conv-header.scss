@@ -2,7 +2,7 @@ $resolve-button-width: 13.2rem;
 
 // Conversation header - Light BG
 .conv-header {
-  background: $color-background-dark1;
+  background: var(--color-background-dark1)
   @include flex;
   @include flex-align($x: justify, $y: middle);
   border-bottom: 1px solid $color-border-dark2;
@@ -31,7 +31,7 @@ $resolve-button-width: 13.2rem;
 
       .multiselect__tags {
         border: 0;
-        background: $color-background-dark1;
+        background: var(--color-background-dark1)
         border-color: transparent;
       }
     }

@@ -61,13 +61,13 @@
   }
 
   &.is-private {
-    background: $color-background-dark1;
+    background: var(--color-background-dark1)
 
     .reply-box__top {
-      background: $color-background-dark1;
+      background: var(--color-background-dark1)
 
       >input {
-        background: $color-background-dark1;
+        background: var(--color-background-dark1)
       }
     }
   }
