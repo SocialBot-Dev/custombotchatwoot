@@ -303,8 +303,8 @@
   }
 
   .activity-wrap {
-    background: #000;
-    border: 1px solid $color-border-dark2;
+    background: var(--color-background-dark2);
+    border: 1px solid var(--color-background-dark2);
     border-radius: var(--border-radius-medium);
     display: flex;
     font-size: var(--font-size-small);
