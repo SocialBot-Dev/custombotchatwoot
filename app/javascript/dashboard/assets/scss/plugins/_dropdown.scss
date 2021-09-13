@@ -13,7 +13,7 @@
 
   &.dropdowm--bottom {
     &::before {
-      @include arrow(top, var(--color-border-light), 14px);
+      @include arrow(top, var(--color-background-dark1), 14px);
       position: absolute;
       right: 6px;
       top: -14px;
