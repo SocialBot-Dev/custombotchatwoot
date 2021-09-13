@@ -40,11 +40,13 @@ export default {
       border-radius: var(--border-radius-normal);
 
       &:hover {
-        background: var(--color-background);
+        background: var(--color-border);
+        color: var(--b-400) !important;
       }
 
       &:focus {
-        background: var(--color-background);
+        background: var(--color-border);
+        color: var(--b-400) !important;
       }
     }
   }

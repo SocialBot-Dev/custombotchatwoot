@@ -120,7 +120,7 @@ export default {
       height: var(--space-large);
       font-size: var(--font-size-small);
       padding: var(--space-small);
-      background-color: var(--color-background);
+      background-color: var(--color-border);
     }
 
     input:focus {
