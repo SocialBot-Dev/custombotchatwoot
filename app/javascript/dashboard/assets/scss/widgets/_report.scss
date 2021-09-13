@@ -39,7 +39,7 @@
 .report-bar {
   @include margin(-1px $zero);
   // @include background-white;
-  background: var(--color-background-dark1)
+  background: var(--color-background-dark1);
   // @include border-light;
   border: 1px solid $color-border-dark2;
   @include padding($space-small $space-medium);
