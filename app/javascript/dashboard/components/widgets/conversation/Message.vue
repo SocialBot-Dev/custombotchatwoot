@@ -347,7 +347,7 @@ export default {
     }
 
     &.is-from-bot {
-      background: var(--v-400);
+      background: var(--g-900);
       .message-text--metadata .time {
         color: var(--v-50);
       }
