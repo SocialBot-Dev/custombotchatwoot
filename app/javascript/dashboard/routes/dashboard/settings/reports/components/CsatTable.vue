@@ -148,7 +148,7 @@ export default {
   flex: 1;
 
   .ve-table {
-    background: var(--color-background-dark2);
+    background: var(--color-background-dark1);
 
     &::v-deep {
       .ve-table-container {
@@ -187,7 +187,7 @@ export default {
 
 .csat--empty-records {
   align-items: center;
-  background-color: var(--color-background-dark2);
+  background-color: var(--color-background-dark1);
   border: 1px solid var(--color-border);
   border-top: 0;
   color: var(--b-600);

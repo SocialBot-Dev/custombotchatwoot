@@ -188,7 +188,7 @@ export default {
   padding: var(--space-slab) var(--space-normal);
 
   &.is-note-mode {
-    background: var(--color-background-dark2);
+    background: var(--color-background-dark1);
   }
 }
 

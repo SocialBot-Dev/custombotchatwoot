@@ -127,7 +127,7 @@ export default {
   display: flex;
   justify-content: space-between;
 
-  background: var(--color-background-dark2);
+  background: var(--color-background-dark1);
 }
 
 .button-group {
@@ -144,7 +144,7 @@ export default {
     z-index: 1;
 
     &.is-active {
-      background: var(--color-background-dark2);
+      background: var(--color-background-dark1);
     }
   }
 
@@ -162,7 +162,7 @@ export default {
 
     &.is-active {
       border-right: 1px solid #3a3a3a;
-      background: var(--color-background-dark2);
+      background: var(--color-background-dark1);
     }
 
     &:hover,
