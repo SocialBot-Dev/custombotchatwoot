@@ -1,6 +1,7 @@
 .dropdown-pane {
   @include elegant-card;
   @include border-light;
+  background-color: var(--color-background-dark1) !important;
   box-sizing: content-box;
   width: fit-content;
   z-index: 999;
