@@ -168,7 +168,7 @@ export default {
   font-weight: var(--font-weight-normal);
   text-align: left;
   line-height: var(--font-size-large);
-  background: #1f2124;
+  background: var(--color-background-dark1);
 }
 
 .search--icon {
