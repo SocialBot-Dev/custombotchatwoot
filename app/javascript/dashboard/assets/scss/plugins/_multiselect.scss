@@ -1,13 +1,13 @@
 @mixin label-multiselect-hover {
   &::after {
-    color: $color-primary-dark;
+    color: var(--color-primary-dark);
   }
 
   &:hover {
-    background: $color-background;
+    background: var(--color-background);
 
     &::after {
-      color: $color-woot;
+      color: var(--color-woot);
     }
   }
 }
@@ -17,7 +17,7 @@
 
   .multiselect--active {
     >.multiselect__tags {
-      border-color: $color-woot;
+      border-color: var(--color-woot);
     }
   }
 
@@ -58,7 +58,7 @@
         color: var(--color-body);
 
         &::after {
-          background: var(--w-50);
+          background: var(--w-800);
           color: var(--s-600);
         }
       }
@@ -90,8 +90,8 @@
 
   .multiselect__tags {
     @include margin(0);
-    border: 1px solid $color-border-dark2;
-    border-color: $color-border-dark2;
+    border: 1px solid var(--color-border-dark2);
+    border-color: var(--color-border-dark2);
     min-height: 4.4rem;
     padding-top: $zero;
     background: var(--color-background-dark1);
@@ -104,7 +104,7 @@
   }
 
   .multiselect__placeholder {
-    color: $color-gray;
+    color: var(--color-gray);
     font-weight: $font-weight-normal;
     padding-top: var(--space-slab);
   }
@@ -112,7 +112,7 @@
   .multiselect__tag {
     $vertical-space: $space-smaller + $space-micro;
     background: var(--color-background-dark1);
-    color: $color-heading;
+    color: var(--color-heading);
     margin-top: $space-smaller;
     padding: $vertical-space $space-medium $vertical-space $space-one;
   }
@@ -127,7 +127,7 @@
     @include padding($zero);
     font-size: $font-size-small;
     background: var(--color-background-dark1);
-    color: $color-dark-gray;
+    color: var(--color-dark-gray);
     height: 4.4rem;
     margin-bottom: $zero;
   }
@@ -165,7 +165,7 @@
     }
 
     &.multiselect--active>.multiselect__tags {
-      border-color: $color-woot;
+      border-color: var(--color-woot);
     }
   }
 }
