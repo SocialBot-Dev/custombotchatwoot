@@ -170,7 +170,7 @@ export default {
   }
 
   &:focus {
-    background-color: var(--color-background);
+    background-color: var(--color-border);
   }
 }
 
