@@ -1,7 +1,6 @@
 .settings {
   overflow: auto;
   background: var(--color-background-dark1);
-
   .page-top-bar {
     @include padding($space-normal $space-two $zero);
   }
@@ -10,12 +9,10 @@
 // Conversation header - Light BG
 .settings-header {
   @include padding($space-small $space-normal);
-  // @include background-white;
   background: var(--color-background-dark1);
   @include flex;
   @include flex-align($x: justify, $y: middle);
-  // @include border-normal-bottom;
-  border-bottom: 1px solid $color-border-dark2;
+  border-bottom: 1px solid var(--color-border-dark2);
   height: $header-height;
   min-height: $header-height;
 
@@ -35,8 +32,7 @@
 .wizard-box {
   .item {
     @include padding($space-normal $space-normal $space-normal $space-medium);
-    // @include background-light;
-    background: $color-background-dark2;
+    background: var(--color-background-dark2);
 
     cursor: pointer;
     position: relative;
@@ -135,8 +131,7 @@
 }
 
 .wizard-body {
-  // @include background-white;
-  background: $color-background-dark2;
+  background: var(--color-background-dark2);
   @include padding($space-medium);
   @include border-light;
   @include full-height();
@@ -154,8 +149,7 @@
     @include padding($space-normal $space-normal);
     @include border-light-bottom();
 
-    // background: $color-white;
-    background: $color-background-dark2;
+    background: var(--color-background-dark2);
     cursor: pointer;
     flex-direction: column;
     float: left;
