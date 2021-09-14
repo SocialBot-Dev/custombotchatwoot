@@ -163,7 +163,7 @@
 
     .bubble {
       @include border-normal;
-      background: #2f3235;
+      background: var(--s-800);
       border-bottom-left-radius: $space-smaller;
       border-top-left-radius: $space-smaller;
       color: #d8d8d8;
