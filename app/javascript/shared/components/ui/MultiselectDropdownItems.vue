@@ -139,7 +139,7 @@ export default {
   height: var(--space-large);
   font-size: var(--font-size-small);
   padding: var(--space-small);
-  background-color: var(--color-background);
+  background-color: var(--color-background-dark2);
 
   &:focus {
     border: 1px solid var(--w-500);
@@ -164,8 +164,8 @@ export default {
   width: 100%;
 
   &.active {
-    background-color: var(--w-50);
-    color: var(--w-900);
+    background-color: var(--color-background-dark2);
+    color: var(--w-100);
     font-weight: var(--font-weight-bold);
   }
 
