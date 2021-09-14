@@ -5,7 +5,7 @@ $resolve-button-width: 13.2rem;
   background: var(--color-background-dark1);
   @include flex;
   @include flex-align($x: justify, $y: middle);
-  border-bottom: 1px solid $color-border-dark2;
+  border-bottom: 1px solid var(--color-border-dark2);
   padding: var(--space-small) var(--space-normal);
 
   .multiselect-box {
