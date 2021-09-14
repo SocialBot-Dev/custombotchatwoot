@@ -13,14 +13,14 @@
 
   &.dropdowm--bottom {
     &::before {
-      @include arrow(top, var(--color-background-dark1), 14px);
+      @include arrow(top, var(--color-border), 14px);
       position: absolute;
       right: 6px;
       top: -14px;
     }
 
     &::after {
-      @include arrow(top, var(--color-background-dark1), var(--space-slab));
+      @include arrow(top, var(--color-border), var(--space-slab));
       position: absolute;
       right: var(--space-small);
       top: -12px;
@@ -29,14 +29,14 @@
 
   &.dropdowm--top {
     &::before {
-      @include arrow(bottom, var(--color-background-dark1), 14px);
+      @include arrow(bottom, var(--color-border), 14px);
       bottom: -14px;
       position: absolute;
       right: 6px;
     }
 
     &::after {
-      @include arrow(bottom, $color-white, var(--space-slab));
+      @include arrow(bottom, var(--color-border), var(--space-slab));
       bottom: -12px;
       position: absolute;
       right: var(--space-small);

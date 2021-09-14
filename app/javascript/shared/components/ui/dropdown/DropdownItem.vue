@@ -38,6 +38,7 @@ export default {
       white-space: nowrap;
       display: inline-flex;
       border-radius: var(--border-radius-normal);
+      background: transparent;
 
       &:hover {
         background: var(--color-border);
