@@ -96,7 +96,7 @@ export default {
   flex: 0 0;
   overflow: hidden;
   overflow: auto;
-  /*background: white;*/
+  background: var(--color-background-dark);
   flex-basis: 28rem;
 
   @include breakpoint(large up) {
@@ -108,7 +108,7 @@ export default {
   }
 
   @include breakpoint(xxlarge up) {
-    flex-basis: 32rem;
+    flex-basis: 33rem;
   }
 
   @include breakpoint(xxxlarge up) {
