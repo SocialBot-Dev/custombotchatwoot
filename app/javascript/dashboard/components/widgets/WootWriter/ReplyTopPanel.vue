@@ -161,7 +161,7 @@ export default {
     border-radius: 0;
 
     &.is-active {
-      border-right: 1px solid #3a3a3a;
+      border-right: 1px solid var(--color-border);
       background: var(--color-background-dark1);
     }
 
