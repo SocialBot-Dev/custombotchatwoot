@@ -227,7 +227,6 @@ export default {
     background: var(--s-100);
   }
 }
-</style>
 
 .modal-mask {
   color: var(--s-600);
