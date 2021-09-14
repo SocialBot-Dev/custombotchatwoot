@@ -431,6 +431,10 @@
 
   pre code {
     background: var(--color-background);
+    padding: 10px;
+    border-radius: 4px;
+    display: block;
+    overflow: overlay;
   }
 
   p:last-child {
