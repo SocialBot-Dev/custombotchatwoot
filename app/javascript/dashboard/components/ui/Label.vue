@@ -118,7 +118,7 @@ export default {
     }
   }
   &.secondary {
-    background: var(--s-100);
+    background: var(--color-background-dark2);
     color: var(--s-900);
     border: 1px solid var(--s-200);
     a {

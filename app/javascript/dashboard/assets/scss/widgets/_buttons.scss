@@ -49,8 +49,7 @@ $default-button-height: 4.0rem;
 
 
     &.secondary {
-      @include button-style(var(--s-50), var(--s-100), var(--s-700));
-      background: var(--color-background-dark1);
+      @include button-style(var(--color-background-dark2), var(--s-100), var(--s-700));
     }
 
     &.success {
