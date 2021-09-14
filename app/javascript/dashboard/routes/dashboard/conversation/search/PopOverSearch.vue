@@ -200,7 +200,7 @@ input::placeholder {
   list-style-type: none;
   font-size: var(--font-size-small);
   font-weight: var(--font-weight-normal);
-  background: #000;
+  background:  var(--color-background-dark);
 }
 
 .result-view {
