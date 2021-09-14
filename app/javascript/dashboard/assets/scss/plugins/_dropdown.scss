@@ -20,7 +20,7 @@
     }
 
     &::after {
-      @include arrow(top, $color-white, var(--space-slab));
+      @include arrow(top, var(--color-background-dark1), var(--space-slab));
       position: absolute;
       right: var(--space-small);
       top: -12px;
@@ -29,7 +29,7 @@
 
   &.dropdowm--top {
     &::before {
-      @include arrow(bottom, var(--color-border-light), 14px);
+      @include arrow(bottom, var(--color-background-dark1), 14px);
       bottom: -14px;
       position: absolute;
       right: 6px;
