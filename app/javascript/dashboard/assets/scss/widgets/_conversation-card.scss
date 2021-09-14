@@ -32,8 +32,8 @@
     background: $color-background-dark4;
     border-bottom-color: $color-border-dark2;
     animation: left-shift-animation .25s $swift-ease-out-function;
-    //border-left-color: $color-woot;
-    // border-top-color: $color-border-dark2;
+    border-left-color: var(--color-woot);
+    border-top-color: var(--color-border-dark2);
 
     .conversation--details {
       border-top-color: transparent;
@@ -52,7 +52,7 @@
 
   &:last-child {
     .conversation--details {
-      border-bottom-color: $color-border-dark2;
+      border-bottom-color: var(--color-border-dark2);
     }
   }
 
@@ -60,7 +60,7 @@
   .conversation--details {
     @include margin(0 0 0 $space-one);
     @include border-light-bottom;
-    border-top: 1px solid $color-border-dark2;
+    border-top: 1px solid var(--color-border-dark2);
     @include padding($space-slab 0);
     border-bottom-color: transparent;
   }
