@@ -224,7 +224,7 @@ export default {
     cursor: pointer;
   }
   &:hover .button {
-    background: var(--s-100);
+    background: var(--s-800);
   }
 }
 
