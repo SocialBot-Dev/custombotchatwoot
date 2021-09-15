@@ -36,10 +36,10 @@ es:
       avg_resolution_time: Promedio de tiempo de resolución (Minutos)
   notifications:
     notification_title:
-      conversation_creation: "[Nueva conversación] - #%{display_id} ha sido creado en %{inbox_name}"
-      conversation_assignment: "[Asignado a usted] - #%{display_id} le ha sido asignado a usted"
-      assigned_conversation_new_message: "[Nuevo mensaje] - #%{display_id} %{content}"
-      conversation_mention: "Ha sido mencionado en la conversación [ID - %{display_id}] por %{name}"
+      conversation_creation: "[%{contact_name}]: has been created in %{inbox_name}"
+      conversation_assignment: "[%{contact_name}] - %{inbox_name}: has been assigned to you"
+      assigned_conversation_new_message: "[%{contact_name}]: %{content}"
+      conversation_mention: "[%{inbox_name}] - %{contact_name}: You have been mentioned in conversation [ID - %{display_id}] by %{name}"
   conversations:
     messages:
       deleted: Este mensaje se ha eliminado

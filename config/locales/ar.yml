@@ -36,10 +36,10 @@ ar:
       avg_resolution_time: Avg resolution time (Minutes)
   notifications:
     notification_title:
-      conversation_creation: "[محادثة جديدة] - #%{display_id} تم إنشاؤها في %{inbox_name}"
-      conversation_assignment: "[تعيين لك] - #%{display_id} تم تعيينه لك"
-      assigned_conversation_new_message: "[رسالة جديدة] - #%{display_id} %{content}"
-      conversation_mention: "تمت الإشارة إليك في المحادثة [ID - %{display_id}] من قبل %{name}"
+      conversation_creation: "[%{contact_name}]: has been created in %{inbox_name}"
+      conversation_assignment: "[%{contact_name}] - %{inbox_name}: has been assigned to you"
+      assigned_conversation_new_message: "[%{contact_name}]: %{content}"
+      conversation_mention: "[%{inbox_name}] - %{contact_name}: You have been mentioned in conversation [ID - %{display_id}] by %{name}"
   conversations:
     messages:
       deleted: تم حذف هذه الرسالة

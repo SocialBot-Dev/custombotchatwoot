@@ -53,7 +53,7 @@ en:
   notifications:
     notification_title:
       conversation_creation: "[%{contact_name}]: has been created in %{inbox_name}"
-      conversation_assignment: "[Assigned to you] - %{inbox_name}: has been assigned to you"
+      conversation_assignment: "[%{contact_name}] - %{inbox_name}: has been assigned to you"
       assigned_conversation_new_message: "[%{contact_name}]: %{content}"
       conversation_mention: "[%{inbox_name}] - %{contact_name}: You have been mentioned in conversation [ID - %{display_id}] by %{name}"
   conversations:
