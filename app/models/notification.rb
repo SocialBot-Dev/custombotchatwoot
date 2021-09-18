@@ -81,7 +81,7 @@ class Notification < ApplicationRecord
       I18n.t(
         'notifications.notification_title.assigned_conversation_new_message',
         display_id: conversation.display_id,
-        content: primary_actor.content&.truncate_words(20),
+        content: primary_actor.content&.truncate_words(35),
         inbox_name: primary_actor.inbox.name,
         contact_name: conversation.contact.name
       )
