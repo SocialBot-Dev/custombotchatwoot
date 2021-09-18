@@ -90,7 +90,7 @@ class Telegram::IncomingMessageService
   end
 
   def file_content_type
-    (params[:message][:photo] || params[:message][:sticker][:thumb]).present? ? :image : file_type(params[:message][:document][:mime_type])
+    params[:message][:photo].present? ? :image : params[:message][:sticker][:thumb].present ? :image : file_type(params[:message][:document][:mime_type])
   end
 
   def attach_files
