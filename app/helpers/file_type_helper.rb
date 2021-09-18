@@ -5,7 +5,8 @@ module FileTypeHelper
       'image/png',
       'image/gif',
       'image/tiff',
-      'image/bmp'
+      'image/bmp',
+      'image/webp'
     ].include?(content_type)
 
     return :video if content_type.include?('video/')
