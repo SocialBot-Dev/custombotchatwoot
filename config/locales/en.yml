@@ -92,7 +92,9 @@ en:
       transcript_subject: "Conversation Transcript"
     survey:
       response: "Share with us your feedback for the conversation, %{link}"
-
+  contacts:
+    online:
+      delete: "%{contact_name} is Online, please try again later"
   integration_apps:
     slack:
       name: "Slack"
