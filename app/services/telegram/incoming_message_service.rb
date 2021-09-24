@@ -90,9 +90,8 @@ class Telegram::IncomingMessageService
   end
 
   def attach_files
-    file = params[:message][:document]
+    file = params[:message][:sticker][:thumb]
     file ||= params[:message][:photo]&.last
-    file ||= params[:message][:sticker][:thumb]
 
     return unless file
 
