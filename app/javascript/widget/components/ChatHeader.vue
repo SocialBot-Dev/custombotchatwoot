@@ -20,7 +20,7 @@
             <span class="availability-status" v-if="isOnline">Online</span>
             <span class="availability-status" v-else>Away</span>
          </div>
-        <span class="reply-eta" v-if="isOnline">Average response time is 30 minutes</span>
+        <span class="reply-eta" v-if="isOnline">Average response time varies</span>
         <span class="reply-eta" v-else>We'll get back to you in a few hours</span>
         <span class="social-links">
             <span class="text-link">

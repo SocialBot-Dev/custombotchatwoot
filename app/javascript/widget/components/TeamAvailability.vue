@@ -14,7 +14,7 @@
           />
         </div>
         <div class="text-xs leading-4 mt-1">
-          <span class="reply-eta" v-if="isOnline">Average response time is 30 minutes</span>
+          <span class="reply-eta" v-if="isOnline">Average response time varies</span>
           <span class="reply-eta" v-else>We'll get back to you in a few hours</span>
         </div>
       </div>
