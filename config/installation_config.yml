@@ -17,7 +17,7 @@
 - name: DISPLAY_MANIFEST
   value: true
 - name: MAILER_INBOUND_EMAIL_DOMAIN
-  value: 'sandboxa54b342eefc74ea497ae292bdb78ca21.mailgun.org'
+  value: 'sandboxb7eac060481944c0b26e5f803218cb4d.mailgun.org'
 - name: BRAND_NAME
   value: 'WevrLabs Communication Center'
 - name: MAILER_SUPPORT_EMAIL
