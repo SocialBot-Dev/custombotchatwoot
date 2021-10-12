@@ -108,11 +108,13 @@ describe Telegram::IncomingMessageService do
             'chat' => { 'id' => 23, 'first_name' => 'Sojan', 'last_name' => 'Jose', 'username' => 'sojan', 'type' => 'private' },
             'date' => 1_631_132_077,
             'sticker' => {
-              'emoji' => '👍', 'width' => 512, 'height' => 512, 'set_name' => 'a834556273_by_HopSins_1_anim', 'is_animated' => 1,
-              'thumb' => {
+              'emoji' => '👍', 'width' => 512, 'height' => 512, 'set_name' => 'a834556273_by_HopSins_1_anim', 'is_animated' => 1, 'thumb' => {
                 'file_id' => 'AgACAgUAAxkBAAODYV3aGZlD6vhzKsE2WNmblsr6zKwAAi-tMRvCoeBWNQ1ENVBzJdwBAAMCAANzAAMhBA',
                 'file_unique_id' => 'AQADL60xG8Kh4FZ4', 'file_size' => 4690, 'width' => 128, 'height' => 128
-              }
+              },
+              'file_id' => 'CAACAgEAAxkBAANHYV6SqK4_QokaTV90Dp-2D2el0uAAAuMAA3FRvjHsabcjn_Em3yEE',
+              'file_unique_id' => 'AgAD4wADcVG-MQ'
+              'file_size' => 7340
             }
           }
         }.with_indifferent_access
