@@ -95,6 +95,33 @@ describe Telegram::IncomingMessageService do
       end
     end
 
+    context 'when valid sticker attachment params' do
+      it 'creates appropriate conversations, message and contacts' do
+        allow(telegram_channel.inbox.channel).to receive(:get_telegram_file_path).and_return('https://chatwoot-public-assets.s3.amazonaws.com/test-files/rspec/sample.png')
+        params = {
+          'update_id' => 2_342_342_343_242,
+          'message' => {
+            'message_id' => 1,
+            'from' => {
+              'id' => 23, 'is_bot' => false, 'first_name' => 'Sojan', 'last_name' => 'Jose', 'username' => 'sojan', 'language_code' => 'en'
+            },
+            'chat' => { 'id' => 23, 'first_name' => 'Sojan', 'last_name' => 'Jose', 'username' => 'sojan', 'type' => 'private' },
+            'date' => 1_631_132_077,
+            'sticker' => {
+              'thumb' => [{
+                'file_id' => 'AgACAgUAAxkBAAODYV3aGZlD6vhzKsE2WNmblsr6zKwAAi-tMRvCoeBWNQ1ENVBzJdwBAAMCAANzAAMhBA',
+                'file_unique_id' => 'AQADL60xG8Kh4FZ4', 'file_size' => 1883, 'width' => 90, 'height' => 67
+              }]
+            }
+          }
+        }.with_indifferent_access
+        described_class.new(inbox: telegram_channel.inbox, params: params).perform
+        expect(telegram_channel.inbox.conversations.count).not_to eq(0)
+        expect(Contact.all.first.name).to eq('Sojan Jose')
+        expect(telegram_channel.inbox.messages.first.attachments.first.file_type).to eq('image')
+      end
+    end
+
     context 'when valid video messages params' do
       it 'creates appropriate conversations, message and contacts' do
         allow(telegram_channel.inbox.channel).to receive(:get_telegram_file_path).and_return('https://chatwoot-public-assets.s3.amazonaws.com/test-files/rspec/sample.mov')
