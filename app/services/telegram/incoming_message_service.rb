@@ -100,12 +100,16 @@ class Telegram::IncomingMessageService
       inbox.channel.get_telegram_file_path(file[:file_id])
     )
 
+    def file_name
+      return params.dig(:message, :document, :file_name) if params.dig(:message, :document, :file_name).present? || attachment_file
+    end
+
     @message.attachments.new(
       account_id: @message.account_id,
       file_type: file_content_type,
       file: {
         io: attachment_file,
-        filename: params.dig(:message, :document, :file_name).presence || attachment_file,
+        filename: file_name,
         content_type: attachment_file.content_type
       }
     )
