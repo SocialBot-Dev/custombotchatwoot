@@ -94,7 +94,7 @@ class Telegram::IncomingMessageService
   end
 
   def file_name
-    return params[:message][:photo].&.last.[:file_unique_id] if params.dig(:message, :photo).present?
+    return params[:message][:photo]&.last[:file_unique_id] if params.dig(:message, :photo).present?
     return params[:message][:sticker][:file_unique_id]  if params.dig(:message, :sticker).present?
     return params[:message][:video][:file_name]         if params.dig(:message, :video).present?
     return params[:message][:audio][:file_name]         if params.dig(:message, :audio).present?
