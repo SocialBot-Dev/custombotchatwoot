@@ -93,21 +93,21 @@ class Telegram::IncomingMessageService
     file_type(params[:message][:document][:mime_type])
   end
 
+  def file_name
+    return params[:message][:photo][0][:file_unique_id] if params.dig(:message, :photo).present?
+    return params[:message][:sticker][:file_unique_id]  if params.dig(:message, :sticker).present?
+    return params[:message][:video][:file_unique_id]    if params.dig(:message, :video).present?
+    return params[:message][:audio][:title]             if params.dig(:message, :audio).present?
+    return params[:message][:voice][:file_unique_id]    if params.dig(:message, :voice).present?
+    return params[:message][:document][:file_name]      if params.dig(:message, :document).present?
+  end
+
   def attach_files
     return unless file
 
     attachment_file = Down.download(
       inbox.channel.get_telegram_file_path(file[:file_id])
     )
-
-    def file_name
-      return params[:message][:photo][0][:file_unique_id] if params.dig(:message, :photo).present?
-      return params[:message][:sticker][:file_unique_id]  if params.dig(:message, :sticker).present?
-      return params[:message][:video][:file_unique_id]    if params.dig(:message, :video).present?
-      return params[:message][:audio][:title]             if params.dig(:message, :audio).present?
-      return params[:message][:voice][:file_unique_id]    if params.dig(:message, :voice).present?
-      return params[:message][:document][:file_name]      if params.dig(:message, :document).present?
-    end
 
     @message.attachments.new(
       account_id: @message.account_id,
