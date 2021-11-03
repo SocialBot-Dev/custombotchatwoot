@@ -1,8 +1,7 @@
 .error {
-
   #{$all-text-inputs},
   select,
-  .multiselect>.multiselect__tags {
+  .multiselect > .multiselect__tags {
     @include thin-border(var(--r-400));
     background: var(--color-background-dark1);
   }
@@ -40,5 +39,9 @@ input {
   input {
     font-size: var(--font-size-small);
     height: var(--space-large);
+  }
+
+  .error {
+    border-color: var(--r-400);
   }
 }

@@ -28,10 +28,13 @@
 <script>
 import { mixin as clickaway } from 'vue-clickaway';
 import { VeTable } from 'vue-easytable';
+import flag from 'country-code-emoji';
+
 import Spinner from 'shared/components/Spinner.vue';
 import Thumbnail from 'dashboard/components/widgets/Thumbnail.vue';
 import EmptyState from 'dashboard/components/widgets/EmptyState.vue';
 import timeMixin from 'dashboard/mixins/time';
+
 export default {
   components: {
     EmptyState,
@@ -92,10 +95,10 @@ export default {
           ...item,
           phone_number: item.phone_number || '---',
           company: additional.company_name || '---',
-          location: additional.location || '---',
           profiles: additional.social_profiles || {},
           city: additional.city || '---',
-          country: additional.country || '---',
+          country: additional.country,
+          countryCode: additional.country_code,
           conversationsCount: item.conversations_count || '---',
           last_activity_at: lastActivityAt
             ? this.dynamicTime(lastActivityAt)
@@ -126,12 +129,17 @@ export default {
                   status={row.availability_status}
                 />
                 <div class="user-block">
-                  <h6 class="sub-block-title user-name text-truncate">
-                    {row.name}
+                  <h6 class="sub-block-title text-truncate">
+                    <router-link
+                      to={`/app/accounts/${this.$route.params.accountId}/contacts/${row.id}`}
+                      class="user-name"
+                    >
+                      {row.name}
+                    </router-link>
                   </h6>
-                  <span class="button clear small link">
+                  <button class="button clear small link view-details--button">
                     {this.$t('CONTACTS_PAGE.LIST.VIEW_DETAILS')}
-                  </span>
+                  </button>
                 </div>
               </div>
             </woot-button>
@@ -184,6 +192,16 @@ export default {
           key: 'country',
           title: this.$t('CONTACTS_PAGE.LIST.TABLE_HEADER.COUNTRY'),
           align: 'left',
+          renderBodyCell: ({ row }) => {
+            if (row.country) {
+              return (
+                <div class="text-truncate">
+                  {`${flag(row.countryCode)} ${row.country}`}
+                </div>
+              );
+            }
+            return '---';
+          },
         },
         {
           field: 'profiles',
@@ -192,8 +210,11 @@ export default {
           align: 'left',
           renderBodyCell: ({ row }) => {
             const { profiles } = row;
+
             const items = Object.keys(profiles);
+
             if (!items.length) return '---';
+
             return (
               <div class="cell--social-profiles">
                 {items.map(
@@ -250,11 +271,13 @@ export default {
 
 <style lang="scss" scoped>
 @import '~dashboard/assets/scss/mixins';
+
 .contacts-table-wrap {
   flex: 1 1;
   height: 100%;
   overflow: hidden;
 }
+
 .contacts-table-wrap::v-deep {
   .ve-table {
     padding-bottom: var(--space-large);
@@ -263,30 +286,39 @@ export default {
     align-items: center;
     display: flex;
     text-align: left;
+
     .user-block {
       min-width: 0;
     }
+
     .user-thumbnail-box {
       margin-right: var(--space-small);
     }
+
     .user-name {
       font-size: var(--font-size-small);
+      font-weight: var(--font-weight-medium);
       margin: 0;
       text-transform: capitalize;
     }
+
+    .view-details--button {
+      color: var(--color-body);
+    }
+
     .user-email {
       margin: 0;
     }
   }
+
   .ve-table-header-th {
     padding: var(--space-small) var(--space-two) !important;
-    background-color: #1f2124;
-    color: #6e6f73;
-    border-color: #3a3a3a;
   }
+
   .ve-table-body-td {
     padding: var(--space-small) var(--space-two) !important;
   }
+
   .ve-table-header-th {
     font-size: var(--font-size-mini) !important;
   }
@@ -294,6 +326,7 @@ export default {
     top: -4px;
   }
 }
+
 .contacts--loader {
   align-items: center;
   display: flex;
@@ -301,6 +334,7 @@ export default {
   justify-content: center;
   padding: var(--space-big);
 }
+
 .cell--social-profiles {
   a {
     color: var(--s-300);

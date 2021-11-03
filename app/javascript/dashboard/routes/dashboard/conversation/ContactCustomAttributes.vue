@@ -62,6 +62,13 @@ export default {
   margin-bottom: var(--space-normal);
 }
 
+.custom-attribute--row__attribute {
+  font-weight: 500;
+  margin: 0 0 8px 0px;
+  background: #31302a;
+  color: #8e8e8e;
+}
+
 .conv-details--item {
   padding-bottom: 0;
 }
@@ -84,12 +91,5 @@ export default {
       margin-bottom: 0 !important;
     }
   }
-}
-
-.custom-attribute--row__attribute {
-  font-weight: 500;
-  margin: 0 0 8px 0px;
-  background: #31302a;
-  color: #8e8e8e;
 }
 </style>
