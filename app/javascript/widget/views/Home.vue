@@ -84,6 +84,8 @@ import { mapGetters } from 'vuex';
 import { MAXIMUM_FILE_UPLOAD_SIZE } from 'shared/constants/messages';
 import { BUS_EVENTS } from 'shared/constants/busEvents';
 import PreChatForm from '../components/PreChat/Form';
+import { isEmptyObject } from 'widget/helpers/utils';
+
 export default {
   name: 'Home',
   components: {
@@ -109,7 +111,11 @@ export default {
     },
     widgetColor: {  
       type: String, 
-      default: '',  
+      default: '',
+    },
+    isCampaignViewClicked: {
+      type: Boolean,
+      default: false,
     },
   },
   data() {
@@ -127,16 +133,24 @@ export default {
       isFetchingList: 'conversation/getIsFetchingList',
       widgetColor: 'appConfig/getWidgetColor',
       currentUser: 'contacts/getCurrentUser',
+      activeCampaign: 'campaign/getActiveCampaign',
+      getCampaignHasExecuted: 'campaign/getCampaignHasExecuted',
     }),
     currentView() {
       const { email: currentUserEmail = '' } = this.currentUser;
+
       if (this.isHeaderCollapsed) {
         if (this.conversationSize) {
           return 'messageView';
         }
+
         if (
-          this.isOnNewConversation ||
-          (this.preChatFormEnabled && !currentUserEmail)
+          !this.getCampaignHasExecuted &&
+          ((this.preChatFormEnabled &&
+            !isEmptyObject(this.activeCampaign) &&
+            this.preChatFormOptions.requireEmail) ||
+            this.isOnNewConversation ||
+            (this.preChatFormEnabled && !currentUserEmail))
         ) {
           return 'preChatFormView';
         }
@@ -151,7 +165,11 @@ export default {
       return MAXIMUM_FILE_UPLOAD_SIZE;
     },
     isHeaderCollapsed() {
-      if (!this.hasIntroText || this.conversationSize) {
+      if (
+        !this.hasIntroText ||
+        this.conversationSize ||
+        this.isCampaignViewClicked
+      ) {
         return true;
       }
       return this.isOnCollapsedView;
