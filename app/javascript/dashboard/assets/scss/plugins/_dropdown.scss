@@ -4,7 +4,7 @@
   background-color: var(--color-background-dark1) !important;
   box-sizing: content-box;
   width: fit-content;
-  z-index: 999;
+  z-index: var(--z-index-very-high);
 
   &.dropdown-pane--open {
     display: block;
