@@ -1,7 +1,6 @@
 <template>
   <header class="header-expanded py-8 px-6 relative box-border w-full">
-    <div class="">
-      <div class="title-logo">
+    <div class="title-logo">
       <img v-if="avatarUrl" class="logo" :src="avatarUrl" />
       <span class="header-elements">
         <div style="display: inline-flex;">
@@ -19,7 +18,7 @@
             "
           />
         </div>
-          <span class="reply-eta" v-html="introBody"></span>
+        <span class="reply-eta" v-html="introBody"></span>
 
       </span>
       <header-actions :show-popout-button="showPopoutButton" />
@@ -60,6 +59,7 @@
             </span>
         </span>
         <span class="reply-eta">Welcome to our communication channel for all sales inquiries and billing related matters. For technical support, kindly open a ticket from your account.</span>
+    </span>
   </header>
 </template>
 
