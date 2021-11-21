@@ -145,8 +145,9 @@ export default {
 
       if (this.messageContentAttributes.submitted_values) {
         if (this.contentType === 'input_select') {
-          const [selectionOption = {}] =
-            this.messageContentAttributes.submitted_values;
+          const [
+            selectionOption = {},
+          ] = this.messageContentAttributes.submitted_values;
           return { content: selectionOption.title || selectionOption.value };
         }
       }
@@ -171,92 +172,3 @@ export default {
   },
 };
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style lang="scss">
-@import '~widget/assets/scss/variables.scss';
-
-.conversation-wrap {
-  .agent-message {
-    align-items: flex-end;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    margin: 0 0 $space-micro $space-small;
-    max-width: 88%;
-    text-align: start !important;
-    unicode-bidi: plaintext;
-
-    .avatar-wrap {
-      height: $space-large;
-      width: $space-large;
-      flex-shrink: 0;
-
-      .user-thumbnail-box {
-        margin-top: -$space-large;
-      }
-    }
-
-    .message-wrap {
-      flex-grow: 1;
-      flex-shrink: 0;
-      margin-left: $space-small;
-      max-width: 90%;
-      text-align: start !important;
-      unicode-bidi: plaintext;
-    }
-  }
-
-  .agent-name {
-    color: $color-body;
-    font-size: $font-size-small;
-    font-weight: $font-weight-medium;
-    margin: $space-small 0;
-    padding-left: $space-micro;
-  }
-
-  .has-attachment {
-    padding: 0;
-    overflow: hidden;
-
-    &.has-text {
-      margin-top: $space-smaller;
-    }
-  }
-
-  .agent-message-wrap {
-    + .agent-message-wrap {
-      margin-top: $space-micro;
-      text-align: start !important;
-      unicode-bidi: plaintext;
-
-      .agent-message .chat-bubble {
-        border-top-left-radius: $space-smaller;
-        text-align: start !important;
-        unicode-bidi: plaintext;
-      }
-    }
-
-    + .user-message-wrap {
-      margin-top: $space-normal;
-      text-align: start !important;
-      unicode-bidi: plaintext;
-    }
-
-    &.has-response + .user-message-wrap {
-      margin-top: $space-micro;
-      .chat-bubble {
-        border-top-right-radius: $space-smaller;
-        text-align: start !important;
-        unicode-bidi: plaintext;
-      }
-    }
-
-    &.has-response + .agent-message-wrap {
-      margin-top: $space-normal;
-      text-align: start !important;
-      unicode-bidi: plaintext;
-    }
-  }
-}
-</style>
