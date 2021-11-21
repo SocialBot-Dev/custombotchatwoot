@@ -6,6 +6,18 @@
       <span class="header-elements">
         <div style="display: inline-flex;">
           <h2 class="title" v-html="introHeading"></h2>
+          <div
+            :class="
+              `status-view--badge rounded-full leading-4 ${
+                isOnline ? 'bg-green-500' : 'bg-orange-500'
+              }`
+            "
+            :title="
+              `${
+                isOnline ? 'Online' : 'Currenlty Away'
+              }`
+            "
+          />
         </div>
           <span class="reply-eta" v-html="introBody"></span>
 
@@ -55,14 +67,14 @@
 import { mapGetters } from 'vuex';
 import HeaderActions from './HeaderActions';
 import configMixin from 'widget/mixins/configMixin';
-import teamAvailabilityMixin from 'widget/mixins/teamAvailabilityMixin';
+import availabilityMixin from 'widget/mixins/availability';
 
 export default {
   name: 'ChatHeaderExpanded',
   components: {
     HeaderActions,
   },
-  mixins: [configMixin, teamAvailabilityMixin],
+  mixins: [configMixin, availabilityMixin],
   props: {
     avatarUrl: {
       type: String,
@@ -89,6 +101,15 @@ export default {
     ...mapGetters({
       widgetColor: 'appConfig/getWidgetColor',
     }),
+    isOnline() {
+      const { workingHoursEnabled } = this.channelConfig;
+      const anyAgentOnline = this.availableAgents.length > 0;
+      
+      if (workingHoursEnabled) {
+        return this.isInBetweenTheWorkingHours;
+      }
+      return anyAgentOnline;
+    },
   },
 };
 </script>
@@ -256,27 +277,41 @@ $logo-size: 56px;
     height: 0.7rem;
     width: 0.65rem;
     margin-top: 8px;
-    margin-left: 7px;
-    animation: pulse 2s infinite;
+    margin-left: 10px;
 }
-@keyframes pulse {
+.status-view--badge.bg-green-500 {
+    animation: pulse-g 2s infinite;
+}
+@keyframes pulse-g {
   0% {
     transform: scale(0.85);
     box-shadow: 0 0 0 0 #08bb13;
   }
-
   70% {
     transform: scale(1);
     box-shadow: 0 0 0 10px transparent;
   }
-
   100% {
     transform: scale(0.95);
     box-shadow: 0 0 0 0 transparent;
-//   .logo {
-//     width: $logo-size;
-//     height: $logo-size;
-//     border-radius: $logo-size;
+  }
+}
+.status-view--badge.bg-orange-500 {
+  background-color: #ffbc00;
+  animation: pulse-o 2s infinite;
+}
+@keyframes pulse-o {
+  0% {
+    transform: scale(0.9);
+    box-shadow: 0 0 0 0 #a0894f;
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px transparent;
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 transparent;
   }
 }
 
@@ -288,8 +323,4 @@ span.availability-status {
     color: #fff;
     font-size: 12px;
 }
-.status-view--badge.bg-orange-500 {
-  background-color: #ffbc00;
-}
-
 </style>
