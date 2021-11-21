@@ -108,7 +108,6 @@
     }
   }
 
-
   .user.has-attachment {
     .icon-wrap {
       color: $color-white;
@@ -138,7 +137,6 @@
   }
 }
 
-
 .unread-messages {
   width: 100%;
   margin-top: 0;
@@ -165,10 +163,10 @@
       left: 10px;
       overflow: visible;
       border-radius: 4px !important;
-      transition: all .2s cubic-bezier(0.42, 0, 0.29, 0.83);
+      transition: all 0.2s cubic-bezier(0.42, 0, 0.29, 0.83);
 
       &:hover {
-          transform: translateX(.25rem);
+        transform: translateX(0.25rem);
       }
       .message-content {
         display: -webkit-box;
@@ -197,12 +195,12 @@
       right: 10px;
       overflow: visible;
       border-radius: 4px !important;
-      transition: all .2s cubic-bezier(0.42, 0, 0.29, 0.83);
+      transition: all 0.2s cubic-bezier(0.42, 0, 0.29, 0.83);
       text-align: start !important;
       unicode-bidi: plaintext;
 
       &:hover {
-          transform: translateX(.25rem);
+        transform: translateX(0.25rem);
       }
       .message-content {
         display: -webkit-box;
@@ -217,7 +215,6 @@
     text-align: right;
   }
 }
-
 
 .chat-bubble {
   @include light-shadow;
@@ -264,50 +261,56 @@
 }
 
 blockquote {
-    text-align: start !important;
-    unicode-bidi: plaintext;
+  text-align: start !important;
+  unicode-bidi: plaintext;
+}
+dd {
+  text-align: start !important;
+  unicode-bidi: plaintext;
+}
+dl {
+  text-align: start !important;
+  unicode-bidi: plaintext;
+}
+figure {
+  text-align: start !important;
+  unicode-bidi: plaintext;
+}
+h1 {
+  text-align: start !important;
+  unicode-bidi: plaintext;
+}
+h2 {
+  text-align: start !important;
+  unicode-bidi: plaintext;
+}
+h3 {
+  text-align: start !important;
+  unicode-bidi: plaintext;
+}
+h4 {
+  text-align: start !important;
+  unicode-bidi: plaintext;
+}
+h5 {
+  text-align: start !important;
+  unicode-bidi: plaintext;
+}
+h6 {
+  text-align: start !important;
+  unicode-bidi: plaintext;
+}
+p {
+  text-align: start !important;
+  unicode-bidi: plaintext;
+}
+pre {
+  text-align: start !important;
+  unicode-bidi: plaintext;
+}
+
+.user-thumbnail-box {
+  .user-thumbnail {
+    height: auto !important;
   }
-  dd {
-    text-align: start !important;
-    unicode-bidi: plaintext;
-  }
-  dl {
-    text-align: start !important;
-    unicode-bidi: plaintext;
-  }
-  figure {
-    text-align: start !important;
-    unicode-bidi: plaintext;
-  }
-  h1 {
-    text-align: start !important;
-    unicode-bidi: plaintext;
-  }
-  h2 {
-    text-align: start !important;
-    unicode-bidi: plaintext;
-  }
-  h3 {
-    text-align: start !important;
-    unicode-bidi: plaintext;
-  }
-  h4 {
-    text-align: start !important;
-    unicode-bidi: plaintext;
-  }
-  h5 {
-    text-align: start !important;
-    unicode-bidi: plaintext;
-  }
-  h6 {
-    text-align: start !important;
-    unicode-bidi: plaintext;
-  }
-  p {
-    text-align: start !important;
-    unicode-bidi: plaintext;
-  }
-  pre {
-    text-align: start !important;
-    unicode-bidi: plaintext;
-  }
+}
