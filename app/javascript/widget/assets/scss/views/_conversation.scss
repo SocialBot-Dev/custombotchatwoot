@@ -10,6 +10,8 @@
     justify-content: flex-start;
     margin: 0 0 $space-micro $space-small;
     max-width: 88%;
+    text-align: start !important;
+    unicode-bidi: plaintext;
 
     .avatar-wrap {
       flex-shrink: 0;
@@ -26,6 +28,8 @@
       flex-shrink: 0;
       margin-left: $space-small;
       max-width: 90%;
+      text-align: start !important;
+      unicode-bidi: plaintext;
     }
   }
 
@@ -91,7 +95,8 @@
     justify-content: flex-end;
     margin: 0 $space-smaller $space-micro auto;
     max-width: 85%;
-    text-align: right;
+    text-align: start !important;
+    unicode-bidi: plaintext;
 
     .message-wrap {
       margin-right: $space-small;
@@ -224,8 +229,9 @@
   line-height: 1.5;
   max-width: 100%;
   padding: $space-slab $space-normal;
-  text-align: left;
   word-break: break-word;
+  text-align: start !important;
+  unicode-bidi: plaintext;
 
   > a {
     color: $color-primary;
@@ -234,13 +240,14 @@
 
   .link {
     text-decoration: underline;
+    word-break: break-all;
   }
 
   &.user {
     border-bottom-right-radius: $space-smaller;
 
     > a {
-      color: $color-white;
+      color: #3f4045;
     }
   }
 
@@ -255,3 +262,52 @@
     }
   }
 }
+
+blockquote {
+    text-align: start !important;
+    unicode-bidi: plaintext;
+  }
+  dd {
+    text-align: start !important;
+    unicode-bidi: plaintext;
+  }
+  dl {
+    text-align: start !important;
+    unicode-bidi: plaintext;
+  }
+  figure {
+    text-align: start !important;
+    unicode-bidi: plaintext;
+  }
+  h1 {
+    text-align: start !important;
+    unicode-bidi: plaintext;
+  }
+  h2 {
+    text-align: start !important;
+    unicode-bidi: plaintext;
+  }
+  h3 {
+    text-align: start !important;
+    unicode-bidi: plaintext;
+  }
+  h4 {
+    text-align: start !important;
+    unicode-bidi: plaintext;
+  }
+  h5 {
+    text-align: start !important;
+    unicode-bidi: plaintext;
+  }
+  h6 {
+    text-align: start !important;
+    unicode-bidi: plaintext;
+  }
+  p {
+    text-align: start !important;
+    unicode-bidi: plaintext;
+  }
+  pre {
+    text-align: start !important;
+    unicode-bidi: plaintext;
+  }
