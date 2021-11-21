@@ -71,11 +71,9 @@
           </a>
         </span>
       </span>
-      <span class="reply-eta"
-        >Welcome to our communication channel for all sales inquiries and
+      <span class="reply-eta">Welcome to our communication channel for all sales inquiries and
         billing related matters. For technical support, kindly open a ticket
-        from your account.</span
-      >
+        from your account.</span>
     </span>
   </header>
 </template>
@@ -111,7 +109,7 @@ export default {
     },
     availableAgents: {
       type: Array,
-      default: () => {},
+      default: () => [],
     },
   },
   computed: {
