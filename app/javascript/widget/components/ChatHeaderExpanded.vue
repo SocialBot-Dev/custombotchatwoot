@@ -171,10 +171,6 @@ $logo-size: 56px;
       color: $color-white;
       font-size: 1.5rem;
       font-weight: 500;
-      /* margin-bottom: 0;
-      margin-top: 1rem;
-      margin-right: 1.5rem;
-      margin-left: 1.5rem; */
     }
     .body {
       color: $color-white;
