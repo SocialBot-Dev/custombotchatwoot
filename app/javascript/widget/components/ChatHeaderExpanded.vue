@@ -147,7 +147,6 @@ $logo-size: 56px;
       margin-left: 1.5rem; */
     }
   }
-
   .close {
     position: absolute;
     right: $space-medium;
