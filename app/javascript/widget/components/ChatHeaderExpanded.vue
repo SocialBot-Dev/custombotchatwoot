@@ -5,12 +5,6 @@
       <span class="header-elements">
         <div style="display: inline-flex">
           <h2 class="title" v-html="introHeading"></h2>
-          <div
-            :class="`status-view--badge rounded-full leading-4 ${
-              isOnline ? 'bg-green-500' : 'bg-orange-500'
-            }`"
-            :title="`${isOnline ? 'Online' : 'Currenlty Away'}`"
-          />
         </div>
         <span class="reply-eta" v-html="introBody"></span>
       </span>
@@ -71,10 +65,11 @@
           </a>
         </span>
       </span>
-      <span class="reply-eta">Welcome to our communication channel for all sales inquiries and
+      <span class="reply-eta">
+        Welcome to our communication channel for all sales inquiries and
         billing related matters. For technical support, kindly open a ticket
-        from your account.</span>
-    </span>
+        from your account.
+      </span>
   </header>
 </template>
 
