@@ -7,6 +7,7 @@
           :message="message.content"
           :status="message.status"
           :widget-color="widgetColor"
+          :style="{ background: widgetColor }"
         />
         <div
           v-if="hasAttachments"
