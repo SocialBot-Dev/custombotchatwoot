@@ -99,9 +99,11 @@ export default {
     },
     isHMACVerified() {
       if (!this.isAWebWidgetInbox) {
+        return false;
+      }
+      if(this.chatMetadata.hmac_verified) {
         return true;
       }
-      return this.chatMetadata.hmac_verified;
     },
     currentContact() {
       return this.$store.getters['contacts/getContact'](
