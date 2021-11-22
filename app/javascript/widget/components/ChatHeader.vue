@@ -29,16 +29,6 @@
                   	<i class="fa fa-caret-right"></i>
                 </a>
             </span>
-            <!-- <span class="email" title="contact us via email">
-                <a href="mailto:care@wevrlabs.net" target="_blank" rel="noopener noreferrer">
-                    <i class="fas fa-envelope"></i>
-                </a>
-            </span>
-            <span class="whatsapp" title="send us on WhatsApp">
-                <a href="https://wa.me/19712514959" target="_blank" rel="noopener noreferrer">
-                    <i class="fab fa-whatsapp"></i>
-                </a>
-            </span> -->
             <span class="facebook" title="like our page on Facebook">
                 <a href="https://fb.me/WevrLabs" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-facebook-f"></i>
@@ -172,8 +162,6 @@ export default {
       margin: 5px 0 0;
       display: block;
       
-        .whatsapp {
-        }
        .text-link {
             a {
               width: auto !important;
@@ -242,10 +230,6 @@ export default {
     width: 55px;
     margin-right: 1rem;
     box-shadow: 0 20px 30px -13px rgba(0, 0, 0, 0.55);
-  }
-
-  .close-button {
-    /*display: none;*/
   }
 
   button.button.transparent.compact.close-button {
