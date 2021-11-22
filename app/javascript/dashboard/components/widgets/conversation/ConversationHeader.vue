@@ -98,9 +98,9 @@ export default {
       return this.chat.meta;
     },
     isHMACVerified() {
-      // if (!this.isAWebWidgetInbox) {
-      //   return true;
-      // }
+      if (!this.isAWebWidgetInbox) {
+        return true;
+      }
       return this.chatMetadata.hmac_verified;
     },
     currentContact() {
@@ -204,10 +204,12 @@ export default {
 .verify-status {
   display: inline-flex;
   align-items: center;
-  margin: 0 0 10px;
+  margin: 0 7px 7px 0;
+  padding: 0 7px 0 0;
+  border-right: 1px solid #797979;
 
   .verify-badge {
-    font-size: 1rem;
+    font-size: 1em;
     border-radius: 6px;
     display: block;
     position: relative;
