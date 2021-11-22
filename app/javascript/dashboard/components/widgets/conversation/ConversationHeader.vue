@@ -11,11 +11,26 @@
       <div class="user--profile__meta">
         <h3 class="user--name text-truncate">
           <span class="margin-right-smaller">{{ currentContact.name }}</span>
-          <i
+          <!-- <i
             v-if="!isHMACVerified"
             v-tooltip="$t('CONVERSATION.UNVERIFIED_SESSION')"
             class="ion-android-alert text-y-800 fs-default"
-          />
+          /> -->
+
+          <div class="verify-status">
+            <span v-if="isHMACVerified">
+              <i
+                class="fa fa-badge-check id-verified"
+              />
+            </span>
+            <span v-else>
+              <i
+                v-tooltip="$t('CONVERSATION.UNVERIFIED_SESSION')"
+                class="fa fa-exclamation-circle id-unverified"
+              />
+            </span>
+          </div>
+
         </h3>
         <div class="conversation--header--actions">
           <inbox-name :inbox="inbox" class="margin-right-small" />
@@ -136,6 +151,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+@import url('https://chats.wevrlabs.net/fontawesome-all.min.css');
+
 .text-truncate {
   white-space: nowrap;
   overflow: hidden;
@@ -180,6 +198,28 @@ export default {
   .snoozed--display-text {
     font-weight: var(--font-weight-medium);
     color: var(--y-900);
+  }
+}
+
+// Customizations
+
+.verify-status {
+  display: inline-flex;
+  align-items: center;
+  margin: 0 0 10px;
+  .id-verified,
+  .id-unverified {
+    font-size: 2rem;
+    border-radius: 6px;
+    display: block;
+    position: relative;
+    margin: 0 5px 0 0;
+  }
+  .id-verified {
+    color: #1cac0d;
+  }
+  .id-unverified {
+    color: #e8a701;
   }
 }
 </style>
