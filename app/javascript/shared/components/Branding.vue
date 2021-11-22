@@ -63,6 +63,7 @@ export default {
   padding: $space-normal 0 $space-slab;
   cursor: pointer;
   transition: .3s ease all;
+  justify-content: center;
 
   &:hover {
     filter: grayscale(0);
