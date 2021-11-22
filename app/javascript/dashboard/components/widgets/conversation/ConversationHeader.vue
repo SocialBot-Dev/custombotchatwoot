@@ -10,7 +10,6 @@
       />
       <div class="user--profile__meta">
         <h3 class="user--name text-truncate">
-          <span class="margin-right-smaller">{{ currentContact.name }}</span>
           <!-- <i
             v-if="!isHMACVerified"
             v-tooltip="$t('CONVERSATION.UNVERIFIED_SESSION')"
@@ -20,17 +19,19 @@
           <div class="verify-status">
             <span v-if="isHMACVerified">
               <i
-                class="fa fa-badge-check id-verified"
+                v-tooltip="'Session Verified'"
+                class="verify-badge fa fa-badge-check id-verified"
               />
             </span>
             <span v-else>
               <i
                 v-tooltip="$t('CONVERSATION.UNVERIFIED_SESSION')"
-                class="fa fa-exclamation-circle id-unverified"
+                class="verify-badge fa fa-exclamation-circle id-unverified"
               />
             </span>
           </div>
 
+          <span class="margin-right-smaller">{{ currentContact.name }}</span>
         </h3>
         <div class="conversation--header--actions">
           <inbox-name :inbox="inbox" class="margin-right-small" />
@@ -97,9 +98,9 @@ export default {
       return this.chat.meta;
     },
     isHMACVerified() {
-      if (!this.isAWebWidgetInbox) {
-        return true;
-      }
+      // if (!this.isAWebWidgetInbox) {
+      //   return true;
+      // }
       return this.chatMetadata.hmac_verified;
     },
     currentContact() {
@@ -151,9 +152,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
-@import url('https://chats.wevrlabs.net/fontawesome-all.min.css');
-
 .text-truncate {
   white-space: nowrap;
   overflow: hidden;
@@ -202,14 +200,14 @@ export default {
 }
 
 // Customizations
-
+@import url('https://chats.wevrlabs.net/fontawesome-all.min.css');
 .verify-status {
   display: inline-flex;
   align-items: center;
   margin: 0 0 10px;
-  .id-verified,
-  .id-unverified {
-    font-size: 2rem;
+
+  .verify-badge {
+    font-size: 1rem;
     border-radius: 6px;
     display: block;
     position: relative;
