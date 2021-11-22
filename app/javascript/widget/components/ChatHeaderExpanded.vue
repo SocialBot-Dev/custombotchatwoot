@@ -91,7 +91,7 @@ export default {
   components: {
     HeaderActions,
   },
-  mixins: [configMixin, availabilityMixin],
+  mixins: [configMixin, availabilityMixin, AvailableAgents],
   props: {
     avatarUrl: {
       type: String,
