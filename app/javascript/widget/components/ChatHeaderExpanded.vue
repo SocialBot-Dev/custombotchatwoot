@@ -5,6 +5,12 @@
       <span class="header-elements">
         <div style="display: inline-flex">
           <h2 class="title" v-html="introHeading"></h2>
+          <div
+            :class="`status-view--badge rounded-full leading-4 ${
+              isOnline ? 'bg-green-500' : 'bg-orange-500'
+            }`"
+            :title="`${isOnline ? 'Online' : 'Currenlty Away'}`"
+          />
         </div>
         <span class="reply-eta" v-html="introBody"></span>
       </span>
@@ -78,6 +84,7 @@ import { mapGetters } from 'vuex';
 import HeaderActions from './HeaderActions';
 import configMixin from 'widget/mixins/configMixin';
 import availabilityMixin from 'widget/mixins/availability';
+import AvailableAgents from 'widget/components/AvailableAgents.vue';
 
 export default {
   name: 'ChatHeaderExpanded',
@@ -104,7 +111,7 @@ export default {
     },
     availableAgents: {
       type: Array,
-      default: () => [],
+      default: () => {},
     },
   },
   computed: {
