@@ -158,11 +158,8 @@ $logo-size: 56px;
     right: $space-medium;
     top: $space-medium;
   }
-  .close-button:after {
-    background-color: #9babbd !important;
-  }
-  .close-button:before {
-    background-color: #9babbd !important;
+  .close-button path {
+    color: #fff !important;
   }
 
   .header-elements.header-elements-2 {

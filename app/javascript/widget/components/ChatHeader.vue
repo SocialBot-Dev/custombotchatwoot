@@ -123,11 +123,8 @@ export default {
   box-sizing: border-box;
   color: $color-white;
   
-  .close-button:after {
-    background-color: #9babbd !important;
-  }
-  .close-button:before {
-    background-color: #9babbd !important;
+  .close-button path {
+    color: #fff !important;
   }
   
 
