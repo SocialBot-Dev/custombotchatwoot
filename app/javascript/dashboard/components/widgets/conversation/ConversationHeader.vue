@@ -10,7 +10,7 @@
       />
       <div class="user--profile__meta">
         <h3 class="user--name text-truncate">
-          <!-- <i
+          <!-- OLD: <i
             v-if="!isHMACVerified"
             v-tooltip="$t('CONVERSATION.UNVERIFIED_SESSION')"
             class="ion-android-alert text-y-800 fs-default"
@@ -101,9 +101,7 @@ export default {
       if (!this.isAWebWidgetInbox) {
         return false;
       }
-      if(this.chatMetadata.hmac_verified) {
-        return true;
-      }
+      return this.chatMetadata.hmac_verified;
     },
     currentContact() {
       return this.$store.getters['contacts/getContact'](
