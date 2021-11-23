@@ -123,13 +123,6 @@ export default {
   box-sizing: border-box;
   color: $color-white;
   
-  .close-button { 
-    svg {
-      color: #fff !important;
-    }
-  }
-  
-
   .header-branding {
     display: flex;
     align-items: normal;

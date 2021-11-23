@@ -5,7 +5,7 @@
       class="button transparent compact new-window--button "
       @click="popoutWindow"
     >
-      <fluent-icon icon="open" size="22" class="text-black-900" />
+      <fluent-icon icon="open" size="22" class="text-white" />
     </button>
     <button
       class="button transparent compact close-button"
@@ -14,7 +14,7 @@
       }"
       @click="closeWindow"
     >
-      <fluent-icon icon="dismiss" size="24" class="text-black-900" />
+      <fluent-icon icon="dismiss" size="24" class="text-white" />
     </button>
   </div>
 </template>
