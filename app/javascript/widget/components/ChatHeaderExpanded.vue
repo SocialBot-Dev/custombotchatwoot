@@ -158,8 +158,10 @@ $logo-size: 56px;
     right: $space-medium;
     top: $space-medium;
   }
-  .close-button path {
-    color: #fff !important;
+  .close-button { 
+    svg {
+      color: #fff !important;
+    }
   }
 
   .header-elements.header-elements-2 {

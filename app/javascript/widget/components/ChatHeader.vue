@@ -123,8 +123,10 @@ export default {
   box-sizing: border-box;
   color: $color-white;
   
-  .close-button path {
-    color: #fff !important;
+  .close-button { 
+    svg {
+      color: #fff !important;
+    }
   }
   
 
