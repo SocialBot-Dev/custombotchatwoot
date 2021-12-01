@@ -59,6 +59,22 @@
     <%= javascript_pack_tag 'application' %>
     <%= stylesheet_pack_tag 'application' %>
     <style type="text/css">
+
+      .woot-sidebar, .secondary-menu {
+        background: var(--color-background-dark1) !important;
+      }
+      .primary--sidebar, .secondary-menu, .dropdown-menu--divider {
+        border-color: var(--color-border-dark2) !important;
+      }
+
+      .menu-item.is-active {
+        background: var(--color-background-dark2) !important;
+      }
+      .menu-item:hover {
+        background: var(--s-800) !important;
+      }
+
+
       .contact--panel, .conversation--attribute {
         background-color: var(--color-background-dark1) !important;
       }
