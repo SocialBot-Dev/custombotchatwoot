@@ -52,7 +52,8 @@ export default {
     position: absolute;
     top: var(--space-smaller);
   }
-.notifications-link {
-  margin-bottom: var(--space-small);
+  .notifications-link {
+    margin-bottom: var(--space-small);
+  }
 }
 </style>
