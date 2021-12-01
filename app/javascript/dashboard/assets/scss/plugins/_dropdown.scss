@@ -3,6 +3,7 @@
   @include border-light;
   background-color: var(--color-background-dark1) !important;
   box-sizing: content-box;
+  padding: var(--space-small);
   width: fit-content;
   z-index: var(--z-index-very-high);
 

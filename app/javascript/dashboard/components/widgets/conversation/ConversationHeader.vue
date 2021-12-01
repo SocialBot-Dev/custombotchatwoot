@@ -10,21 +10,23 @@
       />
       <div class="user--profile__meta">
         <h3 class="user--name text-truncate">
-          <!-- OLD: <i
+          <!-- OLD: <fluent-icon
             v-if="!isHMACVerified"
             v-tooltip="$t('CONVERSATION.UNVERIFIED_SESSION')"
-            class="ion-android-alert text-y-800 fs-default"
+            class="text-y-800"
+            size="14"
+            icon="warning"
           /> -->
 
           <div class="verify-status">
             <span v-if="isHMACVerified">
-              <i
+              <em
                 v-tooltip="'Session Verified'"
                 class="verify-badge fa fa-badge-check id-verified"
               />
             </span>
             <span v-else>
-              <i
+              <em
                 v-tooltip="$t('CONVERSATION.UNVERIFIED_SESSION')"
                 class="verify-badge fa fa-exclamation-circle id-unverified"
               />

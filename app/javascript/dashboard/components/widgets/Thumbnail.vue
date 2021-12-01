@@ -11,7 +11,6 @@
       v-else
       :username="username"
       :class="thumbnailClass"
-      color="white"
       :size="avatarSize"
     />
     <img
@@ -130,6 +129,10 @@ export default {
       type: Boolean,
       default: false,
     },
+    shouldShowStatusAlways: {
+      type: Boolean,
+      default: false,
+    },
   },
   data() {
     return {
@@ -138,6 +141,7 @@ export default {
   },
   computed: {
     showStatusIndicator() {
+      if (this.shouldShowStatusAlways) return true;
       return this.status === 'online' || this.status === 'busy';
     },
     avatarSize() {
@@ -176,12 +180,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '~dashboard/assets/scss/variables';
-@import '~dashboard/assets/scss/foundation-settings';
-@import '~dashboard/assets/scss/mixins';
-
 .user-thumbnail-box {
-  @include flex-shrink;
+  flex: 0 0 auto;
+  max-width: 100%;
   position: relative;
 
   .user-thumbnail {
@@ -199,27 +200,24 @@ export default {
   .source-badge {
     background: white;
     border-radius: var(--border-radius-small);
-    bottom: -$space-micro;
+    bottom: var(--space-minus-micro);
     box-shadow: var(--shadow-small);
-    height: $space-slab;
+    height: var(--space-slab);
     padding: var(--space-micro);
     position: absolute;
-    right: $zero;
-    width: $space-slab;
-    
     background: #e6e6e6;
     border-radius: 50%;
     padding: 3px;
-    // width: 18px !important;
-    // height: auto !important;
+    right: 0;
+    width: var(--space-slab);
   }
 
   .user-online-status {
     border-radius: 50%;
-    bottom: $space-micro;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .2);
     //border: .15rem solid #fff;
     transform: scale(1.5);
+    bottom: var(--space-micro);
 
     &:after {
       content: ' ';
@@ -227,14 +225,22 @@ export default {
   }
 
   .user-online-status--online {
-    background: $success-color;
+    background: var(--g-400);
     background-image: linear-gradient(-180deg,#31ef25,#0e9005);
     top: 0;
     animation: pulse-badge-g 1s infinite;
   }
 
   .user-online-status--busy {
-    background: $warning-color;
+    background: var(--y-700);
+  }
+
+  .user-online-status--offline {
+    background: var(--s-500);
+  }
+
+  .user-online-status--offline {
+    background: var(--s-500);
   }
 }
 

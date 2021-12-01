@@ -1,11 +1,19 @@
 <template>
-  <span class="notifications icon ion-ios-bell" @click.stop="showNotification">
-    <span v-if="unreadCount" class="unread-badge">{{ unreadCount }}</span>
-  </span>
+  <div class="notifications-link">
+    <primary-nav-item
+      name="NOTIFICATIONS"
+      icon="alert"
+      :to="`/app/accounts/${accountId}/notifications`"
+      :count="unreadCount"
+    />
+  </div>
 </template>
 <script>
 import { mapGetters } from 'vuex';
+import PrimaryNavItem from 'dashboard/modules/sidebar/components/PrimaryNavItem';
+
 export default {
+  components: { PrimaryNavItem },
   computed: {
     ...mapGetters({
       accountId: 'getCurrentAccountId',
@@ -13,19 +21,15 @@ export default {
     }),
     unreadCount() {
       if (!this.notificationMetadata.unreadCount) {
-        return 0;
+        return '0';
       }
 
       return this.notificationMetadata.unreadCount < 100
-        ? this.notificationMetadata.unreadCount
+        ? `${this.notificationMetadata.unreadCount}`
         : '99+';
     },
   },
-  methods: {
-    showNotification() {
-      this.$router.push(`/app/accounts/${this.accountId}/notifications`);
-    },
-  },
+  methods: {},
 };
 </script>
 
@@ -48,5 +52,7 @@ export default {
     position: absolute;
     top: var(--space-smaller);
   }
+.notifications-link {
+  margin-bottom: var(--space-small);
 }
 </style>
