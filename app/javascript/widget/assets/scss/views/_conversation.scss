@@ -1,4 +1,4 @@
-.file-uploads .attachment-button + label {
+.file-uploads .attachment-button+label {
   cursor: pointer;
 }
 
@@ -63,7 +63,7 @@
   }
 
   .agent-message-wrap {
-    + .agent-message-wrap {
+    +.agent-message-wrap {
       margin-top: $space-micro;
 
       .agent-message .chat-bubble {
@@ -71,11 +71,11 @@
       }
     }
 
-    + .user-message-wrap {
+    +.user-message-wrap {
       margin-top: $space-normal;
     }
 
-    &.has-response + .user-message-wrap {
+    &.has-response+.user-message-wrap {
       margin-top: $space-micro;
 
       .chat-bubble {
@@ -83,7 +83,7 @@
       }
     }
 
-    &.has-response + .agent-message-wrap {
+    &.has-response+.agent-message-wrap {
       margin-top: $space-normal;
     }
   }
@@ -103,8 +103,20 @@
       max-width: 100%;
     }
 
-    .in-progress {
+    .in-progress,
+    .is-failed {
       opacity: 0.6;
+    }
+
+    .is-failed {
+      align-items: flex-end;
+      display: flex;
+      flex-direction: row-reverse;
+
+      .chat-bubble.user {
+        background: $color-error !important;
+        // TODO: Remove the important
+      }
     }
   }
 
@@ -119,7 +131,7 @@
   }
 
   .user-message-wrap {
-    + .user-message-wrap {
+    +.user-message-wrap {
       margin-top: $space-micro;
 
       .user-message .chat-bubble {
@@ -127,7 +139,7 @@
       }
     }
 
-    + .agent-message-wrap {
+    +.agent-message-wrap {
       margin-top: $space-normal;
     }
   }
@@ -178,6 +190,12 @@
         color: #000 !important;
       }
     }
+
+    +.chat-bubble-wrap {
+      .chat-bubble {
+        border-top-left-radius: $space-smaller;
+      }
+    }
   }
 }
 
@@ -207,6 +225,14 @@
         -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
         overflow: hidden;
+      border-bottom-right-radius: $space-smaller;
+      border-radius: $space-two;
+      }
+    }
+
+    +.chat-bubble-wrap {
+      .chat-bubble {
+        border-top-right-radius: $space-smaller;
       }
     }
   }
@@ -230,7 +256,7 @@
   text-align: start !important;
   unicode-bidi: plaintext;
 
-  > a {
+  >a {
     color: $color-primary;
     word-break: break-all;
   }
