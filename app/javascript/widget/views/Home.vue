@@ -7,7 +7,7 @@
   </div>
   <div v-else class="home" @keydown.esc="closeChat">
     <div
-      class="header-wrap bg-white"
+      class="header-wrap"
       :class="{ expanded: !isHeaderCollapsed, collapsed: isHeaderCollapsed }"
       :style="{ background: widgetColor }"
     >
@@ -132,6 +132,7 @@ export default {
     border-radius: 0; 
     background-image: linear-gradient(125deg,rgba(255, 255, 255, 0.25) -20%,rgba(0,0,0,0.45)) !important; 
     overflow: hidden;
+    max-height: 100%;
 
     &.expanded {
       max-height: 100%;
