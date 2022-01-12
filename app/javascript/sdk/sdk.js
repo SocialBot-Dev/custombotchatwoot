@@ -25,6 +25,8 @@ export const SDK_CSS = `.woot-widget-holder {
   -moz-border-radius: 0 !important;
   -webkit-border-radius: 0 !important;
   border-radius: 0 !important;
+  min-height: 80px;
+  height: auto;
   bottom: 94px;
 }
 .woot-widget-holder iframe {

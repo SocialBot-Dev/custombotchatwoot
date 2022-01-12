@@ -36,70 +36,29 @@
       </transition>
     </div>
     <banner />
-    <div class="flex flex-1 overflow-auto">
-      <conversation-wrap
-        v-if="currentView === 'messageView'"
-        :grouped-messages="groupedMessages"
-      />
-      <pre-chat-form
-        v-if="currentView === 'preChatFormView'"
-        :options="preChatFormOptions"
-      />
+    <div class="flex flex-1 flex-col justify-end">
+      <!-- Load Converstion List Components Here -->
     </div>
-    <div class="footer-wrap">
-      <transition
-        enter-active-class="transition-all delay-300 duration-300 ease"
-        leave-active-class="transition-all duration-200 ease-in"
-        enter-class="opacity-0 transform"
-        enter-to-class="opacity-100 transform translate-y-0"
-        leave-class="opacity-100 transform translate-y-0"
-        leave-to-class="opacity-0 transform "
-      >
-        <div v-if="currentView === 'messageView'" class="input-wrap">
-          <chat-footer />
-        </div>
-        <team-availability
-          v-if="currentView === 'cardView'"
-          :available-agents="availableAgents"
-          @start-conversation="startConversation"
-        />
-      </transition>
-      <branding></branding>
-    </div>
+    <team-availability
+      :available-agents="availableAgents"
+      :has-conversation="!!conversationSize"
+      @start-conversation="startConversation"
+    />
   </div>
 </template>
 
 <script>
-import Branding from 'shared/components/Branding.vue';
-import ChatFooter from 'widget/components/ChatFooter.vue';
-import ChatHeaderExpanded from 'widget/components/ChatHeaderExpanded.vue';
-import ChatHeader from 'widget/components/ChatHeader.vue';
-import ConversationWrap from 'widget/components/ConversationWrap.vue';
-import { IFrameHelper } from 'widget/helpers/utils';
 import configMixin from '../mixins/configMixin';
 import TeamAvailability from 'widget/components/TeamAvailability';
-import Spinner from 'shared/components/Spinner.vue';
-import Banner from 'widget/components/Banner.vue';
 import { mapGetters } from 'vuex';
-import { MAXIMUM_FILE_UPLOAD_SIZE } from 'shared/constants/messages';
 import { BUS_EVENTS } from 'shared/constants/busEvents';
-import PreChatForm from '../components/PreChat/Form';
-import { isEmptyObject } from 'widget/helpers/utils';
-
+import routerMixin from 'widget/mixins/routerMixin';
 export default {
   name: 'Home',
   components: {
-    Branding,
-    ChatFooter,
-    ChatHeader,
-    ChatHeaderExpanded,
-    ConversationWrap,
-    PreChatForm,
-    Spinner,
     TeamAvailability,
-    Banner,
   },
-  mixins: [configMixin],
+  mixins: [configMixin, routerMixin],
   props: {
     hasFetched: {
       type: Boolean,
@@ -128,57 +87,13 @@ export default {
     ...mapGetters({
       availableAgents: 'agent/availableAgents',
       conversationAttributes: 'conversationAttributes/getConversationParams',
-      conversationSize: 'conversation/getConversationSize',
       groupedMessages: 'conversation/getGroupedConversation',
       isFetchingList: 'conversation/getIsFetchingList',
       widgetColor: 'appConfig/getWidgetColor',
       currentUser: 'contacts/getCurrentUser',
       activeCampaign: 'campaign/getActiveCampaign',
-      getCampaignHasExecuted: 'campaign/getCampaignHasExecuted',
+      conversationSize: 'conversation/getConversationSize',
     }),
-    currentView() {
-      const { email: currentUserEmail = '' } = this.currentUser;
-
-      if (this.isHeaderCollapsed) {
-        if (this.conversationSize) {
-          return 'messageView';
-        }
-
-        if (
-          !this.getCampaignHasExecuted &&
-          ((this.preChatFormEnabled &&
-            !isEmptyObject(this.activeCampaign) &&
-            this.preChatFormOptions.requireEmail) ||
-            this.isOnNewConversation ||
-            (this.preChatFormEnabled && !currentUserEmail))
-        ) {
-          return 'preChatFormView';
-        }
-        return 'messageView';
-      }
-      return 'cardView';
-    },
-    isOpen() {
-      return this.conversationAttributes.status === 'open';
-    },
-    fileUploadSizeLimit() {
-      return MAXIMUM_FILE_UPLOAD_SIZE;
-    },
-    isHeaderCollapsed() {
-      if (
-        !this.hasIntroText ||
-        this.conversationSize ||
-        this.isCampaignViewClicked
-      ) {
-        return true;
-      }
-      return this.isOnCollapsedView;
-    },
-    hasIntroText() {
-      return (
-        this.channelConfig.welcomeTitle || this.channelConfig.welcomeTagline
-      );
-    },
   },
   mounted() {
     bus.$on(BUS_EVENTS.START_NEW_CONVERSATION, () => {
@@ -188,10 +103,10 @@ export default {
   },
   methods: {
     startConversation() {
-      this.isOnCollapsedView = !this.isOnCollapsedView;
-    },
-    closeChat() {
-      IFrameHelper.sendMessage({ event: 'closeChat' });
+      if (this.preChatFormEnabled && !this.conversationSize) {
+        return this.replaceRoute('prechat-form');
+      }
+      return this.replaceRoute('messages');
     },
   },
 };

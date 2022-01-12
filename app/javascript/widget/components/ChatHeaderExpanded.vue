@@ -1,7 +1,7 @@
 <template>
   <header class="header-expanded py-8 px-6 relative box-border w-full">
     <div class="title-logo">
-      <img v-if="avatarUrl" class="logo" :src="avatarUrl" />
+      <img v-if="avatarUrl" class="logo h-12 rounded-full" :src="avatarUrl" alt="avatar"/>
       <span class="header-elements">
         <div style="display: inline-flex">
           <h2 class="title" v-html="introHeading"></h2>
