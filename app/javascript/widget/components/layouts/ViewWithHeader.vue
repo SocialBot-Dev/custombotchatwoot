@@ -4,8 +4,9 @@
     @keydown.esc="closeWindow"
   >
     <div
-      class="header-wrap bg-white"
+      class="header-wrap"
       :class="{ expanded: !isHeaderCollapsed, collapsed: isHeaderCollapsed }"
+      :style="{ background: widgetColor }"
     >
       <transition
         enter-active-class="transition-all delay-200 duration-300 ease-in"
@@ -71,6 +72,7 @@ export default {
     ...mapGetters({
       availableAgents: 'agent/availableAgents',
       appConfig: 'appConfig/getAppConfig',
+      widgetColor: 'appConfig/getWidgetColor',
     }),
     isHeaderCollapsed() {
       if (!this.hasIntroText) {
