@@ -5,7 +5,7 @@
   >
     <spinner size="" />
   </div>
-  <div v-else class="home" @keydown.esc="closeChat">
+  <!-- <div v-else class="home" @keydown.esc="closeChat"> -->
     <div
       class="header-wrap"
       :class="{ expanded: !isHeaderCollapsed, collapsed: isHeaderCollapsed }"
