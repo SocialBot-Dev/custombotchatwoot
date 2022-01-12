@@ -110,7 +110,7 @@ export default {
   }
 
   &.collapsed {
-    max-height: 4.5rem;
+    max-height: 8.5rem;
   }
 
   @media only screen and (min-device-width: 320px) and (max-device-width: 667px) {
