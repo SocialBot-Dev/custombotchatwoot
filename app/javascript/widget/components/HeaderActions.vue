@@ -85,7 +85,7 @@ export default {
     font-size: $font-size-large;
   }
   .close-button {
-    display: none;
+    display: block !important;
   }
   .rn-close-button {
     display: block !important;
