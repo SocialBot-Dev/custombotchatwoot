@@ -1,11 +1,6 @@
 <template>
-  <div
-    v-if="!conversationSize && isFetchingList"
-    class="flex flex-1 items-center h-full bg-black-25 justify-center"
-  >
     <spinner size="" />
   </div>
-  <!-- <div v-else class="home" @keydown.esc="closeChat"> -->
     <div
       class="header-wrap"
       :class="{ expanded: !isHeaderCollapsed, collapsed: isHeaderCollapsed }"
@@ -86,11 +81,7 @@ export default {
   computed: {
     ...mapGetters({
       availableAgents: 'agent/availableAgents',
-      conversationAttributes: 'conversationAttributes/getConversationParams',
-      groupedMessages: 'conversation/getGroupedConversation',
-      isFetchingList: 'conversation/getIsFetchingList',
       widgetColor: 'appConfig/getWidgetColor',
-      currentUser: 'contacts/getCurrentUser',
       activeCampaign: 'campaign/getActiveCampaign',
       conversationSize: 'conversation/getConversationSize',
     }),
@@ -124,7 +115,7 @@ export default {
   overflow: hidden;
   background: #f4f6fb;
   .header-wrap {
-    border-radius: $space-normal $space-normal 0 0;
+    // border-radius: $space-normal $space-normal 0 0;
     flex-shrink: 0;
     transition: max-height 300ms;
     z-index: 99;
