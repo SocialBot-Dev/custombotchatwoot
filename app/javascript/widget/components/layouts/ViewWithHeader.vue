@@ -54,7 +54,6 @@ import ChatHeaderExpanded from '../ChatHeaderExpanded.vue';
 import configMixin from '../../mixins/configMixin';
 import { mapGetters } from 'vuex';
 import { IFrameHelper } from 'widget/helpers/utils';
-
 export default {
   components: {
     Banner,
@@ -97,24 +96,48 @@ export default {
 <style scoped lang="scss">
 @import '~widget/assets/scss/variables';
 @import '~widget/assets/scss/mixins';
-
 .header-wrap {
   border-radius: $space-normal $space-normal 0 0;
   flex-shrink: 0;
   transition: max-height 300ms;
   z-index: 99;
   @include shadow-large;
+  border-radius: 0; 
+  background-image: linear-gradient(125deg,rgba(255, 255, 255, 0.25) -20%,rgba(0,0,0,0.45)) !important; 
+  overflow: hidden;
 
   &.expanded {
-    max-height: 16rem;
+    max-height: 100%;
   }
-
   &.collapsed {
-    max-height: 8.5rem;
+    max-height: 100%;
   }
-
   @media only screen and (min-device-width: 320px) and (max-device-width: 667px) {
     border-radius: 0;
   }
+}
+.footer-wrap {
+  flex-shrink: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    top: -$space-normal;
+    left: 0;
+    width: 100%;
+    height: $space-normal;
+    opacity: 0.1;
+    background: linear-gradient(
+      to top,
+      $color-background,
+      rgba($color-background, 0)
+    );
+  }
+}
+.input-wrap {
+  padding: 0 $space-two;
 }
 </style>
