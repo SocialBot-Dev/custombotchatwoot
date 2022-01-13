@@ -4,7 +4,6 @@
       <button v-if="showBackButton" @click="onBackButtonClick">
         <fluent-icon icon="chevron-left" size="24" />
       </button>
-      <!-- <img v-if="avatarUrl" :src="avatarUrl" alt="avatar" /> -->
       <img
         v-if="avatarUrl"
         class="h-8 w-8 rounded-full mr-3"
@@ -82,12 +81,10 @@
 
 <script>
 import { mapGetters } from 'vuex';
-
 import availabilityMixin from 'widget/mixins/availability';
 import FluentIcon from 'shared/components/FluentIcon/Index.vue';
 import HeaderActions from './HeaderActions';
 import routerMixin from 'widget/mixins/routerMixin';
-
 export default {
   name: 'ChatHeader',
   components: {
@@ -130,7 +127,6 @@ export default {
     isOnline() {
       const { workingHoursEnabled } = this.channelConfig;
       const anyAgentOnline = this.availableAgents.length > 0;
-
       if (workingHoursEnabled) {
         return this.isInBetweenTheWorkingHours;
       }
