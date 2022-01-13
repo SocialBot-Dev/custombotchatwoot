@@ -1,6 +1,6 @@
 <template>
-  <header class="header-collapsed">
-    <div class="header-branding">
+  <header class="flex justify-between p-5 w-full header-collapsed">
+    <div class="flex items-center header-branding">
       <button v-if="showBackButton" @click="onBackButtonClick">
         <fluent-icon icon="chevron-left" size="24" />
       </button>
