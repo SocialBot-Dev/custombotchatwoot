@@ -101,14 +101,6 @@ export default {
       type: String,
       default: '',
     },
-    introBody: {
-      type: String,
-      default: '',
-    },
-    introStatusMessageOnline: {
-      type: String,
-      default: '',
-    },
     showPopoutButton: {
       type: Boolean,
       default: false,
