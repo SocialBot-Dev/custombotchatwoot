@@ -22,7 +22,6 @@
 import { IFrameHelper, RNHelper } from 'widget/helpers/utils';
 import { buildPopoutURL } from '../helpers/urlParamsHelper';
 import FluentIcon from 'shared/components/FluentIcon/Index.vue';
-
 export default {
   name: 'HeaderActions',
   components: { FluentIcon },
@@ -51,7 +50,6 @@ export default {
         chatwootWebChannel: { websiteToken },
         authToken,
       } = window;
-
       const popoutWindowURL = buildPopoutURL({
         origin,
         websiteToken,
@@ -77,20 +75,17 @@ export default {
 </script>
 <style scoped lang="scss">
 @import '~widget/assets/scss/variables.scss';
-
 .actions {
   button {
     margin-left: -0.4rem;
     margin-top: -30px;
   }
-
   span {
     color: $color-heading;
     font-size: $font-size-large;
   }
-
   .close-button {
-    /* display: none;*/
+    display: none;
   }
   .rn-close-button {
     display: block !important;
