@@ -141,9 +141,5 @@ export default {
       color: $color-body;
     }
   }
-
-  .close-unread-wrap {
-    text-align: left;
-  }
 }
 </style>
