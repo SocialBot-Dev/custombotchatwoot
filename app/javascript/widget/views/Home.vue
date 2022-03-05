@@ -15,7 +15,6 @@
 import configMixin from '../mixins/configMixin';
 import TeamAvailability from 'widget/components/TeamAvailability';
 import { mapGetters } from 'vuex';
-import { BUS_EVENTS } from 'shared/constants/busEvents';
 import routerMixin from 'widget/mixins/routerMixin';
 export default {
   name: 'Home',
@@ -38,10 +37,7 @@ export default {
     },
   },
   data() {
-    return {
-      isOnCollapsedView: false,
-      isOnNewConversation: false,
-    };
+    return {};
   },
   computed: {
     ...mapGetters({
@@ -50,12 +46,6 @@ export default {
       activeCampaign: 'campaign/getActiveCampaign',
       conversationSize: 'conversation/getConversationSize',
     }),
-  },
-  mounted() {
-    bus.$on(BUS_EVENTS.START_NEW_CONVERSATION, () => {
-      this.isOnCollapsedView = true;
-      this.isOnNewConversation = true;
-    });
   },
   methods: {
     startConversation() {
