@@ -36,7 +36,7 @@ export const SDK_CSS = `
   -moz-border-radius: 0 !important;
   -webkit-border-radius: 0 !important;
   border-radius: 0 !important;
-  min-height: 80px;
+  min-height: 80px !important;
   height: auto;
   bottom: 94px;
   box-shadow: none !important;
