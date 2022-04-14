@@ -13,8 +13,8 @@
           <!-- OLD: <fluent-icon
             v-if="!isHMACVerified"
             v-tooltip="$t('CONVERSATION.UNVERIFIED_SESSION')"
-            class="text-y-800"
             size="14"
+            class="hmac-warning__icon"
             icon="warning"
           /> -->
 
@@ -197,8 +197,12 @@ export default {
 
   .snoozed--display-text {
     font-weight: var(--font-weight-medium);
-    color: var(--y-900);
+    color: var(--y-600);
   }
+}
+
+.hmac-warning__icon {
+  color: var(--y-600);
 }
 
 // Customizations

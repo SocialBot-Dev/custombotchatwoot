@@ -1,7 +1,10 @@
 <template>
   <div class="px-5">
     <div class="flex items-center justify-between mb-4">
-      <div class="text-black-700 max-w-xs">
+      <div
+        class="max-w-xs"
+        :class="$dm('text-black-700', 'dark:text-slate-50')"
+      >
         <div class="text-base leading-5 font-medium mb-1">
           <span class="availability-status" v-if="isOnline">We Are Online</span>
           <span class="availability-status" v-else>Currently Away</span>
@@ -41,6 +44,7 @@ import AvailableAgents from 'widget/components/AvailableAgents.vue';
 import CustomButton from 'shared/components/Button';
 import configMixin from 'widget/mixins/configMixin';
 import availabilityMixin from 'widget/mixins/availability';
+import darkMixin from 'widget/mixins/darkModeMixin.js';
 
 export default {
   name: 'TeamAvailability',
@@ -48,7 +52,7 @@ export default {
     AvailableAgents,
     CustomButton,
   },
-  mixins: [configMixin, availabilityMixin],
+  mixins: [configMixin, availabilityMixin, darkMixin],
   props: {
     availableAgents: {
       type: Array,
@@ -60,7 +64,9 @@ export default {
     },
   },
   computed: {
-    ...mapGetters({ widgetColor: 'appConfig/getWidgetColor' }),
+    ...mapGetters({
+      widgetColor: 'appConfig/getWidgetColor',
+    }),
     textColor() {
       return getContrastingTextColor(this.widgetColor);
     },
