@@ -9,9 +9,9 @@
       :style="{ background: widgetColor }"
     >
       <div
+        v-dompurify-html="formatMessage(message, false)"
         class="message-content"
         :class="$dm('text-black-900', 'dark:text-slate-50')"
-        v-html="formatMessage(message, false)"
       ></div>
       <email-input
         v-if="isTemplateEmail"
