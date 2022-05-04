@@ -1,6 +1,8 @@
 <template>
   <div class="message-text--metadata">
-    <span class="time">{{ readableTime }}</span>
+    <span class="time" :class="{ delivered: messageRead }">{{
+      readableTime
+    }}</span>
     <span v-if="showSentIndicator" class="time">
       <fluent-icon
         v-tooltip.top-start="$t('CHAT_LIST.SENT')"
@@ -255,6 +257,15 @@ export default {
       background: #000;
       margin: 0;
       padding: 2px 8px;
+      &.delivered {
+        right: var(--space-medium);
+        line-height: 2;
+      }
+    }
+    .read-tick {
+      position: absolute;
+      bottom: var(--space-small);
+      right: var(--space-small);
     }
   }
 }
