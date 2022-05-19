@@ -290,4 +290,8 @@ export const SDK_CSS = `
     border-radius: 6px !important;
   }
 }
+
+.woot-hidden {
+  display: none !important;
+}
 `;
