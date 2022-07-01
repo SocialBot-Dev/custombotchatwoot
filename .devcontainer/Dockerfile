@@ -7,4 +7,4 @@ FROM ghcr.io/sojan-official/chatwoot_codespace:latest
 # Do the set up required for chatwoot app 
 WORKDIR /workspace
 COPY . /workspace
-RUN yarn && gem install bundler && bundle install 
+RUN yarn && gem install bundler && bundle install
