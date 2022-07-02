@@ -5,9 +5,14 @@
         !isCards && !isOptions && !isForm && !isArticle && !isCards && !isCSAT
       "
       class="chat-bubble agent"
+      :class="$dm('bg-white', 'dark:bg-slate-700')"
       :style="{ background: widgetColor }"
     >
-      <div class="message-content" v-html="formatMessage(message, false)"></div>
+      <div
+        v-dompurify-html="formatMessage(message, false)"
+        class="message-content"
+        :class="$dm('text-black-900', 'dark:text-slate-50')"
+      />
       <email-input
         v-if="isTemplateEmail"
         :message-id="messageId"
@@ -20,8 +25,7 @@
         :options="messageContentAttributes.items"
         :hide-fields="!!messageContentAttributes.submitted_values"
         @click="onOptionSelect"
-      >
-      </chat-options>
+      />
     </div>
     <chat-form
       v-if="isForm && !messageContentAttributes.submitted_values"
@@ -29,8 +33,7 @@
       :button-label="messageContentAttributes.button_label"
       :submitted-values="messageContentAttributes.submitted_values"
       @submit="onFormSubmit"
-    >
-    </chat-form>
+    />
     <div v-if="isCards">
       <chat-card
         v-for="item in messageContentAttributes.items"
@@ -39,11 +42,10 @@
         :title="item.title"
         :description="item.description"
         :actions="item.actions"
-      >
-      </chat-card>
+      />
     </div>
     <div v-if="isArticle">
-      <chat-article :items="messageContentAttributes.items"></chat-article>
+      <chat-article :items="messageContentAttributes.items" />
     </div>
     <customer-satisfaction
       v-if="isCSAT"
@@ -61,6 +63,7 @@ import ChatOptions from 'shared/components/ChatOptions';
 import ChatArticle from './template/Article';
 import EmailInput from './template/EmailInput';
 import CustomerSatisfaction from 'shared/components/CustomerSatisfaction';
+import darkModeMixin from 'widget/mixins/darkModeMixin.js';
 
 export default {
   name: 'AgentMessageBubble',
@@ -72,7 +75,7 @@ export default {
     EmailInput,
     CustomerSatisfaction,
   },
-  mixins: [messageFormatterMixin],
+  mixins: [messageFormatterMixin, darkModeMixin],
   props: {
     widgetColor: { type: String, default: null },
     message: { type: String, default: null },

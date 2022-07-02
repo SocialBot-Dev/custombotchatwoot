@@ -1,11 +1,15 @@
 <template>
   <div
-    class="w-full h-full bg-slate-50 flex flex-col"
+    class="w-full h-full flex flex-col"
+    :class="$dm('bg-slate-50', 'dark:bg-slate-800')"
     @keydown.esc="closeWindow"
   >
     <div
       class="header-wrap"
-      :class="{ expanded: !isHeaderCollapsed, collapsed: isHeaderCollapsed }"
+      :class="{
+        expanded: !isHeaderCollapsed,
+        collapsed: isHeaderCollapsed,
+      }"
       :style="{ background: widgetColor }"
     >
       <transition
@@ -52,6 +56,7 @@ import Branding from 'shared/components/Branding.vue';
 import ChatHeader from '../ChatHeader.vue';
 import ChatHeaderExpanded from '../ChatHeaderExpanded.vue';
 import configMixin from '../../mixins/configMixin';
+import darkModeMixin from 'widget/mixins/darkModeMixin';
 import { mapGetters } from 'vuex';
 import { IFrameHelper } from 'widget/helpers/utils';
 export default {
@@ -61,7 +66,7 @@ export default {
     ChatHeader,
     ChatHeaderExpanded,
   },
-  mixins: [configMixin],
+  mixins: [configMixin, darkModeMixin],
   data() {
     return {
       showPopoutButton: false,
