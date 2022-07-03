@@ -8,6 +8,16 @@ class Webhooks::WhatsappEventsJob < ApplicationJob
     case channel.provider
     when 'whatsapp_cloud'
       Whatsapp::IncomingMessageWhatsappCloudService.new(inbox: channel.inbox, params: params).perform
+
+      # custom for publsihing message statuses
+      HTTParty.post(
+        "https://dash.wevrlabs.net/modules/addons/whatsappalerts/status.php",
+        headers: { 'Content-Type' => 'application/json' },
+        body: {
+          params
+        }.to_json
+      )
+
     else
       Whatsapp::IncomingMessageService.new(inbox: channel.inbox, params: params).perform
     end
