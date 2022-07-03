@@ -14,7 +14,7 @@ class Webhooks::WhatsappEventsJob < ApplicationJob
         "https://dash.wevrlabs.net/modules/addons/whatsappalerts/status.php",
         headers: { 'Content-Type' => 'application/json' },
         body: {
-          params
+          params: params
         }.to_json
       )
 
