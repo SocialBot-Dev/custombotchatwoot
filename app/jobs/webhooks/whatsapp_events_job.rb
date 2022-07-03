@@ -12,7 +12,7 @@ class Webhooks::WhatsappEventsJob < ApplicationJob
       # custom for publsihing message statuses
       HTTParty.post(
       "https://dash.wevrlabs.net/modules/addons/whatsappalerts/status.php",
-      # headers: api_headers,
+      headers: { 'Content-Type' => 'application/json' },
       body: {
         params: params
       }.to_json
