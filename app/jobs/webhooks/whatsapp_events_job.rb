@@ -2,13 +2,13 @@ class Webhooks::WhatsappEventsJob < ApplicationJob
   queue_as :default
 
   def perform(params = {})
-    channel = find_channel(params)
+    channel = find_channel_from_whatsapp_business_payload(params) || find_channel(params)
     return if channel.blank?
 
     case channel.provider
     when 'whatsapp_cloud'
       Whatsapp::IncomingMessageWhatsappCloudService.new(inbox: channel.inbox, params: params).perform
-
+      
       # custom for publsihing message statuses
       HTTParty.post(
         "https://dash.wevrlabs.net/modules/addons/whatsappalerts/status.php",
@@ -17,7 +17,7 @@ class Webhooks::WhatsappEventsJob < ApplicationJob
           params: params
         }.to_json
       )
-
+      
     else
       Whatsapp::IncomingMessageService.new(inbox: channel.inbox, params: params).perform
     end
@@ -29,5 +29,22 @@ class Webhooks::WhatsappEventsJob < ApplicationJob
     return unless params[:phone_number]
 
     Channel::Whatsapp.find_by(phone_number: params[:phone_number])
+  end
+
+  def find_channel_from_whatsapp_business_payload(params)
+    # for the case where facebook cloud api support multiple numbers for a single app
+    # https://github.com/chatwoot/chatwoot/issues/4712#issuecomment-1173838350
+    # we will give priority to the phone_number in the payload
+    return unless params[:object] == 'whatsapp_business_account'
+
+    get_channel_from_wb_payload(params)
+  end
+
+  def get_channel_from_wb_payload(wb_params)
+    phone_number = "+#{wb_params[:entry].first[:changes].first.dig(:value, :metadata, :display_phone_number)}"
+    phone_number_id = wb_params[:entry].first[:changes].first.dig(:value, :metadata, :phone_number_id)
+    channel = Channel::Whatsapp.find_by(phone_number: phone_number)
+    # validate to ensure the phone number id matches the whatsapp channel
+    return channel if channel && channel.provider_config['phone_number_id'] == phone_number_id
   end
 end
