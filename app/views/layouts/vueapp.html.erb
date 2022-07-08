@@ -62,7 +62,7 @@
     <%= stylesheet_pack_tag 'application' %>
     <style type="text/css">
 
-      .woot-sidebar, .secondary-menu {
+      .woot-sidebar, .secondary-menu, .integrations-wrap .integration {
         background: var(--color-background-dark1) !important;
       }
       .primary--sidebar, .secondary-menu, .dropdown-menu--divider {
@@ -102,7 +102,7 @@
         color: #fff !important;
       }
 
-      .contact--panel, .conversation--attribute, .list-group .list-group-item {
+      .contact--panel, .conversation--attribute, .list-group .list-group-item, .dashboard-app--tabs {
         background-color: var(--color-background-dark1) !important;
       }
       .view-box, .card {
@@ -199,10 +199,21 @@
           background: var(--g-900) !important;
       }
 
+      .label-wrap .label {
+          background-color: var(--color-background-dark2) !important;
+          border-color: var(--color-background-dark2) !important;
+          color: var(--w-50) !important;
+      }
+
       .banner[data-v-d4580068] {
           background: var(--w-700) !important;
           color: var(--white) !important;
       }
+
+      .filters-wrap, .filter {
+          background: var(--color-background-light) !important;
+      }
+
     </style>
   </head>
   <body>
