@@ -1,9 +1,35 @@
+.tabs--container {
+  display: flex;
+}
+
+.tabs--container--with-border {
+  @include border-normal-bottom;
+}
+
 .tabs {
   @include padding($zero $space-normal);
   border-bottom: 1px solid $color-border-dark2;
   border-left-width: 0;
   border-right-width: 0;
   border-top-width: 0;
+  display: flex;
+  min-width: var(--space-mega);
+}
+
+.tabs--with-scroll {
+  max-width: calc(100% - 64px);
+  overflow: hidden;
+  padding: 0 var(--space-smaller);
+}
+
+.tabs--scroll-button {
+  align-items: center;
+  border-radius: 0;
+  cursor: pointer;
+  display: flex;
+  height: auto;
+  justify-content: center;
+  min-width: var(--space-large);
 }
 
 // Tab chat type
@@ -23,6 +49,7 @@
 
 .tabs-title {
   @include margin($zero $space-slab);
+  flex-shrink: 0;
 
   .badge {
     background: $color-background-dark4;
