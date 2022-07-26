@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_07_20_080126) do
+ActiveRecord::Schema.define(version: 2022_07_20_123615) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_stat_statements"
@@ -571,7 +571,7 @@ ActiveRecord::Schema.define(version: 2022_07_20_080126) do
     t.integer "visibility", default: 0
     t.bigint "created_by_id", null: false
     t.bigint "updated_by_id", null: false
-    t.jsonb "actions", default: "{}", null: false
+    t.jsonb "actions", default: {}, null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["account_id"], name: "index_macros_on_account_id"
