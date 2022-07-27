@@ -1,5 +1,5 @@
 <template>
-  <div class="user-thumbnail-box" :style="{ height: size, width: size }">
+  <div class="user-thumbnail-box" :style="{ height: '35', width: '35' }">
     <img
       v-if="!imgError && Boolean(src)"
       id="image"
