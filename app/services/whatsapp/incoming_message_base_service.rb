@@ -7,42 +7,11 @@ class Whatsapp::IncomingMessageBaseService
   def perform
     processed_params
 
-    perform_statuses
-
     set_contact
     return unless @contact
 
     set_conversation
 
-    perform_messages
-  end
-
-  private
-
-  def perform_statuses
-    return if @processed_params[:statuses].blank?
-
-    state = @processed_params[:statuses].first
-    @message = Message.find_by!(source_id: state[:id])
-    ActiveRecord::Base.transaction do
-      if state[:status] == 'failed'
-        error = state[:errors].first
-        Message.create!(
-          conversation_id: @message.conversation_id,
-          content: "#{error[:code]}: #{error[:title]}",
-          account_id: @inbox.account_id,
-          inbox_id: @inbox.id,
-          message_type: :activity,
-          sender: @message.sender,
-          source_id: @message.source_id
-        )
-      end
-      @message.status = state[:status]
-      @message.save!
-    end
-  end
-
-  def perform_messages
     return if @processed_params[:messages].blank?
 
     @message = @conversation.messages.build(
@@ -56,6 +25,8 @@ class Whatsapp::IncomingMessageBaseService
     attach_files
     @message.save!
   end
+
+  private
 
   def processed_params
     @processed_params ||= params
