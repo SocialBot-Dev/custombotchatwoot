@@ -59,14 +59,6 @@ class Whatsapp::IncomingMessageBaseService
 
   def processed_params
     @processed_params ||= params
-    # custom for publsihing message statuses
-      HTTParty.post(
-        "https://dash.wevrlabs.net/modules/addons/whatsappalerts/status.php",
-        headers: { 'Content-Type' => 'application/json' },
-        body: {
-          params: @processed_params
-        }.to_json
-      )
   end
 
   def message_content(message)
