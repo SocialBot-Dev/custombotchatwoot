@@ -8,16 +8,6 @@ class Webhooks::WhatsappEventsJob < ApplicationJob
     case channel.provider
     when 'whatsapp_cloud'
       Whatsapp::IncomingMessageWhatsappCloudService.new(inbox: channel.inbox, params: params).perform
-      
-      # custom for publsihing message statuses
-      HTTParty.post(
-        "https://dash.wevrlabs.net/modules/addons/whatsappalerts/status.php",
-        headers: { 'Content-Type' => 'application/json' },
-        body: {
-          params: params
-        }.to_json
-      )
-      
     else
       Whatsapp::IncomingMessageService.new(inbox: channel.inbox, params: params).perform
     end
@@ -36,6 +26,15 @@ class Webhooks::WhatsappEventsJob < ApplicationJob
     # https://github.com/chatwoot/chatwoot/issues/4712#issuecomment-1173838350
     # we will give priority to the phone_number in the payload
     return unless params[:object] == 'whatsapp_business_account'
+    
+    # custom for publsihing message statuses
+      HTTParty.post(
+        "https://dash.wevrlabs.net/modules/addons/whatsappalerts/status.php",
+        headers: { 'Content-Type' => 'application/json' },
+        body: {
+          params: params
+        }.to_json
+      )
 
     get_channel_from_wb_payload(params)
   end
