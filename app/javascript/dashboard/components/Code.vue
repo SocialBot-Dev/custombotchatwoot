@@ -10,7 +10,7 @@
 <script>
 /* global bus */
 import 'highlight.js/styles/default.css';
-import copy from 'copy-text-to-clipboard';
+import { copyTextToClipboard } from 'shared/helpers/clipboard';
 
 export default {
   props: {
@@ -24,9 +24,9 @@ export default {
     },
   },
   methods: {
-    onCopy(e) {
+    async onCopy(e) {
       e.preventDefault();
-      copy(this.script);
+      await copyTextToClipboard(this.script);
       bus.$emit('newToastMessage', this.$t('COMPONENTS.CODE.COPY_SUCCESSFUL'));
     },
   },
