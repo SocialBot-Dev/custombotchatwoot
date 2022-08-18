@@ -1,7 +1,9 @@
+// scss-lint:disable MergeableSelector
+
 @mixin bubble-with-types {
-  @include padding($space-small $space-normal);
-  @include margin($zero);
-  background: var(--s-800);
+  padding: $space-small $space-normal;
+  margin: 0;
+  background: $color-woot;
   border-radius: $space-one;
   color: $color-white;
   font-size: $font-size-small;
@@ -45,7 +47,11 @@
     }
 
     &::before {
-      background-image: linear-gradient(-180deg, transparent 3%, $color-heading 130%);
+      background-image: linear-gradient(
+        -180deg,
+        transparent 3%,
+        $color-heading 130%
+      );
       bottom: 0;
       content: '';
       height: 20%;
@@ -83,16 +89,15 @@
   }
 
   .conversations-list {
-    @include flex-weight(1);
     @include scroll-on-hover;
+    flex: 1 1;
   }
 
   .chat-list__top {
     @include flex;
-    @include padding($zero $zero $space-micro $zero);
-
     align-items: center;
     justify-content: space-between;
+    padding: $zero $zero $space-micro;
 
     .page-title {
       margin-bottom: $zero;
@@ -100,13 +105,13 @@
     }
 
     .status--filter {
-      @include padding($zero null $zero $space-normal);
-      @include margin($zero);
       background-color: $color-background-light;
       border: 1px solid $color-border;
       float: right;
       font-size: $font-size-mini;
       height: $space-medium;
+      margin: 0;
+      padding: $zero $space-medium $zero $space-normal;
       width: auto;
     }
   }
@@ -118,19 +123,19 @@
 
 .conversation-panel {
   @include flex;
-  @include flex-weight(1 1 1px);
-  @include margin($zero);
+  flex: 1 1 1px;
   flex-direction: column;
   height: 100%;
+  margin: 0;
   overflow-y: auto;
   padding-bottom: var(--space-normal);
   position: relative;
 }
 
-.conversation-panel>li {
+.conversation-panel > li {
   @include flex;
   @include flex-shrink;
-  @include margin($zero $zero $space-micro);
+  margin: $zero $zero $space-micro;
   position: relative;
 
   &:first-child {
@@ -142,11 +147,11 @@
   }
 
   &.unread--toast {
-    +.right {
+    + .right {
       margin-bottom: var(--space-micro);
     }
 
-    +.left {
+    + .left {
       margin-bottom: 0;
     }
 
@@ -175,9 +180,7 @@
     }
   }
 
-
   &.left {
-
     .bubble {
       @include border-normal;
       background: #2f3235;
@@ -211,10 +214,9 @@
           color: $color-primary-dark;
         }
       }
-
     }
 
-    +.right {
+    + .right {
       margin-top: $space-one;
 
       .bubble {
@@ -222,8 +224,8 @@
       }
     }
 
-    +.unread--toast {
-      +.right {
+    + .unread--toast {
+      + .right {
         margin-top: $space-one;
 
         .bubble {
@@ -231,7 +233,7 @@
         }
       }
 
-      +.left {
+      + .left {
         margin-top: 0;
       }
     }
@@ -277,7 +279,7 @@
       }
     }
 
-    +.left {
+    + .left {
       margin-top: $space-one;
 
       .bubble {
@@ -285,8 +287,8 @@
       }
     }
 
-    +.unread--toast {
-      +.left {
+    + .unread--toast {
+      + .left {
         margin-top: $space-one;
 
         .bubble {
@@ -294,11 +296,10 @@
         }
       }
 
-      +.right {
+      + .right {
         margin-top: 0;
       }
     }
-
   }
 
   &.center {
@@ -306,9 +307,8 @@
   }
 
   .wrap {
-    @include margin($zero $space-normal);
-
     --bubble-max-width: 49.6rem;
+    margin: $zero $space-normal;
     max-width: Min(var(--bubble-max-width), 84%);
 
     .sender--name {
@@ -333,7 +333,8 @@
     font-size: var(--font-size-small);
     justify-content: center;
     margin: var(--space-smaller) 10px;
-    padding: var(--space-smaller) var(--space-micro) var(--space-smaller) var(--space-one);
+    padding: var(--space-smaller) var(--space-micro) var(--space-smaller)
+      var(--space-one);
 
     .is-text {
       display: inline-flex;
@@ -384,7 +385,6 @@
 }
 
 .left .bubble .text-content {
-
   h1,
   h2,
   h3,
@@ -423,7 +423,6 @@
 }
 
 .right .bubble .text-content {
-
   h1,
   h2,
   h3,

@@ -1,5 +1,4 @@
 @keyframes left-shift-animation {
-
   0%,
   100% {
     transform: translateX(0);
@@ -13,11 +12,11 @@
 .conversation {
   @include flex;
   @include flex-shrink;
-  @include padding(0 0 0 $space-normal);
   border-bottom: 1px solid transparent;
   border-left: $space-micro solid transparent;
   border-top: 1px solid transparent;
   cursor: pointer;
+  padding: 0 0 0 $space-normal;
   position: relative;
   
   .user-thumbnail-box #badge {
@@ -29,17 +28,17 @@
   }
   
   &.active {
+    animation: left-shift-animation 0.25s $swift-ease-out-function;
     background: $color-background-dark4;
     border-bottom-color: $color-border-dark2;
-    animation: left-shift-animation .25s $swift-ease-out-function;
-    border-left-color: var(--color-woot);
-    border-top-color: var(--color-border-dark2);
+    border-left-color: $color-border-dark2;
+    border-top-color: $color-border-dark2;
 
     .conversation--details {
       border-top-color: transparent;
     }
 
-    +.conversation .conversation--details {
+    + .conversation .conversation--details {
       border-top-color: transparent;
     }
   }
@@ -56,13 +55,12 @@
     }
   }
 
-
   .conversation--details {
-    @include margin(0 0 0 $space-one);
     @include border-light-bottom;
-    border-top: 1px solid var(--color-border-dark2);
-    @include padding($space-slab 0);
+    @include border-light-top;
     border-bottom-color: transparent;
+    margin: 0 0 0 $space-one;
+    padding: $space-slab 0;
   }
 
   .conversation--user {

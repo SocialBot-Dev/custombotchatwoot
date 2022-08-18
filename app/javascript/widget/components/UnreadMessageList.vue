@@ -112,7 +112,7 @@ export default {
     border: 0;
     font-weight: $font-weight-bold;
     font-size: $font-size-medium;
-    transition: all .2s cubic-bezier(0.42, 0, 0.29, 0.83);
+    transition: all 0.3s var(--ease-in-cubic);
     margin-left: $space-smaller;
     padding: 7px 14px 7px 10px;
     box-shadow: -10px -7px 20px 0px rgba(0, 0, 0, 0.15);
@@ -133,7 +133,7 @@ export default {
     transition: all .2s cubic-bezier(0.42, 0, 0.29, 0.83);
     font-weight: $font-weight-medium;
     font-size: $font-size-mini;
-    transition: all .2s cubic-bezier(0.42, 0, 0.29, 0.83);
+    transition: all 0.3s var(--ease-in-cubic);
     margin-bottom: $space-slab;
     border-radius: $space-normal;
 
