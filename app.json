@@ -44,6 +44,7 @@
       "size": "FREE"
     }
   },
+  "stack": "heroku-20",
   "image": "heroku/ruby",
   "addons": [ "heroku-redis", "heroku-postgresql"],
   "buildpacks": [

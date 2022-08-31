@@ -77,7 +77,7 @@
                     'HELP_CENTER.PORTAL.PORTAL_SETTINGS.LIST_ITEM.PORTAL_CONFIG.ITEMS.NAME'
                   )
                 }}</label>
-                <span class="text-block-title">{{ portal.header_text }}</span>
+                <span class="text-block-title">{{ portal.name }}</span>
               </div>
               <div class="configuration-item">
                 <label>{{
@@ -194,13 +194,19 @@ export default {
       this.$emit('open-site');
     },
     openSettings() {
-      this.$emit('open');
+      this.navigateToPortalEdit();
     },
     swapLocale() {
       this.$emit('swap');
     },
     deleteLocale() {
       this.$emit('delete');
+    },
+    navigateToPortalEdit() {
+      this.$router.push({
+        name: 'edit_portal_information',
+        params: { portalSlug: this.portal.slug },
+      });
     },
   },
 };

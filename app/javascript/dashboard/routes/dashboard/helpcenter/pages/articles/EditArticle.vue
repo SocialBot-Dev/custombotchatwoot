@@ -58,7 +58,6 @@ export default {
     ...mapGetters({
       isFetching: 'articles/isFetching',
       articles: 'articles/articles',
-      selectedPortal: 'portals/getSelectedPortal',
     }),
     article() {
       return this.$store.getters['articles/articleById'](this.articleId);
@@ -67,7 +66,7 @@ export default {
       return this.$route.params.articleSlug;
     },
     selectedPortalSlug() {
-      return this.portalSlug || this.selectedPortal?.slug;
+      return this.$route.params.portalSlug;
     },
   },
   mounted() {
@@ -119,12 +118,12 @@ export default {
   padding: var(--space-small) var(--space-normal);
   width: 100%;
   flex: 1;
-  overflow: scroll;
+  overflow: auto;
 
   .edit-article--container {
     flex: 1;
     flex-shrink: 0;
-    overflow: scroll;
+    overflow: auto;
   }
 
   .is-sidebar-open {
