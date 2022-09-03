@@ -1,12 +1,25 @@
 <template>
-  <a
-    class="branding branding--link" href="https://dash.wevrlabs.net/knowledgebase.php?utm_source=chat_widget" target="_blank">
-    <!-- <img alt="WevrLabs Hosting" :src="globalConfig.logoThumbnail" /> -->
-    <i class="fa fa-book"></i>
-    <span>
-      Explore Help Articles
-    </span>
-  </a>
+  <div
+    v-if="globalConfig.brandName && !disableBranding"
+    class="px-0 py-3 flex justify-center"
+  >
+    <a
+      :href="brandRedirectURL"
+      rel="noreferrer noopener nofollow"
+      target="_blank"
+      class="branding--link justify-center"
+    >
+      <img
+        class="branding--image"
+        :alt="globalConfig.brandName"
+        :src="globalConfig.logoThumbnail"
+      />
+      <span>
+        {{ useInstallationName($t('POWERED_BY'), globalConfig.brandName) }}
+      </span>
+    </a>
+  </div>
+  <div v-else class="p-3" />
 </template>
 
 <script>
@@ -20,6 +33,12 @@ const {
 
 export default {
   mixins: [globalConfigMixin],
+  props: {
+    disableBranding: {
+      type: Boolean,
+      default: false,
+    },
+  },
   data() {
     return {
       globalConfig: {
