@@ -191,14 +191,14 @@ export default {
       return (
         this.isOutgoing &&
         this.sourceId &&
-        (this.isAnEmailChannel || this.isAWhatsAppChannel)
+        (this.isAnEmailChannel || (this.isAWhatsAppChannel && this.isSent))
       );
     },
     showDeliveredIndicator() {
-      return this.isAWhatsappChannel && this.isDelivered;
+      return this.isAWhatsAppChannel && this.isDelivered;
     },
     showReadIndicator() {
-      return this.isAWhatsappChannel && this.isRead;
+      return this.isAWhatsAppChannel && this.isRead;
     },
   },
   methods: {

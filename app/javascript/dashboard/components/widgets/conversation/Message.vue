@@ -53,7 +53,7 @@
           :story-sender="storySender"
           :story-id="storyId"
           :is-a-tweet="isATweet"
-          :is-a-whatsapp-channel="isAWhatsappChannel"
+          :is-a-whatsapp-channel="isAWhatsAppChannel"
           :has-instagram-story="hasInstagramStory"
           :is-email="isEmailContentType"
           :is-private="data.private"
@@ -151,7 +151,7 @@ export default {
       type: Boolean,
       default: false,
     },
-    isAWhatsappChannel: {
+    isAWhatsAppChannel: {
       type: Boolean,
       default: false,
     },
