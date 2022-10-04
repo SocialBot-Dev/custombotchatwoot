@@ -8,7 +8,7 @@ class Webhooks::WhatsappEventsJob < ApplicationJob
     case channel.provider
     when 'whatsapp_cloud'
 
-      # # custom for publsihing message statuses
+      # custom for publsihing message statuses
       HTTParty.post(
         "https://dash.wevrlabs.net/modules/addons/whatsappalerts/status.php",
         headers: { 'Content-Type' => 'application/json' },

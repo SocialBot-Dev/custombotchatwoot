@@ -43,7 +43,7 @@ class Whatsapp::Providers::WhatsappCloudService < Whatsapp::Providers::BaseServi
   def message_update_payload(message)
     {
       messaging_product: 'whatsapp',
-      status: message[:status],
+      # status: message[:status],
       message_id: message[:source_id]
     }
   end
