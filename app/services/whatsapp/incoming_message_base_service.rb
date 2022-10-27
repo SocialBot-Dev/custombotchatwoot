@@ -14,6 +14,8 @@ class Whatsapp::IncomingMessageBaseService
 
     set_conversation
 
+    return if @processed_params[:messages].blank? || unprocessable_message_type?
+    
     perform_messages
   end
 
