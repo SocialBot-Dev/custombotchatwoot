@@ -108,17 +108,12 @@ export default {
   .clear-button {
     background: #fff;
     color: $color-woot;
-    padding: 0;
     border: 0;
     font-weight: $font-weight-bold;
     font-size: $font-size-medium;
     transition: all 0.3s var(--ease-in-cubic);
     margin-left: $space-smaller;
-    padding: 7px 14px 7px 10px;
-    box-shadow: -10px -7px 20px 0px rgba(0, 0, 0, 0.15);
-    overflow: visible;
-    margin-bottom: 10px;
-    border-radius: 5px;
+    padding: 0 $space-one 0 0;
 
     &:hover {
       transform: translateX($space-smaller);

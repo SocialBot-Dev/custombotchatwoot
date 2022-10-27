@@ -14,43 +14,7 @@ class Whatsapp::IncomingMessageBaseService
 
     set_conversation
 
-    perform_messages
-  end
-
-  private
-
-  def perform_statuses
-    return if @processed_params[:statuses].blank?
-
-    state = @processed_params[:statuses].first
-    @message = Message.find_by(source_id: state[:id])
-    return unless @message
-
-    ActiveRecord::Base.transaction do
-      create_message_for_failed_status(state)
-
-      @message.status = state[:status]
-      @message.save!
-    end
-  end
-
-  def create_message_for_failed_status(state)
-    return if state[:status] != 'failed' || state[:errors]&.empty?
-
-    error = state[:errors]&.first
-    Message.create!(
-      conversation_id: @message.conversation_id,
-      content: "#{error[:code]}: #{error[:title]}",
-      account_id: @inbox.account_id,
-      inbox_id: @inbox.id,
-      message_type: :activity,
-      sender: @message.sender,
-      source_id: @message.source_id
-    )
-  end
-
-  def perform_messages
-    return if @processed_params[:messages].blank?
+    return if @processed_params[:messages].blank? || unprocessable_message_type?
 
     @message = @conversation.messages.build(
       content: message_content(@processed_params[:messages].first),
@@ -84,7 +48,7 @@ class Whatsapp::IncomingMessageBaseService
     contact_params = @processed_params[:contacts]&.first
     return if contact_params.blank?
 
-    contact_inbox = ::ContactBuilder.new(
+    contact_inbox = ::ContactInboxWithContactBuilder.new(
       source_id: contact_params[:wa_id],
       inbox: inbox,
       contact_attributes: { name: contact_params.dig(:profile, :name), phone_number: "+#{@processed_params[:messages].first[:from]}" }
@@ -120,6 +84,10 @@ class Whatsapp::IncomingMessageBaseService
 
   def message_type
     @processed_params[:messages].first[:type]
+  end
+
+  def unprocessable_message_type?
+    %w[reaction contacts].include?(message_type)
   end
 
   def attach_files

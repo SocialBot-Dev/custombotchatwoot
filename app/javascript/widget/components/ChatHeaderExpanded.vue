@@ -1,7 +1,18 @@
 <template>
-  <header class="header-expanded py-6 px-5 relative box-border w-full">
-    <div class="title-logo">
-      <img v-if="avatarUrl" class="logo h-12 rounded-full" :src="avatarUrl" alt="avatar"/>
+  <header
+    class="header-expanded py-6 px-5 relative box-border w-full"
+    :class="$dm('bg-white', 'dark:bg-slate-900')"
+  >
+    <div
+      class="flex items-start"
+      :class="[avatarUrl ? 'justify-between' : 'justify-end']"
+    >
+      <img
+        v-if="avatarUrl"
+        class="h-12 rounded-full"
+        :src="avatarUrl"
+        alt="Avatar"
+      />
       <span class="header-elements">
         <div style="display: inline-flex">
           <h2 class="title" v-html="introHeading"></h2>

@@ -19,6 +19,7 @@
         <div class="text-xs leading-4 mt-1">
           <span class="reply-eta" v-if="isOnline">Average response time varies</span>
           <span class="reply-eta" v-else>We'll get back to you in a few hours</span>
+          {{ replyWaitMessage }}
         </div>
       </div>
       <available-agents v-if="isOnline" :agents="availableAgents" />
@@ -80,7 +81,7 @@ export default {
       }
       return anyAgentOnline;
     },
-    replyWaitMeessage() {
+    replyWaitMessage() {
       const { workingHoursEnabled } = this.channelConfig;
 
       if (this.isOnline) {
