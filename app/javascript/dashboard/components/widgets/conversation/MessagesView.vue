@@ -141,7 +141,6 @@ export default {
       listLoadingStatus: 'getAllMessagesLoaded',
       getUnreadCount: 'getUnreadCount',
       loadingChatList: 'getChatListLoadingStatus',
-      conversationLastSeen: 'getConversationLastSeen',
     }),
     inboxId() {
       return this.currentChat.inbox_id;
@@ -236,7 +235,6 @@ export default {
       return 'arrow-chevron-left';
     },
     getLastSeenAt() {
-      if (this.conversationLastSeen) return this.conversationLastSeen;
       const { contact_last_seen_at: contactLastSeenAt } = this.currentChat;
       return contactLastSeenAt;
     },
