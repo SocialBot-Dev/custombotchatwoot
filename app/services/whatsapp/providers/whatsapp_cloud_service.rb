@@ -93,7 +93,7 @@ class Whatsapp::Providers::WhatsappCloudService < Whatsapp::Providers::BaseServi
     type_content = {
       'link': attachment_url
     }
-    type_content['caption'] = message.content if type != 'audio'
+    type_content['caption'] = (message.content.present? ? message.content : 'start') if type != 'audio'
     response = HTTParty.post(
       "#{phone_id_path}/messages",
       headers: api_headers,
