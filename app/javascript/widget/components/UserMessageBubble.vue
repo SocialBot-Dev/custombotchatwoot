@@ -2,13 +2,13 @@
   <div
     v-dompurify-html="formatMessage(message, false)"
     class="chat-bubble user"
-    v-html="formatMessage(message, false)"
-    :style="{ background: widgetColor }"
+    :style="{ background: widgetColor, color: textColor }"
   />
 </template>
 
 <script>
 import messageFormatterMixin from 'shared/mixins/messageFormatterMixin';
+import { getContrastingTextColor } from '@chatwoot/utils';
 
 export default {
   name: 'UserMessageBubble',
@@ -25,6 +25,11 @@ export default {
     widgetColor: {
       type: String,
       default: '',
+    },
+  },
+  computed: {
+    textColor() {
+      return getContrastingTextColor(this.widgetColor);
     },
   },
 };

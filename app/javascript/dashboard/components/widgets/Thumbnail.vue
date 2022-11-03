@@ -1,5 +1,5 @@
 <template>
-  <div class="user-thumbnail-box" :style="{ height: size, width: size }">
+  <div :class="thumbnailBoxClass" :style="{ height: size, width: size }">
     <img
       v-if="!imgError && src"
       :src="src"
@@ -134,6 +134,10 @@ export default {
         this.variant === 'circle' ? 'thumbnail-rounded' : 'thumbnail-square';
       return `user-thumbnail ${classname} ${variant}`;
     },
+    thumbnailBoxClass() {
+      const boxClass = this.variant === 'circle' ? 'is-rounded' : '';
+      return `user-thumbnail-box ${boxClass}`;
+    },
   },
   watch: {
     src(value, oldValue) {
@@ -155,6 +159,10 @@ export default {
   flex: 0 0 auto;
   max-width: 100%;
   position: relative;
+
+  &.is-rounded {
+    border-radius: 50%;
+  }
 
   .user-thumbnail {
     border-radius: 50%;
