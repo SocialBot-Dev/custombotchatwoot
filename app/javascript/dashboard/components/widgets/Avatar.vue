@@ -48,5 +48,6 @@ export default {
   text-align: center;
   background-image: linear-gradient(to top, #246375 0%, #11649e 100%);
   color: var(--w-600);
+  cursor: default;
 }
 </style>

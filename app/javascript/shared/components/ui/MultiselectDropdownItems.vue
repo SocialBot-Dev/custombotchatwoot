@@ -19,10 +19,10 @@
           >
             <woot-button
               class="multiselect-dropdown--item"
-              variant="clear"
+              :variant="isActive(option) ? 'hollow' : 'clear'"
               color-scheme="secondary"
               :class="{
-                active: option.id === (selectedItem && selectedItem.id),
+                active: isActive(option),
               }"
               @click="() => onclick(option)"
             >
@@ -33,6 +33,7 @@
                   size="24px"
                   :username="option.name"
                   :status="option.availability_status"
+                  has-border
                 />
                 <div class="name-wrap">
                   <span
@@ -121,6 +122,9 @@ export default {
     focusInput() {
       this.$refs.searchbar.focus();
     },
+    isActive(option) {
+      return this.selectedItem ? option.id === this.selectedItem.id : false;
+    },
   },
 };
 </script>
@@ -171,13 +175,19 @@ export default {
   width: 100%;
 
   &.active {
-    background-color: var(--color-background-dark2);
+    background: var(--color-background-dark2);
+    border-color: var(--s-50);
     color: var(--w-100);
     font-weight: var(--font-weight-medium);
   }
 
   &:focus {
     background-color: var(--color-background-dark2);
+  }
+
+  &:hover {
+    color: var(--s-800);
+    background-color: var(--color-background);
   }
 }
 
@@ -191,6 +201,7 @@ export default {
   justify-content: space-between;
   min-width: 0;
   width: 100%;
+  align-items: center;
 }
 
 .name {

@@ -76,6 +76,7 @@ class Message < ApplicationRecord
     where('EXTRACT(EPOCH FROM updated_at) <= (?) and message_type = 0 and status < 2', datetime.to_i.succ)
   }
   scope :chat, -> { where.not(message_type: :activity).where(private: false) }
+  scope :non_activity_messages, -> { where.not(message_type: :activity).reorder('id desc') }
   scope :today, -> { where("date_trunc('day', created_at) = ?", Date.current) }
   default_scope { order(created_at: :asc) }
 
