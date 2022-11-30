@@ -14,6 +14,31 @@ class Whatsapp::IncomingMessageBaseService
 
     set_conversation
 
+    perform_messages
+  end
+
+  private
+
+  def perform_statuses
+    return if @processed_params[:statuses].blank?
+
+    status = @processed_params[:statuses].first
+    @message = Message.find_by(source_id: status[:id])
+    return unless @message
+
+    update_message_with_status(@message, status)
+  end
+
+  def update_message_with_status(message, status)
+    message.status = status[:status]
+    if status[:status] == 'failed' && status[:errors].present?
+      error = status[:errors]&.first
+      message.external_error = "#{error[:code]}: #{error[:title]}"
+    end
+    message.save!
+  end
+
+  def perform_messages
     return if @processed_params[:messages].blank? || unprocessable_message_type?
     
     perform_messages
