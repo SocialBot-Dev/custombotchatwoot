@@ -29,6 +29,7 @@
               v-else
               :url="attachment.data_url"
               :is-in-progress="isInProgress"
+              :widget-color="widgetColor"
             />
           </div>
         </div>

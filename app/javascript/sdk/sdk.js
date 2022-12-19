@@ -1,6 +1,7 @@
 export const SDK_CSS = `
 :root {
   --b-100: #F2F3F7;
+  --s-700: #37546D;
 }
 
 .woot-widget-holder {
@@ -77,7 +78,7 @@ export const SDK_CSS = `
   width: 56px;
 }
 
-.woot-widget-bubble.woot-widget-bubble--flat img {
+.woot-widget-bubble.woot-widget-bubble--flat svg {
   margin: 16px;
 }
 
@@ -119,8 +120,15 @@ export const SDK_CSS = `
   padding-right: 20px;
   width: auto !important;
 }
-.woot-widget-bubble:active {
-  transform: scale(.9);
+
+.woot-widget-bubble.woot-widget--expanded.woot-widget-bubble-color--lighter div{
+  color: var(--s-700);
+}
+
+.woot-widget-bubble.woot-widget--expanded svg {
+  height: 20px;
+  margin: 14px 8px 14px 16px;
+  width: 20px;
 }
 .woot-widget-bubble.woot-elements--left {
   left: 31px;
@@ -181,11 +189,15 @@ export const SDK_CSS = `
     margin: 10px;
     width: 15%;
 }
-.woot-widget-bubble img {
+.woot-widget-bubble svg {
   all: revert;
   height: 34px;
   width: 34px;
   margin: 17px 15px;
+}
+
+.woot-widget-bubble.woot-widget-bubble-color--lighter path{
+  fill: var(--s-700);
 }
 
 @media only screen and (min-width: 667px) {
@@ -217,7 +229,12 @@ export const SDK_CSS = `
   top: 20px;
   width: 2px;
 }
-.woot--close:before {
+
+.woot-widget-bubble-color--lighter.woot--close::before, .woot-widget-bubble-color--lighter.woot--close::after {
+  background-color: var(--s-700);
+}
+
+.woot--close::before {
   transform: rotate(45deg);
 }
 .woot--close:after {
