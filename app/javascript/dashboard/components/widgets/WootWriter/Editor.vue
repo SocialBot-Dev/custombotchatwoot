@@ -377,6 +377,7 @@ export default {
   flex-direction: column;
 
   .ProseMirror-menubar {
+    min-height: var(--space-two) !important;
     color: #b1b1b1 !important;
   }
 

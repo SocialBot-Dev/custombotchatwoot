@@ -167,10 +167,14 @@ export default {
 .conversation-sidebar-wrap {
   height: auto;
   flex: 0 0;
-  overflow: hidden;
+  z-index: var(--z-index-low);
   overflow: auto;
   background: var(--color-background-dark);
-  flex-basis: 28rem;
+  flex-basis: 100%;
+
+  @include breakpoint(medium up) {
+    flex-basis: 28rem;
+  }
 
   @include breakpoint(large up) {
     flex-basis: 30em;
