@@ -26,13 +26,6 @@
       alt="Badge"
     />
     <img
-      v-if="badge === 'Channel::Email'"
-      id="badge"
-      class="source-badge"
-      :style="badgeStyle"
-      src="~dashboard/assets/images/channels/email.png"
-    />
-    <img
       v-if="badge === 'Channel::WebWidget'"
       id="badge"
       class="source-badge"
