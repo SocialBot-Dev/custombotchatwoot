@@ -12,7 +12,7 @@
   border-top-width: 0;
   display: flex;
   min-width: var(--space-mega);
-  padding: $zero $space-normal;
+  padding: 0 var(--space-normal);
 }
 
 .tabs--with-scroll {
@@ -37,27 +37,27 @@
 
   .tabs-title {
     a {
-      font-size: $font-size-default;
-      font-weight: $font-weight-medium;
+      font-size: var(--font-size-default);
+      font-weight: var(--font-weight-medium);
+      padding-bottom: var(--space-slab);
+      padding-top: var(--space-slab);
       color: $color-dark-gray;
-      padding-bottom: $space-slab;
-      padding-top: $space-slab;
     }
   }
 }
 
 .tabs-title {
   flex-shrink: 0;
-  margin: $zero $space-slab;
+  margin: 0 var(--space-small);
 
   .badge {
-    background: $color-background-dark4;
-    border-radius: $space-small;
-    color: $color-gray;
-    font-size: $font-size-small;
-    font-weight: $font-weight-black;
-    margin-left: $space-one;
-    padding: $space-smaller;
+    background: var(--color-background-dark4);
+    border-radius: var(--space-small);
+    color: var(--color-gray);
+    font-size: var(--font-size-micro);
+    font-weight: var(--font-weight-black);
+    margin: 0 var(--space-smaller);
+    padding: var(--space-smaller);
   }
 
   &:first-child {
@@ -81,7 +81,7 @@
     color: $medium-gray;
     display: flex;
     flex-direction: row;
-    font-size: $font-size-small;
+    font-size: var(--font-size-small);
     position: relative;
     top: 1px;
     transition: border-color 0.15s $swift-ease-out-function;
@@ -89,13 +89,13 @@
 
   &.is-active {
     a {
-      border-bottom-color: $color-woot;
-      color: $color-woot;
+      border-bottom-color: var(--color-woot);
+      color: var(--color-woot);
     }
 
     .badge {
       background: $color-background-dark4;
-      color: $color-woot;
+      color: var(--color-woot);
     }
   }
 }

@@ -75,6 +75,7 @@
 
 .conversations-list-wrap {
   @include flex;
+  border-right: 1px solid var(--s-50);
   flex-direction: column;
 
   .load-more-conversations {
@@ -89,8 +90,8 @@
   }
 
   .conversations-list {
-    overflow-y: auto;
     flex: 1 1;
+    overflow-y: auto;
 
     @include breakpoint(large up) {
       @include scroll-on-hover;
@@ -101,22 +102,10 @@
     @include flex;
     align-items: center;
     justify-content: space-between;
-    padding: $zero $zero $space-micro;
+    padding: 0 var(--space-normal);
 
     .page-title {
-      margin-bottom: $zero;
-      margin-left: $space-normal;
-    }
-
-    .status--filter {
-      background-color: $color-background-light;
-      border: 1px solid $color-border;
-      float: right;
-      font-size: $font-size-mini;
-      height: $space-medium;
-      margin: 0;
-      padding: $zero $space-medium $zero $space-normal;
-      width: auto;
+      margin-bottom: 0;
     }
   }
 
@@ -408,18 +397,6 @@
     unicode-bidi: plaintext;
   }
 
-  blockquote {
-    border-left-color: var(--s-300);
-    text-align: start !important;
-    unicode-bidi: plaintext;
-
-    p {
-      color: var(--s-300);
-      text-align: start !important;
-      unicode-bidi: plaintext;
-    }
-  }
-
   p:last-child {
     margin-bottom: 0;
     text-align: start !important;
@@ -444,29 +421,10 @@
     text-decoration: underline;
   }
 
-  blockquote {
-    border-left-color: var(--w-100);
-    text-align: start !important;
-    unicode-bidi: plaintext;
-
-    p {
-      color: var(--w-100);
-      text-align: start !important;
-      unicode-bidi: plaintext;
-    }
-  }
-
-  pre code {
-    background: var(--color-background);
-    padding: 10px;
-    border-radius: 4px;
-    display: block;
-    overflow: overlay;
-  }
-
   p:last-child {
     margin-bottom: 0;
     text-align: start !important;
     unicode-bidi: plaintext;
   }
 }
+

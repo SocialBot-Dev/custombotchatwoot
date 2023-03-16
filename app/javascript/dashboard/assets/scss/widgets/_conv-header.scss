@@ -49,7 +49,7 @@ $resolve-button-width: 13.2rem;
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
-      margin-left: $space-slab;
+      margin-left: var(--space-small);
       min-width: 0;
     }
   }

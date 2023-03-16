@@ -37,7 +37,7 @@ class Whatsapp::Providers::WhatsappCloudService < Whatsapp::Providers::BaseServi
   end
 
   def media_url(media_id)
-    "https://graph.facebook.com/v13.0/#{media_id}"
+    "#{api_base_path}/v13.0/#{media_id}"
   end
 
   def message_update_payload(message)
@@ -58,9 +58,13 @@ class Whatsapp::Providers::WhatsappCloudService < Whatsapp::Providers::BaseServi
 
   private
 
+  def api_base_path
+    ENV.fetch('WHATSAPP_CLOUD_BASE_URL', 'https://graph.facebook.com')
+  end
+
   # TODO: See if we can unify the API versions and for both paths and make it consistent with out facebook app API versions
   def phone_id_path
-    "https://graph.facebook.com/v13.0/#{whatsapp_channel.provider_config['phone_number_id']}"
+    "#{api_base_path}/v13.0/#{whatsapp_channel.provider_config['phone_number_id']}"
   end
 
   def messages_path
@@ -68,7 +72,7 @@ class Whatsapp::Providers::WhatsappCloudService < Whatsapp::Providers::BaseServi
   end
 
   def business_account_path
-    "https://graph.facebook.com/v14.0/#{whatsapp_channel.provider_config['business_account_id']}"
+    "#{api_base_path}/v14.0/#{whatsapp_channel.provider_config['business_account_id']}"
   end
 
   def send_text_message(phone_number, message)
@@ -98,7 +102,7 @@ class Whatsapp::Providers::WhatsappCloudService < Whatsapp::Providers::BaseServi
       "#{phone_id_path}/messages",
       headers: api_headers,
       body: {
-        messaging_product: 'whatsapp',
+        :messaging_product => 'whatsapp',
         'to' => phone_number,
         'type' => type,
         type.to_s => type_content

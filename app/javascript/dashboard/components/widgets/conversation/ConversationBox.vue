@@ -1,7 +1,7 @@
 <template>
   <div
     class="conversation-details-wrap"
-    :class="{ 'with-border-left': !isOnExpandedLayout }"
+    :class="{ 'with-border-right': !isOnExpandedLayout }"
   >
     <conversation-header
       v-if="currentChat.id"
@@ -145,8 +145,8 @@ export default {
   background: var(--color-background-dark);
   border-left: 1px solid var(--color-border-dark2);
 
-  &.with-border-left {
-    border-left: 1px solid var(--color-border);
+  &.with-border-right {
+    border-right: 1px solid var(--color-border);
   }
 }
 
@@ -165,6 +165,7 @@ export default {
 }
 
 .conversation-sidebar-wrap {
+  border-right: 1px solid var(--color-border);
   height: auto;
   flex: 0 0;
   z-index: var(--z-index-low);
